@@ -1,0 +1,2012 @@
+$theColorPallete:'ast';
+
+@function processColors($specificColor,$palleteName){
+
+ @if($palleteName == 'acg'){
+   @if($specificColor == 'primary'){@return #40582D;}//endif primary
+   @if($specificColor == 'accent'){@return  #A4624C;}//endif accent
+   @if($specificColor == 'dark'){@return    #2D3E20;}//endif dark
+   @if($specificColor == 'light'){@return   #A6E475;}//endif light
+   @if($specificColor == 'black'){@return   #181C14;}//endif black
+   @if($specificColor == 'white'){@return   #F4FFF5;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif ACG
+
+ @if($palleteName == 'amh'){
+   @if($specificColor == 'primary'){@return #735134;}//endif primary
+   @if($specificColor == 'accent'){@return  #30A8BF;}//endif accent
+   @if($specificColor == 'dark'){@return    #332417;}//endif dark
+   @if($specificColor == 'light'){@return   #D9CFB9;}//endif light
+   @if($specificColor == 'black'){@return   #19120C;}//endif black
+   @if($specificColor == 'white'){@return   #FAEFE3;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif AMH
+ @if($palleteName == 'aml'){
+   @if($specificColor == 'primary'){@return #523126;}//endif primary
+   @if($specificColor == 'accent'){@return  #B3B499;}//endif accent
+   @if($specificColor == 'dark'){@return    #261712;}//endif dark
+   @if($specificColor == 'light'){@return   #D69465;}//endif light
+   @if($specificColor == 'black'){@return   #140C05;}//endif black
+   @if($specificColor == 'white'){@return   #EEFFFF;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif AML
+ @if($palleteName == 'asl'){
+   @if($specificColor == 'primary'){@return #355472;}//endif primary
+   @if($specificColor == 'accent'){@return  #A5613D;}//endif accent
+   @if($specificColor == 'dark'){@return    #192836;}//endif dark
+   @if($specificColor == 'light'){@return   #70C2F0;}//endif light
+   @if($specificColor == 'black'){@return   #0B1317;}//endif black
+   @if($specificColor == 'white'){@return   #E2F4FC;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif ASL
+
+ @if($palleteName == 'ant'){
+   @if($specificColor == 'primary'){@return #DBB54F;}//endif primary
+   @if($specificColor == 'accent'){@return  #428280;}//endif accent
+   @if($specificColor == 'dark'){@return    #78693E;}//endif dark
+   @if($specificColor == 'light'){@return   #E8DCBC;}//endif light
+   @if($specificColor == 'black'){@return   #1C190D;}//endif black
+   @if($specificColor == 'white'){@return   #FFFFE8;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif ANT
+ @if($palleteName == 'apa'){
+   @if($specificColor == 'primary'){@return #474120;}//endif primary
+   @if($specificColor == 'accent'){@return  #3B3F54;}//endif accent
+   @if($specificColor == 'dark'){@return    #2B2D2E;}//endif dark
+   @if($specificColor == 'light'){@return   #E5DBBD;}//endif light
+   @if($specificColor == 'black'){@return   #1F1C0B;}//endif black
+   @if($specificColor == 'white'){@return   #FFF8FF;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif APA
+ @if($palleteName == 'mvba'){
+   @if($specificColor == 'primary'){@return #B26E30;}//endif primary
+   @if($specificColor == 'accent'){@return  #3099B2;}//endif accent
+   @if($specificColor == 'dark'){@return    #72471F;}//endif dark
+   @if($specificColor == 'light'){@return   #FFAD5E;}//endif light
+   @if($specificColor == 'black'){@return   #0E0F0E;}//endif black
+   @if($specificColor == 'white'){@return   #FFFCF7;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVBA
+ @if($palleteName == 'mvk'){
+   @if($specificColor == 'primary'){@return #5E9CA0;}//endif primary
+   @if($specificColor == 'accent'){@return  #ECDD7F;}//endif accent
+   @if($specificColor == 'dark'){@return    #295153;}//endif dark
+   @if($specificColor == 'light'){@return   #C9F7FF;}//endif light
+   @if($specificColor == 'black'){@return   #141919;}//endif black
+   @if($specificColor == 'white'){@return   #E9F7FF;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVK
+ @if($palleteName == 'mvpa'){
+   @if($specificColor == 'primary'){@return #615666;}//endif primary
+   @if($specificColor == 'accent'){@return  #CBB852;}//endif accent
+   @if($specificColor == 'dark'){@return    #29252B;}//endif dark
+   @if($specificColor == 'light'){@return   #E6CCF2;}//endif light
+   @if($specificColor == 'black'){@return   #020203;}//endif black
+   @if($specificColor == 'white'){@return   #F2FDFF;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVPA
+ @if($palleteName == 'mvsa'){
+   @if($specificColor == 'primary'){@return #8C6354;}//endif primary
+   @if($specificColor == 'accent'){@return  #BFB493;}//endif accent
+   @if($specificColor == 'dark'){@return    #543C32;}//endif dark
+   @if($specificColor == 'light'){@return   #F0B890;}//endif light
+   @if($specificColor == 'black'){@return   #232626;}//endif black
+   @if($specificColor == 'white'){@return   #F2F2F2;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVSA
+ @if($palleteName == 'mvva'){
+   @if($specificColor == 'primary'){@return #534859;}//endif primary
+   @if($specificColor == 'accent'){@return  #E5D8AF;}//endif accent
+   @if($specificColor == 'dark'){@return    #2D222D;}//endif dark
+   @if($specificColor == 'light'){@return   #DEB4D9;}//endif light
+   @if($specificColor == 'black'){@return   #0F0C0F;}//endif black
+   @if($specificColor == 'white'){@return   #F5EDEF;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVVA
+ @if($palleteName == 'mvwa'){
+   @if($specificColor == 'primary'){@return #331919;}//endif primary
+   @if($specificColor == 'accent'){@return  #E8D1A4;}//endif accent
+   @if($specificColor == 'dark'){@return    #1C0E0E;}//endif dark
+   @if($specificColor == 'light'){@return   #FC9A86;}//endif light
+   @if($specificColor == 'black'){@return   #140C0B;}//endif black
+   @if($specificColor == 'white'){@return   #FFFFF9;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVWA
+ @if($palleteName == 'mvwa'){
+   @if($specificColor == 'primary'){@return #331919;}//endif primary
+   @if($specificColor == 'accent'){@return  #E8D1A4;}//endif accent
+   @if($specificColor == 'dark'){@return    #1C0E0E;}//endif dark
+   @if($specificColor == 'light'){@return   #FC9A86;}//endif light
+   @if($specificColor == 'black'){@return   #140C0B;}//endif black
+   @if($specificColor == 'white'){@return   #FFFFF9;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif MVWA
+ @if($palleteName == 'art'){
+   @if($specificColor == 'primary'){@return #703030;}//endif primary
+   @if($specificColor == 'accent'){@return  #7E827A;}//endif accent
+   @if($specificColor == 'dark'){@return    #291212;}//endif dark
+   @if($specificColor == 'light'){@return   #FF9A6E;}//endif light
+   @if($specificColor == 'black'){@return   #121417;}//endif black
+   @if($specificColor == 'white'){@return   #FAF9FF;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif ART
+ @if($palleteName == 'arh'){
+   @if($specificColor == 'primary'){@return #3B3F40;}//endif primary
+   @if($specificColor == 'accent'){@return  #736C4D;}//endif accent
+   @if($specificColor == 'dark'){@return    #232626;}//endif dark
+   @if($specificColor == 'light'){@return   #A2B0B0;}//endif light
+   @if($specificColor == 'black'){@return   #151717;}//endif black
+   @if($specificColor == 'white'){@return   #F2FDF5;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif ARH
+ @if($palleteName == 'ast'){
+   @if($specificColor == 'primary'){@return #2F343B;}//endif primary
+   @if($specificColor == 'accent'){@return  #877551;}//endif accent
+   @if($specificColor == 'dark'){@return    #212423;}//endif dark
+   @if($specificColor == 'light'){@return   #B8CCC7;}//endif light
+   @if($specificColor == 'black'){@return   #090A0A;}//endif black
+   @if($specificColor == 'white'){@return   #F7FFFC;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif AST
+ @if($palleteName == 'arr'){
+   @if($specificColor == 'primary'){@return #412A22;}//endif primary
+   @if($specificColor == 'accent'){@return  #F2E6B6;}//endif accent
+   @if($specificColor == 'dark'){@return    #33211B;}//endif dark
+   @if($specificColor == 'light'){@return   #CD856B;}//endif light
+   @if($specificColor == 'black'){@return   #0F0A08;}//endif black
+   @if($specificColor == 'white'){@return   #FFF0F5;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif ARR
+ @if($palleteName == 'aer'){
+   @if($specificColor == 'primary'){@return #06394A;}//endif primary
+   @if($specificColor == 'accent'){@return  #F8DC9B;}//endif accent
+   @if($specificColor == 'dark'){@return    #042733;}//endif dark
+   @if($specificColor == 'light'){@return   #77D1DD;}//endif light
+   @if($specificColor == 'black'){@return   #0B1314;}//endif black
+   @if($specificColor == 'white'){@return   #E7F9F7;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif AER
+ @if($palleteName == 'amt'){
+   @if($specificColor == 'primary'){@return #515D73;}//endif primary
+   @if($specificColor == 'accent'){@return  #BFB4AA;}//endif accent
+   @if($specificColor == 'dark'){@return    #192330;}//endif dark
+   @if($specificColor == 'light'){@return   #7ED4F5;}//endif light
+   @if($specificColor == 'black'){@return   #1C1C1C;}//endif black
+   @if($specificColor == 'white'){@return   #F2F2F2;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif AMT
+ @if($palleteName == 'avm'){
+   @if($specificColor == 'primary'){@return #333745;}//endif primary
+   @if($specificColor == 'accent'){@return  #F6F792;}//endif accent
+   @if($specificColor == 'dark'){@return    #1E2129;}//endif dark
+   @if($specificColor == 'light'){@return   #BFF0EE;}//endif light
+   @if($specificColor == 'black'){@return   #121717;}//endif black
+   @if($specificColor == 'white'){@return   #EFFFF3;}//endif white
+
+   @if($specificColor == 'shadow'){@return #727272;}//endif shadow
+
+ }//endif AMT
+
+}//end color function
+
+$primaryColor: processColors("primary",$theColorPallete);
+$lightPrimaryColor: processColors("light",$theColorPallete);
+$darkPrimaryColor: processColors("dark",$theColorPallete);
+$accentColor: processColors("accent",$theColorPallete);
+$shadowColor: processColors("shadow",$theColorPallete);
+$white: processColors("white",$theColorPallete);
+$black: processColors("black",$theColorPallete);
+
+@mixin lightWeight() {
+  font-weight: 300;
+}
+
+@mixin regularWeight() {
+  font-weight: 400;
+}
+
+@mixin heavyWeight() {
+  font-weight: 700;
+}
+
+
+@mixin material-shadow($exOffset, $whyOffset, $blur) {
+  -moz-box-shadow: $exOffset $whyOffset $blur $shadowColor;
+  -webkit-box-shadow: $exOffset $whyOffset $blur $shadowColor;
+  box-shadow: $exOffset $whyOffset $blur $shadowColor;
+}
+
+@mixin font-familyRegular() {
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
+}
+
+
+@mixin font-familyHeading() {
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+
+@mixin breathingEffect(){
+  -webkit-animation-name: breathingHover;
+  animation-name: breathingHover;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+
+
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: .0625em;
+  border: 0;
+  border-top: .0625em solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+
+
+
+//main.css are the styles that I retained from html5 boilerplate.
+//todo At the end of the main dev cycle get rid of the import and combine it all into one CSS file to cut down on HTTP requests.
+//these are the default styles, and are done from a mobile first stand point.
+//you can find any desktop styles in the media queries below.
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-familyHeading;
+    @include lightWeight;
+    color: $black;
+}
+
+body {
+    background-color: $lightPrimaryColor;
+
+}
+
+body,
+p {
+    @include regularWeight;
+    @include font-familyRegular;
+    color: $black;
+    word-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+}
+
+li p {
+    margin: 0 auto 0 auto;
+}
+
+ul li:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+ul {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+img,
+audio,
+canvas,
+video,
+iframe {
+    max-width: 100%;
+}
+
+object {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.courseIcon {
+  fill: $white;
+  height: 45px;
+  width: 45px;
+  float:left;
+  padding: 0.5rem 0 0 .5rem;
+
+}
+#courseNumber {
+    float: left;
+    width: 98%;
+    //border-top: .0625em solid $lightPrimaryColor;
+    color: $white;
+    margin: 0;
+    padding: .75rem 0 0 .5rem;
+    @include lightWeight;
+}
+
+#moduleNumber {
+    float: left;
+    width: 94%;
+    color: $white;
+    margin: 0 0 .8rem 1rem;
+    @include lightWeight;
+}
+
+.module {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.moduleHeaders {
+    width: 100%;
+
+    background-color: $primaryColor;
+    border-bottom: .0625em solid $darkPrimaryColor;
+    margin-bottom: .5rem;
+    @include material-shadow(0px,
+    .125em,
+    .0625em);
+}
+
+.slide .TOCs {
+    //hidden in mobile
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: .0625em;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: .0625em;
+}
+
+#theModuleHeader {
+    position: relative;
+
+}
+
+#moduleTOC-default {
+    /* default TOC style - button state - */
+    margin: 0 auto -50px 0;
+    width: 1vw;
+    border-radius: .1875em;
+    padding-top: 0;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    z-index: 2;
+    height: 2.8125em;
+    overflow: hidden;
+
+    -o-transition: height .25s ease-in-out, width .3s ease-in-out;
+    -webkit-transition: height .25s ease-in-out, width .3s ease-in-out;
+    -moz-transition: height .25s ease-in-out, width .3s ease-in-out;
+    transition: height .25s ease-in-out, width .3s ease-in-out;
+    background-color: $primaryColor;
+    color: $white;
+    border-bottom: .0625em solid $primaryColor;
+}
+#moduleTOC-default #theTocTarget {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: .1875em;
+    background: url('../img/TOC-default.png') 0px 100% no-repeat;
+    background-size: contain;
+    margin-left: -35px;
+    position: absolute;
+    top: .3rem;
+    //right:1vw;
+
+
+}
+.TOCs-open {
+    /* Open TOC Menu state */
+    z-index: 200!important;
+    height: 90vh!important;
+    width: 80%!important;
+    right:0!important;
+
+    background-color: $accentColor!important;
+
+    @include material-shadow(.15em, .15em, .15em)
+}
+.TOCs-open #theTocTarget{
+    background: url('../img/TOC-closeX.png') 0 50% no-repeat!important;
+    width: 2.75em!important;
+    height: 2.75em!important;
+    right:0!important;
+    top:1em;
+
+}
+.TOCs-open #theTocTarget::before{
+    content:"Table of Contents";
+    position:relative;
+    left:-13.5rem;
+    top:.5rem;
+    width:20rem;
+    color:$black;
+    display:inline-block;
+    text-align:left;
+    font-size: 1.5em;
+
+
+
+
+}
+
+#moduleTOC-default .slideNumber {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: .0625em;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: .0625em;
+}
+
+#moduleTOC-default li ul {
+    padding-left: 0;
+}
+
+//end li ul
+#moduleTOC-default li ul li {
+    list-style-type: none !important;
+}
+
+//end li ul li
+#moduleTOC-default li a {
+    text-decoration: none;
+    color: $white;
+}
+
+//end li a
+
+
+//end theTocTarget
+#moduleTOC-default #slide1TOC {
+    margin-top: 2.8125em;
+}
+
+//end slide1TOC
+#moduleTOC-default .TOClink:hover {
+    background-color: $primaryColor;
+}
+
+//end toclink
+.TOC-H1 {
+    @include lightWeight;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.TOC-H1 a {
+    column-rule: $darkPrimaryColor;
+}
+
+.TOC-H2 {
+    @include lightWeight;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H2 a {
+    padding-left: .9375em;
+}
+
+.TOC-H2::before {
+    content: "•";
+}
+
+.TOC-H3 {
+    @include lightWeight;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H3 a {
+    padding-left: .9375em;
+}
+
+.TOC-H3::before {
+    content: "•";
+}
+
+.TOC-H4 {
+    @include lightWeight;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H4 a {
+    padding-left: .9375em;
+}
+
+.TOC-H4::before {
+    content: "•";
+}
+
+.TOC-H5 {
+    @include lightWeight;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H5 a {
+    padding-left: .9375em;
+}
+
+.TOC-H5::before {
+    content: "•";
+}
+
+.TOC-H6 {
+    @include lightWeight;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H6 a {
+    padding-left: .9375em;
+}
+
+.TOC-H6::before {
+    content: "•";
+}
+
+.audioBox {
+    width: 95%;
+    position: fixed;
+    bottom: 6.25em;
+    margin-top: -28px;
+}
+
+.audioControls {
+    width: 60%;
+    margin: auto;
+}
+
+.audioButton {
+    position: fixed;
+    bottom: 2.9375em;
+    left: 45%;
+    height: 2.75em;
+    width: 2.75em;
+    background: url("../img/audioButton.svg") no-repeat;
+    background-color: $accentColor;
+    border-radius: 50%;
+    @include material-shadow(0,
+    .25em,
+    .25em);
+    -o-transition: width .5s ease-in-out, height .25s ease-in-out;
+    -webkit-transition: width .5s ease-in-out, height .25s ease-in-out;
+    -moz-transition: width .5s ease-in-out, height .25s ease-in-out;
+    transition: width .5s ease-in-out, height .25s ease-in-out;
+}
+
+#celLogo {
+    float: left;
+    -o-transition: width .5s, height .5s;
+    -webkit-transition: width .5s, height .5s;
+    -moz-transition: width .5s, height .5s;
+    transition: width .5s, height .5s;
+    height: 2.8125em;
+    width: 2.6em;
+    margin: .375em;
+}
+
+.helpBox {
+    background: $primaryColor url("../img/HELP-default.png") no-repeat;
+    /* background-position: 100% 0px,top; */
+    background-position: center;
+    color: $white;
+    position:absolute;
+    right:0;
+
+    text-align: left;
+    background-origin: content-box;
+    padding-bottom: .3rem;
+    background-size: 2.6rem;
+    height: 2.75em;
+    width: 2.75em;
+    overflow: hidden;
+    margin-top: .25em;
+    margin-right: .25em;
+}
+
+.helpBox h2 {
+    @include font-familyHeading
+}
+
+#helpBoxOpening {
+    -o-transition: width .5s ease-in-out, height .25s;
+    -webkit-transition: width .5s ease-in-out, height .25s;
+    -moz-transition: width .5s ease-in-out, height .25s;
+    transition: width .5s ease-in-out, height .25s;
+    z-index: 2;
+
+}
+
+#helpBoxClosing {
+    -o-transition: width .15s, height .5s ease-in-out;
+    -webkit-transition: width .15s, height .5s ease-in-out;
+    -moz-transition: width .15s, height .5s ease-in-out;
+    transition: width .15s, height .5s ease-in-out;
+    background-color: $accentColor;
+    z-index: 200;
+    width:38.2%
+}
+
+#helpButton {
+    width: 100%;
+    height: 2.45em;
+    color: $white;
+    font-weight: 700;
+    padding: .7em 0 0 .9em;
+    text-align: left;
+    float: right;
+}
+
+.helpContent {
+    width: 90%;
+    margin-left:5%;
+    text-align: left;
+    @include lightWeight;
+    @include font-familyRegular;
+}
+
+.slide {
+    width: 100%;
+    background-color: $lightPrimaryColor;
+}
+
+.activeSlide {
+    float: left;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: .625em;
+    background-color: $white;
+    border-radius: .1875em;
+    @include material-shadow(0,
+    .125em,
+    .125em)
+}
+
+.slideHeader {
+    /* This is the active slide style. */
+    width: 95%;
+    position: relative;
+
+    text-decoration: none;
+} //end slideheader
+.slideHeader h1 {
+    //this controls the default space between main headers.
+    width: 100%;
+    color: $darkPrimaryColor;
+    text-align: left;
+    padding: .625em 0;
+    margin: .1875em 0;
+    border-radius: .1875em;
+    position: relative;
+
+} //end h1
+.slideHeader h1 .slideNumber {
+    float: left;
+    width: 17%;
+    text-align: right;
+    padding-right: 3%;
+} //end slidenumber
+.slideHeader h1 .slideTitle {
+    float: right;
+    width: 75%;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 1%;
+    word-wrap: break-word;
+    border-left: 1px solid $black;
+}
+
+
+/* end .slideHeader h1 .slideTitle */
+
+.futureSlideHeader {
+    /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
+    width: 98%;
+    text-decoration: none;
+}
+
+.futureSlideHeader h1 {
+    font-size: 2.25em;
+    width: 95%;
+    color: $darkPrimaryColor;
+    text-align: center;
+    padding: .625em 0;
+    margin: .1875em auto;
+    border-radius: .1875em;
+    background-color: $white;
+    @include material-shadow(0,
+    .125em,
+    .125em);
+} //end h1
+.futureSlideHeader h1 .slideNumber {
+    float: left;
+    width: 17%;
+    text-align: right;
+    padding-right: 3%;
+} //end slidenumber
+.futureSlideHeader h1 .slideTitle {
+    float: right;
+    width: 75%;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 1%;
+    word-wrap: break-word;
+    border-left: 1px solid $black;
+}
+
+.futureSlideHeader h1:hover {
+    color: $white;
+    background-color: $accentColor
+} //end h1 hover
+//end slideheader
+.pastSlideHeader {
+    /* this is a slide that has been clicked on already and shows as being in the past in the mobile slide stack*/
+    width: 90%;
+    text-decoration: none;
+}
+
+.pastSlideHeader h1 {
+    font-size: 2.25em;
+    padding: 5px 10px;
+    margin: 1px auto;
+    text-align: center;
+    background-color: $darkPrimaryColor;
+} //end h1
+.pastSlideHeader h1:hover {
+    color: $white;
+    background-color: $accentColor;
+} //end pastSlideheader hover
+.pastSlideHeader h1 .slideNumber {
+    float: left;
+    width: 20%;
+    text-align: right;
+    color: $white;
+} //end slidenumber
+.pastSlideHeader h1 .slideTitle {
+    float: right;
+    width: 75%;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 1%;
+    word-wrap: break-word;
+    border-left: 1px solid $lightPrimaryColor;
+    color: $white;
+}
+
+.activeSlide .pastSlideHeader {
+    /* This is a slide that has been has been viewed once, and gone back to. I wanted this style to match the default style*/
+    width: 98%;
+    position: relative;
+    text-decoration: none;
+}
+
+.activeSlide .pastSlideHeader h1 {
+    //this controls the default space between main headers.
+    width: 95%;
+    color: $accentColor;
+    text-align: left;
+    padding: 10px 2.5%;
+    margin: 3px auto;
+    border-radius: 3px;
+    position: relative;
+    background-color: $white;
+} //end h1
+.activeSlide .pastSlideHeader h1 .slideNumber {
+    float: left;
+    width: 17%;
+    text-align: right;
+    padding-right: 3%;
+    color: $darkPrimaryColor;
+} //end slidenumber
+.activeSlide .pastSlideHeader h1 .slideTitle {
+    float: right;
+    width: 75%;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 1%;
+    word-wrap: break-word;
+    border-left: 1px solid $primaryColor;
+    box-shadow: none;
+    border-bottom: none;
+    color: $darkPrimaryColor;
+}
+
+.activeSlide .pastSlideHeader h1:hover {
+    color: $accentColor;
+}
+
+.slideContent {
+    padding-left: 1%;
+}
+
+.slide .slideContent {
+    //default mobile slide state...hidden
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.slide .slideFooter {
+    //default mobile slide state...hidden
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.activeSlide .activeSlideFooter {
+    //default mobile active slide state...visible
+    border: 0;
+    clip: inherit;
+    height: auto;
+    margin: 0 1em 0 0;
+    //overflow: auto;
+    padding: 0;
+    position: inherit;
+    width: 100%;
+}
+
+.activeSlide .activeSlideContent {
+    //default mobile active slide state...visible
+    border: 0;
+    clip: inherit;
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    padding: 2%;
+    position: inherit;
+    width: 90%;
+}
+
+#mainNavList {
+    //default mobile Nav state...hidden
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.nextButton {
+    position: fixed;
+    bottom: 44px;
+    right: 22px;
+    border-radius: 50%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background: url("../img/next.svg") no-repeat $lightPrimaryColor;
+    background-color: $accentColor;
+    background-size: contain;
+    background-position: 50% 50%;
+    @include material-shadow(0,
+    4px,
+    4px);
+    width: 44px;
+    height: 44px;
+}
+
+.prevButton {
+    position: fixed;
+    bottom: 44px;
+    left: 22px;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    background: url("../img/previous.svg") no-repeat $lightPrimaryColor;
+    background-color: $accentColor;
+    background-position: 50% 50%;
+    @include material-shadow(0,
+    4px,
+    4px);
+    width: 44px;
+    height: 44px;
+}
+
+.nextButton:hover {
+    background-color: $darkPrimaryColor;
+    transition: background-color .25s ease-in-out;
+}
+
+.prevButton:hover {
+    background-color: $darkPrimaryColor;
+    transition: background-color .25s ease-in-out;
+}
+
+.slideFooter {
+    width: 100%;
+    margin-bottom: 2.25em;
+}
+
+.activeSlideFooter {
+    width: 100%;
+    margin-bottom: 2.25em;
+}
+
+.navContainer {
+    //default mobile slide state...hidden
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.mainFooter {
+    width: 100%;
+    float: left;
+}
+#institutionalLogo{
+  width: 100%;
+
+
+}
+.figure{
+  position:relative;
+  width:100%;
+  margin:0;
+  padding:0;
+  z-index:100;
+}
+.figure img{
+  width:100%;
+  margin:0!important;
+  padding:0;
+  z-index:100;
+}
+.figure p{
+  font-style: italic;
+  text-align:center;
+  width:100%;
+  z-index:100;
+}
+.figure p::before{
+    content:"Figure: ";
+    font-weight: bold;
+    z-index:100;
+}
+.fullScreenButton{
+  width:30px!important;
+  height:30px!important;
+  position:absolute;
+  top:10px;
+  left:10px;
+  z-index:101;
+
+
+
+}
+
+.fullScreenButton:hover{
+    @include breathingEffect;
+}
+
+
+
+
+
+
+
+
+
+
+
+//========================
+/* =================> Column Layout styles *//* DO NOT TOUCH */
+/* DO NOT TOUCH */
+// at mobile widths I am taking the top margin off the a's and the bottom margin off the ending boxes.
+
+.cel-row {float: left;width: 99%;margin: 0 0 1.9rem 0;padding: 0;}
+.cel-100 {float: left;width: 100%;padding: 0;}
+.cel-divider {float: left;width: 100%;height: .125em;}
+
+
+/* 50/50 2 column split */
+.cel-50-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
+.cel-50-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
+.cel-50-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
+.cel-50-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color:  $lightPrimaryColor $white $white $white;}
+.cel-50-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor}
+.cel-50-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor}
+
+/* 75/25 2 column split */
+.cel-7525-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-7525-b {float: right;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-7525-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white  $lightPrimaryColor $white;}
+.cel-7525-b-rule {float: right;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
+.cel-7525-a-box {float: left; width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-7525-b-box {float: right;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+
+/* 25/75 2 column split */
+.cel-2575-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-2575-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-2575-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
+.cel-2575-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
+.cel-2575-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-2575-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+
+/* 60/40 2 column split */
+.cel-60-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-40-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-60-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
+.cel-40-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
+.cel-60-a-box {float: left;width: 98%;padding: 0 .5%;border: 1px solid $lightPrimaryColor;}
+.cel-40-b-box {float: left;width: 98%;padding: 0 .5%;border: 1px solid $lightPrimaryColor;}
+
+/* 40/60 2 column split */
+.cel-40-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-60-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-40-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
+.cel-60-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
+.cel-40-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-60-b-box {float: right;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+
+
+/* 30/30/30 3 column split */
+.cel-30-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-30-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-30-c {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-30-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
+.cel-30-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white;}
+.cel-30-c-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
+.cel-30-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-30-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-30-c-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+
+/* 25/25/25/25 4 column split */
+.cel-25-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
+.cel-25-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
+.cel-25-c {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-25-d {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
+.cel-25-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
+.cel-25-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white;}
+.cel-25-c-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white;}
+.cel-25-d-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white  ;}
+.cel-25-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-25-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-25-c-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+.cel-25-d-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+
+/* ========================typography */
+html {font-size: 16px;}//1 rem = 16px;
+h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
+h2 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
+h3 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
+h4 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
+h5 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
+h6 {font-size: .64rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 14pxs */
+p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
+
+//========================================================================(mobile ^) Media Queries (desktop v) =====================================
+// =============================================================
+// =============================================================
+// =============================================================
+// =============================================================
+// =============================================================
+// =============================================================
+
+@media only screen and (min-width: 35em) {/* 560 pixel width */
+
+
+
+  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H1-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
+
+  .cel-50-a img:first-child {margin-top: 1.4rem;}
+  .cel-50-b img:first-child {margin-top: 1.4rem;}
+  .cel-50-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-a h2:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
+  .cel-50-b h2:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
+  .cel-50-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-50-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-50-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-50-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  .cel-7525-a img:first-child {margin-top: 1.4rem;}
+  .cel-7525-b img:first-child {margin-top: 1.4rem;}
+  .cel-7525-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-7525-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-7525-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-7525-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-7525-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-7525-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  .cel-2575-a img:first-child {margin-top: 1.4rem;}
+  .cel-2575-b img:first-child {margin-top: 1.4rem;}
+  .cel-2575-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-2575-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-2575-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-2575-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-2575-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-2575-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  .cel-40-a img:first-child {margin-top: 1.4rem;}
+  .cel-60-b img:first-child {margin-top: 1.4rem;}
+  .cel-40-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-60-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-40-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-60-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-40-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-60-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  .cel-60-a img:first-child {margin-top: 1.4rem;}
+  .cel-40-b img:first-child {margin-top: 1.4rem;}
+  .cel-60-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-40-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-60-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-40-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-60-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-40-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  .cel-30-a img:first-child {margin-top: 1.4rem;}
+  .cel-30-b img:first-child {margin-top: 1.4rem;}
+  .cel-30-c img:first-child {margin-top: 1.4rem;}
+  .cel-30-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-c ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-c ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-c h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-30-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-30-c h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-30-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-30-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-30-c h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-30-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-30-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-30-c h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  .cel-25-a img:first-child {margin-top: 1.4rem;}
+  .cel-25-b img:first-child {margin-top: 1.4rem;}
+  .cel-25-c img:first-child {margin-top: 1.4rem;}
+  .cel-25-d img:first-child {margin-top: 1.4rem;}
+  .cel-25-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-c ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-d ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-c ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-d ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-c h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-d h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-c h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-d h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-c h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-d h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-c h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-d h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+  /* ========================typography */
+  html {font-size: 16px;}
+  //1 rem = 16px;
+  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
+  h2 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 38pxs */
+  h3 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 21pxs */
+  h4 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 18pxs */
+  h5 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 16pxs */
+  h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
+  p {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding: 0;}/* 16pxs */
+  body {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;}/* 16pxs */
+
+  /* =================> Column Layout styles *//* DO NOT TOUCH */
+  /* DO NOT TOUCH */
+  .cel-row {float: left;width: 99%;margin: 0 0 1.9rem 0;padding: 0;}
+  .cel-100 {float: left;width: 100%;padding: 0;}
+  .cel-divider {float: left;width: 100%;height: .125em;}
+
+
+  /* 50/50 2 column split */
+  .cel-50-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white}
+  .cel-50-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
+  .cel-50-a-rule {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-50-b-rule {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-50-a-box {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
+  .cel-50-b-box {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
+
+  /* 75/25 2 column split */
+  .cel-7525-a {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $white;}
+  .cel-7525-b {float: right;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $white;}
+  .cel-7525-a-rule {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-7525-b-rule {float: right;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-7525-a-box {float: left; width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-7525-b-box {float: right;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+  /* 25/75 2 column split */
+  .cel-2575-a {float: left;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-2575-b {float: left;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-2575-a-rule {float: left;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-2575-b-rule {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-2575-a-box {float: left;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-2575-b-box {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+  /* 60/40 2 column split */
+  .cel-60-a {float: left;width: 61%;padding: 0 1% 0 0;border: .0625em solid $white;}
+  .cel-40-b {float: left;width: 35%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-60-a-rule {float: left;width: 61%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-40-b-rule {float: left;width: 35%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-60-a-box {float: left;width: 61%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-40-b-box {float: left;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+  /* 40/60 2 column split */
+  .cel-40-a {float: left;width: 35%;padding: 0 1% 0 0;border: .0625em solid $white;}
+  .cel-60-b {float: left;width: 61%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-40-a-rule {float: left;width: 35%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-60-b-rule {float: left;width: 61%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-40-a-box {float: left;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-60-b-box {float: right;width: 61%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+
+  /* 30/30/30 3 column split */
+  .cel-30-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white;margin-bottom: .4rem;}
+  .cel-30-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white;margin-bottom: .4rem;}
+  .cel-30-c {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
+  .cel-30-a-rule {float: left;width: 48%;padding: 0 1% 0 0;margin-bottom: .4rem;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white ;}
+  .cel-30-b-rule {float: left;width: 48%;padding: 0 0 0 1%;margin-bottom: .4rem;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-30-c-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white;}
+  .cel-30-a-box {float: left;width: 48%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;margin-bottom: .4rem;}
+  .cel-30-b-box {float: left;width: 48%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;margin-bottom: .4rem;}
+  .cel-30-c-box {float: left;width: 97%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+  /* 25/25/25/25 4 column split */
+  .cel-25-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white}
+  .cel-25-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
+  .cel-25-c {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
+  .cel-25-d {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
+  .cel-25-a-rule {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white ;}
+  .cel-25-b-rule {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor ;}
+  .cel-25-c-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white ;}
+  .cel-25-d-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white  ;}
+  .cel-25-a-box {float: left;width: 48%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-25-b-box {float: left;width: 48%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-25-c-box {float: left;width: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-25-d-box {float: left;width: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+
+  .activeSlide {
+    //This makes sure that the header buttons works.
+    margin-top: 3.125em;
+    min-height: 100%;
+    float: none;
+}
+
+.activeSlide .activeSlideContent {
+    padding: 1rem;
+}
+
+.activeSlide .activeSlideFooter {
+    margin: 0 1em 0 0;
+    padding: 0;
+    position: fixed;
+    width: 12.5em;
+    height: 3.125em;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.slide .slideFooter {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 12.5em;
+    height: 3.125em;
+    bottom: 0;
+    right: 0;
+}
+
+.audioBox {
+    position: static;
+    width: 9.375em;
+}
+
+.audioButton {
+    position: absolute;
+    left: 40.5%;
+    top: 0;
+}
+
+.nextButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    margin: 0;
+}
+
+.prevButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    margin: 0;
+}
+.courseIcon {
+  fill: $white;
+  height: 100px;
+  width: 100px;
+  float:left;
+  padding: .75rem 0 0 .5rem;
+
+}
+#courseNumber {
+    position:relative;
+    margin-top: 1rem;
+    width:60vw;
+    @include heavyWeight;
+    font-size: 3em;
+    font-weight: 300;
+    border: 0;
+    padding: 0 0 0 .75rem;
+}
+
+#moduleNumber {
+
+    margin-bottom: 1rem;
+    position:relative;
+    width:60vw;
+
+}
+#moduleTOC-default {
+    /* default TOC style - button state - */
+
+
+    right: 10%;
+
+
+}
+.slideHeader {
+    width: 98%;
+    text-decoration: none;
+} //end slideheader
+.slideHeader h1 {
+    //this controls the default space between main headers.
+    width: 100%;
+    color: $darkPrimaryColor;
+    text-align: left;
+    padding: 3rem 0;
+    margin: .1875em 0;
+    float: left;
+    @include regularWeight;
+    border-radius: .1875em;
+} //end h1
+.futureSlideHeader {
+    width: 98%;
+    text-decoration: none;
+} //end slideheader
+.futureSlideHeader h1 {
+    //this controls the default space between main headers.
+    width: 100%;
+    color: $darkPrimaryColor;
+    text-align: left;
+    padding: .625em 0;
+    margin: .1875em auto;
+    border-bottom: .0625em solid $darkPrimaryColor;
+    border-radius: .1875em;
+} //end h1
+.activeSlide .pastSlideHeader {
+    width: 98%;
+    text-decoration: none;
+}
+
+//end pastSlideheader
+.activeSlide .pastSlideHeader h1 {
+    //this controls the default space between main headers.
+    background-color: transparent;
+    width: 100%;
+    color: $darkPrimaryColor;
+    text-align: left;
+    padding: 3rem 0;
+    margin: .1875em 0;
+    float: left;
+    @include regularWeight;
+    font-size: 3.157rem;
+    border-radius: .1875em;
+} //end h1
+.activeAudioBox {
+    width: 100%;
+}
+
+
+/* for now...all the non-mobile styles */
+
+.slide {
+    //default desktop slide state...hidden
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: .0625em;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: .0625em;
+}
+
+.slide .slideContent {
+    //default desktop slideContent state...visible yet hidden if slide is hidden
+    border: 0;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    position: inherit;
+    width: 100%;
+}
+
+.slide .slideFooter {
+    //default desktop slideContent state...visible yet hidden if slide is hidden
+    border: 0;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    position: inherit;
+    width: 100%;
+
+}
+
+.mainFooter {
+    height: 4.6875em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    #background-color: red;
+}
+
+#mainNav {
+    //the container
+    height: 5vh;
+    width: 90vw;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+#mainNavList {
+    //the list
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 4.375em;
+    overflow: visible;
+}
+
+
+/* The hover effect for the nav elements. */
+@-webkit-keyframes breathingHover {
+    to {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+
+@keyframes breathingHover {
+    to {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+
+
+.navElement {
+    background: url(../img/sprites.png) 50% 0px no-repeat;
+    display: inline-block;
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    padding-top: .75em;
+
+
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.activeNavElement {
+
+    background: url(../img/sprites.png) 50% -41px no-repeat;
+    display: inline-block;
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    padding-top: .75em!important;
+
+
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pastNavElement {
+    background: url(../img/sprites.png) 50% -135px no-repeat;
+    display: inline-block;
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    padding-top: .75em!important;
+    color:#FFF;
+
+
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navElement:hover,
+.activeNavElement:hover,
+.pastNavElement:hover,
+.navElement:focus,
+.activeNavElement:focus,
+.pastNavElement:focus,
+.navElement:active,
+.activeNavElement:active,
+.pastNavElement:active
+{
+    background: url(../img/sprites.png) 50% -88px no-repeat;
+    display: inline-block;
+    width: 45px;
+    height: 35px;
+    color: #FFF;
+
+    -webkit-animation-name: breathingHover;
+    animation-name: breathingHover;
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.helpBox {
+    height: 2.5em;
+    width: 2.5em;
+    overflow: hidden;
+    margin: .375em;
+}
+
+#helpButton {
+    padding: .7em .9em 0 0;
+    text-align: right;
+    float: right;
+}
+
+#celLogo {
+    float: left;
+    margin: 0 0 0 2.25%;
+    padding: 0;
+}
+
+#institutionalLogo{
+  width: 300px;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+
+}
+
+
+} /* end 35em media query */
+@media only screen and (min-width: 41.25em){/* 660 pixel width */
+    #moduleTOC-default {
+        /* default TOC style - button state - */
+
+
+        right: 7%;
+
+
+    }
+
+
+}/* end 41.25 em media query */
+
+@media only screen and (min-width: 49.5em) {/* 792 pixel width */
+
+  /* 30/30/30 3 column split */
+  .cel-30-a {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid $white;}
+  .cel-30-b {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $white;}
+  .cel-30-c {float: left;width: 32%;padding: 0 0 0 1%;border: 1px solid $white;}
+
+  .cel-30-a-rule {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-30-b-rule {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid;border-color: $white $lightPrimaryColor;}
+  .cel-30-c-rule {float: left;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-30-a-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
+  .cel-30-b-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
+  .cel-30-c-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
+
+  #moduleTOC-default {
+      /* default TOC style - button state - */
+
+
+      right: 6%;
+
+
+  }
+
+
+}//end 792
+
+@media only screen and (min-width: 59.375em) {/* 950 pixels width */
+
+  /* 25/25/25/25 4 column split */
+  .cel-25-a {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
+  .cel-25-b {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
+  .cel-25-c {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
+  .cel-25-d {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
+  .cel-25-a-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
+  .cel-25-b-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor;}
+  .cel-25-c-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor;}
+  .cel-25-d-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-25-a-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
+  .cel-25-b-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
+  .cel-25-c-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
+  .cel-25-d-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
+
+}//end 840
+
+@media only screen and (min-width: 68.1875em) {
+  //This stops the content area from growing any larger than 1091 pixels.
+
+  .activeSlide {
+    margin-bottom: .625em;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    display: block;
+    width: 64rem;
+    float: none;
+}
+
+#mainNav {
+    //since this is supposed to follow the bottom of the content area I made it the same width.
+    height: 5vh;
+    width: 64rem;
+}
+
+
+
+}//end 1091px media query
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}//end print

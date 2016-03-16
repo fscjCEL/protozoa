@@ -1,0 +1,25 @@
+<svg id="d2dda9ce-227a-48a3-8b06-b662188de873" data-name="open copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+  <defs>
+    <style>
+      .\31 e009dcc-da13-42f2-833a-3615703ebda5 {
+        fill: #fff;
+      }
+
+      .\34 5a3b4ab-d029-43a9-a75f-89756db5c5d8, .b4b57d1b-7312-439e-bc8e-686017cbbcfe {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .\34 5a3b4ab-d029-43a9-a75f-89756db5c5d8 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <title>figureClose</title>
+  <circle class="1e009dcc-da13-42f2-833a-3615703ebda5" cx="124.95" cy="124.95" r="122.96"/>
+  <circle class="b4b57d1b-7312-439e-bc8e-686017cbbcfe" cx="125.16" cy="125.16" r="113.41"/>
+  <line class="45a3b4ab-d029-43a9-a75f-89756db5c5d8" x1="66.72" y1="66.25" x2="184.75" y2="184.28"/>
+  <line class="45a3b4ab-d029-43a9-a75f-89756db5c5d8" x1="66.72" y1="184.28" x2="184.75" y2="66.25"/>
+</svg>
