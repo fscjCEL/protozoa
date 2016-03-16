@@ -1748,7 +1748,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 
 .navElement {
-    background: url(../img/sprites.png) 50% 0px no-repeat;
+    background: url(../img/nav-sprites.png) 50% 0px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -1765,7 +1765,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 .activeNavElement {
 
-    background: url(../img/sprites.png) 50% -41px no-repeat;
+    background: url(../img/nav-sprites.png) 50% -41px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -1781,7 +1781,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 }
 
 .pastNavElement {
-    background: url(../img/sprites.png) 50% -135px no-repeat;
+    background: url(../img/nav-sprites.png) 50% -135px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -1807,7 +1807,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 .activeNavElement:active,
 .pastNavElement:active
 {
-    background: url(../img/sprites.png) 50% -88px no-repeat;
+    background: url(../img/nav-sprites.png) 50% -88px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
