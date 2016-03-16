@@ -2244,7 +2244,7 @@ p {
       -webkit-transform: scale(1.3);
       transform: scale(1.3); } }
   .navElement {
-    background: url(../img/sprites.png) 50% 0px no-repeat;
+    background: url(../img/nav-sprites.png) 50% 0px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -2257,7 +2257,7 @@ p {
     -moz-osx-font-smoothing: grayscale; }
 
   .activeNavElement {
-    background: url(../img/sprites.png) 50% -41px no-repeat;
+    background: url(../img/nav-sprites.png) 50% -41px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -2270,7 +2270,7 @@ p {
     -moz-osx-font-smoothing: grayscale; }
 
   .pastNavElement {
-    background: url(../img/sprites.png) 50% -135px no-repeat;
+    background: url(../img/nav-sprites.png) 50% -135px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -2292,7 +2292,7 @@ p {
   .navElement:active,
   .activeNavElement:active,
   .pastNavElement:active {
-    background: url(../img/sprites.png) 50% -88px no-repeat;
+    background: url(../img/nav-sprites.png) 50% -88px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
