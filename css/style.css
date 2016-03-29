@@ -453,6 +453,12 @@ object {
   font-weight: 300;
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
 
+.helpContent p {
+  margin-left: 5%; }
+
+.helpContent h3 {
+  font-weight: 300; }
+
 .slide {
   width: 100%;
   background-color: #B8CCC7; }

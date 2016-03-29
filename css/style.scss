@@ -619,6 +619,12 @@ object {
     @include lightWeight;
     @include font-familyRegular;
 }
+.helpContent p{
+  margin-left: 5%;
+}
+.helpContent h3{
+  font-weight: 300;
+}
 
 .slide {
     width: 100%;
