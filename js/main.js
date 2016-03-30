@@ -464,22 +464,12 @@ var methods = {
             theHelpBoxElement = document.getElementById("helpBoxClosing");
 
             theHelpBoxElement.id = "helpBoxOpening";
-            theHelpBoxElement.style.width = "2.75em";
-            theHelpBoxElement.style.height = "2.75em";
-            theHelpBoxElement.style.backgroundImage = "url('img/HELP-default.png')";
-            theHelpBoxElement.style.backgroundPosition = "100% 0px,top";
-            theHelpBoxElement.style.backgroundSize = "2.6rem";
-            theHelpBoxElement.style.marginTop = ".25em";
+           
         }else{
             //closed, and needs to be opened using the following steps
             theHelpBoxElement = document.getElementById("helpBoxOpening");
             theHelpBoxElement.id = "helpBoxClosing";
-            theHelpBoxElement.style.width = "50vw";
-            theHelpBoxElement.style.height = "90vh";//todo this could be taken care of dynamically.
-            theHelpBoxElement.style.backgroundImage = "url('img/HELP-closeX.png')";
-            theHelpBoxElement.style.backgroundPosition = "100% 0px,top";
-            theHelpBoxElement.style.backgroundSize = "2.6rem";
-            theHelpBoxElement.style.marginTop = ".25em";
+           
         }//end if
 
 

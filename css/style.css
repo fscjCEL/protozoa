@@ -418,15 +418,18 @@ object {
   margin-top: .25em;
   margin-right: .25em; }
 
-.helpBox h2 {
-  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
-
 #helpBoxOpening {
   -o-transition: width .5s ease-in-out, height .25s;
   -webkit-transition: width .5s ease-in-out, height .25s;
   -moz-transition: width .5s ease-in-out, height .25s;
   transition: width .5s ease-in-out, height .25s;
-  z-index: 2; }
+  z-index: 2;
+  width: 2.75em;
+  height: 2.75em;
+  background-image: url(../img/HELP-default.png);
+  background-position: 100% 0px, top;
+  background-size: 2.6rem;
+  margin-top: .25em; }
 
 #helpBoxClosing {
   -o-transition: width .15s, height .5s ease-in-out;
@@ -435,7 +438,13 @@ object {
   transition: width .15s, height .5s ease-in-out;
   background-color: #877551;
   z-index: 200;
-  width: 38.2%; }
+  /* width:38.2% */
+  width: 50vw;
+  height: 90vh;
+  background-image: url(../img/HELP-closeX.png);
+  background-position: 100% 0px,top;
+  background-size: 2.6rem;
+  margin-top: .25em; }
 
 #helpButton {
   width: 100%;
@@ -449,7 +458,7 @@ object {
 .helpContent {
   width: 90%;
   margin-left: 5%;
-  text-align: left;
+  text-align: right;
   font-weight: 300;
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
 
