@@ -572,16 +572,14 @@ object {
     background-origin: content-box;
     padding-bottom: .3rem;
     background-size: 2.6rem;
-    height: 2.75em;
-    width: 2.75em;
-    overflow: hidden;
+    overflow: scroll;
     margin-top: .25em;
     margin-right: .25em;
 }
 
 
 
-#helpBoxOpening {
+#helpboxClosedState {
     -o-transition: width .5s ease-in-out, height .25s;
     -webkit-transition: width .5s ease-in-out, height .25s;
     -moz-transition: width .5s ease-in-out, height .25s;
@@ -597,14 +595,14 @@ object {
 
 }
 
-#helpBoxClosing {
+#helpboxOpenState {
     -o-transition: width .15s, height .5s ease-in-out;
     -webkit-transition: width .15s, height .5s ease-in-out;
     -moz-transition: width .15s, height .5s ease-in-out;
     transition: width .15s, height .5s ease-in-out;
     background-color: $accentColor;
-    z-index: 200;
-    /* width:38.2% */
+    z-index: 200;/* this pops it up above everything*/
+
 
     width : 50vw;
     height : 90vh;

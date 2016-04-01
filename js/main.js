@@ -458,20 +458,15 @@ var methods = {
         var theHelpBoxElement,theHelpButtonParent;
 
          theHelpButtonParent = document.getElementById("helpButton").parentNode;
-
-        if (theHelpButtonParent.id === "helpBoxClosing") {
+        if (theHelpButtonParent.id === "helpboxOpenState") {
             //opened, and needs to be closed using the following steps
-            theHelpBoxElement = document.getElementById("helpBoxClosing");
-
-            theHelpBoxElement.id = "helpBoxOpening";
-           
+            theHelpBoxElement = document.getElementById("helpboxOpenState");
+            theHelpBoxElement.id = "helpboxClosedState";
         }else{
             //closed, and needs to be opened using the following steps
-            theHelpBoxElement = document.getElementById("helpBoxOpening");
-            theHelpBoxElement.id = "helpBoxClosing";
-           
+            theHelpBoxElement = document.getElementById("helpboxClosedState");
+            theHelpBoxElement.id = "helpboxOpenState";
         }//end if
-
 
     },//end helpButtonHandler method
     changeTheActualSlide: function (destination, destinationNAV, navID, slideID) {
