@@ -596,12 +596,13 @@ object {
 }
 
 #helpboxOpenState {
+    // This is the help box that is sitting open.
     -o-transition: width .15s, height .5s ease-in-out;
     -webkit-transition: width .15s, height .5s ease-in-out;
     -moz-transition: width .15s, height .5s ease-in-out;
     transition: width .15s, height .5s ease-in-out;
     background-color: $accentColor;
-    z-index: 200;/* this pops it up above everything*/
+    z-index: 200;
 
 
     width : 50vw;
