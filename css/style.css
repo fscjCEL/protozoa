@@ -403,37 +403,32 @@ object {
 
 .helpBox {
   background: #2F343B url("../img/HELP-default.png") no-repeat;
-  /* background-position: 100% 0px,top; */
   background-position: center;
+  background-size: 2.6rem;
+  background-origin: content-box;
   color: #F7FFFC;
   position: absolute;
   right: 0;
   text-align: left;
-  background-origin: content-box;
   padding-bottom: .3rem;
-  background-size: 2.6rem;
-  overflow: scroll;
+  overflow: hidden;
   margin-top: .25em;
-  margin-right: .25em; }
+  margin-right: .25em;
+  transition-property: height, width;
+  transition-duration: .25s, .5s; }
 
 #helpboxClosedState {
-  -o-transition: width .5s ease-in-out, height .25s;
-  -webkit-transition: width .5s ease-in-out, height .25s;
-  -moz-transition: width .5s ease-in-out, height .25s;
-  transition: width .5s ease-in-out, height .25s;
-  z-index: 2;
   width: 2.75em;
   height: 2.75em;
+  z-index: 2;
+  transition-timing-function: ease-in-out;
   background-image: url(../img/HELP-default.png);
   background-position: 100% 0px, top;
   background-size: 2.6rem;
   margin-top: .25em; }
 
 #helpboxOpenState {
-  -o-transition: width .15s, height .5s ease-in-out;
-  -webkit-transition: width .15s, height .5s ease-in-out;
-  -moz-transition: width .15s, height .5s ease-in-out;
-  transition: width .15s, height .5s ease-in-out;
+  animation-timing-function: ease-in-out;
   background-color: #877551;
   z-index: 200;
   width: 50vw;
