@@ -265,13 +265,15 @@ object {
   /* This renders the Table of Contents Menu Title as a CSS insertion */
   content: "Table of Contents";
   position: relative;
-  left: 1.5em;
+  left: 1em;
   top: .5rem;
   color: #090A0A;
   display: inline-block;
   text-align: left;
-  font-size: 1.5em;
-  border-bottom: 1px solid #212423; }
+  font-size: 2em;
+  border-bottom: 1px solid #212423;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-weight: 300; }
 
 /* All of these styles need to be changed to the className Once implemented.  */
 #tocOpenState .slideNumber {
@@ -306,6 +308,7 @@ object {
 
 .TOC-H1 {
   font-weight: 300;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 1.5; }
 
@@ -314,6 +317,7 @@ object {
 
 .TOC-H2 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -325,6 +329,7 @@ object {
 
 .TOC-H3 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -336,6 +341,7 @@ object {
 
 .TOC-H4 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -347,6 +353,7 @@ object {
 
 .TOC-H5 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -358,6 +365,7 @@ object {
 
 .TOC-H6 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 

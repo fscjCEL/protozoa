@@ -393,14 +393,16 @@ object {
     /* This renders the Table of Contents Menu Title as a CSS insertion */
     content:"Table of Contents";
     position:relative;
-    left:1.5em;
+    left:1em;
     top:.5rem;
 
     color:$black;
     display:inline-block;
     text-align:left;
-    font-size: 1.5em;
+    font-size: 2em;
     border-bottom: 1px solid $darkPrimaryColor;
+    @include font-familyHeading;
+    @include lightWeight;
 
 
 
@@ -428,6 +430,7 @@ object {
 #tocOpenState li ul li {
     list-style-type: none !important;
     color: $darkPrimaryColor;
+
 }
 
 //end li ul li
@@ -454,6 +457,7 @@ object {
 //end toclink
 .TOC-H1 {
     @include lightWeight;
+    @include font-familyHeading;
     font-size: 1.25rem;
     line-height: 1.5;
 }
@@ -464,6 +468,7 @@ object {
 
 .TOC-H2 {
     @include lightWeight;
+    @include font-familyRegular;
     font-size: .8rem;
     line-height: 1.3;
 }
@@ -478,6 +483,7 @@ object {
 
 .TOC-H3 {
     @include lightWeight;
+    @include font-familyRegular;
     font-size: .8rem;
     line-height: 1.3;
 }
@@ -492,6 +498,7 @@ object {
 
 .TOC-H4 {
     @include lightWeight;
+    @include font-familyRegular;
     font-size: .8rem;
     line-height: 1.3;
 }
@@ -506,6 +513,7 @@ object {
 
 .TOC-H5 {
     @include lightWeight;
+    @include font-familyRegular;
     font-size: .8rem;
     line-height: 1.3;
 }
@@ -520,6 +528,7 @@ object {
 
 .TOC-H6 {
     @include lightWeight;
+    @include font-familyRegular;
     font-size: .8rem;
     line-height: 1.3;
 }
