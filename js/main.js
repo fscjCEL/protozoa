@@ -119,16 +119,21 @@ var methods = {
 
     },//end populateTheNavMenu
     clickScopeTOC: function () {
-        var theIDtoSend, theTOCParentClassname;
-        theTOCParentClassname = this.parentNode.className;
-        if (theTOCParentClassname === "TOCs") {
+        var theIDtoSend, theTOCparentID;
+        theTOCparentID = this.parentNode.id;
+        //alert(theTOCparentID);
+        if (theTOCparentID === "tocClosedState") {
             //This TOC is CLOSED and needs to be OPENED.
+
             theIDtoSend = this.id;//(theTocTarget)
+
             methods.openTOC(theIDtoSend);
         }//end if
-        if (theTOCParentClassname === "TOCs-open") {
+        if (theTOCparentID === "tocOpenState") {
             //This TOC is OPEN and needs to be CLOSED.
+
             theIDtoSend = this.id;//(theTocTarget)
+
             methods.closeTOC(theIDtoSend);
         }//end if
     },//end scopeTOC function
@@ -137,27 +142,18 @@ var methods = {
         //and does nothing other than making sure the TOC is closed before proceeding to the next slide.
         //The different contextual scope of the input made this necessarily separate.
         //todo I need to set the top margin of the .activeSlide to 50px when closing this.
-        var theTOCelement = document.getElementById(incomingSlideID).parentNode;
-        var theActiveSlideElements = document.getElementsByClassName("activeSlide");
-        var actualActiveSlide = theActiveSlideElements[0];
-        if (theTOCelement.style.height !== "45px") {
-            theTOCelement.style.height = "45px";
-        }//end if
-        actualActiveSlide.style.marginTop = "50px";
-        theTOCelement.className = "TOCs";
+        var theTOCelement = document.getElementById(incomingSlideID).parentNode.id;//so theTocTarget's parentNode
+        document.getElementById(theTOCelement).id = "tocClosedState";
+
+
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
+        //console.log("Yes I made it");
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
         //add up all the elements in the TOC and add the heights into one big total variable
-        var theTotal = 0;
-        for (var ii = 0; ii < theTOCelement.children.length; ii++) {
-            var theTocElementIamWorkingON = theTOCelement.children[ii];
-            var theCurrentHeight = Number(theTocElementIamWorkingON.offsetHeight);
-            theTotal = theTotal + theCurrentHeight;
-        }//end for
 
-        theTotal = theTotal + 45;//giving the box a bit of padding
-        theTOCelement.className = "TOCs-open";
+
+        theTOCelement.id = "tocOpenState";
 
     },//end function
     traverse: function (task, node) {
@@ -181,13 +177,13 @@ var methods = {
 
         function addTheIDToTheTOCElement() {
             var grabMyChild;
-            if (document.getElementById("moduleTOC-default")) {
-                grabMyChild = document.getElementById("moduleTOC-default");
+            if (document.getElementById("tocClosedState")) {
+                grabMyChild = document.getElementById("tocClosedState");
             }
-            if (document.getElementById("moduleTOC-open")) {
-                grabMyChild = document.getElementById("moduleTOC-open");
+            if (document.getElementById("tocOpenState")) {
+                grabMyChild = document.getElementById("tocOpenState");
             }
-            //grabMyChild = document.getElementById("moduleTOC-open");//grab the TOC element
+            //grabMyChild = document.getElementById("tocOpenState");//grab the TOC element
             grabMyChild.children[0].id = "theTocTarget";//set the ID of the one and only li, to set it up as a landing target for other LIs
             grabMyChild.children[0].className = "TOCtargets";//apply the classname to the same li as above.
             grabMyChild.children[0].style.listStyleType = "none";
@@ -217,11 +213,11 @@ var methods = {
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
                 var theTOCParentMainList;
-                if (document.getElementById("moduleTOC-default")) {
-                    theTOCParentMainList = document.getElementById("moduleTOC-default");
+                if (document.getElementById("tocClosedState")) {
+                    theTOCParentMainList = document.getElementById("tocClosedState");
                 }
-                if (document.getElementById("moduleTOC-open")) {
-                    theTOCParentMainList = document.getElementById("moduleTOC-open");
+                if (document.getElementById("tocOpenState")) {
+                    theTOCParentMainList = document.getElementById("tocOpenState");
                 }
                 // create the child list that will eventually hold actual list items.
                 //var theSlideTOCList = document.createElement("ul");
@@ -474,7 +470,7 @@ var methods = {
     changeTheActualSlide: function (destination, destinationNAV, navID, slideID) {
         //change the active slide to pastSlide this needs to occur on the nav and header elements.
         //initialize
-        var theActiveSlideElement, theSlideCompareElementID, theOneIAmWorkingON, destinationsChildClassname, theChildsClassname, theActiveSlideHeaderElement, theDestinationSlideElement, INeedTheSlideNumber, allTheAudioElements, theIDforTOC, theTOCParentClassname, evaluateThisSlideClassname;
+        var theActiveSlideElement, theSlideCompareElementID, theOneIAmWorkingON, destinationsChildClassname, theChildsClassname, theActiveSlideHeaderElement, theDestinationSlideElement, INeedTheSlideNumber, allTheAudioElements, theIDforTOC, theTOCParentalID, evaluateThisSlideClassname;
         //todo alert("destination:"+destination+"\n destinationNAV:"+destinationNAV+"\n navID:"+navID+"\n slideID:"+slideID);
 
         //this is to hide the header info past slide one, but I need to retain the header size to make up for the buttons located within.
@@ -498,8 +494,8 @@ var methods = {
         //end if
         //TOC should close
         theIDforTOC = "theTocTarget";
-        theTOCParentClassname = document.getElementById(theIDforTOC).parentNode.className;
-        if (theTOCParentClassname === "TOCs-open") {
+        theTOCParentalID = document.getElementById(theIDforTOC).parentNode.id;
+        if (theTOCParentalID === "tocOpenState") {
             //This TOC is OPEN and needs to be CLOSED.
             methods.closeTOC(theIDforTOC);
         }//end if

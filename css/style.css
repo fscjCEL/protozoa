@@ -203,42 +203,44 @@ object {
   -webkit-box-shadow: 0px 0.125em 0.0625em #727272;
   box-shadow: 0px 0.125em 0.0625em #727272; }
 
-.slide .TOCs {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: .0625em;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: .0625em; }
-
 #theModuleHeader {
   position: relative; }
 
-#moduleTOC-default {
-  /* default TOC style - button state - */
-  /* These styles should be in the class not the ID. */
+.TOCs {
   margin: 0 auto -50px 0;
-  width: 1vw;
   border-radius: .1875em;
   padding-top: 0;
   position: absolute;
   top: 0;
   right: 15%;
-  z-index: 2;
-  height: 2.8125em;
-  overflow: hidden;
-  /* change this to the long hand version so you have more control how this opens and closes.*/
-  -o-transition: height .25s ease-in-out, width .3s ease-in-out;
-  -webkit-transition: height .25s ease-in-out, width .3s ease-in-out;
-  -moz-transition: height .25s ease-in-out, width .3s ease-in-out;
-  transition: height .25s ease-in-out, width .3s ease-in-out;
   background-color: #2F343B;
   color: #F7FFFC;
-  border-bottom: 0.0625em solid #2F343B; }
+  border-bottom: 0.0625em solid #2F343B;
+  transition-property: height, width;
+  transition-timing-function: ease-in-out; }
 
-#moduleTOC-default #theTocTarget {
+#tocClosedState {
+  /* default TOC style - button state - */
+  z-index: 2;
+  width: 1vw;
+  height: 2.8125em;
+  overflow: hidden;
+  /* This controls the opening timing height,width */
+  transition-duration: .5s, .5s; }
+
+#tocOpenState {
+  z-index: 200;
+  height: 90vh;
+  width: 80%;
+  overflow: visible;
+  background-color: #877551 !important;
+  /* This controls the opening timing height,width */
+  transition-duration: .5s, .5s;
+  -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
+  -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
+  box-shadow: 0.15em 0.15em 0.15em #727272; }
+
+#tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
   width: 2.5em;
   height: 2.5em;
@@ -249,40 +251,28 @@ object {
   position: absolute;
   top: .3rem; }
 
-.TOCs-open {
-  /* Open TOC Menu state */
-  /* this should be in the ID NOT the class, and in hindsite is the reason why I had to use importants here. */
-  z-index: 200 !important;
-  height: 90vh !important;
-  width: 80% !important;
-  right: 0 !important;
-  background-color: #877551 !important;
-  -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
-  -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
-  box-shadow: 0.15em 0.15em 0.15em #727272; }
-
-.TOCs-open #theTocTarget {
+#tocOpenState #theTocTarget {
   /* this controls the open state of the TOC menu button */
-  background: url("../img/TOC-closeX.png") 0 50% no-repeat !important;
-  width: 2.75em !important;
-  height: 2.75em !important;
-  right: 0 !important;
-  top: 1em; }
+  background: url("../img/TOC-closeX.png") 100% 0 no-repeat !important;
+  width: 100%;
+  height: 2.75em;
+  right: 1em;
+  top: 1em;
+  position: absolute; }
 
-.TOCs-open #theTocTarget::before {
+#tocOpenState #theTocTarget::before {
   /* This renders the Table of Contents Menu Title as a CSS insertion */
   content: "Table of Contents";
   position: relative;
-  left: -13.5rem;
+  left: 60%;
   top: .5rem;
-  width: 20rem;
   color: #090A0A;
   display: inline-block;
   text-align: left;
   font-size: 1.5em; }
 
 /* All of these styles need to be changed to the className Once implemented.  */
-#moduleTOC-default .slideNumber {
+#tocOpenState .slideNumber {
   border: 0;
   clip: rect(0 0 0 0);
   height: .0625em;
@@ -292,20 +282,20 @@ object {
   position: absolute;
   width: .0625em; }
 
-#moduleTOC-default li ul {
+#tocOpenState li ul {
   padding-left: 0; }
 
-#moduleTOC-default li ul li {
+#tocOpenState li ul li {
   list-style-type: none !important; }
 
-#moduleTOC-default li a {
+#tocOpenState li a {
   text-decoration: none;
   color: #F7FFFC; }
 
-#moduleTOC-default #slide1TOC {
+#tocOpenState #slide1TOC {
   margin-top: 2.8125em; }
 
-#moduleTOC-default .TOClink:hover {
+#tocOpenState .TOClink:hover {
   background-color: #2F343B; }
 
 .TOC-H1 {
@@ -2165,10 +2155,6 @@ p {
     position: relative;
     width: 60vw; }
 
-  #moduleTOC-default {
-    /* default TOC style - button state - */
-    right: 10%; }
-
   .slideHeader {
     width: 98%;
     text-decoration: none; }
@@ -2361,10 +2347,7 @@ p {
     left: 0px; } }
 /* end 35em media query */
 @media only screen and (min-width: 41.25em) {
-  /* 660 pixel width */
-  #moduleTOC-default {
-    /* default TOC style - button state - */
-    right: 7%; } }
+  /* 660 pixel width */ }
 /* end 41.25 em media query */
 @media only screen and (min-width: 49.5em) {
   /* 792 pixel width */
@@ -2424,11 +2407,7 @@ p {
     float: left;
     width: 32%;
     padding: 0 .5% 0 .5%;
-    border: 1px solid #B8CCC7; }
-
-  #moduleTOC-default {
-    /* default TOC style - button state - */
-    right: 6%; } }
+    border: 1px solid #B8CCC7; } }
 @media only screen and (min-width: 59.375em) {
   /* 950 pixels width */
   /* 25/25/25/25 4 column split */
