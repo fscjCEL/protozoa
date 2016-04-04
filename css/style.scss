@@ -325,12 +325,12 @@ object {
     padding-top: 0;
     position: absolute;
     top: 0;
-    right: 15%;
+
     //background-color: $primaryColor;
-    color: $white;
+
     border-bottom: .0625em solid $primaryColor;
     overflow: hidden;
-    transition-property: height, width,background-color;
+    transition-property: height, width,background-color,right;
     transition-timing-function: ease-in-out;
 }
 #tocClosedState {
@@ -340,8 +340,9 @@ object {
     width: 1vw;
     height: 2.8125em;
     background-color: $primaryColor;
+    right: 15%;
     /* This controls the opening timing height,width */
-    transition-duration: .5s, .5s,.5s;
+    transition-duration: .1s, .25s,.5s,.25s;
 
 
 }
@@ -349,12 +350,13 @@ object {
     z-index: 200;
     height: 90vh;
     width: 80%;
-    //overflow:visible;
-
+    padding-top:2em;
 
     background-color: $lightPrimaryColor;
+    color: $darkPrimaryColor;
+    right: 0;
     /* This controls the opening timing height,width */
-    transition-duration: .5s, .5s,.5s;
+    transition-duration: .25s, .1s,.5s,.25s;
 
     @include material-shadow(.15em, .15em, .15em)
 }
@@ -380,9 +382,10 @@ object {
 
     width: 100%;
     height: 2.75em;
-    right:1em;
-    top:1em;
+    right:.25em;
+    top:.25em;
     position:absolute;
+
 
 
 }
@@ -390,13 +393,15 @@ object {
     /* This renders the Table of Contents Menu Title as a CSS insertion */
     content:"Table of Contents";
     position:relative;
-    left:60%;
+    left:1.5em;
     top:.5rem;
 
     color:$black;
     display:inline-block;
     text-align:left;
     font-size: 1.5em;
+    border-bottom: 1px solid $darkPrimaryColor;
+
 
 
 
@@ -416,17 +421,20 @@ object {
 
 #tocOpenState li ul {
     padding-left: 0;
+    color: $darkPrimaryColor;
 }
 
 //end li ul
 #tocOpenState li ul li {
     list-style-type: none !important;
+    color: $darkPrimaryColor;
 }
 
 //end li ul li
 #tocOpenState li a {
     text-decoration: none;
     color: $white;
+    color: $darkPrimaryColor;
 }
 
 //end li a
@@ -439,7 +447,8 @@ object {
 
 //end slide1TOC
 #tocOpenState .TOClink:hover {
-    background-color: $primaryColor;
+    background-color: $accentColor;
+    color: $white;
 }
 
 //end toclink
@@ -565,7 +574,7 @@ object {
 }
 
 .helpBox {
-    background: $primaryColor url("../img/HELP-default.png") no-repeat;
+    background: url("../img/HELP-default.png") no-repeat;
     background-position: center;
     background-size: 2.6rem;
     background-origin: content-box;
@@ -582,7 +591,7 @@ object {
     margin-top: .25em;
     margin-right: .25em;
     /* the timing for this is in the IDs that get swapped */
-    transition-property: height, width;
+    transition-property: height, width,background-color;
     transition-timing-function: ease-in-out;
 
 }
@@ -594,6 +603,7 @@ object {
 
     width : 2.75em;
     height : 2.75em;
+    background-color: $primaryColor;
     z-index: 2;
 
 
@@ -602,14 +612,14 @@ object {
     background-size : 2.6rem;
     margin-top : .25em;
     /* timing of height then width NOTE: this effects the closing animation */
-    transition-duration: .1s, .5s;
+    transition-duration: .1s, .25s, .5s;
 
 }
 
 #helpboxOpenState {
     // This is the help box that is sitting open.
 
-    background-color: $accentColor;
+    background-color: $lightPrimaryColor;
     z-index: 200;
 
 
@@ -621,7 +631,7 @@ object {
     background-size : 2.6rem;
     margin-top : .25em;
     /* timing of height then width NOTE: this effects the opening animation*/
-    transition-duration: .5s, .25s;
+    transition-duration: .25s, .1s,.5s;
 }
 
 #helpButton {
@@ -652,17 +662,14 @@ object {
 
 }
 .helpContent p{
-  margin-left: 5%;
+
+  margin: 0 auto 0 5%;
 }
-.helpContent hr{
-    width:10%;
-    margin: 0 auto;
-    border-color:$black;
-}
+
 .helpContent h3{
   font-weight: 300;
-  margin-bottom:.5em;
-  margin-top: 1.5em;
+  margin-bottom:1em;
+  margin-top: 2em;
 }
 
 .slide {
