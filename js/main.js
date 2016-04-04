@@ -133,7 +133,9 @@ var methods = {
         }//end if
     },//end scopeTOC function
     closeTOC: function (incomingSlideID) {
-        //this function is being called from the changeTheActualSlide function, and does nothing other than making sure the TOC is closed before proceeding to the next slide. The different contextual scope of the input made this necessarily separate.
+        //this function is being called from the changeTheActualSlide function,
+        //and does nothing other than making sure the TOC is closed before proceeding to the next slide.
+        //The different contextual scope of the input made this necessarily separate.
         //todo I need to set the top margin of the .activeSlide to 50px when closing this.
         var theTOCelement = document.getElementById(incomingSlideID).parentNode;
         var theActiveSlideElements = document.getElementsByClassName("activeSlide");
@@ -459,11 +461,11 @@ var methods = {
 
          theHelpButtonParent = document.getElementById("helpButton").parentNode;
         if (theHelpButtonParent.id === "helpboxOpenState") {
-            //opened, and needs to be closed 
+            //opened, and needs to be closed
             theHelpBoxElement = document.getElementById("helpboxOpenState");
             theHelpBoxElement.id = "helpboxClosedState";
         }else{
-            //closed, and needs to be opened 
+            //closed, and needs to be opened
             theHelpBoxElement = document.getElementById("helpboxClosedState");
             theHelpBoxElement.id = "helpboxOpenState";
         }//end if

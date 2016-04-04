@@ -332,6 +332,7 @@ object {
 
 #moduleTOC-default {
     /* default TOC style - button state - */
+    /* These styles should be in the class not the ID. */
     margin: 0 auto -50px 0;
     width: 1vw;
     border-radius: .1875em;
@@ -342,7 +343,7 @@ object {
     z-index: 2;
     height: 2.8125em;
     overflow: hidden;
-
+    /* change this to the long hand version so you have more control how this opens and closes.*/
     -o-transition: height .25s ease-in-out, width .3s ease-in-out;
     -webkit-transition: height .25s ease-in-out, width .3s ease-in-out;
     -moz-transition: height .25s ease-in-out, width .3s ease-in-out;
@@ -352,6 +353,7 @@ object {
     border-bottom: .0625em solid $primaryColor;
 }
 #moduleTOC-default #theTocTarget {
+    /* this hooks into the closed menu TOC button */
     width: 2.5em;
     height: 2.5em;
     border-radius: .1875em;
@@ -360,12 +362,13 @@ object {
     margin-left: -35px;
     position: absolute;
     top: .3rem;
-    //right:1vw;
+
 
 
 }
 .TOCs-open {
     /* Open TOC Menu state */
+    /* this should be in the ID NOT the class, and in hindsite is the reason why I had to use importants here. */
     z-index: 200!important;
     height: 90vh!important;
     width: 80%!important;
@@ -376,6 +379,7 @@ object {
     @include material-shadow(.15em, .15em, .15em)
 }
 .TOCs-open #theTocTarget{
+    /* this controls the open state of the TOC menu button */
     background: url('../img/TOC-closeX.png') 0 50% no-repeat!important;
     width: 2.75em!important;
     height: 2.75em!important;
@@ -384,6 +388,7 @@ object {
 
 }
 .TOCs-open #theTocTarget::before{
+    /* This renders the Table of Contents Menu Title as a CSS insertion */
     content:"Table of Contents";
     position:relative;
     left:-13.5rem;
@@ -398,7 +403,7 @@ object {
 
 
 }
-
+/* All of these styles need to be changed to the className Once implemented.  */
 #moduleTOC-default .slideNumber {
     border: 0;
     clip: rect(0 0 0 0);
@@ -1637,8 +1642,6 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
-
-
 #helpboxOpenState{
     width:38.2vw;
 }
