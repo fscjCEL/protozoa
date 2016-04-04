@@ -213,10 +213,10 @@ object {
   position: absolute;
   top: 0;
   right: 15%;
-  background-color: #2F343B;
   color: #F7FFFC;
   border-bottom: 0.0625em solid #2F343B;
-  transition-property: height, width;
+  overflow: hidden;
+  transition-property: height, width,background-color;
   transition-timing-function: ease-in-out; }
 
 #tocClosedState {
@@ -224,18 +224,17 @@ object {
   z-index: 2;
   width: 1vw;
   height: 2.8125em;
-  overflow: hidden;
+  background-color: #2F343B;
   /* This controls the opening timing height,width */
-  transition-duration: .5s, .5s; }
+  transition-duration: .5s, .5s,.5s; }
 
 #tocOpenState {
   z-index: 200;
   height: 90vh;
   width: 80%;
-  overflow: visible;
-  background-color: #877551 !important;
+  background-color: #B8CCC7;
   /* This controls the opening timing height,width */
-  transition-duration: .5s, .5s;
+  transition-duration: .5s, .5s,.5s;
   -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272; }

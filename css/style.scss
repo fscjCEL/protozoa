@@ -326,11 +326,11 @@ object {
     position: absolute;
     top: 0;
     right: 15%;
-    background-color: $primaryColor;
+    //background-color: $primaryColor;
     color: $white;
     border-bottom: .0625em solid $primaryColor;
-
-    transition-property: height, width;
+    overflow: hidden;
+    transition-property: height, width,background-color;
     transition-timing-function: ease-in-out;
 }
 #tocClosedState {
@@ -339,9 +339,9 @@ object {
     z-index: 2;
     width: 1vw;
     height: 2.8125em;
-    overflow: hidden;
+    background-color: $primaryColor;
     /* This controls the opening timing height,width */
-    transition-duration: .5s, .5s;
+    transition-duration: .5s, .5s,.5s;
 
 
 }
@@ -349,12 +349,12 @@ object {
     z-index: 200;
     height: 90vh;
     width: 80%;
-    overflow:visible;
+    //overflow:visible;
 
 
-    background-color: $accentColor!important;
+    background-color: $lightPrimaryColor;
     /* This controls the opening timing height,width */
-    transition-duration: .5s, .5s;
+    transition-duration: .5s, .5s,.5s;
 
     @include material-shadow(.15em, .15em, .15em)
 }
