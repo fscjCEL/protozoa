@@ -340,7 +340,7 @@ object {
     width: 1vw;
     height: 2.8125em;
     background-color: $primaryColor;
-    right: 3em;//todo ahhhhhhhhhhh change meeeee
+    right: 3em;
 
 
     /* This controls the opening timing height,width */
@@ -354,8 +354,8 @@ object {
     width: 80%;
     padding-top:2em;
 
-    background-color: $lightPrimaryColor;
-    color: $darkPrimaryColor;
+    background-color: $darkPrimaryColor;
+    color: $lightPrimaryColor;
     right: 0;
     /* This controls the opening timing height,width */
     transition-duration: .25s, .1s,.5s,.25s;
@@ -400,9 +400,9 @@ object {
     content:"Table of Contents";
     position:relative;
     left:1em;
-    top:.5rem;
+    top:1.5rem;
 
-    color:$black;
+    color:$lightPrimaryColor;
     display:inline-block;
     text-align:left;
     font-size: 2em;
@@ -429,21 +429,21 @@ object {
 
 #tocOpenState li ul {
     padding-left: 0;
-    color: $darkPrimaryColor;
+    color: $lightPrimaryColor;
 }
 
 //end li ul
 #tocOpenState li ul li {
     list-style-type: none !important;
-    color: $darkPrimaryColor;
+    color: $lightPrimaryColor;
 
 }
 
 //end li ul li
 #tocOpenState li a {
     text-decoration: none;
-    color: $white;
-    color: $darkPrimaryColor;
+    color: $lightPrimaryColor;
+
 }
 
 //end li a
@@ -635,7 +635,7 @@ object {
 #helpboxOpenState {
     // This is the help box that is sitting open.
 
-    background-color: $lightPrimaryColor;
+    background-color: $darkPrimaryColor;
     @include material-shadow(.15em, .15em, .15em);
     z-index: 200;
 
@@ -677,16 +677,24 @@ object {
     transition-duration: .1s;
 
 
+
 }
 .helpContent p{
 
   margin: 0 auto 0 5%;
+  color:$lightPrimaryColor;
+}
+.helpContent p a{
+
+  //text-decoration:none;
+  color:$lightPrimaryColor;
 }
 
 .helpContent h3{
   font-weight: 300;
   margin-bottom:1em;
-  margin-top: 2em;
+  margin-top: 1em;
+  color:$lightPrimaryColor;
 }
 
 .slide {

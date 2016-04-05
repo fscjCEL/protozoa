@@ -232,8 +232,8 @@ object {
   height: 90vh;
   width: 80%;
   padding-top: 2em;
-  background-color: #B8CCC7;
-  color: #212423;
+  background-color: #212423;
+  color: #B8CCC7;
   right: 0;
   /* This controls the opening timing height,width */
   transition-duration: .25s, .1s,.5s,.25s;
@@ -269,8 +269,8 @@ object {
   content: "Table of Contents";
   position: relative;
   left: 1em;
-  top: .5rem;
-  color: #090A0A;
+  top: 1.5rem;
+  color: #B8CCC7;
   display: inline-block;
   text-align: left;
   font-size: 2em;
@@ -291,16 +291,15 @@ object {
 
 #tocOpenState li ul {
   padding-left: 0;
-  color: #212423; }
+  color: #B8CCC7; }
 
 #tocOpenState li ul li {
   list-style-type: none !important;
-  color: #212423; }
+  color: #B8CCC7; }
 
 #tocOpenState li a {
   text-decoration: none;
-  color: #F7FFFC;
-  color: #212423; }
+  color: #B8CCC7; }
 
 #tocOpenState #slide1TOC {
   margin-top: 2.8125em; }
@@ -445,7 +444,7 @@ object {
   transition-duration: .1s, .25s, .5s; }
 
 #helpboxOpenState {
-  background-color: #B8CCC7;
+  background-color: #212423;
   -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272;
@@ -484,12 +483,17 @@ object {
   transition-duration: .1s; }
 
 .helpContent p {
-  margin: 0 auto 0 5%; }
+  margin: 0 auto 0 5%;
+  color: #B8CCC7; }
+
+.helpContent p a {
+  color: #B8CCC7; }
 
 .helpContent h3 {
   font-weight: 300;
   margin-bottom: 1em;
-  margin-top: 2em; }
+  margin-top: 1em;
+  color: #B8CCC7; }
 
 .slide {
   width: 100%;
