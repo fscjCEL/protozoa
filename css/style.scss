@@ -1689,7 +1689,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
-#helpboxOpenState{width:40vw;}
+#helpboxOpenState{width:40vw;height:70em;}
 #helpButton {
     padding: .7em .9em 0 0;
     text-align: right;
@@ -1715,6 +1715,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 @media only screen and (min-width: 41.25em){/* 660 pixel width */
 
     #tocOpenState{width: 40%;}
+    #helpboxOpenState{height:60em;}
 
 
 
@@ -1735,6 +1736,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-30-c-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
 
   #tocOpenState{width: 35%;}
+  #helpboxOpenState{height:55em;}
 
 
 
@@ -1756,7 +1758,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-25-c-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   .cel-25-d-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   #tocOpenState{width: 30%;}
-
+  #helpboxOpenState{height:55em;}
 }//end 840
 
 @media only screen and (min-width: 68.1875em) {

@@ -2359,7 +2359,8 @@ p {
     animation-direction: alternate; }
 
   #helpboxOpenState {
-    width: 40vw; }
+    width: 40vw;
+    height: 70em; }
 
   #helpButton {
     padding: .7em .9em 0 0;
@@ -2380,7 +2381,10 @@ p {
 @media only screen and (min-width: 41.25em) {
   /* 660 pixel width */
   #tocOpenState {
-    width: 40%; } }
+    width: 40%; }
+
+  #helpboxOpenState {
+    height: 60em; } }
 /* end 41.25 em media query */
 @media only screen and (min-width: 49.5em) {
   /* 792 pixel width */
@@ -2443,7 +2447,10 @@ p {
     border: 1px solid #B8CCC7; }
 
   #tocOpenState {
-    width: 35%; } }
+    width: 35%; }
+
+  #helpboxOpenState {
+    height: 55em; } }
 @media only screen and (min-width: 59.375em) {
   /* 950 pixels width */
   /* 25/25/25/25 4 column split */
@@ -2536,7 +2543,10 @@ p {
     margin-bottom: 1.5rem; }
 
   #tocOpenState {
-    width: 30%; } }
+    width: 30%; }
+
+  #helpboxOpenState {
+    height: 55em; } }
 @media only screen and (min-width: 68.1875em) {
   .activeSlide {
     margin-bottom: .625em;
