@@ -211,7 +211,7 @@ object {
   border-radius: .1875em;
   padding-top: 0;
   position: absolute;
-  top: 0;
+  top: .25em;
   border-bottom: 0.0625em solid #2F343B;
   overflow: hidden;
   transition-property: height, width,background-color,right;
@@ -223,7 +223,7 @@ object {
   width: 1vw;
   height: 2.8125em;
   background-color: #2F343B;
-  right: 15%;
+  right: 3em;
   /* This controls the opening timing height,width */
   transition-duration: .1s, .25s,.5s,.25s; }
 
@@ -243,22 +243,25 @@ object {
 
 #tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.6em;
+  height: 2.6em;
   border-radius: .1875em;
-  background: url("../img/TOC-default.png") 0px 100% no-repeat;
-  background-size: contain;
+  background-image: url("../img/TOC-default.png");
+  background-repeat: no-repeat;
+  background-position: -1px 0, top;
+  background-size: 2.5em, 2.5em;
   margin-left: -35px;
   position: absolute;
-  top: .3rem; }
+  top: 0; }
 
 #tocOpenState #theTocTarget {
   /* this controls the open state of the TOC menu button */
-  background: url("../img/TOC-closeX.png") 100% 0 no-repeat !important;
+  background: url("../img/TOC-closeX.png") 100% 0 no-repeat;
   width: 100%;
   height: 2.75em;
-  right: .25em;
-  top: .25em;
+  background-size: 2.6em;
+  right: 0;
+  top: 0;
   position: absolute; }
 
 #tocOpenState #theTocTarget::before {
@@ -417,14 +420,15 @@ object {
   background-position: center;
   background-size: 2.6rem;
   background-origin: content-box;
+  border-radius: .1875em;
   color: #F7FFFC;
   position: absolute;
   right: 0;
+  top: .25em;
+  margin-right: .25em;
   text-align: left;
   padding-bottom: .3rem;
   overflow: hidden;
-  margin-top: .25em;
-  margin-right: .25em;
   /* the timing for this is in the IDs that get swapped */
   transition-property: height, width,background-color;
   transition-timing-function: ease-in-out; }
@@ -435,21 +439,22 @@ object {
   background-color: #2F343B;
   z-index: 2;
   background-image: url(../img/HELP-default.png);
-  background-position: 100% 0px, top;
-  background-size: 2.6rem;
-  margin-top: .25em;
+  background-position: 100% 0px;
+  background-size: 2.5rem;
   /* timing of height then width NOTE: this effects the closing animation */
   transition-duration: .1s, .25s, .5s; }
 
 #helpboxOpenState {
   background-color: #B8CCC7;
+  -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
+  -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
+  box-shadow: 0.15em 0.15em 0.15em #727272;
   z-index: 200;
   width: 90vw;
   height: 90vh;
   background-image: url(../img/HELP-closeX.png);
   background-position: 100% 0px,top;
-  background-size: 2.6rem;
-  margin-top: .25em;
+  background-size: 2.5rem;
   /* timing of height then width NOTE: this effects the opening animation*/
   transition-duration: .25s, .1s,.5s; }
 
@@ -2172,15 +2177,14 @@ p {
     transition-duration: .1s, .25s,.5s,.25s; }
 
   #tocOpenState {
-    height: 90vh;
-    width: 80%;
+    width: 50%;
     padding-top: 2em;
-    right: 0;
+    right: 3em;
     /* This controls the opening timing height,width */
-    transition-duration: .25s, .1s,.5s,.25s;
-    -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
-    -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
-    box-shadow: 0.15em 0.15em 0.15em #727272; }
+    transition-duration: .25s, .1s,.5s,.25s; }
+
+  #tocOpenState #theTocTarget:before {
+    border: 0; }
 
   .slideHeader {
     width: 98%;
@@ -2355,7 +2359,7 @@ p {
     animation-direction: alternate; }
 
   #helpboxOpenState {
-    width: 38.2vw; }
+    width: 40vw; }
 
   #helpButton {
     padding: .7em .9em 0 0;
@@ -2374,7 +2378,9 @@ p {
     left: 0px; } }
 /* end 35em media query */
 @media only screen and (min-width: 41.25em) {
-  /* 660 pixel width */ }
+  /* 660 pixel width */
+  #tocOpenState {
+    width: 40%; } }
 /* end 41.25 em media query */
 @media only screen and (min-width: 49.5em) {
   /* 792 pixel width */
@@ -2434,7 +2440,10 @@ p {
     float: left;
     width: 32%;
     padding: 0 .5% 0 .5%;
-    border: 1px solid #B8CCC7; } }
+    border: 1px solid #B8CCC7; }
+
+  #tocOpenState {
+    width: 35%; } }
 @media only screen and (min-width: 59.375em) {
   /* 950 pixels width */
   /* 25/25/25/25 4 column split */
@@ -2524,7 +2533,10 @@ p {
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
-    margin-bottom: 1.5rem; } }
+    margin-bottom: 1.5rem; }
+
+  #tocOpenState {
+    width: 30%; } }
 @media only screen and (min-width: 68.1875em) {
   .activeSlide {
     margin-bottom: .625em;
@@ -2536,7 +2548,20 @@ p {
 
   #mainNav {
     height: 5vh;
-    width: 64rem; } }
+    width: 64rem; }
+
+  #tocOpenState {
+    width: 25%; }
+
+  #helpboxOpenState {
+    width: 35vw; } }
+@media only screen and (min-width: 92.625em) {
+  /* 1482 pixels width */
+  #tocOpenState {
+    width: 20%; }
+
+  #helpboxOpenState {
+    width: 25vw; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
