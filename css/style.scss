@@ -1304,11 +1304,11 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
   /* 50/50 2 column split */
   .cel-50-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white}
-  .cel-50-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
+  .cel-50-b {float: right;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
   .cel-50-a-rule {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-50-b-rule {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-50-b-rule {float: right;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-50-a-box {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
-  .cel-50-b-box {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
+  .cel-50-b-box {float: right;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
 
   /* 75/25 2 column split */
   .cel-7525-a {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $white;}
@@ -1320,25 +1320,25 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
   /* 25/75 2 column split */
   .cel-2575-a {float: left;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
-  .cel-2575-b {float: left;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-2575-b {float: right;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
   .cel-2575-a-rule {float: left;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-2575-b-rule {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-2575-b-rule {float: right;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-2575-a-box {float: left;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-2575-b-box {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-2575-b-box {float: right;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
   /* 60/40 2 column split */
   .cel-60-a {float: left;width: 61%;padding: 0 1% 0 0;border: .0625em solid $white;}
-  .cel-40-b {float: left;width: 35%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-40-b {float: right;width: 35%;padding: 0 0 0 1%;border: .0625em solid $white;}
   .cel-60-a-rule {float: left;width: 61%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-40-b-rule {float: left;width: 35%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-40-b-rule {float: right;width: 35%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-60-a-box {float: left;width: 61%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-40-b-box {float: left;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-40-b-box {float: right;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
   /* 40/60 2 column split */
   .cel-40-a {float: left;width: 35%;padding: 0 1% 0 0;border: .0625em solid $white;}
-  .cel-60-b {float: left;width: 61%;padding: 0 0 0 1%;border: .0625em solid $white;}
+  .cel-60-b {float: right;width: 61%;padding: 0 0 0 1%;border: .0625em solid $white;}
   .cel-40-a-rule {float: left;width: 35%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-60-b-rule {float: left;width: 61%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-60-b-rule {float: right;width: 61%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-40-a-box {float: left;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
   .cel-60-b-box {float: right;width: 61%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
@@ -1346,27 +1346,27 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   /* 30/30/30 3 column split */
   .cel-30-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white;margin-bottom: .4rem;}
   .cel-30-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white;margin-bottom: .4rem;}
-  .cel-30-c {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
+  .cel-30-c {float: right;width: 98%;padding: 0;border: .0625em solid $white;}
   .cel-30-a-rule {float: left;width: 48%;padding: 0 1% 0 0;margin-bottom: .4rem;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white ;}
   .cel-30-b-rule {float: left;width: 48%;padding: 0 0 0 1%;margin-bottom: .4rem;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-30-c-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white;}
+  .cel-30-c-rule {float: right;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white;}
   .cel-30-a-box {float: left;width: 48%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;margin-bottom: .4rem;}
   .cel-30-b-box {float: left;width: 48%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;margin-bottom: .4rem;}
-  .cel-30-c-box {float: left;width: 97%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-30-c-box {float: right;width: 97%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
   /* 25/25/25/25 4 column split */
   .cel-25-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white}
   .cel-25-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
   .cel-25-c {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
-  .cel-25-d {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
+  .cel-25-d {float: left;right: 98%;padding: 0;border: .0625em solid $white;}
   .cel-25-a-rule {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white ;}
   .cel-25-b-rule {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor ;}
   .cel-25-c-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white ;}
-  .cel-25-d-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white  ;}
+  .cel-25-d-rule {float: left;right: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white  ;}
   .cel-25-a-box {float: left;width: 48%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
   .cel-25-b-box {float: left;width: 48%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
   .cel-25-c-box {float: left;width: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-25-d-box {float: left;width: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
+  .cel-25-d-box {float: left;right: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
 
   .activeSlide {
@@ -1734,14 +1734,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   /* 30/30/30 3 column split */
   .cel-30-a {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid $white;}
   .cel-30-b {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $white;}
-  .cel-30-c {float: left;width: 32%;padding: 0 0 0 1%;border: 1px solid $white;}
+  .cel-30-c {float: right;width: 32%;padding: 0 0 0 1%;border: 1px solid $white;}
 
   .cel-30-a-rule {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
   .cel-30-b-rule {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-30-c-rule {float: left;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-30-c-rule {right: left;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-30-a-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
   .cel-30-b-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
-  .cel-30-c-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
+  .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
 
   #tocOpenState{width: 35%;}
   #helpboxOpenState{height:55em;}
@@ -1756,15 +1756,15 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-25-a {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
   .cel-25-b {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
   .cel-25-c {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
-  .cel-25-d {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
+  .cel-25-d {float: right;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
   .cel-25-a-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
   .cel-25-b-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor;}
   .cel-25-c-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-25-d-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-25-d-rule {float: right;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-25-a-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   .cel-25-b-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   .cel-25-c-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
-  .cel-25-d-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
+  .cel-25-d-box {float: right;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   #tocOpenState{width: 30%;}
   #helpboxOpenState{height:55em;}
 }//end 840

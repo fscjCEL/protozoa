@@ -1774,7 +1774,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-50-b {
-    float: left;
+    float: right;
     width: 48%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1787,7 +1787,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-50-b-rule {
-    float: left;
+    float: right;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: .0625em solid;
@@ -1800,7 +1800,7 @@ p {
     border: 0.0625em solid #B8CCC7; }
 
   .cel-50-b-box {
-    float: left;
+    float: right;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: 0.0625em solid #B8CCC7; }
@@ -1852,7 +1852,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-2575-b {
-    float: left;
+    float: right;
     width: 73%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1865,7 +1865,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-2575-b-rule {
-    float: left;
+    float: right;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: .0625em solid;
@@ -1878,7 +1878,7 @@ p {
     border: 0.0625em solid #B8CCC7; }
 
   .cel-2575-b-box {
-    float: left;
+    float: right;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
@@ -1891,7 +1891,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-40-b {
-    float: left;
+    float: right;
     width: 35%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1904,7 +1904,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-40-b-rule {
-    float: left;
+    float: right;
     width: 35%;
     padding: 0 0 0 1%;
     border: .0625em solid;
@@ -1917,7 +1917,7 @@ p {
     border: 0.0625em solid #B8CCC7; }
 
   .cel-40-b-box {
-    float: left;
+    float: right;
     width: 35%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
@@ -1930,7 +1930,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-60-b {
-    float: left;
+    float: right;
     width: 61%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1943,7 +1943,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-60-b-rule {
-    float: left;
+    float: right;
     width: 61%;
     padding: 0 0 0 1%;
     border: .0625em solid;
@@ -1977,7 +1977,7 @@ p {
     margin-bottom: .4rem; }
 
   .cel-30-c {
-    float: left;
+    float: right;
     width: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
@@ -1999,7 +1999,7 @@ p {
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
 
   .cel-30-c-rule {
-    float: left;
+    float: right;
     width: 98%;
     padding: 0;
     border: .0625em solid;
@@ -2020,7 +2020,7 @@ p {
     margin-bottom: .4rem; }
 
   .cel-30-c-box {
-    float: left;
+    float: right;
     width: 97%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
@@ -2046,7 +2046,7 @@ p {
 
   .cel-25-d {
     float: left;
-    width: 98%;
+    right: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
 
@@ -2073,7 +2073,7 @@ p {
 
   .cel-25-d-rule {
     float: left;
-    width: 98%;
+    right: 98%;
     padding: 0;
     border: .0625em solid;
     border-color: #B8CCC7 #F7FFFC #F7FFFC #F7FFFC; }
@@ -2098,7 +2098,7 @@ p {
 
   .cel-25-d-box {
     float: left;
-    width: 97%;
+    right: 97%;
     padding: 0 .5%;
     border: 0.0625em solid #B8CCC7; }
 
@@ -2406,7 +2406,7 @@ p {
     border: 1px solid #F7FFFC; }
 
   .cel-30-c {
-    float: left;
+    float: right;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid #F7FFFC; }
@@ -2426,7 +2426,7 @@ p {
     border-color: #F7FFFC #B8CCC7; }
 
   .cel-30-c-rule {
-    float: left;
+    right: left;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid;
@@ -2445,7 +2445,7 @@ p {
     border: 1px solid #B8CCC7; }
 
   .cel-30-c-box {
-    float: left;
+    float: right;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7; }
@@ -2480,7 +2480,7 @@ p {
     margin-bottom: 1.5rem; }
 
   .cel-25-d {
-    float: left;
+    float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC;
@@ -2511,7 +2511,7 @@ p {
     border-color: #F7FFFC #B8CCC7; }
 
   .cel-25-d-rule {
-    float: left;
+    float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     margin-bottom: 1.5rem;
@@ -2540,7 +2540,7 @@ p {
     margin-bottom: 1.5rem; }
 
   .cel-25-d-box {
-    float: left;
+    float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
