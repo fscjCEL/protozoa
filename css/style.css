@@ -2165,6 +2165,23 @@ p {
     position: relative;
     width: 60vw; }
 
+  #tocClosedState {
+    /* default TOC style - button state - */
+    right: 3em;
+    /* This controls the opening timing height,width */
+    transition-duration: .1s, .25s,.5s,.25s; }
+
+  #tocOpenState {
+    height: 90vh;
+    width: 80%;
+    padding-top: 2em;
+    right: 0;
+    /* This controls the opening timing height,width */
+    transition-duration: .25s, .1s,.5s,.25s;
+    -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
+    -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
+    box-shadow: 0.15em 0.15em 0.15em #727272; }
+
   .slideHeader {
     width: 98%;
     text-decoration: none; }

@@ -1438,6 +1438,34 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 }
 
+#tocClosedState {
+    /* default TOC style - button state - */
+
+    // z-index: 2;
+    //width: 1vw;
+    //height: 2.8125em;
+    //background-color: $primaryColor;
+    right: 3em;
+    /* This controls the opening timing height,width */
+    transition-duration: .1s, .25s,.5s,.25s;
+
+
+}
+#tocOpenState{
+    //z-index: 200;
+    height: 90vh;
+    width: 80%;
+    padding-top:2em;
+
+    //background-color: $lightPrimaryColor;
+    //color: $darkPrimaryColor;
+    right: 0;
+    /* This controls the opening timing height,width */
+    transition-duration: .25s, .1s,.5s,.25s;
+
+    @include material-shadow(.15em, .15em, .15em)
+}
+
 .slideHeader {
     width: 98%;
     text-decoration: none;
