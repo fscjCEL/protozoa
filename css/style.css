@@ -264,6 +264,12 @@ object {
   top: 0;
   position: absolute; }
 
+#tocOpenState #theTocTarge:hover {
+  cursor: pointer; }
+
+#tocClosedState #theTocTarget:hover {
+  cursor: pointer; }
+
 #tocOpenState #theTocTarget::before {
   /* This renders the Table of Contents Menu Title as a CSS insertion */
   content: "Table of Contents";
@@ -466,6 +472,9 @@ object {
   text-align: left;
   float: right; }
 
+#helpButton:hover {
+  cursor: pointer; }
+
 #helpboxClosedState .helpContent {
   opacity: 0; }
 
@@ -516,6 +525,9 @@ object {
   width: 95%;
   position: relative;
   text-decoration: none; }
+
+a.slideHeader:hover {
+  cursor: auto !important; }
 
 .slideHeader h1 {
   width: 100%;
@@ -748,11 +760,13 @@ object {
 
 .nextButton:hover {
   background-color: #212423;
-  transition: background-color .25s ease-in-out; }
+  transition: background-color .25s ease-in-out;
+  cursor: pointer; }
 
 .prevButton:hover {
   background-color: #212423;
-  transition: background-color .25s ease-in-out; }
+  transition: background-color .25s ease-in-out;
+  cursor: pointer; }
 
 .slideFooter {
   width: 100%;
@@ -2373,7 +2387,8 @@ p {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
-    animation-direction: alternate; }
+    animation-direction: alternate;
+    cursor: pointer; }
 
   #helpboxOpenState {
     width: 40vw;

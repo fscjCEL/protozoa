@@ -395,6 +395,12 @@ object {
 
 
 }
+#tocOpenState #theTocTarge:hover{
+    cursor: pointer;
+}
+#tocClosedState #theTocTarget:hover{
+    cursor: pointer;
+}
 #tocOpenState #theTocTarget::before{
     /* This renders the Table of Contents Menu Title as a CSS insertion */
     content:"Table of Contents";
@@ -660,6 +666,9 @@ object {
     text-align: left;
     float: right;
 }
+#helpButton:hover{
+    cursor: pointer;
+}
 #helpboxClosedState .helpContent{
     opacity: 0;
 }
@@ -721,6 +730,10 @@ object {
 
     text-decoration: none;
 } //end slideheader
+a.slideHeader:hover{
+
+    cursor:auto!important;
+}
 .slideHeader h1 {
     //this controls the default space between main headers.
     width: 100%;
@@ -984,11 +997,13 @@ object {
 .nextButton:hover {
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
+    cursor: pointer;
 }
 
 .prevButton:hover {
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
+    cursor: pointer;
 }
 
 .slideFooter {
@@ -1650,6 +1665,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 .activeNavElement {
@@ -1667,6 +1683,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 .pastNavElement {
@@ -1712,6 +1729,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    cursor: pointer;
 }
 #helpboxOpenState{width:40vw;height:70em;}
 #helpButton {
