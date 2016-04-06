@@ -1,4 +1,18 @@
 var methods = {
+    yellowFlash:function(){
+        var slidesLength = methods.countTheSlides();
+        for (var i = 0; i < slidesLength; i++) {
+            var theActiveSlideElement = document.getElementById("slide"+(i+1));
+            var theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+            if(theFirstParagraph.parentNode.className !=="figure"){
+             theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+            }else{
+                theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
+            }//end if
+            theFirstParagraph.className = "TheFirst";
+
+        }
+    },//end yellowFlashFunction
     figureModalHandler: function(){
         //add the class that makes it a modal box
 
@@ -183,7 +197,7 @@ var methods = {
             if (document.getElementById("tocOpenState")) {
                 grabMyChild = document.getElementById("tocOpenState");
             }
-            //grabMyChild = document.getElementById("tocOpenState");//grab the TOC element
+
             grabMyChild.children[0].id = "theTocTarget";//set the ID of the one and only li, to set it up as a landing target for other LIs
             grabMyChild.children[0].className = "TOCtargets";//apply the classname to the same li as above.
             grabMyChild.children[0].style.listStyleType = "none";
@@ -265,7 +279,7 @@ var methods = {
         //RIp through all the elements on each slide to populate all the menus.
 
         theNumberOfSlides = methods.countTheSlides();//the total amount of slides
-
+        //this is the main loop.
         for (var bbb = 0; bbb < theNumberOfSlides; bbb++) {//for the length of all the slides.
             currentSlideID = "slide" + (bbb + 1);//build the slide ID
             currentSlideElement = document.getElementById(currentSlideID);//grab the slide element object to rip through.
@@ -848,6 +862,7 @@ var methods = {
        methods.navMenu();
        //call the figure build
        methods.figureButtonInsertion();
+       methods.yellowFlash();
 
 
 

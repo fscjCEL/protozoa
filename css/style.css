@@ -691,6 +691,18 @@ object {
   position: inherit;
   width: 90%; }
 
+@keyframes yellowFlash {
+  from {
+    background-color: #F7FFFC; }
+  to {
+    background-color: yellow; } }
+.activeSlide .TheFirst {
+  animation-name: yellowFlash;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-duration: .5s;
+  animation-timing-function: ease-in; }
+
 #mainNavList {
   border: 0;
   clip: rect(0 0 0 0);
