@@ -483,7 +483,8 @@ object {
   transition-duration: .1s; }
 
 .helpContent p {
-  margin: 0 auto 0 5%;
+  width: 90%;
+  margin: 0 auto;
   color: #B8CCC7; }
 
 .helpContent p a {
