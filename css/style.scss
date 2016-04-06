@@ -919,19 +919,20 @@ object {
     width: 90%;
 }
 @keyframes yellowFlash{
-  from {
-    background-color:$white;
-  }
-  to {
+  0% {
     background-color:yellow;
+  }
+
+  100%{
+    background-color:$white;
   }
 }
 .activeSlide .TheFirst{
     animation-name: yellowFlash;
       animation-direction: alternate;
       animation-iteration-count: 1;
-      animation-duration: .5s;
-      animation-timing-function: ease-in;
+      animation-duration: .8s;
+      animation-timing-function: ease;
 }
 #mainNavList {
     //default mobile Nav state...hidden
