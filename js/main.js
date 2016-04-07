@@ -248,9 +248,9 @@ var methods = {
             subTocParentELement.insertBefore(theNewElement, TocSubListTarget);
         }//end processCapturedNode function
         function captureNodes(node) {
-            if (node.nodeName === "H1") {
-                processCapturedNode("H1", node);
-            }//end if
+            //if (node.nodeName === "H1") {
+              //  processCapturedNode("H1", node);
+            //}//end if
             if (node.nodeName === "H2") {
                 processCapturedNode("H2", node);
             }//end if

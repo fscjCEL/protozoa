@@ -465,30 +465,15 @@ object {
 }
 
 //end toclink
-.TOC-H1 {
+.TOC-H2 {
     @include lightWeight;
     @include font-familyHeading;
     font-size: 1.25rem;
     line-height: 1.5;
 }
 
-.TOC-H1 a {
-    column-rule: $darkPrimaryColor;
-}
-
-.TOC-H2 {
-    @include lightWeight;
-    @include font-familyRegular;
-    font-size: .8rem;
-    line-height: 1.3;
-}
-
 .TOC-H2 a {
-    padding-left: .9375em;
-}
-
-.TOC-H2::before {
-    content: "•";
+    column-rule: $darkPrimaryColor;
 }
 
 .TOC-H3 {
@@ -548,6 +533,21 @@ object {
 }
 
 .TOC-H6::before {
+    content: "•";
+}
+
+.TOC-H7 {
+    @include lightWeight;
+    @include font-familyRegular;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H7 a {
+    padding-left: .9375em;
+}
+
+.TOC-H7::before {
     content: "•";
 }
 
@@ -1159,12 +1159,14 @@ a.slideHeader:hover{
 
 /* ========================typography */
 html {font-size: 16px;}
-h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
-h2 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
-h3 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
-h4 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
-h5 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
-h6 {font-size: .64rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 14pxs */
+header h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
+
+h2 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
+h3 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
+h4 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
+h5 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
+h6 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
+//h7 {font-size: .64rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 14pxs */
 p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 //========================================================================(mobile ^) Media Queries (desktop v) =====================================
@@ -1310,12 +1312,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   /* ========================typography */
   html {font-size: 16px;}
   //1 rem = 16px;
-  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
-  h2 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 38pxs */
-  h3 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 21pxs */
-  h4 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 18pxs */
-  h5 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 16pxs */
-  h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
+  header h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
+  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}
+  h2 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
+  h3 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 38pxs */
+  h4 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 21pxs */
+  h5 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 18pxs */
+  h6 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 16pxs */
+  //h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
   p {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding: 0;}/* 16pxs */
   body {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;}/* 16pxs */
 
