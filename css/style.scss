@@ -350,9 +350,10 @@ object {
 }
 #tocOpenState{
     z-index: 200;
-    height: 90vh;
+    //height: 90vh;
     width: 80%;
     padding-top:2em;
+    padding-bottom: 1em;
 
     background-color: $darkPrimaryColor;
     color: $lightPrimaryColor;
@@ -607,7 +608,7 @@ object {
     margin-right: .25em;
     text-align: left;
 
-    padding-bottom: .3rem;
+
 
     overflow:hidden;
 
@@ -621,14 +622,11 @@ object {
 
 
 #helpboxClosedState {
-
-
     width : 2.75em;
     height : 2.75em;
     background-color: $primaryColor;
     z-index: 2;
-
-
+    padding-bottom: .3rem;
     background-image : url(../img/HELP-default.png);
     background-position : 100% 0px ;
     background-size : 2.5rem;
@@ -644,10 +642,11 @@ object {
     background-color: $darkPrimaryColor;
     @include material-shadow(.15em, .15em, .15em);
     z-index: 200;
+    padding-bottom: 1rem;
 
 
     width : 90vw;
-    height : 90vh;
+    //height : 90vh;
 
     background-image : url(../img/HELP-closeX.png);
     background-position : 100% 0px,top;
@@ -1731,7 +1730,9 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     animation-direction: alternate;
     cursor: pointer;
 }
-#helpboxOpenState{width:40vw;height:70em;}
+#helpboxOpenState{width:40vw;
+    //height:70em;
+}
 #helpButton {
     padding: .7em .9em 0 0;
     text-align: right;
@@ -1757,7 +1758,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 @media only screen and (min-width: 41.25em){/* 660 pixel width */
 
     #tocOpenState{width: 40%;}
-    #helpboxOpenState{height:60em;}
+    //#helpboxOpenState{height:60em;}
 
 
 
@@ -1778,7 +1779,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
 
   #tocOpenState{width: 35%;}
-  #helpboxOpenState{height:55em;}
+  //#helpboxOpenState{height:55em;}
 
 
 
@@ -1800,7 +1801,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-25-c-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   .cel-25-d-box {float: right;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   #tocOpenState{width: 30%;}
-  #helpboxOpenState{height:55em;}
+  //#helpboxOpenState{height:55em;}
 }//end 840
 
 @media only screen and (min-width: 68.1875em) {

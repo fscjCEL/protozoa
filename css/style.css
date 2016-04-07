@@ -229,9 +229,9 @@ object {
 
 #tocOpenState {
   z-index: 200;
-  height: 90vh;
   width: 80%;
   padding-top: 2em;
+  padding-bottom: 1em;
   background-color: #212423;
   color: #B8CCC7;
   right: 0;
@@ -432,7 +432,6 @@ object {
   top: .25em;
   margin-right: .25em;
   text-align: left;
-  padding-bottom: .3rem;
   overflow: hidden;
   /* the timing for this is in the IDs that get swapped */
   transition-property: height, width,background-color;
@@ -443,6 +442,7 @@ object {
   height: 2.75em;
   background-color: #2F343B;
   z-index: 2;
+  padding-bottom: .3rem;
   background-image: url(../img/HELP-default.png);
   background-position: 100% 0px;
   background-size: 2.5rem;
@@ -455,8 +455,8 @@ object {
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272;
   z-index: 200;
+  padding-bottom: 1rem;
   width: 90vw;
-  height: 90vh;
   background-image: url(../img/HELP-closeX.png);
   background-position: 100% 0px,top;
   background-size: 2.5rem;
@@ -2391,8 +2391,7 @@ p {
     cursor: pointer; }
 
   #helpboxOpenState {
-    width: 40vw;
-    height: 70em; }
+    width: 40vw; }
 
   #helpButton {
     padding: .7em .9em 0 0;
@@ -2413,10 +2412,7 @@ p {
 @media only screen and (min-width: 41.25em) {
   /* 660 pixel width */
   #tocOpenState {
-    width: 40%; }
-
-  #helpboxOpenState {
-    height: 60em; } }
+    width: 40%; } }
 /* end 41.25 em media query */
 @media only screen and (min-width: 49.5em) {
   /* 792 pixel width */
@@ -2479,10 +2475,7 @@ p {
     border: 1px solid #B8CCC7; }
 
   #tocOpenState {
-    width: 35%; }
-
-  #helpboxOpenState {
-    height: 55em; } }
+    width: 35%; } }
 @media only screen and (min-width: 59.375em) {
   /* 950 pixels width */
   /* 25/25/25/25 4 column split */
@@ -2575,10 +2568,7 @@ p {
     margin-bottom: 1.5rem; }
 
   #tocOpenState {
-    width: 30%; }
-
-  #helpboxOpenState {
-    height: 55em; } }
+    width: 30%; } }
 @media only screen and (min-width: 68.1875em) {
   .activeSlide {
     margin-bottom: .625em;

@@ -157,16 +157,19 @@ var methods = {
         //The different contextual scope of the input made this necessarily separate.
         //todo I need to set the top margin of the .activeSlide to 50px when closing this.
         var theTOCelement = document.getElementById(incomingSlideID).parentNode.id;//so theTocTarget's parentNode
+        document.getElementById(theTOCelement).className = "TOCs";
         document.getElementById(theTOCelement).id = "tocClosedState";
+
+
 
 
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
         //console.log("Yes I made it");
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
-        //add up all the elements in the TOC and add the heights into one big total variable
+        //add clearfix to the open menu so it shows everything inside.
 
-
+        theTOCelement.className += " clearfix";
         theTOCelement.id = "tocOpenState";
 
     },//end function
@@ -473,10 +476,12 @@ var methods = {
         if (theHelpButtonParent.id === "helpboxOpenState") {
             //opened, and needs to be closed
             theHelpBoxElement = document.getElementById("helpboxOpenState");
+            theHelpBoxElement.className = "helpBox";
             theHelpBoxElement.id = "helpboxClosedState";
         }else{
             //closed, and needs to be opened
             theHelpBoxElement = document.getElementById("helpboxClosedState");
+            theHelpBoxElement.className += " clearfix";
             theHelpBoxElement.id = "helpboxOpenState";
         }//end if
 
