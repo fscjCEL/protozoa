@@ -57,18 +57,12 @@ var methods = {
                     theFigureCaption.style.backgroundColor = "transparent";
                 }//endif
         }//end if
-
-
-
-
-
     },//end figureModalHandler
     figureButtonInsertion:function(){
         //create a button element that will be inserted into each figure element.
 
         //first: gather and loop through each figure element.
         var allTheFigureElements = document.getElementsByClassName("figure");
-        // correct - alert(allTheFigureElements.length);
         //each element needs to have a button inserted, and then a listener added to the button.
             for (var i = 0; i < allTheFigureElements.length; i++) {
                 //create the button element
@@ -103,7 +97,6 @@ var methods = {
         //give the blank Li an ID
         theInitialTarget.id = "nav"+theInitialSlideCount;
         //these three lines set the attributes of the target element.
-        //theInitialTarget.setAttribute("data-hover",theInitialSlideCount);
         theInitialTarget.className = "navElement";
         theInitialTarget.innerHTML = theInitialSlideCount;
 
@@ -120,7 +113,6 @@ var methods = {
             }//end if
 
             insertThisListItemElement.innerHTML = i;
-            //insertThisListItemElement.setAttribute("data-hover",i);
 
             var navLiParentNode = document.getElementById("mainNavList");
             var insertLiBeforeThis = document.getElementById("nav"+(i+1));
@@ -165,7 +157,6 @@ var methods = {
 
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
-        //console.log("Yes I made it");
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
         //add clearfix to the open menu so it shows everything inside.
 
@@ -179,7 +170,7 @@ var methods = {
         //"node" needs to be a slide. So RIP through all the slide's children
         for (var xxx = 0; xxx < node.childNodes.length; xxx++) {
             childNode = node.childNodes[xxx];//this one variable is easier to work with.
-            task(childNode);//captureNodes(childNode)//do task to childnode.
+            task(childNode);//do task to childnode.
             //if this childNode has children then lets go again.
             if (childNode.childNodes.length > 0) {
                 methods.traverse(task, childNode);
@@ -237,7 +228,6 @@ var methods = {
                     theTOCParentMainList = document.getElementById("tocOpenState");
                 }
                 // create the child list that will eventually hold actual list items.
-                //var theSlideTOCList = document.createElement("ul");
                 var theSlideTOCList = document.createElement("li");
                 // give the new parent list an ID
                 theSlideTOCList.id = "slide" + slideBit + "TOC";
@@ -365,7 +355,6 @@ var methods = {
                 //create an element, then insert it in before the anchor element.
                 theElementToInsertBefore = allTheLinks[s];
                 theElementsParent = theElementToInsertBefore.parentNode;
-                //alert(typeof theElementsParent);
                 theNewElement = document.createElement("img");
                 //this inserts a little glyph before each link within the content that leads to an external page. All internal links do not get the glyph. .
                 theNewElement.id = "link" + s;
@@ -450,10 +439,8 @@ var methods = {
                     //this opens the box that contains the play pause buttons.
                     if (theParentAudioBox.children[o].className === "audioControls") {
                         audioControlBox = theParentAudioBox.children[o];
-                        //audioControlBox.style.height = "31px";
                         showAudioButton.style.height = "0px";
                         showAudioButton.style.width = "0px";
-                        //audioControlBox.style.width = "280px";
                     }//end if
                     if (theParentAudioBox.children[o].className === "audioButton") {
                         audioCopy = theParentAudioBox.children[o];
@@ -484,7 +471,7 @@ var methods = {
         //change the active slide to pastSlide this needs to occur on the nav and header elements.
         //initialize
         var theActiveSlideElement, theSlideCompareElementID, theOneIAmWorkingON, destinationsChildClassname, theChildsClassname, theActiveSlideHeaderElement, theDestinationSlideElement, INeedTheSlideNumber, allTheAudioElements, theIDforTOC, theTOCParentalID, evaluateThisSlideClassname;
-        //todo alert("destination:"+destination+"\n destinationNAV:"+destinationNAV+"\n navID:"+navID+"\n slideID:"+slideID);
+
 
         //this is to hide the header info past slide one, but I need to retain the header size to make up for the buttons located within.
         INeedTheSlideNumber = destination.substr(5);
@@ -571,11 +558,9 @@ var methods = {
 
                     switch (evaluateThisSlideClassname) {
                         case "pastSlideHeader clearfix":
-                            //This is here because I want to leave these alone. THey need to retain that class.
-                            //theOneIAmWorkingON.children[j].className = "slideHeader";
+                            //These is here because I want to leave these alone. THey need to retain that class.
                             break;
                         case "futureSlideHeader clearfix":
-                            //theOneIAmWorkingON.children[j].className = "pastSlideHeader";
                             break;
                         case "activeSlideContent":
                             theOneIAmWorkingON.children[j].className = "slideContent";
@@ -739,7 +724,7 @@ var methods = {
                     for (var nn = 0; nn < theSlideDOMElement.children.length; nn++) {
                         //insertion target is the slide header.
                         if (theSlideDOMElement.children[nn].className === "slideFooter" || theSlideDOMElement.children[nn].className === "activeSlideFooter") {
-                            //this should be theAudioInsertionParentElement var
+
                             theAudioInsertionParentElement = theSlideDOMElement.children[nn];
                             if (theAudioInsertionParentElement.children[0].className === "nextPrevious") {
                                 theAudioInsertionTargetElement = theAudioInsertionParentElement.children[0];
@@ -768,7 +753,6 @@ var methods = {
                     theAudioBoxElement.appendChild(theAudioButtonElement);
                     theAudioBoxElement.appendChild(theAudioControlsElement);
                     // This is where the audio player gets inserted into the audioControls element.
-                    //change this to theSlideDOMElement
                     theAudioInsertionParentElement.insertBefore(theAudioBoxElement, theAudioInsertionTargetElement);
 
 
@@ -785,9 +769,8 @@ var methods = {
 
         //putting all the elements into the nav menu based on how many slide there are.
         methods.populateTheNavMenu();
-        //giving the first nav menu the proper style image.
-        //document.getElementById("nav1").children[0].src = "img/active_middle.png";
-        //======================add the listeners
+
+        //====================== now add the listeners
         //All the slide headers.
 
 
