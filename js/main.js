@@ -401,12 +401,6 @@ var methods = {
         }//end for
 
     },//end navMenu function
-
-    scrollTo: function (hash) {
-        window.location.href = "#" + hash;
-    },//end scrollTo
-
-
     audioButtonHandler: function () {
         //This paints the audio player within the audio button.
         //It is only called when someone hits the audio button.
@@ -540,11 +534,6 @@ var methods = {
         }//end for
         //the nav element to past style
         document.getElementById(navID).className = "pastNavElement";
-        //document.getElementById(navID).children[0].src = "img/past_middle.png";
-
-       // INeedTheSlideNumber = destination.substr(5);
-
-
 
         //apply the active styles to the destination slide, nav, and footer
         theDestinationSlideElement = document.getElementById(destination);
@@ -568,7 +557,6 @@ var methods = {
         }//end for
         //now the nav element
         document.getElementById(destinationNAV).className = "activeNavElement";
-        //document.getElementById(destinationNAV).children[0].src = "img/active_middle.png";
         //rip through the slides changing the non-active slides to there default classes. (hiding them)
         for (var i = 0; i < methods.countTheSlides(); i++) {
             theSlideCompareElementID = document.getElementById("slide" + (i + 1)).id;
@@ -675,6 +663,8 @@ var methods = {
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
+                //this is here because of it's scope, and so it will jump to and open a slide.
+                window.location = "#"+destinationSlideID;
                 break;
         }//end switch
     },//end ascertainScope method
