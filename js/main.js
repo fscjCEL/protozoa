@@ -476,10 +476,12 @@ var methods = {
         if (theHelpButtonParent.id === "helpboxOpenState") {
             //opened, and needs to be closed
             theHelpBoxElement = document.getElementById("helpboxOpenState");
+            theHelpBoxElement.className = "helpBox";
             theHelpBoxElement.id = "helpboxClosedState";
         }else{
             //closed, and needs to be opened
             theHelpBoxElement = document.getElementById("helpboxClosedState");
+            theHelpBoxElement.className += " clearfix";
             theHelpBoxElement.id = "helpboxOpenState";
         }//end if
 
