@@ -728,7 +728,7 @@ a.slideHeader:hover{
 
     cursor:auto!important;
 }
-.slideHeader h1 {
+.slideHeader h2 {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -739,13 +739,13 @@ a.slideHeader:hover{
     position: relative;
 
 } //end h1
-.slideHeader h1 .slideNumber {
+.slideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
 } //end slidenumber
-.slideHeader h1 .slideTitle {
+.slideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -764,7 +764,7 @@ a.slideHeader:hover{
     text-decoration: none;
 }
 
-.futureSlideHeader h1 {
+.futureSlideHeader h2 {
     font-size: 2.25em;
     width: 95%;
     color: $darkPrimaryColor;
@@ -777,13 +777,13 @@ a.slideHeader:hover{
     .125em,
     .125em);
 } //end h1
-.futureSlideHeader h1 .slideNumber {
+.futureSlideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
 } //end slidenumber
-.futureSlideHeader h1 .slideTitle {
+.futureSlideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -793,7 +793,7 @@ a.slideHeader:hover{
     border-left: 1px solid $black;
 }
 
-.futureSlideHeader h1:hover {
+.futureSlideHeader h2:hover {
     color: $white;
     background-color: $accentColor
 } //end h1 hover
@@ -804,24 +804,24 @@ a.slideHeader:hover{
     text-decoration: none;
 }
 
-.pastSlideHeader h1 {
+.pastSlideHeader h2 {
     font-size: 2.25em;
     padding: 5px 10px;
     margin: 1px auto;
     text-align: center;
     background-color: $darkPrimaryColor;
 } //end h1
-.pastSlideHeader h1:hover {
+.pastSlideHeader h2:hover {
     color: $white;
     background-color: $accentColor;
 } //end pastSlideheader hover
-.pastSlideHeader h1 .slideNumber {
+.pastSlideHeader h2 .slideNumber {
     float: left;
     width: 20%;
     text-align: right;
     color: $white;
 } //end slidenumber
-.pastSlideHeader h1 .slideTitle {
+.pastSlideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -839,7 +839,7 @@ a.slideHeader:hover{
     text-decoration: none;
 }
 
-.activeSlide .pastSlideHeader h1 {
+.activeSlide .pastSlideHeader h2 {
     //this controls the default space between main headers.
     width: 95%;
     color: $accentColor;
@@ -850,14 +850,14 @@ a.slideHeader:hover{
     position: relative;
     background-color: $white;
 } //end h1
-.activeSlide .pastSlideHeader h1 .slideNumber {
+.activeSlide .pastSlideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
     color: $darkPrimaryColor;
 } //end slidenumber
-.activeSlide .pastSlideHeader h1 .slideTitle {
+.activeSlide .pastSlideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -870,7 +870,7 @@ a.slideHeader:hover{
     color: $darkPrimaryColor;
 }
 
-.activeSlide .pastSlideHeader h1:hover {
+.activeSlide .pastSlideHeader h2:hover {
     color: $accentColor;
 }
 
@@ -1503,7 +1503,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     width: 98%;
     text-decoration: none;
 } //end slideheader
-.slideHeader h1 {
+.slideHeader h2 {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -1518,7 +1518,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     width: 98%;
     text-decoration: none;
 } //end slideheader
-.futureSlideHeader h1 {
+.futureSlideHeader h2 {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -1534,7 +1534,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 }
 
 //end pastSlideheader
-.activeSlide .pastSlideHeader h1 {
+.activeSlide .pastSlideHeader h2 {
     //this controls the default space between main headers.
     background-color: transparent;
     width: 100%;
