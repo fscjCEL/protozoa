@@ -229,9 +229,9 @@ object {
 
 #tocOpenState {
   z-index: 200;
-  height: 90vh;
   width: 80%;
   padding-top: 2em;
+  padding-bottom: 1em;
   background-color: #212423;
   color: #B8CCC7;
   right: 0;
