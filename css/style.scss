@@ -278,7 +278,6 @@ object {
 #courseNumber {
     float: left;
     width: 98%;
-    //border-top: .0625em solid $lightPrimaryColor;
     color: $white;
     margin: 0;
     padding: .75rem 0 0 .5rem;
@@ -326,7 +325,6 @@ object {
     position: absolute;
     top: .25em;
 
-    //background-color: $primaryColor;
 
     border-bottom: .0625em solid $primaryColor;
     overflow: hidden;
@@ -371,7 +369,6 @@ object {
     background-image: url('../img/TOC-default.png');
     background-repeat: no-repeat;
     background-position:-1px 0, top;
-    //background-size: contain;
     background-size:2.5em, 2.5em;
 
 
@@ -646,7 +643,6 @@ object {
 
 
     width : 90vw;
-    //height : 90vh;
 
     background-image : url(../img/HELP-closeX.png);
     background-position : 100% 0px,top;
@@ -694,7 +690,6 @@ object {
 }
 .helpContent p a{
 
-  //text-decoration:none;
   color:$lightPrimaryColor;
 }
 
@@ -1163,7 +1158,7 @@ a.slideHeader:hover{
 .cel-25-d-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
 
 /* ========================typography */
-html {font-size: 16px;}//1 rem = 16px;
+html {font-size: 16px;}
 h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
 h2 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
 h3 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
@@ -1485,11 +1480,6 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 #tocClosedState {
     /* default TOC style - button state - */
-
-    // z-index: 2;
-    //width: 1vw;
-    //height: 2.8125em;
-    //background-color: $primaryColor;
     right: 3em;
     /* This controls the opening timing height,width */
     transition-duration: .1s, .25s,.5s,.25s;
@@ -1498,18 +1488,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 }
 
 #tocOpenState{
-    //z-index: 200;
-    //height: 90vh;
     width: 50%;
     padding-top:2em;
-
-    //background-color: $lightPrimaryColor;
-    //color: $darkPrimaryColor;
     right: 3em;
     /* This controls the opening timing height,width */
     transition-duration: .25s, .1s,.5s,.25s;
 
-    //@include material-shadow(.15em, .15em, .15em)
 }
 #tocOpenState #theTocTarget:before{
     border:0;
@@ -1730,8 +1714,8 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     animation-direction: alternate;
     cursor: pointer;
 }
-#helpboxOpenState{width:40vw;
-    //height:70em;
+#helpboxOpenState{
+    width:40vw;
 }
 #helpButton {
     padding: .7em .9em 0 0;
@@ -1758,7 +1742,6 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 @media only screen and (min-width: 41.25em){/* 660 pixel width */
 
     #tocOpenState{width: 40%;}
-    //#helpboxOpenState{height:60em;}
 
 
 
@@ -1779,9 +1762,6 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
 
   #tocOpenState{width: 35%;}
-  //#helpboxOpenState{height:55em;}
-
-
 
 }//end 792
 
