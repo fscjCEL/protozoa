@@ -20,7 +20,7 @@ html {
   line-height: 1.4; }
 
 ::selection {
-  background: #b3d4fc;
+  background: yellow;
   text-shadow: none; }
 
 /*
@@ -553,7 +553,7 @@ a.slideHeader:hover {
   word-wrap: break-word;
   border-left: 1px solid #090A0A; }
 
-/* end .slideHeader h1 .slideTitle */
+/* end .slideHeader h2 .slideTitle */
 .futureSlideHeader {
   /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
   width: 98%;
@@ -1196,6 +1196,12 @@ header h1 {
   font-weight: 300; }
 
 /* 36pxs */
+h1 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: 300; }
+
+/* 36pxs */
 h2 {
   font-size: 2.441rem;
   line-height: 3rem;
@@ -1246,7 +1252,7 @@ p {
 /* 16pxs */
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H1-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
+  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
   .cel-50-a img:first-child {
     margin-top: 1.4rem; }
 
@@ -1269,35 +1275,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-50-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-50-a h2:first-child {
-    margin-top: .7rem;
-    margin-bottom: 1.8rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-50-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-50-a h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem; }
 
-  .cel-50-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-50-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .7rem;
+    margin-bottom: 1.8rem; }
 
   .cel-50-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-50-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-50-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-50-b h4:first-child {
+  .cel-50-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1323,35 +1329,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-7525-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-7525-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-7525-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-7525-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-7525-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-7525-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-7525-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-7525-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-7525-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-7525-b h4:first-child {
+  .cel-7525-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1377,35 +1383,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-2575-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-2575-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-2575-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-2575-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-2575-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-2575-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-2575-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-2575-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-2575-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-2575-b h4:first-child {
+  .cel-2575-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1431,35 +1437,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-60-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-40-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-60-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-40-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-40-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-60-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-40-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-60-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-40-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-60-b h4:first-child {
+  .cel-60-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1485,35 +1491,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-40-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-60-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-40-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-60-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-60-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-40-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-60-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-40-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-60-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-40-b h4:first-child {
+  .cel-40-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1550,51 +1556,51 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-30-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-30-c h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-30-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-30-b h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-30-c h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-30-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-30-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-30-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-30-c h3:first-child {
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
+
+  .cel-30-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-30-a h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
-
   .cel-30-b h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
 
   .cel-30-c h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-30-a h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-30-b h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-30-c h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1642,67 +1648,67 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-25-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-25-c h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-25-d h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-25-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-25-b h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-25-c h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-25-d h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-25-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-25-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-25-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-25-c h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-25-d h3:first-child {
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
+
+  .cel-25-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-25-a h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
-
   .cel-25-b h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
 
   .cel-25-c h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-25-d h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-25-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-25-d h4:first-child {
+  .cel-25-b h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-25-c h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-25-d h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
