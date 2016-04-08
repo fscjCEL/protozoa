@@ -948,10 +948,15 @@ a.slideHeader:hover{
   }
 }
 .activeSlide .TheFirst{
-    animation-name: yellowFlash;
+        -webkit-animation-name: yellowFlash;
+        animation-name: yellowFlash;
+      -webkit-animation-direction: alternate;
       animation-direction: alternate;
+      -webkit-animation-iteration-count: 1;
       animation-iteration-count: 1;
+      -webkit-animation-duration: .8s;
       animation-duration: .8s;
+      -webkit-animation-timing-function: ease;
       animation-timing-function: ease;
 }
 #mainNavList {
@@ -1639,6 +1644,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 @-webkit-keyframes breathingHover {
     to {
         -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
         transform: scale(1.3);
     }
 }
@@ -1646,6 +1652,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 @keyframes breathingHover {
     to {
         -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
         transform: scale(1.3);
     }
 }
@@ -1662,7 +1669,9 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
     vertical-align: middle;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
+
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
 
@@ -1680,6 +1689,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
     vertical-align: middle;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
@@ -1698,6 +1708,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
     vertical-align: middle;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
