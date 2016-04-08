@@ -536,13 +536,15 @@ a.slideHeader:hover {
   padding: .625em 0;
   margin: .1875em 0;
   border-radius: .1875em;
-  position: relative; }
+  position: relative;
+  font-weight: 300; }
 
 .slideHeader h2 .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
-  padding-right: 3%; }
+  padding-right: 3%;
+  font-weight: 300; }
 
 .slideHeader h2 .slideTitle {
   float: right;
@@ -551,7 +553,8 @@ a.slideHeader:hover {
   padding-left: 3%;
   padding-right: 1%;
   word-wrap: break-word;
-  border-left: 1px solid #090A0A; }
+  border-left: 1px solid #090A0A;
+  font-weight: 300; }
 
 /* end .slideHeader h2 .slideTitle */
 .futureSlideHeader {
@@ -570,13 +573,15 @@ a.slideHeader:hover {
   background-color: #F7FFFC;
   -moz-box-shadow: 0 0.125em 0.125em #727272;
   -webkit-box-shadow: 0 0.125em 0.125em #727272;
-  box-shadow: 0 0.125em 0.125em #727272; }
+  box-shadow: 0 0.125em 0.125em #727272;
+  font-weight: 300; }
 
 .futureSlideHeader h2 .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
-  padding-right: 3%; }
+  padding-right: 3%;
+  font-weight: 300; }
 
 .futureSlideHeader h2 .slideTitle {
   float: right;
@@ -585,7 +590,8 @@ a.slideHeader:hover {
   padding-left: 3%;
   padding-right: 1%;
   word-wrap: break-word;
-  border-left: 1px solid #090A0A; }
+  border-left: 1px solid #090A0A;
+  font-weight: 300; }
 
 .futureSlideHeader h2:hover {
   color: #F7FFFC;
@@ -601,7 +607,8 @@ a.slideHeader:hover {
   padding: 5px 10px;
   margin: 1px auto;
   text-align: center;
-  background-color: #212423; }
+  background-color: #212423;
+  font-weight: 300; }
 
 .pastSlideHeader h2:hover {
   color: #F7FFFC;
@@ -611,7 +618,8 @@ a.slideHeader:hover {
   float: left;
   width: 20%;
   text-align: right;
-  color: #F7FFFC; }
+  color: #F7FFFC;
+  font-weight: 300; }
 
 .pastSlideHeader h2 .slideTitle {
   float: right;
@@ -621,7 +629,8 @@ a.slideHeader:hover {
   padding-right: 1%;
   word-wrap: break-word;
   border-left: 1px solid #B8CCC7;
-  color: #F7FFFC; }
+  color: #F7FFFC;
+  font-weight: 300; }
 
 .activeSlide .pastSlideHeader {
   /* This is a slide that has been has been viewed once, and gone back to. I wanted this style to match the default style*/
@@ -637,14 +646,16 @@ a.slideHeader:hover {
   margin: 3px auto;
   border-radius: 3px;
   position: relative;
-  background-color: #F7FFFC; }
+  background-color: #F7FFFC;
+  font-weight: 300; }
 
 .activeSlide .pastSlideHeader h2 .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
   padding-right: 3%;
-  color: #212423; }
+  color: #212423;
+  font-weight: 300; }
 
 .activeSlide .pastSlideHeader h2 .slideTitle {
   float: right;
@@ -656,7 +667,8 @@ a.slideHeader:hover {
   border-left: 1px solid #2F343B;
   box-shadow: none;
   border-bottom: none;
-  color: #212423; }
+  color: #212423;
+  font-weight: 300; }
 
 .activeSlide .pastSlideHeader h2:hover {
   color: #877551; }
@@ -691,7 +703,8 @@ a.slideHeader:hover {
   margin: 0 1em 0 0;
   padding: 0;
   position: inherit;
-  width: 100%; }
+  width: 100%;
+  z-index: 102; }
 
 .activeSlide .activeSlideContent {
   border: 0;
@@ -797,8 +810,7 @@ a.slideHeader:hover {
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 0;
-  z-index: 100; }
+  padding: 0; }
 
 .figure img {
   width: 100%;
@@ -2153,7 +2165,7 @@ p {
     height: 3.125em;
     bottom: 0;
     right: 0;
-    z-index: 1; }
+    z-index: 102; }
 
   .slide .slideFooter {
     margin: 0;
@@ -2264,7 +2276,7 @@ p {
     padding: 3rem 0;
     margin: .1875em 0;
     float: left;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3.157rem;
     border-radius: .1875em; }
 

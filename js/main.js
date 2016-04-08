@@ -31,6 +31,7 @@ var methods = {
             theFigureBox.style.right = "0";
             theFigureBox.style.background = "rgba(0,0,0,0.8)";
             theFigureBox.style.position = "fixed";
+            theFigureBox.style.zIndex = "102";
 
             this.src = "img/figureClose.svg";
             if(theFigureImage.tagName === "IMG"){
@@ -49,6 +50,7 @@ var methods = {
             theFigureBox.style.right = "auto";
             theFigureBox.style.background = "rgba(0,0,0,0)";
             theFigureBox.style.position = "relative";
+            theFigureBox.style.zIndex = "auto";
             this.src = "img/figureOpen.svg";
             if(theFigureCaption.tagName === "IMG"){
                     theFigureCaption.style.overflow = "visible";
