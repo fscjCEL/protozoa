@@ -737,6 +737,7 @@ a.slideHeader:hover{
     margin: .1875em 0;
     border-radius: .1875em;
     position: relative;
+    @include lightWeight;
 
 } //end h2
 .slideHeader h2 .slideNumber {
@@ -744,6 +745,7 @@ a.slideHeader:hover{
     width: 17%;
     text-align: right;
     padding-right: 3%;
+    @include lightWeight;
 } //end slidenumber
 .slideHeader h2 .slideTitle {
     float: right;
@@ -753,6 +755,7 @@ a.slideHeader:hover{
     padding-right: 1%;
     word-wrap: break-word;
     border-left: 1px solid $black;
+    @include lightWeight;
 }
 
 
@@ -776,12 +779,14 @@ a.slideHeader:hover{
     @include material-shadow(0,
     .125em,
     .125em);
+    @include lightWeight;
 } //end h2
 .futureSlideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
+    @include lightWeight;
 } //end slidenumber
 .futureSlideHeader h2 .slideTitle {
     float: right;
@@ -791,6 +796,7 @@ a.slideHeader:hover{
     padding-right: 1%;
     word-wrap: break-word;
     border-left: 1px solid $black;
+    @include lightWeight;
 }
 
 .futureSlideHeader h2:hover {
@@ -810,6 +816,7 @@ a.slideHeader:hover{
     margin: 1px auto;
     text-align: center;
     background-color: $darkPrimaryColor;
+    @include lightWeight;
 } //end h2
 .pastSlideHeader h2:hover {
     color: $white;
@@ -820,6 +827,7 @@ a.slideHeader:hover{
     width: 20%;
     text-align: right;
     color: $white;
+    @include lightWeight;
 } //end slidenumber
 .pastSlideHeader h2 .slideTitle {
     float: right;
@@ -830,6 +838,7 @@ a.slideHeader:hover{
     word-wrap: break-word;
     border-left: 1px solid $lightPrimaryColor;
     color: $white;
+    @include lightWeight;
 }
 
 .activeSlide .pastSlideHeader {
@@ -849,6 +858,7 @@ a.slideHeader:hover{
     border-radius: 3px;
     position: relative;
     background-color: $white;
+    @include lightWeight;
 } //end h2
 .activeSlide .pastSlideHeader h2 .slideNumber {
     float: left;
@@ -856,6 +866,7 @@ a.slideHeader:hover{
     text-align: right;
     padding-right: 3%;
     color: $darkPrimaryColor;
+    @include lightWeight;
 } //end slidenumber
 .activeSlide .pastSlideHeader h2 .slideTitle {
     float: right;
@@ -868,6 +879,7 @@ a.slideHeader:hover{
     box-shadow: none;
     border-bottom: none;
     color: $darkPrimaryColor;
+    @include lightWeight;
 }
 
 .activeSlide .pastSlideHeader h2:hover {
@@ -1547,7 +1559,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     padding: 3rem 0;
     margin: .1875em 0;
     float: left;
-    @include regularWeight;
+    @include lightWeight;
     font-size: 3.157rem;
     border-radius: .1875em;
 } //end h2
