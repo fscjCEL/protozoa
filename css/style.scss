@@ -80,7 +80,7 @@ html {
 
 
 ::selection {
-  background: #b3d4fc;
+  background: yellow;
   text-shadow: none;
 }
 
@@ -465,30 +465,15 @@ object {
 }
 
 //end toclink
-.TOC-H1 {
+.TOC-H2 {
     @include lightWeight;
     @include font-familyHeading;
     font-size: 1.25rem;
     line-height: 1.5;
 }
 
-.TOC-H1 a {
-    column-rule: $darkPrimaryColor;
-}
-
-.TOC-H2 {
-    @include lightWeight;
-    @include font-familyRegular;
-    font-size: .8rem;
-    line-height: 1.3;
-}
-
 .TOC-H2 a {
-    padding-left: .9375em;
-}
-
-.TOC-H2::before {
-    content: "•";
+    column-rule: $darkPrimaryColor;
 }
 
 .TOC-H3 {
@@ -548,6 +533,21 @@ object {
 }
 
 .TOC-H6::before {
+    content: "•";
+}
+
+.TOC-H7 {
+    @include lightWeight;
+    @include font-familyRegular;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+.TOC-H7 a {
+    padding-left: .9375em;
+}
+
+.TOC-H7::before {
     content: "•";
 }
 
@@ -728,7 +728,7 @@ a.slideHeader:hover{
 
     cursor:auto!important;
 }
-.slideHeader h1 {
+.slideHeader h2 {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -738,14 +738,14 @@ a.slideHeader:hover{
     border-radius: .1875em;
     position: relative;
 
-} //end h1
-.slideHeader h1 .slideNumber {
+} //end h2
+.slideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
 } //end slidenumber
-.slideHeader h1 .slideTitle {
+.slideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -756,7 +756,7 @@ a.slideHeader:hover{
 }
 
 
-/* end .slideHeader h1 .slideTitle */
+/* end .slideHeader h2 .slideTitle */
 
 .futureSlideHeader {
     /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
@@ -764,7 +764,7 @@ a.slideHeader:hover{
     text-decoration: none;
 }
 
-.futureSlideHeader h1 {
+.futureSlideHeader h2 {
     font-size: 2.25em;
     width: 95%;
     color: $darkPrimaryColor;
@@ -776,14 +776,14 @@ a.slideHeader:hover{
     @include material-shadow(0,
     .125em,
     .125em);
-} //end h1
-.futureSlideHeader h1 .slideNumber {
+} //end h2
+.futureSlideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
 } //end slidenumber
-.futureSlideHeader h1 .slideTitle {
+.futureSlideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -793,10 +793,10 @@ a.slideHeader:hover{
     border-left: 1px solid $black;
 }
 
-.futureSlideHeader h1:hover {
+.futureSlideHeader h2:hover {
     color: $white;
     background-color: $accentColor
-} //end h1 hover
+} //end h2 hover
 //end slideheader
 .pastSlideHeader {
     /* this is a slide that has been clicked on already and shows as being in the past in the mobile slide stack*/
@@ -804,24 +804,24 @@ a.slideHeader:hover{
     text-decoration: none;
 }
 
-.pastSlideHeader h1 {
+.pastSlideHeader h2 {
     font-size: 2.25em;
     padding: 5px 10px;
     margin: 1px auto;
     text-align: center;
     background-color: $darkPrimaryColor;
-} //end h1
-.pastSlideHeader h1:hover {
+} //end h2
+.pastSlideHeader h2:hover {
     color: $white;
     background-color: $accentColor;
 } //end pastSlideheader hover
-.pastSlideHeader h1 .slideNumber {
+.pastSlideHeader h2 .slideNumber {
     float: left;
     width: 20%;
     text-align: right;
     color: $white;
 } //end slidenumber
-.pastSlideHeader h1 .slideTitle {
+.pastSlideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -839,7 +839,7 @@ a.slideHeader:hover{
     text-decoration: none;
 }
 
-.activeSlide .pastSlideHeader h1 {
+.activeSlide .pastSlideHeader h2 {
     //this controls the default space between main headers.
     width: 95%;
     color: $accentColor;
@@ -849,15 +849,15 @@ a.slideHeader:hover{
     border-radius: 3px;
     position: relative;
     background-color: $white;
-} //end h1
-.activeSlide .pastSlideHeader h1 .slideNumber {
+} //end h2
+.activeSlide .pastSlideHeader h2 .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
     color: $darkPrimaryColor;
 } //end slidenumber
-.activeSlide .pastSlideHeader h1 .slideTitle {
+.activeSlide .pastSlideHeader h2 .slideTitle {
     float: right;
     width: 75%;
     text-align: left;
@@ -870,7 +870,7 @@ a.slideHeader:hover{
     color: $darkPrimaryColor;
 }
 
-.activeSlide .pastSlideHeader h1:hover {
+.activeSlide .pastSlideHeader h2:hover {
     color: $accentColor;
 }
 
@@ -1159,12 +1159,14 @@ a.slideHeader:hover{
 
 /* ========================typography */
 html {font-size: 16px;}
+header h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
 h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
-h2 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
-h3 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
-h4 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
-h5 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
-h6 {font-size: .64rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 14pxs */
+h2 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
+h3 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
+h4 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
+h5 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
+h6 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
+//h7 {font-size: .64rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 14pxs */
 p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 //========================================================================(mobile ^) Media Queries (desktop v) =====================================
@@ -1179,7 +1181,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 
 
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H1-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
+  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
 
   .cel-50-a img:first-child {margin-top: 1.4rem;}
   .cel-50-b img:first-child {margin-top: 1.4rem;}
@@ -1187,14 +1189,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-50-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-50-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-50-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-a h2:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
-  .cel-50-b h2:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
-  .cel-50-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-50-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-50-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-50-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-50-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-50-a h3:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
+  .cel-50-b h3:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
+  .cel-50-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-50-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-50-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-50-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   .cel-7525-a img:first-child {margin-top: 1.4rem;}
   .cel-7525-b img:first-child {margin-top: 1.4rem;}
@@ -1202,14 +1204,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-7525-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-7525-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-7525-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-7525-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-7525-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-7525-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-7525-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-7525-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-7525-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-7525-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-7525-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-7525-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-7525-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-7525-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-7525-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   .cel-2575-a img:first-child {margin-top: 1.4rem;}
   .cel-2575-b img:first-child {margin-top: 1.4rem;}
@@ -1217,14 +1219,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-2575-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-2575-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-2575-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-2575-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-2575-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-2575-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-2575-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-2575-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-2575-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-2575-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-2575-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-2575-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-2575-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-2575-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-2575-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   .cel-40-a img:first-child {margin-top: 1.4rem;}
   .cel-60-b img:first-child {margin-top: 1.4rem;}
@@ -1232,14 +1234,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-60-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-40-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-60-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-60-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-40-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-60-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-40-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-60-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-40-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-60-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-40-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-60-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-40-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-60-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   .cel-60-a img:first-child {margin-top: 1.4rem;}
   .cel-40-b img:first-child {margin-top: 1.4rem;}
@@ -1247,14 +1249,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-40-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-60-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-40-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-40-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-60-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-40-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-60-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-40-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-60-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-40-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-60-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-40-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-60-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-40-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-60-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-40-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   .cel-30-a img:first-child {margin-top: 1.4rem;}
   .cel-30-b img:first-child {margin-top: 1.4rem;}
@@ -1265,18 +1267,18 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-30-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-30-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-30-c ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-c h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-30-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-30-c h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-30-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-30-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-30-c h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-30-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-30-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-30-c h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-30-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-c h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-30-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-30-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-30-c h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-30-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-30-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-30-c h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-30-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-30-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-30-c h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   .cel-25-a img:first-child {margin-top: 1.4rem;}
   .cel-25-b img:first-child {margin-top: 1.4rem;}
@@ -1290,32 +1292,34 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-25-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-25-c ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
   .cel-25-d ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-a h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-b h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-c h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-d h1:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-a h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-b h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-c h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-d h2:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-a h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-b h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-c h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-d h3:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-a h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-25-b h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-25-c h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-25-d h4:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-c h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-d h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
+  .cel-25-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-c h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-d h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
+  .cel-25-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-c h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-d h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
+  .cel-25-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-c h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+  .cel-25-d h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
   /* ========================typography */
   html {font-size: 16px;}
   //1 rem = 16px;
-  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
-  h2 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 38pxs */
-  h3 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 21pxs */
-  h4 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 18pxs */
-  h5 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 16pxs */
-  h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
+  header h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
+  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}
+  h2 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
+  h3 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 38pxs */
+  h4 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 21pxs */
+  h5 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 18pxs */
+  h6 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 16pxs */
+  //h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
   p {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding: 0;}/* 16pxs */
   body {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;}/* 16pxs */
 
@@ -1503,7 +1507,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     width: 98%;
     text-decoration: none;
 } //end slideheader
-.slideHeader h1 {
+.slideHeader h2 {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -1513,12 +1517,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     float: left;
     @include regularWeight;
     border-radius: .1875em;
-} //end h1
+} //end h2
 .futureSlideHeader {
     width: 98%;
     text-decoration: none;
 } //end slideheader
-.futureSlideHeader h1 {
+.futureSlideHeader h2 {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -1527,14 +1531,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     margin: .1875em auto;
     border-bottom: .0625em solid $darkPrimaryColor;
     border-radius: .1875em;
-} //end h1
+} //end h2
 .activeSlide .pastSlideHeader {
     width: 98%;
     text-decoration: none;
 }
 
 //end pastSlideheader
-.activeSlide .pastSlideHeader h1 {
+.activeSlide .pastSlideHeader h2 {
     //this controls the default space between main headers.
     background-color: transparent;
     width: 100%;
@@ -1546,7 +1550,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     @include regularWeight;
     font-size: 3.157rem;
     border-radius: .1875em;
-} //end h1
+} //end h2
 .activeAudioBox {
     width: 100%;
 }
