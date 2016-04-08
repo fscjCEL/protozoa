@@ -924,6 +924,7 @@ a.slideHeader:hover{
     padding: 0;
     position: inherit;
     width: 100%;
+    z-index: 102;
 }
 
 .activeSlide .activeSlideContent {
@@ -1048,7 +1049,7 @@ a.slideHeader:hover{
   width:100%;
   margin:0;
   padding:0;
-  z-index:100;
+
 }
 .figure img{
   width:100%;
@@ -1428,7 +1429,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     height: 3.125em;
     bottom: 0;
     right: 0;
-    z-index: 1;
+    z-index: 102;
 }
 
 .slide .slideFooter {
