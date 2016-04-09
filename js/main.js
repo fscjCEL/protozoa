@@ -1,4 +1,18 @@
 var methods = {
+    yellowFlash:function(){
+        var slidesLength = methods.countTheSlides();
+        for (var i = 0; i < slidesLength; i++) {
+            var theActiveSlideElement = document.getElementById("slide"+(i+1));
+            var theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+            if(theFirstParagraph.parentNode.className !=="figure"){
+             theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+            }else{
+                theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
+            }//end if
+            theFirstParagraph.className = "TheFirst";
+
+        }
+    },//end yellowFlashFunction
     figureModalHandler: function(){
         //add the class that makes it a modal box
 
@@ -17,6 +31,7 @@ var methods = {
             theFigureBox.style.right = "0";
             theFigureBox.style.background = "rgba(0,0,0,0.8)";
             theFigureBox.style.position = "fixed";
+            theFigureBox.style.zIndex = "102";
 
             this.src = "img/figureClose.svg";
             if(theFigureImage.tagName === "IMG"){
@@ -35,6 +50,7 @@ var methods = {
             theFigureBox.style.right = "auto";
             theFigureBox.style.background = "rgba(0,0,0,0)";
             theFigureBox.style.position = "relative";
+            theFigureBox.style.zIndex = "auto";
             this.src = "img/figureOpen.svg";
             if(theFigureCaption.tagName === "IMG"){
                     theFigureCaption.style.overflow = "visible";
@@ -43,18 +59,12 @@ var methods = {
                     theFigureCaption.style.backgroundColor = "transparent";
                 }//endif
         }//end if
-
-
-
-
-
     },//end figureModalHandler
     figureButtonInsertion:function(){
         //create a button element that will be inserted into each figure element.
 
         //first: gather and loop through each figure element.
         var allTheFigureElements = document.getElementsByClassName("figure");
-        // correct - alert(allTheFigureElements.length);
         //each element needs to have a button inserted, and then a listener added to the button.
             for (var i = 0; i < allTheFigureElements.length; i++) {
                 //create the button element
@@ -89,7 +99,6 @@ var methods = {
         //give the blank Li an ID
         theInitialTarget.id = "nav"+theInitialSlideCount;
         //these three lines set the attributes of the target element.
-        //theInitialTarget.setAttribute("data-hover",theInitialSlideCount);
         theInitialTarget.className = "navElement";
         theInitialTarget.innerHTML = theInitialSlideCount;
 
@@ -106,7 +115,6 @@ var methods = {
             }//end if
 
             insertThisListItemElement.innerHTML = i;
-            //insertThisListItemElement.setAttribute("data-hover",i);
 
             var navLiParentNode = document.getElementById("mainNavList");
             var insertLiBeforeThis = document.getElementById("nav"+(i+1));
@@ -119,43 +127,43 @@ var methods = {
 
     },//end populateTheNavMenu
     clickScopeTOC: function () {
-        var theIDtoSend, theTOCParentClassname;
-        theTOCParentClassname = this.parentNode.className;
-        if (theTOCParentClassname === "TOCs") {
+        var theIDtoSend, theTOCparentID;
+        theTOCparentID = this.parentNode.id;
+        //alert(theTOCparentID);
+        if (theTOCparentID === "tocClosedState") {
             //This TOC is CLOSED and needs to be OPENED.
+
             theIDtoSend = this.id;//(theTocTarget)
+
             methods.openTOC(theIDtoSend);
         }//end if
-        if (theTOCParentClassname === "TOCs-open") {
+        if (theTOCparentID === "tocOpenState") {
             //This TOC is OPEN and needs to be CLOSED.
+
             theIDtoSend = this.id;//(theTocTarget)
+
             methods.closeTOC(theIDtoSend);
         }//end if
     },//end scopeTOC function
     closeTOC: function (incomingSlideID) {
-        //this function is being called from the changeTheActualSlide function, and does nothing other than making sure the TOC is closed before proceeding to the next slide. The different contextual scope of the input made this necessarily separate.
+        //this function is being called from the changeTheActualSlide function,
+        //and does nothing other than making sure the TOC is closed before proceeding to the next slide.
+        //The different contextual scope of the input made this necessarily separate.
         //todo I need to set the top margin of the .activeSlide to 50px when closing this.
-        var theTOCelement = document.getElementById(incomingSlideID).parentNode;
-        var theActiveSlideElements = document.getElementsByClassName("activeSlide");
-        var actualActiveSlide = theActiveSlideElements[0];
-        if (theTOCelement.style.height !== "45px") {
-            theTOCelement.style.height = "45px";
-        }//end if
-        actualActiveSlide.style.marginTop = "50px";
-        theTOCelement.className = "TOCs";
+        var theTOCelement = document.getElementById(incomingSlideID).parentNode.id;//so theTocTarget's parentNode
+        document.getElementById(theTOCelement).className = "TOCs";
+        document.getElementById(theTOCelement).id = "tocClosedState";
+
+
+
+
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
-        //add up all the elements in the TOC and add the heights into one big total variable
-        var theTotal = 0;
-        for (var ii = 0; ii < theTOCelement.children.length; ii++) {
-            var theTocElementIamWorkingON = theTOCelement.children[ii];
-            var theCurrentHeight = Number(theTocElementIamWorkingON.offsetHeight);
-            theTotal = theTotal + theCurrentHeight;
-        }//end for
+        //add clearfix to the open menu so it shows everything inside.
 
-        theTotal = theTotal + 45;//giving the box a bit of padding
-        theTOCelement.className = "TOCs-open";
+        theTOCelement.className += " clearfix";
+        theTOCelement.id = "tocOpenState";
 
     },//end function
     traverse: function (task, node) {
@@ -164,7 +172,7 @@ var methods = {
         //"node" needs to be a slide. So RIP through all the slide's children
         for (var xxx = 0; xxx < node.childNodes.length; xxx++) {
             childNode = node.childNodes[xxx];//this one variable is easier to work with.
-            task(childNode);//captureNodes(childNode)//do task to childnode.
+            task(childNode);//do task to childnode.
             //if this childNode has children then lets go again.
             if (childNode.childNodes.length > 0) {
                 methods.traverse(task, childNode);
@@ -179,13 +187,13 @@ var methods = {
 
         function addTheIDToTheTOCElement() {
             var grabMyChild;
-            if (document.getElementById("moduleTOC-default")) {
-                grabMyChild = document.getElementById("moduleTOC-default");
+            if (document.getElementById("tocClosedState")) {
+                grabMyChild = document.getElementById("tocClosedState");
             }
-            if (document.getElementById("moduleTOC-open")) {
-                grabMyChild = document.getElementById("moduleTOC-open");
+            if (document.getElementById("tocOpenState")) {
+                grabMyChild = document.getElementById("tocOpenState");
             }
-            //grabMyChild = document.getElementById("moduleTOC-open");//grab the TOC element
+
             grabMyChild.children[0].id = "theTocTarget";//set the ID of the one and only li, to set it up as a landing target for other LIs
             grabMyChild.children[0].className = "TOCtargets";//apply the classname to the same li as above.
             grabMyChild.children[0].style.listStyleType = "none";
@@ -215,14 +223,13 @@ var methods = {
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
                 var theTOCParentMainList;
-                if (document.getElementById("moduleTOC-default")) {
-                    theTOCParentMainList = document.getElementById("moduleTOC-default");
+                if (document.getElementById("tocClosedState")) {
+                    theTOCParentMainList = document.getElementById("tocClosedState");
                 }
-                if (document.getElementById("moduleTOC-open")) {
-                    theTOCParentMainList = document.getElementById("moduleTOC-open");
+                if (document.getElementById("tocOpenState")) {
+                    theTOCParentMainList = document.getElementById("tocOpenState");
                 }
                 // create the child list that will eventually hold actual list items.
-                //var theSlideTOCList = document.createElement("ul");
                 var theSlideTOCList = document.createElement("li");
                 // give the new parent list an ID
                 theSlideTOCList.id = "slide" + slideBit + "TOC";
@@ -243,9 +250,9 @@ var methods = {
             subTocParentELement.insertBefore(theNewElement, TocSubListTarget);
         }//end processCapturedNode function
         function captureNodes(node) {
-            if (node.nodeName === "H1") {
-                processCapturedNode("H1", node);
-            }//end if
+            //if (node.nodeName === "H1") {
+              //  processCapturedNode("H1", node);
+            //}//end if
             if (node.nodeName === "H2") {
                 processCapturedNode("H2", node);
             }//end if
@@ -267,7 +274,7 @@ var methods = {
         //RIp through all the elements on each slide to populate all the menus.
 
         theNumberOfSlides = methods.countTheSlides();//the total amount of slides
-
+        //this is the main loop.
         for (var bbb = 0; bbb < theNumberOfSlides; bbb++) {//for the length of all the slides.
             currentSlideID = "slide" + (bbb + 1);//build the slide ID
             currentSlideElement = document.getElementById(currentSlideID);//grab the slide element object to rip through.
@@ -350,7 +357,6 @@ var methods = {
                 //create an element, then insert it in before the anchor element.
                 theElementToInsertBefore = allTheLinks[s];
                 theElementsParent = theElementToInsertBefore.parentNode;
-                //alert(typeof theElementsParent);
                 theNewElement = document.createElement("img");
                 //this inserts a little glyph before each link within the content that leads to an external page. All internal links do not get the glyph. .
                 theNewElement.id = "link" + s;
@@ -386,12 +392,6 @@ var methods = {
         }//end for
 
     },//end navMenu function
-
-    scrollTo: function (hash) {
-        window.location.href = "#" + hash;
-    },//end scrollTo
-
-
     audioButtonHandler: function () {
         //This paints the audio player within the audio button.
         //It is only called when someone hits the audio button.
@@ -441,10 +441,8 @@ var methods = {
                     //this opens the box that contains the play pause buttons.
                     if (theParentAudioBox.children[o].className === "audioControls") {
                         audioControlBox = theParentAudioBox.children[o];
-                        //audioControlBox.style.height = "31px";
                         showAudioButton.style.height = "0px";
                         showAudioButton.style.width = "0px";
-                        //audioControlBox.style.width = "280px";
                     }//end if
                     if (theParentAudioBox.children[o].className === "audioButton") {
                         audioCopy = theParentAudioBox.children[o];
@@ -458,37 +456,24 @@ var methods = {
         var theHelpBoxElement,theHelpButtonParent;
 
          theHelpButtonParent = document.getElementById("helpButton").parentNode;
-
-        if (theHelpButtonParent.id === "helpBoxClosing") {
-            //opened, and needs to be closed using the following steps
-            theHelpBoxElement = document.getElementById("helpBoxClosing");
-
-            theHelpBoxElement.id = "helpBoxOpening";
-            theHelpBoxElement.style.width = "2.75em";
-            theHelpBoxElement.style.height = "2.75em";
-            theHelpBoxElement.style.backgroundImage = "url('img/HELP-default.png')";
-            theHelpBoxElement.style.backgroundPosition = "100% 0px,top";
-            theHelpBoxElement.style.backgroundSize = "2.6rem";
-            theHelpBoxElement.style.marginTop = ".25em";
+        if (theHelpButtonParent.id === "helpboxOpenState") {
+            //opened, and needs to be closed
+            theHelpBoxElement = document.getElementById("helpboxOpenState");
+            theHelpBoxElement.className = "helpBox";
+            theHelpBoxElement.id = "helpboxClosedState";
         }else{
-            //closed, and needs to be opened using the following steps
-            theHelpBoxElement = document.getElementById("helpBoxOpening");
-            theHelpBoxElement.id = "helpBoxClosing";
-            theHelpBoxElement.style.width = "50vw";
-            theHelpBoxElement.style.height = "90vh";//todo this could be taken care of dynamically.
-            theHelpBoxElement.style.backgroundImage = "url('img/HELP-closeX.png')";
-            theHelpBoxElement.style.backgroundPosition = "100% 0px,top";
-            theHelpBoxElement.style.backgroundSize = "2.6rem";
-            theHelpBoxElement.style.marginTop = ".25em";
+            //closed, and needs to be opened
+            theHelpBoxElement = document.getElementById("helpboxClosedState");
+            theHelpBoxElement.className += " clearfix";
+            theHelpBoxElement.id = "helpboxOpenState";
         }//end if
-
 
     },//end helpButtonHandler method
     changeTheActualSlide: function (destination, destinationNAV, navID, slideID) {
         //change the active slide to pastSlide this needs to occur on the nav and header elements.
         //initialize
-        var theActiveSlideElement, theSlideCompareElementID, theOneIAmWorkingON, destinationsChildClassname, theChildsClassname, theActiveSlideHeaderElement, theDestinationSlideElement, INeedTheSlideNumber, allTheAudioElements, theIDforTOC, theTOCParentClassname, evaluateThisSlideClassname;
-        //todo alert("destination:"+destination+"\n destinationNAV:"+destinationNAV+"\n navID:"+navID+"\n slideID:"+slideID);
+        var theActiveSlideElement, theSlideCompareElementID, theOneIAmWorkingON, destinationsChildClassname, theChildsClassname, theActiveSlideHeaderElement, theDestinationSlideElement, INeedTheSlideNumber, allTheAudioElements, theIDforTOC, theTOCParentalID, evaluateThisSlideClassname;
+
 
         //this is to hide the header info past slide one, but I need to retain the header size to make up for the buttons located within.
         INeedTheSlideNumber = destination.substr(5);
@@ -511,8 +496,8 @@ var methods = {
         //end if
         //TOC should close
         theIDforTOC = "theTocTarget";
-        theTOCParentClassname = document.getElementById(theIDforTOC).parentNode.className;
-        if (theTOCParentClassname === "TOCs-open") {
+        theTOCParentalID = document.getElementById(theIDforTOC).parentNode.id;
+        if (theTOCParentalID === "tocOpenState") {
             //This TOC is OPEN and needs to be CLOSED.
             methods.closeTOC(theIDforTOC);
         }//end if
@@ -538,11 +523,6 @@ var methods = {
         }//end for
         //the nav element to past style
         document.getElementById(navID).className = "pastNavElement";
-        //document.getElementById(navID).children[0].src = "img/past_middle.png";
-
-       // INeedTheSlideNumber = destination.substr(5);
-
-
 
         //apply the active styles to the destination slide, nav, and footer
         theDestinationSlideElement = document.getElementById(destination);
@@ -566,7 +546,6 @@ var methods = {
         }//end for
         //now the nav element
         document.getElementById(destinationNAV).className = "activeNavElement";
-        //document.getElementById(destinationNAV).children[0].src = "img/active_middle.png";
         //rip through the slides changing the non-active slides to there default classes. (hiding them)
         for (var i = 0; i < methods.countTheSlides(); i++) {
             theSlideCompareElementID = document.getElementById("slide" + (i + 1)).id;
@@ -581,11 +560,9 @@ var methods = {
 
                     switch (evaluateThisSlideClassname) {
                         case "pastSlideHeader clearfix":
-                            //This is here because I want to leave these alone. THey need to retain that class.
-                            //theOneIAmWorkingON.children[j].className = "slideHeader";
+                            //These is here because I want to leave these alone. THey need to retain that class.
                             break;
                         case "futureSlideHeader clearfix":
-                            //theOneIAmWorkingON.children[j].className = "pastSlideHeader";
                             break;
                         case "activeSlideContent":
                             theOneIAmWorkingON.children[j].className = "slideContent";
@@ -673,6 +650,8 @@ var methods = {
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
+                //this is here because of it's scope, and so it will jump to and open a slide.
+                window.location = "#"+destinationSlideID;
                 break;
         }//end switch
     },//end ascertainScope method
@@ -747,7 +726,7 @@ var methods = {
                     for (var nn = 0; nn < theSlideDOMElement.children.length; nn++) {
                         //insertion target is the slide header.
                         if (theSlideDOMElement.children[nn].className === "slideFooter" || theSlideDOMElement.children[nn].className === "activeSlideFooter") {
-                            //this should be theAudioInsertionParentElement var
+
                             theAudioInsertionParentElement = theSlideDOMElement.children[nn];
                             if (theAudioInsertionParentElement.children[0].className === "nextPrevious") {
                                 theAudioInsertionTargetElement = theAudioInsertionParentElement.children[0];
@@ -776,7 +755,6 @@ var methods = {
                     theAudioBoxElement.appendChild(theAudioButtonElement);
                     theAudioBoxElement.appendChild(theAudioControlsElement);
                     // This is where the audio player gets inserted into the audioControls element.
-                    //change this to theSlideDOMElement
                     theAudioInsertionParentElement.insertBefore(theAudioBoxElement, theAudioInsertionTargetElement);
 
 
@@ -793,9 +771,8 @@ var methods = {
 
         //putting all the elements into the nav menu based on how many slide there are.
         methods.populateTheNavMenu();
-        //giving the first nav menu the proper style image.
-        //document.getElementById("nav1").children[0].src = "img/active_middle.png";
-        //======================add the listeners
+
+        //====================== now add the listeners
         //All the slide headers.
 
 
@@ -865,6 +842,7 @@ var methods = {
        methods.navMenu();
        //call the figure build
        methods.figureButtonInsertion();
+       methods.yellowFlash();
 
 
 

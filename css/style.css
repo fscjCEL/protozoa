@@ -20,7 +20,7 @@ html {
   line-height: 1.4; }
 
 ::selection {
-  background: #b3d4fc;
+  background: yellow;
   text-shadow: none; }
 
 /*
@@ -203,79 +203,89 @@ object {
   -webkit-box-shadow: 0px 0.125em 0.0625em #727272;
   box-shadow: 0px 0.125em 0.0625em #727272; }
 
-.slide .TOCs {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: .0625em;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: .0625em; }
-
 #theModuleHeader {
   position: relative; }
 
-#moduleTOC-default {
-  /* default TOC style - button state - */
+.TOCs {
   margin: 0 auto -50px 0;
-  width: 1vw;
   border-radius: .1875em;
   padding-top: 0;
   position: absolute;
-  top: 0;
-  right: 15%;
-  z-index: 2;
-  height: 2.8125em;
+  top: .25em;
+  border-bottom: 0.0625em solid #2F343B;
   overflow: hidden;
-  -o-transition: height .25s ease-in-out, width .3s ease-in-out;
-  -webkit-transition: height .25s ease-in-out, width .3s ease-in-out;
-  -moz-transition: height .25s ease-in-out, width .3s ease-in-out;
-  transition: height .25s ease-in-out, width .3s ease-in-out;
+  transition-property: height, width,background-color,right;
+  transition-timing-function: ease-in-out; }
+
+#tocClosedState {
+  /* default TOC style - button state - */
+  z-index: 2;
+  width: 1vw;
+  height: 2.8125em;
   background-color: #2F343B;
-  color: #F7FFFC;
-  border-bottom: 0.0625em solid #2F343B; }
+  right: 3em;
+  /* This controls the opening timing height,width */
+  transition-duration: .1s, .25s,.5s,.25s; }
 
-#moduleTOC-default #theTocTarget {
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: .1875em;
-  background: url("../img/TOC-default.png") 0px 100% no-repeat;
-  background-size: contain;
-  margin-left: -35px;
-  position: absolute;
-  top: .3rem; }
-
-.TOCs-open {
-  /* Open TOC Menu state */
-  z-index: 200 !important;
-  height: 90vh !important;
-  width: 80% !important;
-  right: 0 !important;
-  background-color: #877551 !important;
+#tocOpenState {
+  z-index: 200;
+  width: 80%;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  background-color: #212423;
+  color: #B8CCC7;
+  right: 0;
+  /* This controls the opening timing height,width */
+  transition-duration: .25s, .1s,.5s,.25s;
   -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272; }
 
-.TOCs-open #theTocTarget {
-  background: url("../img/TOC-closeX.png") 0 50% no-repeat !important;
-  width: 2.75em !important;
-  height: 2.75em !important;
-  right: 0 !important;
-  top: 1em; }
+#tocClosedState #theTocTarget {
+  /* this hooks into the closed menu TOC button */
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: .1875em;
+  background-image: url("../img/TOC-default.png");
+  background-repeat: no-repeat;
+  background-position: -1px 0, top;
+  background-size: 2.5em, 2.5em;
+  margin-left: -35px;
+  position: absolute;
+  top: 0; }
 
-.TOCs-open #theTocTarget::before {
+#tocOpenState #theTocTarget {
+  /* this controls the open state of the TOC menu button */
+  background: url("../img/TOC-closeX.png") 100% 0 no-repeat;
+  width: 100%;
+  height: 2.75em;
+  background-size: 2.6em;
+  right: 0;
+  top: 0;
+  position: absolute; }
+
+#tocOpenState #theTocTarge:hover {
+  cursor: pointer; }
+
+#tocClosedState #theTocTarget:hover {
+  cursor: pointer; }
+
+#tocOpenState #theTocTarget::before {
+  /* This renders the Table of Contents Menu Title as a CSS insertion */
   content: "Table of Contents";
   position: relative;
-  left: -13.5rem;
-  top: .5rem;
-  width: 20rem;
-  color: #090A0A;
+  left: 1em;
+  top: 1.5rem;
+  color: #B8CCC7;
   display: inline-block;
   text-align: left;
-  font-size: 1.5em; }
+  font-size: 2em;
+  border-bottom: 1px solid #212423;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-weight: 300; }
 
-#moduleTOC-default .slideNumber {
+/* All of these styles need to be changed to the className Once implemented.  */
+#tocOpenState .slideNumber {
   border: 0;
   clip: rect(0 0 0 0);
   height: .0625em;
@@ -285,43 +295,37 @@ object {
   position: absolute;
   width: .0625em; }
 
-#moduleTOC-default li ul {
-  padding-left: 0; }
+#tocOpenState li ul {
+  padding-left: 0;
+  color: #B8CCC7; }
 
-#moduleTOC-default li ul li {
-  list-style-type: none !important; }
+#tocOpenState li ul li {
+  list-style-type: none !important;
+  color: #B8CCC7; }
 
-#moduleTOC-default li a {
+#tocOpenState li a {
   text-decoration: none;
-  color: #F7FFFC; }
+  color: #B8CCC7; }
 
-#moduleTOC-default #slide1TOC {
+#tocOpenState #slide1TOC {
   margin-top: 2.8125em; }
 
-#moduleTOC-default .TOClink:hover {
-  background-color: #2F343B; }
-
-.TOC-H1 {
-  font-weight: 300;
-  font-size: 1.25rem;
-  line-height: 1.5; }
-
-.TOC-H1 a {
-  column-rule: #212423; }
+#tocOpenState .TOClink:hover {
+  background-color: #877551;
+  color: #F7FFFC; }
 
 .TOC-H2 {
   font-weight: 300;
-  font-size: .8rem;
-  line-height: 1.3; }
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.25rem;
+  line-height: 1.5; }
 
 .TOC-H2 a {
-  padding-left: .9375em; }
-
-.TOC-H2::before {
-  content: "•"; }
+  column-rule: #212423; }
 
 .TOC-H3 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -333,6 +337,7 @@ object {
 
 .TOC-H4 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -344,6 +349,7 @@ object {
 
 .TOC-H5 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -355,6 +361,7 @@ object {
 
 .TOC-H6 {
   font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
   line-height: 1.3; }
 
@@ -362,6 +369,18 @@ object {
   padding-left: .9375em; }
 
 .TOC-H6::before {
+  content: "•"; }
+
+.TOC-H7 {
+  font-weight: 300;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: .8rem;
+  line-height: 1.3; }
+
+.TOC-H7 a {
+  padding-left: .9375em; }
+
+.TOC-H7::before {
   content: "•"; }
 
 .audioBox {
@@ -402,40 +421,47 @@ object {
   margin: .375em; }
 
 .helpBox {
-  background: #2F343B url("../img/HELP-default.png") no-repeat;
-  /* background-position: 100% 0px,top; */
+  background: url("../img/HELP-default.png") no-repeat;
   background-position: center;
+  background-size: 2.6rem;
+  background-origin: content-box;
+  border-radius: .1875em;
   color: #F7FFFC;
   position: absolute;
   right: 0;
+  top: .25em;
+  margin-right: .25em;
   text-align: left;
-  background-origin: content-box;
-  padding-bottom: .3rem;
-  background-size: 2.6rem;
-  height: 2.75em;
-  width: 2.75em;
   overflow: hidden;
-  margin-top: .25em;
-  margin-right: .25em; }
+  /* the timing for this is in the IDs that get swapped */
+  transition-property: height, width,background-color;
+  transition-timing-function: ease-in-out; }
 
-.helpBox h2 {
-  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+#helpboxClosedState {
+  width: 2.75em;
+  height: 2.75em;
+  background-color: #2F343B;
+  z-index: 2;
+  padding-bottom: .3rem;
+  background-image: url(../img/HELP-default.png);
+  background-position: 100% 0px;
+  background-size: 2.5rem;
+  /* timing of height then width NOTE: this effects the closing animation */
+  transition-duration: .1s, .25s, .5s; }
 
-#helpBoxOpening {
-  -o-transition: width .5s ease-in-out, height .25s;
-  -webkit-transition: width .5s ease-in-out, height .25s;
-  -moz-transition: width .5s ease-in-out, height .25s;
-  transition: width .5s ease-in-out, height .25s;
-  z-index: 2; }
-
-#helpBoxClosing {
-  -o-transition: width .15s, height .5s ease-in-out;
-  -webkit-transition: width .15s, height .5s ease-in-out;
-  -moz-transition: width .15s, height .5s ease-in-out;
-  transition: width .15s, height .5s ease-in-out;
-  background-color: #877551;
+#helpboxOpenState {
+  background-color: #212423;
+  -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
+  -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
+  box-shadow: 0.15em 0.15em 0.15em #727272;
   z-index: 200;
-  width: 38.2%; }
+  padding-bottom: 1rem;
+  width: 90vw;
+  background-image: url(../img/HELP-closeX.png);
+  background-position: 100% 0px,top;
+  background-size: 2.5rem;
+  /* timing of height then width NOTE: this effects the opening animation*/
+  transition-duration: .25s, .1s,.5s; }
 
 #helpButton {
   width: 100%;
@@ -446,12 +472,38 @@ object {
   text-align: left;
   float: right; }
 
+#helpButton:hover {
+  cursor: pointer; }
+
+#helpboxClosedState .helpContent {
+  opacity: 0; }
+
+#helpboxOpenState .helpContent {
+  opacity: 1; }
+
 .helpContent {
   width: 90%;
   margin-left: 5%;
-  text-align: left;
+  text-align: center;
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: .1s; }
+
+.helpContent p {
+  width: 90%;
+  margin: 0 auto;
+  color: #B8CCC7; }
+
+.helpContent p a {
+  color: #B8CCC7; }
+
+.helpContent h3 {
+  font-weight: 300;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  color: #B8CCC7; }
 
 .slide {
   width: 100%;
@@ -474,37 +526,43 @@ object {
   position: relative;
   text-decoration: none; }
 
-.slideHeader h1 {
+a.slideHeader:hover {
+  cursor: auto !important; }
+
+.slideHeader h2 {
   width: 100%;
   color: #212423;
   text-align: left;
   padding: .625em 0;
   margin: .1875em 0;
   border-radius: .1875em;
-  position: relative; }
+  position: relative;
+  font-weight: 300; }
 
-.slideHeader h1 .slideNumber {
+.slideHeader h2 .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
-  padding-right: 3%; }
+  padding-right: 3%;
+  font-weight: 300; }
 
-.slideHeader h1 .slideTitle {
+.slideHeader h2 .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
   padding-left: 3%;
   padding-right: 1%;
   word-wrap: break-word;
-  border-left: 1px solid #090A0A; }
+  border-left: 1px solid #090A0A;
+  font-weight: 300; }
 
-/* end .slideHeader h1 .slideTitle */
+/* end .slideHeader h2 .slideTitle */
 .futureSlideHeader {
   /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
   width: 98%;
   text-decoration: none; }
 
-.futureSlideHeader h1 {
+.futureSlideHeader h2 {
   font-size: 2.25em;
   width: 95%;
   color: #212423;
@@ -515,24 +573,27 @@ object {
   background-color: #F7FFFC;
   -moz-box-shadow: 0 0.125em 0.125em #727272;
   -webkit-box-shadow: 0 0.125em 0.125em #727272;
-  box-shadow: 0 0.125em 0.125em #727272; }
+  box-shadow: 0 0.125em 0.125em #727272;
+  font-weight: 300; }
 
-.futureSlideHeader h1 .slideNumber {
+.futureSlideHeader h2 .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
-  padding-right: 3%; }
+  padding-right: 3%;
+  font-weight: 300; }
 
-.futureSlideHeader h1 .slideTitle {
+.futureSlideHeader h2 .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
   padding-left: 3%;
   padding-right: 1%;
   word-wrap: break-word;
-  border-left: 1px solid #090A0A; }
+  border-left: 1px solid #090A0A;
+  font-weight: 300; }
 
-.futureSlideHeader h1:hover {
+.futureSlideHeader h2:hover {
   color: #F7FFFC;
   background-color: #877551; }
 
@@ -541,24 +602,26 @@ object {
   width: 90%;
   text-decoration: none; }
 
-.pastSlideHeader h1 {
+.pastSlideHeader h2 {
   font-size: 2.25em;
   padding: 5px 10px;
   margin: 1px auto;
   text-align: center;
-  background-color: #212423; }
+  background-color: #212423;
+  font-weight: 300; }
 
-.pastSlideHeader h1:hover {
+.pastSlideHeader h2:hover {
   color: #F7FFFC;
   background-color: #877551; }
 
-.pastSlideHeader h1 .slideNumber {
+.pastSlideHeader h2 .slideNumber {
   float: left;
   width: 20%;
   text-align: right;
-  color: #F7FFFC; }
+  color: #F7FFFC;
+  font-weight: 300; }
 
-.pastSlideHeader h1 .slideTitle {
+.pastSlideHeader h2 .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -566,7 +629,8 @@ object {
   padding-right: 1%;
   word-wrap: break-word;
   border-left: 1px solid #B8CCC7;
-  color: #F7FFFC; }
+  color: #F7FFFC;
+  font-weight: 300; }
 
 .activeSlide .pastSlideHeader {
   /* This is a slide that has been has been viewed once, and gone back to. I wanted this style to match the default style*/
@@ -574,7 +638,7 @@ object {
   position: relative;
   text-decoration: none; }
 
-.activeSlide .pastSlideHeader h1 {
+.activeSlide .pastSlideHeader h2 {
   width: 95%;
   color: #877551;
   text-align: left;
@@ -582,16 +646,18 @@ object {
   margin: 3px auto;
   border-radius: 3px;
   position: relative;
-  background-color: #F7FFFC; }
+  background-color: #F7FFFC;
+  font-weight: 300; }
 
-.activeSlide .pastSlideHeader h1 .slideNumber {
+.activeSlide .pastSlideHeader h2 .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
   padding-right: 3%;
-  color: #212423; }
+  color: #212423;
+  font-weight: 300; }
 
-.activeSlide .pastSlideHeader h1 .slideTitle {
+.activeSlide .pastSlideHeader h2 .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -601,9 +667,10 @@ object {
   border-left: 1px solid #2F343B;
   box-shadow: none;
   border-bottom: none;
-  color: #212423; }
+  color: #212423;
+  font-weight: 300; }
 
-.activeSlide .pastSlideHeader h1:hover {
+.activeSlide .pastSlideHeader h2:hover {
   color: #877551; }
 
 .slideContent {
@@ -636,7 +703,8 @@ object {
   margin: 0 1em 0 0;
   padding: 0;
   position: inherit;
-  width: 100%; }
+  width: 100%;
+  z-index: 102; }
 
 .activeSlide .activeSlideContent {
   border: 0;
@@ -647,6 +715,23 @@ object {
   padding: 2%;
   position: inherit;
   width: 90%; }
+
+@keyframes yellowFlash {
+  0% {
+    background-color: yellow; }
+  100% {
+    background-color: #F7FFFC; } }
+.activeSlide .TheFirst {
+  -webkit-animation-name: yellowFlash;
+  animation-name: yellowFlash;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease; }
 
 #mainNavList {
   border: 0;
@@ -693,11 +778,13 @@ object {
 
 .nextButton:hover {
   background-color: #212423;
-  transition: background-color .25s ease-in-out; }
+  transition: background-color .25s ease-in-out;
+  cursor: pointer; }
 
 .prevButton:hover {
   background-color: #212423;
-  transition: background-color .25s ease-in-out; }
+  transition: background-color .25s ease-in-out;
+  cursor: pointer; }
 
 .slideFooter {
   width: 100%;
@@ -728,8 +815,7 @@ object {
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 0;
-  z-index: 100; }
+  padding: 0; }
 
 .figure img {
   width: 100%;
@@ -1121,6 +1207,12 @@ object {
 html {
   font-size: 16px; }
 
+header h1 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: 300; }
+
+/* 36pxs */
 h1 {
   font-size: 2.441rem;
   line-height: 3rem;
@@ -1128,6 +1220,12 @@ h1 {
 
 /* 36pxs */
 h2 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: 300; }
+
+/* 36pxs */
+h3 {
   font-size: 1.953rem;
   line-height: 3rem;
   font-weight: 300;
@@ -1136,7 +1234,7 @@ h2 {
   padding-left: .25rem; }
 
 /* 24pxs */
-h3 {
+h4 {
   font-size: 1.563rem;
   line-height: 1.5rem;
   font-weight: 300;
@@ -1145,7 +1243,7 @@ h3 {
   padding-left: .25rem; }
 
 /* 21pxs */
-h4 {
+h5 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 300;
@@ -1154,7 +1252,7 @@ h4 {
   padding-left: .25rem; }
 
 /* 18pxs */
-h5 {
+h6 {
   font-size: .8rem;
   line-height: 1.5rem;
   font-weight: 300;
@@ -1163,15 +1261,6 @@ h5 {
   padding-left: .25rem; }
 
 /* 16pxs */
-h6 {
-  font-size: .64rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: .25rem; }
-
-/* 14pxs */
 p {
   font-size: 1rem;
   line-height: 1.5;
@@ -1180,7 +1269,7 @@ p {
 /* 16pxs */
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H1-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
+  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
   .cel-50-a img:first-child {
     margin-top: 1.4rem; }
 
@@ -1203,35 +1292,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-50-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-50-a h2:first-child {
-    margin-top: .7rem;
-    margin-bottom: 1.8rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-50-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-50-a h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem; }
 
-  .cel-50-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-50-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .7rem;
+    margin-bottom: 1.8rem; }
 
   .cel-50-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-50-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-50-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-50-b h4:first-child {
+  .cel-50-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1257,35 +1346,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-7525-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-7525-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-7525-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-7525-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-7525-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-7525-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-7525-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-7525-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-7525-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-7525-b h4:first-child {
+  .cel-7525-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1311,35 +1400,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-2575-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-2575-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-2575-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-2575-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-2575-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-2575-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-2575-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-2575-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-2575-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-2575-b h4:first-child {
+  .cel-2575-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1365,35 +1454,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-60-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-40-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-60-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-40-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-40-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-60-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-40-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-60-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-40-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-60-b h4:first-child {
+  .cel-60-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1419,35 +1508,35 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-40-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-60-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-40-b h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-60-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-60-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-40-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-60-a h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-40-b h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-60-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-40-b h4:first-child {
+  .cel-40-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1484,51 +1573,51 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-30-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-30-c h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-30-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-30-b h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-30-c h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-30-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-30-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-30-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-30-c h3:first-child {
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
+
+  .cel-30-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-30-a h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
-
   .cel-30-b h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
 
   .cel-30-c h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-30-a h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-30-b h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-30-c h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1576,67 +1665,67 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-a h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-25-b h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-25-c h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
-  .cel-25-d h1:first-child {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem; }
-
   .cel-25-a h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-25-b h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-25-c h2:first-child {
-    margin-top: .65rem;
-    margin-bottom: 1.85rem; }
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
 
   .cel-25-d h2:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+
+  .cel-25-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-25-a h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
-
   .cel-25-b h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-25-c h3:first-child {
-    margin-top: .5rem;
-    margin-bottom: 2rem; }
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
 
   .cel-25-d h3:first-child {
+    margin-top: .65rem;
+    margin-bottom: 1.85rem; }
+
+  .cel-25-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-25-a h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
-
   .cel-25-b h4:first-child {
-    margin-top: .4rem;
-    margin-bottom: 2.1rem; }
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
 
   .cel-25-c h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-25-d h4:first-child {
+    margin-top: .5rem;
+    margin-bottom: 2rem; }
+
+  .cel-25-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-25-d h4:first-child {
+  .cel-25-b h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-25-c h5:first-child {
+    margin-top: .4rem;
+    margin-bottom: 2.1rem; }
+
+  .cel-25-d h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1644,14 +1733,27 @@ p {
   html {
     font-size: 16px; }
 
-  h1 {
+  header h1 {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
     font-weight: 400; }
 
   /* 50.5pxs */
+  h1 {
+    font-size: 3.157rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 400; }
+
   h2 {
+    font-size: 3.157rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 400; }
+
+  /* 50.5pxs */
+  h3 {
     font-size: 2.369rem;
     line-height: 3rem;
     margin-bottom: 3rem;
@@ -1659,7 +1761,7 @@ p {
     padding-left: .25rem; }
 
   /* 38pxs */
-  h3 {
+  h4 {
     font-size: 1.777rem;
     line-height: 3rem;
     margin-bottom: 3rem;
@@ -1667,7 +1769,7 @@ p {
     padding-left: .25rem; }
 
   /* 21pxs */
-  h4 {
+  h5 {
     font-size: 1.333rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
@@ -1675,7 +1777,7 @@ p {
     padding-left: .25rem; }
 
   /* 18pxs */
-  h5 {
+  h6 {
     font-size: .75rem;
     line-height: 1.5rem;
     margin-bottom: 1.5rem;
@@ -1683,14 +1785,6 @@ p {
     padding-left: .25rem; }
 
   /* 16pxs */
-  h6 {
-    font-size: .563rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-    padding-left: .25rem; }
-
-  /* 14pxs */
   p {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1732,7 +1826,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-50-b {
-    float: left;
+    float: right;
     width: 48%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1745,7 +1839,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-50-b-rule {
-    float: left;
+    float: right;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: .0625em solid;
@@ -1758,7 +1852,7 @@ p {
     border: 0.0625em solid #B8CCC7; }
 
   .cel-50-b-box {
-    float: left;
+    float: right;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: 0.0625em solid #B8CCC7; }
@@ -1810,7 +1904,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-2575-b {
-    float: left;
+    float: right;
     width: 73%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1823,7 +1917,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-2575-b-rule {
-    float: left;
+    float: right;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: .0625em solid;
@@ -1836,7 +1930,7 @@ p {
     border: 0.0625em solid #B8CCC7; }
 
   .cel-2575-b-box {
-    float: left;
+    float: right;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
@@ -1849,7 +1943,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-40-b {
-    float: left;
+    float: right;
     width: 35%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1862,7 +1956,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-40-b-rule {
-    float: left;
+    float: right;
     width: 35%;
     padding: 0 0 0 1%;
     border: .0625em solid;
@@ -1875,7 +1969,7 @@ p {
     border: 0.0625em solid #B8CCC7; }
 
   .cel-40-b-box {
-    float: left;
+    float: right;
     width: 35%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
@@ -1888,7 +1982,7 @@ p {
     border: 0.0625em solid #F7FFFC; }
 
   .cel-60-b {
-    float: left;
+    float: right;
     width: 61%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
@@ -1901,7 +1995,7 @@ p {
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
 
   .cel-60-b-rule {
-    float: left;
+    float: right;
     width: 61%;
     padding: 0 0 0 1%;
     border: .0625em solid;
@@ -1935,7 +2029,7 @@ p {
     margin-bottom: .4rem; }
 
   .cel-30-c {
-    float: left;
+    float: right;
     width: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
@@ -1957,7 +2051,7 @@ p {
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
 
   .cel-30-c-rule {
-    float: left;
+    float: right;
     width: 98%;
     padding: 0;
     border: .0625em solid;
@@ -1978,7 +2072,7 @@ p {
     margin-bottom: .4rem; }
 
   .cel-30-c-box {
-    float: left;
+    float: right;
     width: 97%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
@@ -2004,7 +2098,7 @@ p {
 
   .cel-25-d {
     float: left;
-    width: 98%;
+    right: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
 
@@ -2031,7 +2125,7 @@ p {
 
   .cel-25-d-rule {
     float: left;
-    width: 98%;
+    right: 98%;
     padding: 0;
     border: .0625em solid;
     border-color: #B8CCC7 #F7FFFC #F7FFFC #F7FFFC; }
@@ -2056,7 +2150,7 @@ p {
 
   .cel-25-d-box {
     float: left;
-    width: 97%;
+    right: 97%;
     padding: 0 .5%;
     border: 0.0625em solid #B8CCC7; }
 
@@ -2076,7 +2170,7 @@ p {
     height: 3.125em;
     bottom: 0;
     right: 0;
-    z-index: 1; }
+    z-index: 102; }
 
   .slide .slideFooter {
     margin: 0;
@@ -2132,15 +2226,27 @@ p {
     position: relative;
     width: 60vw; }
 
-  #moduleTOC-default {
+  #tocClosedState {
     /* default TOC style - button state - */
-    right: 10%; }
+    right: 3em;
+    /* This controls the opening timing height,width */
+    transition-duration: .1s, .25s,.5s,.25s; }
+
+  #tocOpenState {
+    width: 50%;
+    padding-top: 2em;
+    right: 3em;
+    /* This controls the opening timing height,width */
+    transition-duration: .25s, .1s,.5s,.25s; }
+
+  #tocOpenState #theTocTarget:before {
+    border: 0; }
 
   .slideHeader {
     width: 98%;
     text-decoration: none; }
 
-  .slideHeader h1 {
+  .slideHeader h2 {
     width: 100%;
     color: #212423;
     text-align: left;
@@ -2154,7 +2260,7 @@ p {
     width: 98%;
     text-decoration: none; }
 
-  .futureSlideHeader h1 {
+  .futureSlideHeader h2 {
     width: 100%;
     color: #212423;
     text-align: left;
@@ -2167,7 +2273,7 @@ p {
     width: 98%;
     text-decoration: none; }
 
-  .activeSlide .pastSlideHeader h1 {
+  .activeSlide .pastSlideHeader h2 {
     background-color: transparent;
     width: 100%;
     color: #212423;
@@ -2175,7 +2281,7 @@ p {
     padding: 3rem 0;
     margin: .1875em 0;
     float: left;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3.157rem;
     border-radius: .1875em; }
 
@@ -2238,10 +2344,12 @@ p {
   @-webkit-keyframes breathingHover {
     to {
       -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
       transform: scale(1.3); } }
   @keyframes breathingHover {
     to {
       -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
       transform: scale(1.3); } }
   .navElement {
     background: url(../img/nav-sprites.png) 50% 0px no-repeat;
@@ -2252,6 +2360,7 @@ p {
     padding-top: .75em;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
     -moz-osx-font-smoothing: grayscale; }
@@ -2265,6 +2374,7 @@ p {
     padding-top: 0.75em !important;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
     -moz-osx-font-smoothing: grayscale; }
@@ -2279,6 +2389,7 @@ p {
     color: #FFF;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
     -moz-osx-font-smoothing: grayscale; }
@@ -2306,13 +2417,11 @@ p {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
-    animation-direction: alternate; }
+    animation-direction: alternate;
+    cursor: pointer; }
 
-  .helpBox {
-    height: 2.5em;
-    width: 2.5em;
-    overflow: hidden;
-    margin: .375em; }
+  #helpboxOpenState {
+    width: 40vw; }
 
   #helpButton {
     padding: .7em .9em 0 0;
@@ -2332,9 +2441,8 @@ p {
 /* end 35em media query */
 @media only screen and (min-width: 41.25em) {
   /* 660 pixel width */
-  #moduleTOC-default {
-    /* default TOC style - button state - */
-    right: 7%; } }
+  #tocOpenState {
+    width: 40%; } }
 /* end 41.25 em media query */
 @media only screen and (min-width: 49.5em) {
   /* 792 pixel width */
@@ -2352,7 +2460,7 @@ p {
     border: 1px solid #F7FFFC; }
 
   .cel-30-c {
-    float: left;
+    float: right;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid #F7FFFC; }
@@ -2372,7 +2480,7 @@ p {
     border-color: #F7FFFC #B8CCC7; }
 
   .cel-30-c-rule {
-    float: left;
+    right: left;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid;
@@ -2391,14 +2499,13 @@ p {
     border: 1px solid #B8CCC7; }
 
   .cel-30-c-box {
-    float: left;
+    float: right;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7; }
 
-  #moduleTOC-default {
-    /* default TOC style - button state - */
-    right: 6%; } }
+  #tocOpenState {
+    width: 35%; } }
 @media only screen and (min-width: 59.375em) {
   /* 950 pixels width */
   /* 25/25/25/25 4 column split */
@@ -2424,7 +2531,7 @@ p {
     margin-bottom: 1.5rem; }
 
   .cel-25-d {
-    float: left;
+    float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC;
@@ -2455,7 +2562,7 @@ p {
     border-color: #F7FFFC #B8CCC7; }
 
   .cel-25-d-rule {
-    float: left;
+    float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     margin-bottom: 1.5rem;
@@ -2484,11 +2591,14 @@ p {
     margin-bottom: 1.5rem; }
 
   .cel-25-d-box {
-    float: left;
+    float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
-    margin-bottom: 1.5rem; } }
+    margin-bottom: 1.5rem; }
+
+  #tocOpenState {
+    width: 30%; } }
 @media only screen and (min-width: 68.1875em) {
   .activeSlide {
     margin-bottom: .625em;
@@ -2500,7 +2610,20 @@ p {
 
   #mainNav {
     height: 5vh;
-    width: 64rem; } }
+    width: 64rem; }
+
+  #tocOpenState {
+    width: 25%; }
+
+  #helpboxOpenState {
+    width: 35vw; } }
+@media only screen and (min-width: 92.625em) {
+  /* 1482 pixels width */
+  #tocOpenState {
+    width: 20%; }
+
+  #helpboxOpenState {
+    width: 25vw; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
