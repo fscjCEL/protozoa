@@ -1737,27 +1737,27 @@ p {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
-    font-weight: 400; }
+    font-weight: 300; }
 
   /* 50.5pxs */
   h1 {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
-    font-weight: 400; }
+    font-weight: 300; }
 
   h2 {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
-    font-weight: 400; }
+    font-weight: 300; }
 
   /* 50.5pxs */
   h3 {
     font-size: 2.369rem;
     line-height: 3rem;
     margin-bottom: 3rem;
-    font-weight: 400;
+    font-weight: 300;
     padding-left: .25rem; }
 
   /* 38pxs */
@@ -1765,7 +1765,7 @@ p {
     font-size: 1.777rem;
     line-height: 3rem;
     margin-bottom: 3rem;
-    font-weight: 400;
+    font-weight: 300;
     padding-left: .25rem; }
 
   /* 21pxs */
@@ -1773,7 +1773,7 @@ p {
     font-size: 1.333rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     padding-left: .25rem; }
 
   /* 18pxs */
@@ -1781,7 +1781,7 @@ p {
     font-size: .75rem;
     line-height: 1.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     padding-left: .25rem; }
 
   /* 16pxs */
@@ -1796,7 +1796,8 @@ p {
   body {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    font-weight: 400; }
 
   /* 16pxs */
   /* =================> Column Layout styles */
