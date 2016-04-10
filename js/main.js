@@ -24,6 +24,7 @@ var methods = {
 
         if (figureEval === "closed") {
             //closed --> open
+            //these styles should be in the css
             theFigureBox.setAttribute("data-state","open");
             theFigureBox.style.top = "0";
             theFigureBox.style.bottom = "0";
@@ -43,6 +44,7 @@ var methods = {
         }//endif
         if (figureEval === "open") {
             //open--->closed
+            //these styles should be in the css
             theFigureBox.setAttribute("data-state","closed");
             theFigureBox.style.top = "auto";
             theFigureBox.style.bottom = "auto";
@@ -120,9 +122,6 @@ var methods = {
             var insertLiBeforeThis = document.getElementById("nav"+(i+1));
 
             navLiParentNode.insertBefore(insertThisListItemElement,insertLiBeforeThis);
-
-
-
         }//end for
 
     },//end populateTheNavMenu
@@ -153,10 +152,6 @@ var methods = {
         var theTOCelement = document.getElementById(incomingSlideID).parentNode.id;//so theTocTarget's parentNode
         document.getElementById(theTOCelement).className = "TOCs";
         document.getElementById(theTOCelement).id = "tocClosedState";
-
-
-
-
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
@@ -210,15 +205,15 @@ var methods = {
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
             newVar = "nav" + theCurrentSlide.substr(5);
-            //KEEP build the HREF that is inserted into list item.
+            //build the HREF that is inserted into list item.
             theHREFiNeed = "#" + theCurrentSlide + "-" + type + "-" + randomNumforNodes;
             //build the anchor that is inserted into the list item.
             linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + node.innerHTML + "</a>";
-            //KEEP create the new list item
+            //create the new list item
             theNewElement = document.createElement("li");
-            //KEEP build the list item contents including the link to the header ID.
+            //build the list item contents including the link to the header ID.
             theNewElement.className = "TOC-" + type;
-            //KEEP craft the link as the innerHTML of the list item.
+            //craft the link as the innerHTML of the list item.
             theNewElement.innerHTML = linkInnerHtml;
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
