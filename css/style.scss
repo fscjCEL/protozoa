@@ -1330,16 +1330,16 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   /* ========================typography */
   html {font-size: 16px;}
   //1 rem = 16px;
-  header h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
-  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}
-  h2 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;}/* 50.5pxs */
-  h3 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 38pxs */
-  h4 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include regularWeight;padding-left: .25rem;}/* 21pxs */
-  h5 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 18pxs */
-  h6 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 16pxs */
+  header h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;}/* 50.5pxs */
+  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;}
+  h2 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;}/* 50.5pxs */
+  h3 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;padding-left: .25rem;}/* 38pxs */
+  h4 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;padding-left: .25rem;}/* 21pxs */
+  h5 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include lightWeight;padding-left: .25rem;}/* 18pxs */
+  h6 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include lightWeight;padding-left: .25rem;}/* 16pxs */
   //h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
   p {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding: 0;}/* 16pxs */
-  body {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;}/* 16pxs */
+  body {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;}/* 16pxs */
 
   /* =================> Column Layout styles *//* DO NOT TOUCH */
   /* DO NOT TOUCH */
