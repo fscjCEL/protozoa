@@ -24,6 +24,7 @@ var methods = {
 
         if (figureEval === "closed") {
             //closed --> open
+            //These styles should be applied via css not JS
             theFigureBox.setAttribute("data-state","open");
             theFigureBox.style.top = "0";
             theFigureBox.style.bottom = "0";
@@ -43,6 +44,7 @@ var methods = {
         }//endif
         if (figureEval === "open") {
             //open--->closed
+            //These styles should be applied via css not JS
             theFigureBox.setAttribute("data-state","closed");
             theFigureBox.style.top = "auto";
             theFigureBox.style.bottom = "auto";
