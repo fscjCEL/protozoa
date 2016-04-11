@@ -26,14 +26,7 @@ var methods = {
             //closed --> open
             //these styles should be in the css
             theFigureBox.setAttribute("data-state","open");
-            theFigureBox.style.top = "0";
-            theFigureBox.style.bottom = "0";
-            theFigureBox.style.left = "0";
-            theFigureBox.style.right = "0";
-            theFigureBox.style.background = "rgba(0,0,0,0.8)";
-            theFigureBox.style.position = "fixed";
-            theFigureBox.style.zIndex = "102";
-
+            theFigureBox.className = "figure-open-state";
             this.src = "img/figureClose.svg";
             if(theFigureImage.tagName === "IMG"){
                     theFigureImage.style.overflow = "scroll";
@@ -46,13 +39,7 @@ var methods = {
             //open--->closed
             //these styles should be in the css
             theFigureBox.setAttribute("data-state","closed");
-            theFigureBox.style.top = "auto";
-            theFigureBox.style.bottom = "auto";
-            theFigureBox.style.left = "auto";
-            theFigureBox.style.right = "auto";
-            theFigureBox.style.background = "rgba(0,0,0,0)";
-            theFigureBox.style.position = "relative";
-            theFigureBox.style.zIndex = "auto";
+            theFigureBox.className = "figure-closed-state";
             this.src = "img/figureOpen.svg";
             if(theFigureCaption.tagName === "IMG"){
                     theFigureCaption.style.overflow = "visible";
