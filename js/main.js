@@ -133,17 +133,10 @@ var methods = {
         }//end if
     },//end scopeTOC function
     closeTOC: function (incomingSlideID) {
-        //this function is being called from the changeTheActualSlide function,
-        //and does nothing other than making sure the TOC is closed before proceeding to the next slide.
-        //The different contextual scope of the input made this necessarily separate.
-        //todo I need to set the top margin of the .activeSlide to 50px when closing this.
+
         var theTOCelement = document.getElementById(incomingSlideID).parentNode.id;//so theTocTarget's parentNode
         document.getElementById(theTOCelement).className = "TOCs";
         document.getElementById(theTOCelement).id = "tocClosedState";
-
-
-
-
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
@@ -197,19 +190,21 @@ var methods = {
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
             newVar = "nav" + theCurrentSlide.substr(5);
-            //KEEP build the HREF that is inserted into list item.
+            // build the HREF that is inserted into list item.
             theHREFiNeed = "#" + theCurrentSlide + "-" + type + "-" + randomNumforNodes;
             //build the anchor that is inserted into the list item.
             linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + node.innerHTML + "</a>";
-            //KEEP create the new list item
-            theNewElement = document.createElement("li");
-            //KEEP build the list item contents including the link to the header ID.
+
+            // create the new list item
+            theNewElement = document.createElement(type);
+            // build the list item contents including the link to the header ID.
             theNewElement.className = "TOC-" + type;
-            //KEEP craft the link as the innerHTML of the list item.
+            // craft the link as the innerHTML of the list item.
             theNewElement.innerHTML = linkInnerHtml;
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
-                var theTOCParentMainList;
+                var theTOCParentMainList;//<--this should remain the same because it is the starter list.
+
                 if (document.getElementById("tocClosedState")) {
                     theTOCParentMainList = document.getElementById("tocClosedState");
                 }
@@ -217,7 +212,7 @@ var methods = {
                     theTOCParentMainList = document.getElementById("tocOpenState");
                 }
                 // create the child list that will eventually hold actual list items.
-                var theSlideTOCList = document.createElement("li");
+                var theSlideTOCList = document.createElement("li");//<--Dont touch.This holds each slides info
                 // give the new parent list an ID
                 theSlideTOCList.id = "slide" + slideBit + "TOC";
                 // adding one list item to the new parent to act as a landing pad for others.
