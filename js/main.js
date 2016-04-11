@@ -197,8 +197,8 @@ var methods = {
 
             // create the new list item
             theNewElement = document.createElement(type);
-            // build the list item contents including the link to the header ID.
-            theNewElement.className = "TOC-" + type;
+
+
             // craft the link as the innerHTML of the list item.
             theNewElement.innerHTML = linkInnerHtml;
             if (stopBit === Number(slideBit)) {
@@ -215,6 +215,7 @@ var methods = {
                 var theSlideTOCList = document.createElement("li");//<--Dont touch.This holds each slides info
                 // give the new parent list an ID
                 theSlideTOCList.id = "slide" + slideBit + "TOC";
+                theSlideTOCList.className = "TOC";
                 // adding one list item to the new parent to act as a landing pad for others.
                 theSlideTOCList.innerHTML = "<ul><li id='slide" + slideBit + "TocTarget'" + "></li></ul>";
                 //grab the element that is the landing pad for the new parent list.
