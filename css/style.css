@@ -817,6 +817,30 @@ a.slideHeader:hover {
   margin: 0;
   padding: 0; }
 
+.figure-open-state {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 102; }
+
+.figure-closed-state {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  background: transparent;
+  z-index: auto; }
+
 .figure img {
   width: 100%;
   margin: 0 !important;
@@ -840,7 +864,8 @@ a.slideHeader:hover {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 101; }
+  z-index: 101;
+  margin-top: 0 !important; }
 
 .fullScreenButton:hover {
   -webkit-animation-name: breathingHover;
