@@ -342,13 +342,13 @@ object {
 
 
     /* This controls the opening timing height,width */
-    transition-duration: .1s, .25s,.5s,.25s;
+    transition-duration: .1s,.25s,.5s,.25s;
 
 
 }
 #tocOpenState{
     z-index: 200;
-    //height: 90vh;
+
     width: 80%;
     padding-top:2em;
     padding-bottom: 1em;
@@ -357,7 +357,7 @@ object {
     color: $lightPrimaryColor;
     right: 0;
     /* This controls the opening timing height,width */
-    transition-duration: .25s, .1s,.5s,.25s;
+    transition-duration: 15s, 1s,.5s,.25s;
 
     @include material-shadow(.15em, .15em, .15em)
 }
@@ -421,6 +421,7 @@ object {
 }
 /* All of these styles need to be changed to the className Once implemented.  */
 #tocOpenState .slideNumber {
+    /* The Number that precedes each entry */
     border: 0;
     clip: rect(0 0 0 0);
     height: .0625em;
@@ -432,12 +433,14 @@ object {
 }
 
 #tocOpenState li ul {
+    /* the lists that hold each slides info */
     padding-left: 0;
     color: $lightPrimaryColor;
 }
 
 //end li ul
 #tocOpenState li ul li {
+    /* The sublist of each slide. */
     list-style-type: none !important;
     color: $lightPrimaryColor;
 
@@ -445,6 +448,7 @@ object {
 
 //end li ul li
 #tocOpenState li a {
+    /* The links that connect this lists to the actual slides. */
     text-decoration: none;
     color: $lightPrimaryColor;
 
