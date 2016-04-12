@@ -662,18 +662,6 @@ var methods = {
         if (this.className === "slideHeader clearfix" || this.className === "pastSlideHeader clearfix" || this.className === "futureSlideHeader clearfix") {
             methods.ascertainScope("slideHeader", this.parentNode.id);
         }//end if
-
-        // Pressed the right arrow key
-        //if (zz.keyCode === 39) {
-            //methods.ascertainScope("next", null);
-
-       /// }//end if
-
-        // Pressed the left arrow key
-        //if (zz.keyCode === 37) {
-           // methods.ascertainScope("prev", null);
-        //}//end if
-        // Pressed the N key
         if (zz.keyCode === 78) {
             methods.ascertainScope("next", null);
         }//end if
