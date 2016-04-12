@@ -318,6 +318,7 @@ object {
     position: relative;
 
 }
+
 .TOCs{
     margin: 0 auto -50px 0;
     border-radius: .1875em;
@@ -327,7 +328,7 @@ object {
 
 
     border-bottom: .0625em solid $primaryColor;
-    overflow: hidden;
+
     transition-property: height, width,background-color,right;
     transition-timing-function: ease-in-out;
 }
@@ -339,9 +340,10 @@ object {
     height: 2.8125em;
     background-color: $primaryColor;
     right: 3em;
+    overflow:hidden;
 
 
-    /* This controls the opening timing height,width */
+    /* closing timing for height, width, backgroundColor, rightPosition */
     transition-duration: .1s,.25s,.5s,.25s;
 
 
@@ -349,17 +351,30 @@ object {
 #tocOpenState{
     z-index: 200;
 
-    width: 80%;
+    //width: 80%;
     padding-top:2em;
     padding-bottom: 1em;
 
-    background-color: $darkPrimaryColor;
+
+    background-color: $darkPrimaryColor;;
     color: $lightPrimaryColor;
     right: 0;
-    /* This controls the opening timing height,width */
-    transition-duration: 15s, 1s,.5s,.25s;
+
+
+    /* opening timing for height, width, backgroundColor, rightPosition */
+    transition-duration: .25s, .1s,.5s,.25s;
 
     @include material-shadow(.15em, .15em, .15em)
+}
+#tocOpenState .TOC{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration:5s;
+}
+#tocOpenState .TOC{
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration:5s;
 }
 #tocClosedState #theTocTarget {
     /* this hooks into the closed menu TOC button */
@@ -1532,7 +1547,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     /* default TOC style - button state - */
     right: 3em;
     /* This controls the opening timing height,width */
-    transition-duration: .1s, .25s,.5s,.25s;
+
 
 
 }
@@ -1542,7 +1557,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     padding-top:2em;
     right: 3em;
     /* This controls the opening timing height,width */
-    transition-duration: .25s, .1s,.5s,.25s;
+    //transition-duration: .25s, .1s,.5s,.25s;
 
 }
 #tocOpenState #theTocTarget:before{

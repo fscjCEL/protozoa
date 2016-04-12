@@ -213,7 +213,6 @@ object {
   position: absolute;
   top: .25em;
   border-bottom: 0.0625em solid #2F343B;
-  overflow: hidden;
   transition-property: height, width,background-color,right;
   transition-timing-function: ease-in-out; }
 
@@ -224,22 +223,32 @@ object {
   height: 2.8125em;
   background-color: #2F343B;
   right: 3em;
-  /* This controls the opening timing height,width */
+  overflow: hidden;
+  /* closing timing for height, width, backgroundColor, rightPosition */
   transition-duration: .1s,.25s,.5s,.25s; }
 
 #tocOpenState {
   z-index: 200;
-  width: 80%;
   padding-top: 2em;
   padding-bottom: 1em;
   background-color: #212423;
   color: #B8CCC7;
   right: 0;
-  /* This controls the opening timing height,width */
-  transition-duration: 15s, 1s,.5s,.25s;
+  /* opening timing for height, width, backgroundColor, rightPosition */
+  transition-duration: .25s, .1s,.5s,.25s;
   -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272; }
+
+#tocOpenState .TOC {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 5s; }
+
+#tocOpenState .TOC {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 5s; }
 
 #tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
@@ -2256,15 +2265,13 @@ p {
   #tocClosedState {
     /* default TOC style - button state - */
     right: 3em;
-    /* This controls the opening timing height,width */
-    transition-duration: .1s, .25s,.5s,.25s; }
+    /* This controls the opening timing height,width */ }
 
   #tocOpenState {
     width: 50%;
     padding-top: 2em;
     right: 3em;
-    /* This controls the opening timing height,width */
-    transition-duration: .25s, .1s,.5s,.25s; }
+    /* This controls the opening timing height,width */ }
 
   #tocOpenState #theTocTarget:before {
     border: 0; }
