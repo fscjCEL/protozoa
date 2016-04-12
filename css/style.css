@@ -763,10 +763,10 @@ button {
   border-radius: 50%;
   margin-right: 1%;
   margin-bottom: 1%;
-  background: url("../img/next.svg") no-repeat #B8CCC7;
+  color: #F7FFFC;
+  font-size: 2.25em;
   background-color: #877551;
-  background-size: contain;
-  background-position: 50% 50%;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   -moz-box-shadow: 0 4px 4px #727272;
   -webkit-box-shadow: 0 4px 4px #727272;
   box-shadow: 0 4px 4px #727272;
@@ -780,9 +780,10 @@ button {
   border-radius: 50%;
   margin-left: 1%;
   margin-bottom: 1%;
-  background: url("../img/previous.svg") no-repeat #B8CCC7;
+  color: #F7FFFC;
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 2.25em;
   background-color: #877551;
-  background-position: 50% 50%;
   -moz-box-shadow: 0 4px 4px #727272;
   -webkit-box-shadow: 0 4px 4px #727272;
   box-shadow: 0 4px 4px #727272;

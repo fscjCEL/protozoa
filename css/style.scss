@@ -992,10 +992,11 @@ button{border:0;}
     border-radius: 50%;
     margin-right: 1%;
     margin-bottom: 1%;
-    background: url("../img/next.svg") no-repeat $lightPrimaryColor;
+    color: $white;
+    font-size: 2.25em;
+
     background-color: $accentColor;
-    background-size: contain;
-    background-position: 50% 50%;
+    @include font-familyRegular;
     @include material-shadow(0,
     4px,
     4px);
@@ -1010,9 +1011,10 @@ button{border:0;}
     border-radius: 50%;
     margin-left: 1%;
     margin-bottom: 1%;
-    background: url("../img/previous.svg") no-repeat $lightPrimaryColor;
+    color: $white;
+    @include font-familyRegular;
+    font-size: 2.25em;
     background-color: $accentColor;
-    background-position: 50% 50%;
     @include material-shadow(0,
     4px,
     4px);
@@ -1024,7 +1026,7 @@ button{border:0;}
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
     cursor: pointer;
-    
+
 }
 
 .prevButton:hover {
