@@ -753,6 +753,9 @@ a.slideHeader:hover {
   position: absolute;
   width: 1px; }
 
+button {
+  border: 0; }
+
 .nextButton {
   position: fixed;
   bottom: 44px;

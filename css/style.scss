@@ -984,7 +984,7 @@ a.slideHeader:hover{
     position: absolute;
     width: 1px;
 }
-
+button{border:0;}
 .nextButton {
     position: fixed;
     bottom: 44px;
@@ -1024,6 +1024,7 @@ a.slideHeader:hover{
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
     cursor: pointer;
+    
 }
 
 .prevButton:hover {
