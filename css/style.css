@@ -225,7 +225,7 @@ object {
   background-color: #2F343B;
   right: 3em;
   /* This controls the opening timing height,width */
-  transition-duration: .1s, .25s,.5s,.25s; }
+  transition-duration: .1s,.25s,.5s,.25s; }
 
 #tocOpenState {
   z-index: 200;
@@ -236,7 +236,7 @@ object {
   color: #B8CCC7;
   right: 0;
   /* This controls the opening timing height,width */
-  transition-duration: .25s, .1s,.5s,.25s;
+  transition-duration: 15s, 1s,.5s,.25s;
   -moz-box-shadow: 0.15em 0.15em 0.15em #727272;
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272; }
@@ -286,6 +286,7 @@ object {
 
 /* All of these styles need to be changed to the className Once implemented.  */
 #tocOpenState .slideNumber {
+  /* The Number that precedes each entry */
   border: 0;
   clip: rect(0 0 0 0);
   height: .0625em;
@@ -296,14 +297,17 @@ object {
   width: .0625em; }
 
 #tocOpenState li ul {
+  /* the lists that hold each slides info */
   padding-left: 0;
   color: #B8CCC7; }
 
 #tocOpenState li ul li {
+  /* The sublist of each slide. */
   list-style-type: none !important;
   color: #B8CCC7; }
 
 #tocOpenState li a {
+  /* The links that connect this lists to the actual slides. */
   text-decoration: none;
   color: #B8CCC7; }
 
@@ -314,73 +318,70 @@ object {
   background-color: #877551;
   color: #F7FFFC; }
 
-.TOC-H2 {
+.TOC {
+  margin-top: 0;
+  margin-bottom: 1.25rem; }
+
+.TOC h2 {
   font-weight: 300;
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
   font-size: 1.25rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin: 0 !important; }
 
-.TOC-H2 a {
+.TOC h2 a {
   column-rule: #212423; }
 
-.TOC-H3 {
+.TOC h3 {
   font-weight: 300;
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
-  line-height: 1.3; }
+  line-height: 1.3;
+  margin: 0 !important; }
 
-.TOC-H3 a {
+.TOC h3 a {
   padding-left: .9375em; }
 
-.TOC-H3::before {
+.TOC h3::before {
   content: "•"; }
 
-.TOC-H4 {
+.TOC h4 {
   font-weight: 300;
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
-  line-height: 1.3; }
+  line-height: 1.3;
+  margin: 0 !important; }
 
-.TOC-H4 a {
+.TOC h4 a {
   padding-left: .9375em; }
 
-.TOC-H4::before {
+.TOC h4::before {
   content: "•"; }
 
-.TOC-H5 {
+.TOC h5 {
   font-weight: 300;
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
-  line-height: 1.3; }
+  line-height: 1.3;
+  margin: 0 !important; }
 
-.TOC-H5 a {
+.TOC h5 a {
   padding-left: .9375em; }
 
-.TOC-H5::before {
+.TOC h5::before {
   content: "•"; }
 
-.TOC-H6 {
+.TOC h6 {
   font-weight: 300;
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: .8rem;
-  line-height: 1.3; }
+  line-height: 1.3;
+  margin: 0 !important; }
 
-.TOC-H6 a {
+.TOC h6 a {
   padding-left: .9375em; }
 
-.TOC-H6::before {
-  content: "•"; }
-
-.TOC-H7 {
-  font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  font-size: .8rem;
-  line-height: 1.3; }
-
-.TOC-H7 a {
-  padding-left: .9375em; }
-
-.TOC-H7::before {
+.TOC h6::before {
   content: "•"; }
 
 .audioBox {
