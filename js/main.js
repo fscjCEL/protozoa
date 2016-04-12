@@ -343,6 +343,7 @@ var methods = {
                 theNewElement = document.createElement("img");
                 //this inserts a little glyph before each link within the content that leads to an external page. All internal links do not get the glyph. .
                 theNewElement.id = "link" + s;
+                theNewElement.alt = "";
                 theNewElement.style.width = "10px";
                 theNewElement.style.height = "10px";
                 theNewElement.style.margin = "0";
@@ -663,15 +664,15 @@ var methods = {
         }//end if
 
         // Pressed the right arrow key
-        if (zz.keyCode === 39) {
-            methods.ascertainScope("next", null);
+        //if (zz.keyCode === 39) {
+            //methods.ascertainScope("next", null);
 
-        }//end if
+       /// }//end if
 
         // Pressed the left arrow key
-        if (zz.keyCode === 37) {
-            methods.ascertainScope("prev", null);
-        }//end if
+        //if (zz.keyCode === 37) {
+           // methods.ascertainScope("prev", null);
+        //}//end if
         // Pressed the N key
         if (zz.keyCode === 78) {
             methods.ascertainScope("next", null);
