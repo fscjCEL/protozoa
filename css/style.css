@@ -240,15 +240,15 @@ object {
   -webkit-box-shadow: 0.15em 0.15em 0.15em #727272;
   box-shadow: 0.15em 0.15em 0.15em #727272; }
 
-#tocOpenState .TOC {
+#tocClosedState .TOC {
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 5s; }
+  transition-duration: .5s; }
 
 #tocOpenState .TOC {
   opacity: 1;
   transition-property: opacity;
-  transition-duration: 5s; }
+  transition-duration: .5s; }
 
 #tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
