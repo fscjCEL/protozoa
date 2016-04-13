@@ -318,6 +318,7 @@ object {
     position: relative;
 
 }
+
 .TOCs{
     margin: 0 auto -50px 0;
     border-radius: .1875em;
@@ -327,7 +328,7 @@ object {
 
 
     border-bottom: .0625em solid $primaryColor;
-    overflow: hidden;
+
     transition-property: height, width,background-color,right;
     transition-timing-function: ease-in-out;
 }
@@ -339,9 +340,10 @@ object {
     height: 2.8125em;
     background-color: $primaryColor;
     right: 3em;
+    overflow:hidden;
 
 
-    /* This controls the opening timing height,width */
+    /* closing timing for height, width, backgroundColor, rightPosition */
     transition-duration: .1s,.25s,.5s,.25s;
 
 
@@ -349,17 +351,30 @@ object {
 #tocOpenState{
     z-index: 200;
 
-    width: 80%;
+    //width: 80%;
     padding-top:2em;
     padding-bottom: 1em;
 
+
     background-color: $darkPrimaryColor;
-    color: $lightPrimaryColor;
+    color: $white;
     right: 0;
-    /* This controls the opening timing height,width */
-    transition-duration: 15s, 1s,.5s,.25s;
+
+
+    /* opening timing for height, width, backgroundColor, rightPosition */
+    transition-duration: .25s, .1s,.5s,.25s;
 
     @include material-shadow(.15em, .15em, .15em)
+}
+#tocClosedState .TOC{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration:.5s;
+}
+#tocOpenState .TOC{
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration:.5s;
 }
 #tocClosedState #theTocTarget {
     /* this hooks into the closed menu TOC button */
@@ -464,8 +479,8 @@ object {
 
 //end slide1TOC
 #tocOpenState .TOClink:hover {
-    background-color: $accentColor;
-    color: $white;
+    background-color: $lightPrimaryColor;
+    color: $darkPrimaryColor;
 }
 
 //end toclink
@@ -969,7 +984,7 @@ a.slideHeader:hover{
     position: absolute;
     width: 1px;
 }
-
+button{border:0;}
 .nextButton {
     position: fixed;
     bottom: 44px;
@@ -977,10 +992,11 @@ a.slideHeader:hover{
     border-radius: 50%;
     margin-right: 1%;
     margin-bottom: 1%;
-    background: url("../img/next.svg") no-repeat $lightPrimaryColor;
+    color: $white;
+    font-size: 2.25em;
+
     background-color: $accentColor;
-    background-size: contain;
-    background-position: 50% 50%;
+    @include font-familyRegular;
     @include material-shadow(0,
     4px,
     4px);
@@ -995,9 +1011,10 @@ a.slideHeader:hover{
     border-radius: 50%;
     margin-left: 1%;
     margin-bottom: 1%;
-    background: url("../img/previous.svg") no-repeat $lightPrimaryColor;
+    color: $white;
+    @include font-familyRegular;
+    font-size: 2.25em;
     background-color: $accentColor;
-    background-position: 50% 50%;
     @include material-shadow(0,
     4px,
     4px);
@@ -1009,6 +1026,7 @@ a.slideHeader:hover{
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
     cursor: pointer;
+
 }
 
 .prevButton:hover {
@@ -1532,7 +1550,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     /* default TOC style - button state - */
     right: 3em;
     /* This controls the opening timing height,width */
-    transition-duration: .1s, .25s,.5s,.25s;
+
 
 
 }
@@ -1542,7 +1560,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     padding-top:2em;
     right: 3em;
     /* This controls the opening timing height,width */
-    transition-duration: .25s, .1s,.5s,.25s;
+    //transition-duration: .25s, .1s,.5s,.25s;
 
 }
 #tocOpenState #theTocTarget:before{
