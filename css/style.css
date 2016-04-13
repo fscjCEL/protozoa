@@ -232,7 +232,7 @@ object {
   padding-top: 2em;
   padding-bottom: 1em;
   background-color: #212423;
-  color: #B8CCC7;
+  color: #F7FFFC;
   right: 0;
   /* opening timing for height, width, backgroundColor, rightPosition */
   transition-duration: .25s, .1s,.5s,.25s;
@@ -324,8 +324,8 @@ object {
   margin-top: 2.8125em; }
 
 #tocOpenState .TOClink:hover {
-  background-color: #877551;
-  color: #F7FFFC; }
+  background-color: #B8CCC7;
+  color: #212423; }
 
 .TOC {
   margin-top: 0;

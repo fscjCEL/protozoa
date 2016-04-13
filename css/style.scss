@@ -356,8 +356,8 @@ object {
     padding-bottom: 1em;
 
 
-    background-color: $darkPrimaryColor;;
-    color: $lightPrimaryColor;
+    background-color: $darkPrimaryColor;
+    color: $white;
     right: 0;
 
 
@@ -479,8 +479,8 @@ object {
 
 //end slide1TOC
 #tocOpenState .TOClink:hover {
-    background-color: $accentColor;
-    color: $white;
+    background-color: $lightPrimaryColor;
+    color: $darkPrimaryColor;
 }
 
 //end toclink
