@@ -357,7 +357,7 @@ object {
 
 
     background-color: $darkPrimaryColor;
-    color: $white;
+    
     right: 0;
 
 
@@ -425,7 +425,7 @@ object {
     display:inline-block;
     text-align:left;
     font-size: 2em;
-    border-bottom: 1px solid $darkPrimaryColor;
+    
     @include font-familyHeading;
     @include lightWeight;
 
@@ -435,31 +435,11 @@ object {
 
 }
 /* All of these styles need to be changed to the className Once implemented.  */
-#tocOpenState .slideNumber {
-    /* The Number that precedes each entry */
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: .0625em;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: .0625em;
-}
 
-#tocOpenState li ul {
-    /* the lists that hold each slides info */
-    padding-left: 0;
-    color: $lightPrimaryColor;
-}
 
-//end li ul
-#tocOpenState li ul li {
-    /* The sublist of each slide. */
-    list-style-type: none !important;
-    color: $lightPrimaryColor;
 
-}
+
+
 
 //end li ul li
 #tocOpenState li a {
@@ -469,7 +449,10 @@ object {
 
 }
 
-//end li a
+#tocOpenState li a:hover {
+    background-color: yellow;
+    color: $darkPrimaryColor;
+}
 
 
 //end theTocTarget
@@ -478,10 +461,6 @@ object {
 }
 
 //end slide1TOC
-#tocOpenState .TOClink:hover {
-    background-color: $lightPrimaryColor;
-    color: $darkPrimaryColor;
-}
 
 //end toclink
 .TOC{
@@ -503,7 +482,7 @@ object {
 .TOC h3 {
     @include lightWeight;
     @include font-familyRegular;
-    font-size: .8rem;
+    font-size: .9375rem;
     line-height: 1.3;
     margin:0!important;
 }
