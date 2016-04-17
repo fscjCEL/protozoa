@@ -356,7 +356,7 @@ object {
     padding-bottom: 1em;
 
 
-    background-color: $black;
+    background-color: $darkPrimaryColor;
     
     right: 0;
 
@@ -421,7 +421,7 @@ object {
     left:1em;
     top:1.5rem;
 
-    color:$white;
+    color:$lightPrimaryColor;
     display:inline-block;
     text-align:left;
     font-size: 2em;
@@ -445,13 +445,13 @@ object {
 #tocOpenState li a {
     /* The links that connect this lists to the actual slides. */
     text-decoration: none;
-    color: $white;
+    color: $lightPrimaryColor;
 
 }
 
 #tocOpenState li a:hover {
     background-color: yellow;
-    color: $black;
+    color: $darkPrimaryColor;
 }
 
 
@@ -482,7 +482,7 @@ object {
 .TOC h3 {
     @include lightWeight;
     @include font-familyRegular;
-    font-size: .8rem;
+    font-size: .9375rem;
     line-height: 1.3;
     margin:0!important;
 }
