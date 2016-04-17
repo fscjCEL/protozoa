@@ -193,11 +193,22 @@ var methods = {
             // build the HREF that is inserted into list item.
             theHREFiNeed = "#" + theCurrentSlide + "-" + type + "-" + randomNumforNodes;
             //build the anchor that is inserted into the list item.
-            linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + node.innerHTML + "</a>";
+            //todo only pull the slide title out of node.innerHtml and write it to this 
+            //linkInnerHtml variable where node.innerHTML is written currently
+            //so only grab the className of slideTitle as children of node.
+            var insertThisTitle;
+            if(node.children[0]){
+                //grabbing the slide title from the slide header itself
+                insertThisTitle = node.children[1].innerHTML;
+            }else{
+                //nope this is a normal header with no children. 
+                insertThisTitle = node.innerHTML;
+            }
+            linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
 
             // create the new list item
-            theNewElement = document.createElement(type);
-
+            theNewElement = document.createElement(type);//type=h2
+            //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
 
             // craft the link as the innerHTML of the list item.
             theNewElement.innerHTML = linkInnerHtml;
@@ -217,7 +228,7 @@ var methods = {
                 theSlideTOCList.id = "slide" + slideBit + "TOC";
                 theSlideTOCList.className = "TOC";
                 // adding one list item to the new parent to act as a landing pad for others.
-                theSlideTOCList.innerHTML = "<ul><li id='slide" + slideBit + "TocTarget'" + "></li></ul>";
+                theSlideTOCList.innerHTML = "<span id='slide" + slideBit + "TocTarget'" + " class='hidden'></span>";
                 //grab the element that is the landing pad for the new parent list.
                 insertNewBefore = document.getElementById("theTocTarget");
                 // execute the insertion of the new parent. This acts as a target for the list insertion and changes each time the slide changes.
@@ -226,7 +237,7 @@ var methods = {
                 stopBit++;
             }//end if
             //grab the element for the list within the list.
-            var subTocParentELement = document.getElementById("slide" + slideBit + "TOC").children[0];
+            var subTocParentELement = document.getElementById("slide" + slideBit + "TOC");
             // the insert before element.
             var TocSubListTarget = document.getElementById("slide" + slideBit + "TocTarget");
             //now that I have everything put it together.
