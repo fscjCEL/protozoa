@@ -231,8 +231,7 @@ object {
   z-index: 200;
   padding-top: 2em;
   padding-bottom: 1em;
-  background-color: #212423;
-  color: #F7FFFC;
+  background-color: #090A0A;
   right: 0;
   /* opening timing for height, width, backgroundColor, rightPosition */
   transition-duration: .25s, .1s,.5s,.25s;
@@ -285,47 +284,25 @@ object {
   position: relative;
   left: 1em;
   top: 1.5rem;
-  color: #B8CCC7;
+  color: #F7FFFC;
   display: inline-block;
   text-align: left;
   font-size: 2em;
-  border-bottom: 1px solid #212423;
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
   font-weight: 300; }
 
 /* All of these styles need to be changed to the className Once implemented.  */
-#tocOpenState .slideNumber {
-  /* The Number that precedes each entry */
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: .0625em;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: .0625em; }
-
-#tocOpenState li ul {
-  /* the lists that hold each slides info */
-  padding-left: 0;
-  color: #B8CCC7; }
-
-#tocOpenState li ul li {
-  /* The sublist of each slide. */
-  list-style-type: none !important;
-  color: #B8CCC7; }
-
 #tocOpenState li a {
   /* The links that connect this lists to the actual slides. */
   text-decoration: none;
-  color: #B8CCC7; }
+  color: #F7FFFC; }
+
+#tocOpenState li a:hover {
+  background-color: yellow;
+  color: #090A0A; }
 
 #tocOpenState #slide1TOC {
   margin-top: 2.8125em; }
-
-#tocOpenState .TOClink:hover {
-  background-color: #B8CCC7;
-  color: #212423; }
 
 .TOC {
   margin-top: 0;

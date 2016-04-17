@@ -207,7 +207,7 @@ var methods = {
             linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
 
             // create the new list item
-            theNewElement = document.createElement(type);//type=h2
+            theNewElement = document.createElement(type);//ex.type=h2
             //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
 
             // craft the link as the innerHTML of the list item.
@@ -227,7 +227,7 @@ var methods = {
                 // give the new parent list an ID
                 theSlideTOCList.id = "slide" + slideBit + "TOC";
                 theSlideTOCList.className = "TOC";
-                // adding one list item to the new parent to act as a landing pad for others.
+                // adding one span to the new parent to act as a landing pad for others.
                 theSlideTOCList.innerHTML = "<span id='slide" + slideBit + "TocTarget'" + " class='hidden'></span>";
                 //grab the element that is the landing pad for the new parent list.
                 insertNewBefore = document.getElementById("theTocTarget");
