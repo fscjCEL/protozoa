@@ -331,7 +331,7 @@ object {
 
     border-bottom: .0625em solid $primaryColor;
 
-    transition-property: all;
+    transition-property: height, width, left,top;
     transition-timing-function: ease-in-out;
 }
 #tocClosedState {
@@ -340,7 +340,7 @@ object {
     z-index: 2;
     width: 1vw;
     height: 2.8125em;
-    background-color: $primaryColor;
+    background-color: transparent;
     right: 3em;
     overflow:hidden;
 
