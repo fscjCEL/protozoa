@@ -353,17 +353,20 @@ object {
 #tocOpenState{
     z-index: 200;
 
-    //width: 80%;
+    width: 100%;
     padding-top:4rem;
     padding-bottom: .75em;
     position:fixed;
-    top: 15%;
-    left:10%;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+
 
 
     background-color: $darkPrimaryColor;
 
-    right: 0;
+
 
 
     /* opening timing for height, width, backgroundColor, leftPosition,topPosition */
@@ -398,7 +401,7 @@ object {
     width: 100%;
     height: 2.75rem;
     background-size:2.75rem;
-    right: .75rem;
+    right: 3rem;
     top: .75em;
     position:absolute;
 
@@ -415,12 +418,12 @@ object {
     /* This renders the Table of Contents Menu Title as a CSS insertion */
     content:"Table of Contents";
     position:relative;
-    left:1.75rem;
+    left:4rem;
     top:2rem;
 
     color:$lightPrimaryColor;
     display:inline-block;
-    text-align:left;
+
     font-size: 2em;
 
     @include font-familyHeading;
@@ -1548,8 +1551,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     padding-top:4rem;
     padding-bottom: .75em;
     position:fixed;
-    top: 15%;
-    left:40%;
+    top: 0;
+    bottom:0;
+    left:100%;
+    margin-left: -28%;
+    right:0;
+    width:27%!important;
 }
 #tocOpenState #theTocTarget:before{
     border:0;
