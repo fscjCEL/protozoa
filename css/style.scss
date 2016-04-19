@@ -1553,13 +1553,16 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     position:fixed;
     top: 0;
     bottom:0;
-    left:100%;
-    margin-left: -28%;
-    right:0;
-    width:27%!important;
+
+    left:50%;
+    width:50%;
 }
 #tocOpenState #theTocTarget:before{
     border:0;
+}
+#tocOpenState .TOC{
+    width:80%;
+
 }
 
 .slideHeader {
@@ -1810,7 +1813,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 } /* end 35em media query */
 @media only screen and (min-width: 41.25em){/* 660 pixel width */
 
-    #tocOpenState{width: 40%;}
+
 
 
 
@@ -1830,7 +1833,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-30-b-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
   .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
 
-  #tocOpenState{width: 35%;}
+
 
 }//end 792
 
@@ -1849,13 +1852,16 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-25-b-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   .cel-25-c-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
   .cel-25-d-box {float: right;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
-  #tocOpenState{width: 30%;}
+
   //#helpboxOpenState{height:55em;}
 }//end 840
 
 @media only screen and (min-width: 68.1875em) {
   //This stops the content area from growing any larger than 1091 pixels.
-
+  #tocOpenState{
+    width:30%;
+    left:70%;
+  }
   .activeSlide {
     margin-bottom: .625em;
     margin-right: auto!important;
@@ -1872,12 +1878,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     width: 64rem;
 }
 
-#tocOpenState{width: 25%;}
+
 #helpboxOpenState{width:35vw;}
 
 }//end 1091px media query
 @media only screen and (min-width: 92.625em) {/* 1482 pixels width */
-    #tocOpenState{width: 20%;}
+
     #helpboxOpenState{width:25vw;}
 }
 @media print,
