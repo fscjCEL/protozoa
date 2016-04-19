@@ -324,12 +324,14 @@ object {
     border-radius: .1875em;
     padding-top: 0;
     position: absolute;
-    top: .25em;
+    top: .25rem;
+    list-style-type:decimal;
+    color:$lightPrimaryColor;
 
 
     border-bottom: .0625em solid $primaryColor;
 
-    transition-property: height, width,background-color,right;
+    transition-property: all;
     transition-timing-function: ease-in-out;
 }
 #tocClosedState {
@@ -343,8 +345,8 @@ object {
     overflow:hidden;
 
 
-    /* closing timing for height, width, backgroundColor, rightPosition */
-    transition-duration: .1s,.25s,.5s,.25s;
+    /* closing timing for height, width, backgroundColor, leftPosition,topPosition */
+    transition-duration: 1s;
 
 
 }
@@ -352,30 +354,25 @@ object {
     z-index: 200;
 
     //width: 80%;
-    padding-top:2em;
-    padding-bottom: 1em;
+    padding-top:4rem;
+    padding-bottom: .75em;
+    position:fixed;
+    top: 15%;
+    left:10%;
 
 
     background-color: $darkPrimaryColor;
-    
+
     right: 0;
 
 
-    /* opening timing for height, width, backgroundColor, rightPosition */
-    transition-duration: .25s, .1s,.5s,.25s;
+    /* opening timing for height, width, backgroundColor, leftPosition,topPosition */
+    transition-duration: 1s;
 
     @include material-shadow(.15em, .15em, .15em)
 }
-#tocClosedState .TOC{
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration:.5s;
-}
-#tocOpenState .TOC{
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration:.5s;
-}
+
+
 #tocClosedState #theTocTarget {
     /* this hooks into the closed menu TOC button */
     width: 2.6em;
@@ -399,16 +396,16 @@ object {
     background: url('../img/TOC-closeX.png') 100% 0 no-repeat;
 
     width: 100%;
-    height: 2.75em;
-    background-size:2.6em;
-    right:0;
-    top:0;
+    height: 2.75rem;
+    background-size:2.75rem;
+    right: .75rem;
+    top: .75em;
     position:absolute;
 
 
 
 }
-#tocOpenState #theTocTarge:hover{
+#tocOpenState #theTocTarget:hover{
     cursor: pointer;
 }
 #tocClosedState #theTocTarget:hover{
@@ -418,14 +415,14 @@ object {
     /* This renders the Table of Contents Menu Title as a CSS insertion */
     content:"Table of Contents";
     position:relative;
-    left:1em;
-    top:1.5rem;
+    left:1.75rem;
+    top:2rem;
 
     color:$lightPrimaryColor;
     display:inline-block;
     text-align:left;
     font-size: 2em;
-    
+
     @include font-familyHeading;
     @include lightWeight;
 
@@ -434,8 +431,20 @@ object {
 
 
 }
-/* All of these styles need to be changed to the className Once implemented.  */
+/* these controls the fade in animation of the toc menu content.   */
 
+#tocClosedState .TOC{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration:3.5s;
+    transition-timing-function: ease
+}
+#tocOpenState .TOC{
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease
+}
 
 
 
@@ -1535,12 +1544,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 }
 
 #tocOpenState{
-    width: 50%;
-    padding-top:2em;
-    right: 3em;
-    /* This controls the opening timing height,width */
-    //transition-duration: .25s, .1s,.5s,.25s;
 
+    padding-top:4rem;
+    padding-bottom: .75em;
+    position:fixed;
+    top: 15%;
+    left:40%;
 }
 #tocOpenState #theTocTarget:before{
     border:0;
