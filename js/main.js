@@ -193,7 +193,7 @@ var methods = {
             // build the HREF that is inserted into list item.
             theHREFiNeed = "#" + theCurrentSlide + "-" + type + "-" + randomNumforNodes;
             //build the anchor that is inserted into the list item.
-            //todo only pull the slide title out of node.innerHtml and write it to this 
+            //todo only pull the slide title out of node.innerHtml and write it to this
             //linkInnerHtml variable where node.innerHTML is written currently
             //so only grab the className of slideTitle as children of node.
             var insertThisTitle;
@@ -201,7 +201,7 @@ var methods = {
                 //grabbing the slide title from the slide header itself
                 insertThisTitle = node.children[1].innerHTML;
             }else{
-                //nope this is a normal header with no children. 
+                //nope this is a normal header with no children.
                 insertThisTitle = node.innerHTML;
             }
             linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
@@ -476,16 +476,38 @@ var methods = {
             //slide 2 or above
             document.getElementById("theCourseIcon").style.height="0px";
             document.getElementById("theCourseIcon").style.width="0px";
-            document.getElementById("courseNumber").className="visuallyhidden";
-            document.getElementById("moduleNumber").className="visuallyhidden";
+            document.getElementById("courseNumber").style.overflow = "hidden";
+            document.getElementById("courseNumber").style.opacity = "0";
+            document.getElementById("courseNumber").style.width = "0px";
+            document.getElementById("courseNumber").style.height = "0px";
+
+            //document.getElementById("courseNumber").className="visuallyhidden";
+            document.getElementById("moduleNumber").style.opacity="0";
+            document.getElementById("moduleNumber").style.width="0px";
+            document.getElementById("moduleNumber").style.height="0px";
+            document.getElementById("moduleNumber").style.overflow="hidden";
+
+            //document.getElementById("moduleNumber").className="visuallyhidden";
+
+
             document.getElementById("theModuleHeader").style.height="3.25em";
 
         }else{
             //slide 1
             document.getElementById("theCourseIcon").style.height="100px";
             document.getElementById("theCourseIcon").style.width="100px";
-            document.getElementById("courseNumber").className="";
-            document.getElementById("moduleNumber").className="";
+            document.getElementById("courseNumber").style.opacity="1";
+            document.getElementById("courseNumber").style.overflow="visible";
+            document.getElementById("courseNumber").style.width="60vw";
+            document.getElementById("courseNumber").style.height="auto";
+            //document.getElementById("courseNumber").className="";
+
+            document.getElementById("moduleNumber").style.opacity="1";
+            document.getElementById("moduleNumber").style.overflow="visible";
+            document.getElementById("moduleNumber").style.width="70%";
+            document.getElementById("moduleNumber").style.height="auto";
+            //document.getElementById("moduleNumber").className="";
+
             document.getElementById("theModuleHeader").style.height="auto";
         }
         //end if

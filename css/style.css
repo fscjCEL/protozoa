@@ -2248,12 +2248,20 @@ p {
     font-size: 3em;
     font-weight: 300;
     border: 0;
-    padding: 0 0 0 .75rem; }
+    padding: 0 0 0 .75rem;
+    opacity: 1;
+    transition-property: opacity,height;
+    transition-duration: 1s,3s;
+    transition-timing-function: ease-in-out; }
 
   #moduleNumber {
     margin-bottom: 1rem;
     position: relative;
-    width: 60vw; }
+    width: 60vw;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out; }
 
   #tocClosedState {
     /* default TOC style - button state - */

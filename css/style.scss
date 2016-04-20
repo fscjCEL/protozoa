@@ -1513,6 +1513,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     font-weight: 300;
     border: 0;
     padding: 0 0 0 .75rem;
+    opacity:1;
+
+
+    transition-property:opacity,height;
+    transition-duration: 1s,3s;
+    transition-timing-function:ease-in-out;
 }
 
 #moduleNumber {
@@ -1520,6 +1526,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     margin-bottom: 1rem;
     position:relative;
     width:60vw;
+    opacity:1;
+
+
+    transition-property:opacity;
+        transition-duration: 1s;
+        transition-timing-function:ease-in-out;
 
 }
 
