@@ -473,6 +473,7 @@ var methods = {
         //this is to hide the header info past slide one, but I need to retain the header size to make up for the buttons located within.
         INeedTheSlideNumber = destination.substr(5);
         if(INeedTheSlideNumber>1){
+            //push these styles out to a CSS class.
             //slide 2 or above
             document.getElementById("theCourseIcon").style.height="0px";
             document.getElementById("theCourseIcon").style.width="0px";
@@ -481,13 +482,13 @@ var methods = {
             document.getElementById("courseNumber").style.width = "0px";
             document.getElementById("courseNumber").style.height = "0px";
 
-            //document.getElementById("courseNumber").className="visuallyhidden";
+
             document.getElementById("moduleNumber").style.opacity="0";
             document.getElementById("moduleNumber").style.width="0px";
             document.getElementById("moduleNumber").style.height="0px";
             document.getElementById("moduleNumber").style.overflow="hidden";
 
-            //document.getElementById("moduleNumber").className="visuallyhidden";
+
 
 
             document.getElementById("theModuleHeader").style.height="3.25em";
@@ -500,13 +501,13 @@ var methods = {
             document.getElementById("courseNumber").style.overflow="visible";
             document.getElementById("courseNumber").style.width="60vw";
             document.getElementById("courseNumber").style.height="auto";
-            //document.getElementById("courseNumber").className="";
+
 
             document.getElementById("moduleNumber").style.opacity="1";
             document.getElementById("moduleNumber").style.overflow="visible";
             document.getElementById("moduleNumber").style.width="70%";
             document.getElementById("moduleNumber").style.height="auto";
-            //document.getElementById("moduleNumber").className="";
+
 
             document.getElementById("theModuleHeader").style.height="auto";
         }
