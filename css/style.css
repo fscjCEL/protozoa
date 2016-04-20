@@ -496,8 +496,7 @@ object {
 
 .slide {
   width: 100%;
-  background-color: #B8CCC7;
-  opacity: 0; }
+  background-color: #B8CCC7; }
 
 .activeSlide {
   opacity: 1;
@@ -509,10 +508,7 @@ object {
   border-radius: .1875em;
   -moz-box-shadow: 0 0.125em 0.125em #727272;
   -webkit-box-shadow: 0 0.125em 0.125em #727272;
-  box-shadow: 0 0.125em 0.125em #727272;
-  transition-property: opacity;
-  transition-duration: .25s;
-  transition-timing-function: ease-in; }
+  box-shadow: 0 0.125em 0.125em #727272; }
 
 .slideHeader {
   /* This is the active slide style. */
@@ -2183,7 +2179,14 @@ p {
   .activeSlide {
     margin-top: 3.125em;
     min-height: 100%;
-    float: none; }
+    float: none;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .25s;
+    transition-timing-function: ease-in; }
+
+  .slide {
+    opacity: 0; }
 
   .activeSlide .activeSlideContent {
     padding: 1rem; }

@@ -684,8 +684,8 @@ object {
 .slide {
     width: 100%;
     background-color: $lightPrimaryColor;
-    opacity:0;
-    //
+
+
 }
 
 .activeSlide {
@@ -698,9 +698,7 @@ object {
     border-radius: .1875em;
     @include material-shadow(0,.125em,.125em);
 
-    transition-property:opacity;
-    transition-duration:.25s;
-    transition-timing-function:ease-in;
+
 }
 
 .slideHeader {
@@ -1440,7 +1438,12 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     margin-top: 3.125em;
     min-height: 100%;
     float: none;
+    opacity:1;
+    transition-property:opacity;
+    transition-duration:.25s;
+    transition-timing-function:ease-in;
 }
+.slide{opacity:0;}
 
 .activeSlide .activeSlideContent {
     padding: 1rem;
