@@ -496,9 +496,11 @@ object {
 
 .slide {
   width: 100%;
-  background-color: #B8CCC7; }
+  background-color: #B8CCC7;
+  opacity: 0; }
 
 .activeSlide {
+  opacity: 1;
   float: left;
   width: 95%;
   margin-left: 2.5%;
@@ -507,7 +509,10 @@ object {
   border-radius: .1875em;
   -moz-box-shadow: 0 0.125em 0.125em #727272;
   -webkit-box-shadow: 0 0.125em 0.125em #727272;
-  box-shadow: 0 0.125em 0.125em #727272; }
+  box-shadow: 0 0.125em 0.125em #727272;
+  transition-property: opacity;
+  transition-duration: .25s;
+  transition-timing-function: ease-in; }
 
 .slideHeader {
   /* This is the active slide style. */

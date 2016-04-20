@@ -684,18 +684,23 @@ object {
 .slide {
     width: 100%;
     background-color: $lightPrimaryColor;
+    opacity:0;
+    //
 }
 
 .activeSlide {
+    opacity:1;
     float: left;
     width: 95%;
     margin-left: 2.5%;
     margin-bottom: .625em;
     background-color: $white;
     border-radius: .1875em;
-    @include material-shadow(0,
-    .125em,
-    .125em)
+    @include material-shadow(0,.125em,.125em);
+
+    transition-property:opacity;
+    transition-duration:.25s;
+    transition-timing-function:ease-in;
 }
 
 .slideHeader {
