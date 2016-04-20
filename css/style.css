@@ -2261,6 +2261,9 @@ p {
     left: 50%;
     width: 50%; }
 
+  #tocOpenState #theTocTarget {
+    right: 3em; }
+
   #tocOpenState #theTocTarget:before {
     border: 0; }
 
