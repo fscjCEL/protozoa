@@ -214,7 +214,7 @@ object {
   color: #B8CCC7;
   transition-property: width,right;
   transition-timing-function: ease-in-out;
-  transition-duration: 1s; }
+  transition-duration: .1s; }
 
 #tocClosedState {
   /* default TOC style - button state - */
