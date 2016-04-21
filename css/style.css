@@ -523,10 +523,7 @@ a.slideHeader:hover {
   width: 100%;
   color: #212423;
   text-align: left;
-  padding: .625em 0;
-  margin: .1875em 0;
   border-radius: .1875em;
-  position: relative;
   font-weight: 300; }
 
 .slideHeader h2 .slideNumber {
@@ -550,7 +547,8 @@ a.slideHeader:hover {
 .futureSlideHeader {
   /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
   width: 98%;
-  text-decoration: none; }
+  text-decoration: none;
+  border-radius: 50%; }
 
 .futureSlideHeader h2 {
   font-size: 2.25em;
@@ -561,9 +559,6 @@ a.slideHeader:hover {
   margin: .1875em auto;
   border-radius: .1875em;
   background-color: #F7FFFC;
-  -moz-box-shadow: 0 0.125em 0.125em #727272;
-  -webkit-box-shadow: 0 0.125em 0.125em #727272;
-  box-shadow: 0 0.125em 0.125em #727272;
   font-weight: 300; }
 
 .futureSlideHeader h2 .slideNumber {

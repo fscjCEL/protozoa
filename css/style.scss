@@ -717,10 +717,10 @@ a.slideHeader:hover{
     width: 100%;
     color: $darkPrimaryColor;
     text-align: left;
-    padding: .625em 0;
-    margin: .1875em 0;
+    //padding: .625em 0;
+    //margin: 1em 0;
     border-radius: .1875em;
-    position: relative;
+    
     @include lightWeight;
 
 } //end h2
@@ -749,6 +749,7 @@ a.slideHeader:hover{
     /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
     width: 98%;
     text-decoration: none;
+    border-radius: 50%;
 }
 
 .futureSlideHeader h2 {
@@ -760,9 +761,7 @@ a.slideHeader:hover{
     margin: .1875em auto;
     border-radius: .1875em;
     background-color: $white;
-    @include material-shadow(0,
-    .125em,
-    .125em);
+    
     @include lightWeight;
 } //end h2
 .futureSlideHeader h2 .slideNumber {
