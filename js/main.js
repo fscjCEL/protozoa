@@ -142,7 +142,7 @@ var methods = {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
         //add clearfix to the open menu so it shows everything inside.
 
-        theTOCelement.className += " clearfix";
+        theTOCelement.classList.add = "clearfix";
         theTOCelement.id = "tocOpenState";
 
     },//end function
@@ -531,6 +531,8 @@ var methods = {
 
         //This is the ID of the current active slide.
         theActiveSlideElement = document.getElementById(slideID);
+        //I need to change the href of the skip to content link each time slide is changed
+        document.getElementById("skipToContentLink").href = "#"+destination;
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
