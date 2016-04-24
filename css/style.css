@@ -296,12 +296,7 @@ object {
 
 #tocOpenState li a {
   /* The links that connect this lists to the actual slides. */
-  text-decoration: none;
-  color: #B8CCC7; }
-
-#tocOpenState li a:hover {
-  background-color: yellow;
-  color: #212423; }
+  text-decoration: none; }
 
 #tocOpenState #slide1TOC {
   margin-top: 2.8125em; }
@@ -315,7 +310,12 @@ object {
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 1.5;
-  margin: 0 !important; }
+  margin: 0 !important;
+  color: #B8CCC7; }
+
+.TOClink:hover {
+  background-color: yellow;
+  color: #212423; }
 
 .TOC h2 a {
   column-rule: #212423; }

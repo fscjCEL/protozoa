@@ -433,14 +433,11 @@ object {
 #tocOpenState li a {
     /* The links that connect this lists to the actual slides. */
     text-decoration: none;
-    color: $lightPrimaryColor;
+    
 
 }
 
-#tocOpenState li a:hover {
-    background-color: yellow;
-    color: $darkPrimaryColor;
-}
+
 
 
 //end theTocTarget
@@ -461,6 +458,11 @@ object {
     font-size: 1.25rem;
     line-height: 1.5;
     margin:0!important;
+    color: $lightPrimaryColor;
+}
+.TOClink:hover {
+    background-color: yellow;
+    color: $darkPrimaryColor;
 }
 
 .TOC h2 a {

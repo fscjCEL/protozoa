@@ -211,7 +211,7 @@ var methods = {
             theNewElement = document.createElement("a");
             theNewElement.className = "TOClink";
             theNewElement.href = theHREFiNeed;
-            theNewElement.dataset.destination = theCurrentSlide;
+            theNewElement.setAttribute("data-destination", theCurrentSlide);
             theNewElement.setAttribute("data-destinationNavID", newVar);
 
             //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
