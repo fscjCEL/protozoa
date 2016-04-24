@@ -20,6 +20,8 @@ $black: #090A0A;
 }
 
 
+
+
 @mixin material-shadow($exOffset, $whyOffset, $blur) {
   -moz-box-shadow: $exOffset $whyOffset $blur $shadowColor;
   -webkit-box-shadow: $exOffset $whyOffset $blur $shadowColor;
@@ -49,7 +51,16 @@ $black: #090A0A;
 }
 
 
+@mixin indexHeader(){
 
+    @include lightWeight;
+    @include font-familyHeading;
+    
+    
+    margin:0!important;
+    color: $lightPrimaryColor;
+
+}
 
 
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
@@ -452,13 +463,15 @@ object {
     margin-top: 0;
     margin-bottom: 1.25rem;
 }
+
+
+
 .TOC h2 {
-    @include lightWeight;
-    @include font-familyHeading;
+    @include indexHeader;
+
     font-size: 1.25rem;
     line-height: 1.5;
-    margin:0!important;
-    color: $lightPrimaryColor;
+    
 }
 .TOClink:hover {
     background-color: yellow;
@@ -470,11 +483,10 @@ object {
 }
 
 .TOC h3 {
-    @include lightWeight;
-    @include font-familyRegular;
+    @include indexHeader;
     font-size: .9375rem;
     line-height: 1.3;
-    margin:0!important;
+   
 }
 
 .TOC h3 a {
@@ -486,11 +498,10 @@ object {
 }
 
 .TOC h4 {
-    @include lightWeight;
-    @include font-familyRegular;
+    @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-    margin:0!important;
+    
 }
 
 .TOC h4 a {
@@ -502,11 +513,10 @@ object {
 }
 
 .TOC h5 {
-    @include lightWeight;
-    @include font-familyRegular;
+    @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-    margin:0!important;
+    
 }
 
 .TOC h5 a {
@@ -518,11 +528,10 @@ object {
 }
 
 .TOC h6 {
-    @include lightWeight;
-    @include font-familyRegular;
+    @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-    margin:0!important;
+    
 }
 
 .TOC h6 a {

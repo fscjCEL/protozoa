@@ -308,10 +308,10 @@ object {
 .TOC h2 {
   font-weight: 300;
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.25rem;
-  line-height: 1.5;
   margin: 0 !important;
-  color: #B8CCC7; }
+  color: #B8CCC7;
+  font-size: 1.25rem;
+  line-height: 1.5; }
 
 .TOClink:hover {
   background-color: yellow;
@@ -322,10 +322,11 @@ object {
 
 .TOC h3 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .9375rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
 .TOC h3 a {
   padding-left: .9375em; }
@@ -335,10 +336,11 @@ object {
 
 .TOC h4 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .8rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
 .TOC h4 a {
   padding-left: .9375em; }
@@ -348,10 +350,11 @@ object {
 
 .TOC h5 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .8rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
 .TOC h5 a {
   padding-left: .9375em; }
@@ -361,10 +364,11 @@ object {
 
 .TOC h6 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .8rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
 .TOC h6 a {
   padding-left: .9375em; }
