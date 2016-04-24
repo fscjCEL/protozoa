@@ -182,7 +182,7 @@ var methods = {
         function processCapturedNode(type, node) {//process type of "H1" and the actual <h1> element dom object
             //generate a random # to use as a header ID, and to write as an HREF target.
             //this gives me a random, usually 4 digit, number to identify and connect each header/href pair.
-            var randomNumforNodes, theHREFiNeed, slideBit, newVar, linkInnerHtml;
+            var randomNumforNodes, theHREFiNeed, slideBit, newVar;
             randomNumforNodes = Math.round((Math.random() * 10000));
             //apply the random # to the ID of the header
             node.id = theCurrentSlide + "-" + type + "-" + randomNumforNodes;//apply the ID.
@@ -204,14 +204,21 @@ var methods = {
                 //nope this is a normal header with no children.
                 insertThisTitle = node.innerHTML;
             }
-            linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
+            //linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
 
             // create the new list item
-            theNewElement = document.createElement(type);//ex.type=h2
+            //theNewElement = document.createElement(type);//ex.type=h2 should be <a
+            theNewElement = document.createElement("a");
+            theNewElement.className = "TOClink";
+            theNewElement.href = theHREFiNeed;
+            theNewElement.dataset.destination = theCurrentSlide;
+            theNewElement.setAttribute("data-destinationNavID", newVar);
+
             //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
 
             // craft the link as the innerHTML of the list item.
-            theNewElement.innerHTML = linkInnerHtml;
+            theNewElement.innerHTML =  "<"+type+">"+insertThisTitle+"</"+type+">";
+
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
                 var theTOCParentMainList;//<--this should remain the same because it is the starter list.
