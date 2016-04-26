@@ -679,6 +679,7 @@ var methods = {
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
                 //this is here because of it's scope, and so it will jump to and open a slide.
                 window.location = "#"+destinationSlideID;
+                document.getElementById(destinationSlideID).focus();
                 break;
         }//end switch
     },//end ascertainScope method
@@ -857,6 +858,18 @@ var methods = {
        methods.navMenu();
        //call the figure build
        methods.figureButtonInsertion();
+
+       //put this into a function if it works.
+       document.getElementById("skipToContentLink").addEventListener("click", function(){
+            var href=this.getAttribute("href");
+            var theID = href.substr(1);
+            alert("the keyboard focus should go to "+theID);
+            document.getElementById(theID).focus();
+
+
+
+       },false);
+
        methods.yellowFlash();
 
 
