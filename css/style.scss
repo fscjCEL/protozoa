@@ -55,8 +55,8 @@ $black: #090A0A;
 
     @include lightWeight;
     @include font-familyHeading;
-    
-    
+
+
     margin:0!important;
     color: $lightPrimaryColor;
 
@@ -444,7 +444,7 @@ object {
 #tocOpenState li a {
     /* The links that connect this lists to the actual slides. */
     text-decoration: none;
-    
+
 
 }
 
@@ -471,75 +471,67 @@ object {
 
     font-size: 1.25rem;
     line-height: 1.5;
-    
+
 }
 .TOClink:hover {
-    background-color: yellow;
-    color: $darkPrimaryColor;
+    background-color: yellow!important;
+    color: $darkPrimaryColor!important;
 }
 
-.TOC h2 a {
-    column-rule: $darkPrimaryColor;
-}
+
 
 .TOC h3 {
     @include indexHeader;
     font-size: .9375rem;
     line-height: 1.3;
-   
+
 }
 
-.TOC h3 a {
-    padding-left: .9375em;
-}
 
-.TOC h3::before {
-    content: "•";
+
+.TOC h3:before {
+    content: "•   ";
 }
 
 .TOC h4 {
     @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-    
+
 }
 
-.TOC h4 a {
-    padding-left: .9375em;
-}
 
-.TOC h4::before {
-    content: "•";
+
+.TOC h4:before {
+    content: "•   ";
 }
 
 .TOC h5 {
     @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-    
+
 }
 
 .TOC h5 a {
     padding-left: .9375em;
 }
 
-.TOC h5::before {
-    content: "•";
+.TOC h5:before {
+    content: "•   ";
 }
 
 .TOC h6 {
     @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-    
+
 }
 
-.TOC h6 a {
-    padding-left: .9375em;
-}
 
-.TOC h6::before {
-    content: "•";
+
+.TOC h6:before {
+    content: "•   ";
 }
 
 
@@ -731,7 +723,7 @@ a.slideHeader:hover{
     //padding: .625em 0;
     //margin: 1em 0;
     border-radius: .1875em;
-    
+
     @include lightWeight;
 
 } //end h2
@@ -772,7 +764,7 @@ a.slideHeader:hover{
     margin: .1875em auto;
     border-radius: .1875em;
     background-color: $white;
-    
+
     @include lightWeight;
 } //end h2
 .futureSlideHeader h2 .slideNumber {
