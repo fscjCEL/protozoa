@@ -473,9 +473,9 @@ object {
     line-height: 1.5;
 
 }
-.TOClink:hover {
-    background-color: yellow!important;
-    color: $darkPrimaryColor!important;
+.TOC h2:hover,.TOC h3:hover,.TOC h4:hover,.TOC h5:hover,.TOC h6:hover {
+    background-color: yellow;
+    color: $darkPrimaryColor;
 }
 
 

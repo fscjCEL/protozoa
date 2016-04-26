@@ -313,9 +313,9 @@ object {
   font-size: 1.25rem;
   line-height: 1.5; }
 
-.TOClink:hover {
-  background-color: yellow !important;
-  color: #212423 !important; }
+.TOC h2:hover, .TOC h3:hover, .TOC h4:hover, .TOC h5:hover, .TOC h6:hover {
+  background-color: yellow;
+  color: #212423; }
 
 .TOC h3 {
   font-weight: 300;
