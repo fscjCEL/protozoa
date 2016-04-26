@@ -61,13 +61,13 @@
             </header>
             <!-- ========================================================================= start slide -->
             <section id="slide1" class="activeSlide" data-hasAudioPlayer="no" tabindex="0">
-                <a class="slideHeader clearfix" href="#slide1">
+                <a class="slideHeader clearfix" href="#slide1" tabindex="-1">
                     <h2 class="clearfix">
                         <span class="slideNumber">1</span>
                         <span class="slideTitle">Motions of Objects</span>
                     </h2>
                 </a>
-                <div class="activeSlideContent">
+                <div class="activeSlideContent" tabindex="0">
                     <div class="cel-row">
 
                         <div class="cel-50-b">
@@ -84,7 +84,7 @@
                 <!-- end content -->
                 <footer class="activeSlideFooter">
                     <nav class="nextPrevious">
-                        <a href="#slide2"><button class="nextButton" title="advance to slide 2">&gt;</button></a>
+                        <a href="#slide2"><button class="nextButton" title="advance to slide 2"><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
@@ -97,7 +97,7 @@
                 <span class="slideTitle">Our Night Sky</span>
             </h2>
                 </a>
-                <div class="slideContent">
+                <div class="slideContent" tabindex="0">
 
                     <div class="cel-row">
                         <div class="cel-7525-b">
@@ -125,8 +125,8 @@
                 </div><!-- end content -->
                 <footer class="slideFooter">
                     <nav class="nextPrevious">
-                        <a href="#slide1"><button class="prevButton" title="navigate to slide 1">&lt;</button></a>
-                        <a href="#slide3"><button class="nextButton" title="advance to slide 3" >&gt;</button></a>
+                        <a href="#slide1"><button class="prevButton" title="navigate to slide 1"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide3"><button class="nextButton" title="advance to slide 3" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
@@ -517,7 +517,7 @@ In even monochrome and curving line<br>Of imperturbable serenity.<br><em>Thomas 
 
 
             <footer class="mainFooter">
-                <nav id="mainNav">
+                <nav id="mainNav" tabindex="-1">
                     <ul id="mainNavList">
                         <li></li>
                     </ul>
