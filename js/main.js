@@ -863,7 +863,7 @@ var methods = {
        document.getElementById("skipToContentLink").addEventListener("click", function(){
             var href=this.getAttribute("href");
             var theID = href.substr(1);
-            alert("the keyboard focus should go to "+theID);
+
             document.getElementById(theID).focus();
 
 

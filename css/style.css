@@ -511,21 +511,21 @@ object {
 a.slideHeader:hover {
   cursor: auto !important; }
 
-.slideHeader h2 {
+.slideHeader {
   width: 100%;
   color: #212423;
   text-align: left;
   border-radius: .1875em;
   font-weight: 300; }
 
-.slideHeader h2 .slideNumber {
+.slideHeader .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
   padding-right: 3%;
   font-weight: 300; }
 
-.slideHeader h2 .slideTitle {
+.slideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -542,7 +542,7 @@ a.slideHeader:hover {
   text-decoration: none;
   border-radius: 50%; }
 
-.futureSlideHeader h2 {
+.futureSlideHeader {
   font-size: 2.25em;
   width: 95%;
   color: #212423;
@@ -553,14 +553,14 @@ a.slideHeader:hover {
   background-color: #F7FFFC;
   font-weight: 300; }
 
-.futureSlideHeader h2 .slideNumber {
+.futureSlideHeader .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
   padding-right: 3%;
   font-weight: 300; }
 
-.futureSlideHeader h2 .slideTitle {
+.futureSlideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -570,7 +570,7 @@ a.slideHeader:hover {
   border-left: 1px solid #090A0A;
   font-weight: 300; }
 
-.futureSlideHeader h2:hover {
+.futureSlideHeader:hover {
   color: #F7FFFC;
   background-color: #877551; }
 
@@ -579,7 +579,7 @@ a.slideHeader:hover {
   width: 90%;
   text-decoration: none; }
 
-.pastSlideHeader h2 {
+.pastSlideHeader {
   font-size: 2.25em;
   padding: 5px 10px;
   margin: 1px auto;
@@ -587,18 +587,18 @@ a.slideHeader:hover {
   background-color: #212423;
   font-weight: 300; }
 
-.pastSlideHeader h2:hover {
+.pastSlideHeader:hover {
   color: #F7FFFC;
   background-color: #877551; }
 
-.pastSlideHeader h2 .slideNumber {
+.pastSlideHeader .slideNumber {
   float: left;
   width: 20%;
   text-align: right;
   color: #F7FFFC;
   font-weight: 300; }
 
-.pastSlideHeader h2 .slideTitle {
+.pastSlideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -615,7 +615,7 @@ a.slideHeader:hover {
   position: relative;
   text-decoration: none; }
 
-.activeSlide .pastSlideHeader h2 {
+.activeSlide .pastSlideHeader {
   width: 95%;
   color: #877551;
   text-align: left;
@@ -626,7 +626,7 @@ a.slideHeader:hover {
   background-color: #F7FFFC;
   font-weight: 300; }
 
-.activeSlide .pastSlideHeader h2 .slideNumber {
+.activeSlide .pastSlideHeader .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
@@ -634,7 +634,7 @@ a.slideHeader:hover {
   color: #212423;
   font-weight: 300; }
 
-.activeSlide .pastSlideHeader h2 .slideTitle {
+.activeSlide .pastSlideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -647,7 +647,7 @@ a.slideHeader:hover {
   color: #212423;
   font-weight: 300; }
 
-.activeSlide .pastSlideHeader h2:hover {
+.activeSlide .pastSlideHeader:hover {
   color: #877551; }
 
 .slideContent {
@@ -2277,7 +2277,7 @@ p {
     width: 98%;
     text-decoration: none; }
 
-  .slideHeader h2 {
+  .slideHeader {
     width: 100%;
     color: #212423;
     text-align: left;
@@ -2291,7 +2291,7 @@ p {
     width: 98%;
     text-decoration: none; }
 
-  .futureSlideHeader h2 {
+  .futureSlideHeader {
     width: 100%;
     color: #212423;
     text-align: left;
@@ -2301,10 +2301,6 @@ p {
     border-radius: .1875em; }
 
   .activeSlide .pastSlideHeader {
-    width: 98%;
-    text-decoration: none; }
-
-  .activeSlide .pastSlideHeader h2 {
     background-color: transparent;
     width: 100%;
     color: #212423;
