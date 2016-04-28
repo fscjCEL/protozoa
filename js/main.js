@@ -230,8 +230,9 @@ var methods = {
 
             //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
 
-            // craft the link as the innerHTML of the list item.
-            theNewElement.innerHTML =  "<"+type+">"+insertThisTitle+"</"+type+">";
+            // craft the header element as the innerHTML of the list item.
+
+            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide "+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
