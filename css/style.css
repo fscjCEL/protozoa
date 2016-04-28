@@ -146,20 +146,9 @@ ul li:first-child {
   margin-top: 0;
   padding-top: 0; }
 
-dt {
-  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-  margin-bottom: .5rem;
-  padding-left: .25rem; }
-
-dd {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  margin-left: 2rem;
-  padding: .25rem 1rem 1rem 0; }
+ul {
+  margin-top: 0;
+  padding-top: 0; }
 
 img,
 audio,
@@ -307,12 +296,7 @@ object {
 
 #tocOpenState li a {
   /* The links that connect this lists to the actual slides. */
-  text-decoration: none;
-  color: #B8CCC7; }
-
-#tocOpenState li a:hover {
-  background-color: yellow;
-  color: #212423; }
+  text-decoration: none; }
 
 #tocOpenState #slide1TOC {
   margin-top: 2.8125em; }
@@ -324,64 +308,61 @@ object {
 .TOC h2 {
   font-weight: 300;
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin: 0 !important; }
+  line-height: 1.5; }
 
-.TOC h2 a {
-  column-rule: #212423; }
+.TOC h2:hover, .TOC h3:hover, .TOC h4:hover, .TOC h5:hover, .TOC h6:hover {
+  background-color: yellow;
+  color: #212423; }
 
 .TOC h3 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .9375rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
-.TOC h3 a {
-  padding-left: .9375em; }
-
-.TOC h3::before {
-  content: "•"; }
+.TOC h3:before {
+  content: "•   "; }
 
 .TOC h4 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .8rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
-.TOC h4 a {
-  padding-left: .9375em; }
-
-.TOC h4::before {
-  content: "•"; }
+.TOC h4:before {
+  content: "•   "; }
 
 .TOC h5 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .8rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
 .TOC h5 a {
   padding-left: .9375em; }
 
-.TOC h5::before {
-  content: "•"; }
+.TOC h5:before {
+  content: "•   "; }
 
 .TOC h6 {
   font-weight: 300;
-  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  margin: 0 !important;
+  color: #B8CCC7;
   font-size: .8rem;
-  line-height: 1.3;
-  margin: 0 !important; }
+  line-height: 1.3; }
 
-.TOC h6 a {
-  padding-left: .9375em; }
-
-.TOC h6::before {
-  content: "•"; }
+.TOC h6:before {
+  content: "•   "; }
 
 .audioBox {
   width: 95%;
@@ -530,21 +511,21 @@ object {
 a.slideHeader:hover {
   cursor: auto !important; }
 
-.slideHeader h2 {
+.slideHeader {
   width: 100%;
   color: #212423;
   text-align: left;
   border-radius: .1875em;
   font-weight: 300; }
 
-.slideHeader h2 .slideNumber {
+.slideHeader .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
   padding-right: 3%;
   font-weight: 300; }
 
-.slideHeader h2 .slideTitle {
+.slideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -561,7 +542,7 @@ a.slideHeader:hover {
   text-decoration: none;
   border-radius: 50%; }
 
-.futureSlideHeader h2 {
+.futureSlideHeader {
   font-size: 2.25em;
   width: 95%;
   color: #212423;
@@ -572,14 +553,14 @@ a.slideHeader:hover {
   background-color: #F7FFFC;
   font-weight: 300; }
 
-.futureSlideHeader h2 .slideNumber {
+.futureSlideHeader .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
   padding-right: 3%;
   font-weight: 300; }
 
-.futureSlideHeader h2 .slideTitle {
+.futureSlideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -589,7 +570,7 @@ a.slideHeader:hover {
   border-left: 1px solid #090A0A;
   font-weight: 300; }
 
-.futureSlideHeader h2:hover {
+.futureSlideHeader:hover {
   color: #F7FFFC;
   background-color: #877551; }
 
@@ -598,7 +579,7 @@ a.slideHeader:hover {
   width: 90%;
   text-decoration: none; }
 
-.pastSlideHeader h2 {
+.pastSlideHeader {
   font-size: 2.25em;
   padding: 5px 10px;
   margin: 1px auto;
@@ -606,18 +587,18 @@ a.slideHeader:hover {
   background-color: #212423;
   font-weight: 300; }
 
-.pastSlideHeader h2:hover {
+.pastSlideHeader:hover {
   color: #F7FFFC;
   background-color: #877551; }
 
-.pastSlideHeader h2 .slideNumber {
+.pastSlideHeader .slideNumber {
   float: left;
   width: 20%;
   text-align: right;
   color: #F7FFFC;
   font-weight: 300; }
 
-.pastSlideHeader h2 .slideTitle {
+.pastSlideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -634,7 +615,7 @@ a.slideHeader:hover {
   position: relative;
   text-decoration: none; }
 
-.activeSlide .pastSlideHeader h2 {
+.activeSlide .pastSlideHeader {
   width: 95%;
   color: #877551;
   text-align: left;
@@ -645,7 +626,7 @@ a.slideHeader:hover {
   background-color: #F7FFFC;
   font-weight: 300; }
 
-.activeSlide .pastSlideHeader h2 .slideNumber {
+.activeSlide .pastSlideHeader .slideNumber {
   float: left;
   width: 17%;
   text-align: right;
@@ -653,7 +634,7 @@ a.slideHeader:hover {
   color: #212423;
   font-weight: 300; }
 
-.activeSlide .pastSlideHeader h2 .slideTitle {
+.activeSlide .pastSlideHeader .slideTitle {
   float: right;
   width: 75%;
   text-align: left;
@@ -666,7 +647,7 @@ a.slideHeader:hover {
   color: #212423;
   font-weight: 300; }
 
-.activeSlide .pastSlideHeader h2:hover {
+.activeSlide .pastSlideHeader:hover {
   color: #877551; }
 
 .slideContent {
@@ -717,7 +698,6 @@ a.slideHeader:hover {
     background-color: yellow; }
   100% {
     background-color: #F7FFFC; } }
-
 .activeSlide .TheFirst {
   -webkit-animation-name: yellowFlash;
   animation-name: yellowFlash;
@@ -1300,363 +1280,486 @@ p {
   /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
   .cel-50-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-50-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-50-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-50-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-50-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-50-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-50-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-50-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-50-a h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem; }
+
   .cel-50-b h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem; }
+
   .cel-50-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-50-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-50-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-50-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-7525-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-7525-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-7525-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-7525-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-7525-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-7525-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-7525-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-7525-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-7525-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-7525-b h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-7525-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-7525-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-7525-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-7525-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-2575-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-2575-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-2575-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-2575-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-2575-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-2575-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-2575-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-2575-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-2575-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-2575-b h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-2575-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-2575-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-2575-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-2575-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-40-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-60-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-40-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-60-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-40-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-60-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-40-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-60-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-40-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-60-b h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-40-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-60-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-40-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-60-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-60-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-40-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-60-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-40-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-60-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-40-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-60-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-40-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-60-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-40-b h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-60-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-40-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-60-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-40-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-30-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-30-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-30-c img:first-child {
     margin-top: 1.4rem; }
+
   .cel-30-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-c ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-c ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-c h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-30-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-30-b h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-30-c h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-30-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-30-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-30-c h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-30-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-30-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-30-c h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-25-a img:first-child {
     margin-top: 1.4rem; }
+
   .cel-25-b img:first-child {
     margin-top: 1.4rem; }
+
   .cel-25-c img:first-child {
     margin-top: 1.4rem; }
+
   .cel-25-d img:first-child {
     margin-top: 1.4rem; }
+
   .cel-25-a ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-b ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-c ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-d ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-a ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-b ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-c ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-d ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-a h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-b h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-c h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-d h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
+
   .cel-25-a h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-25-b h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-25-c h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-25-d h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
+
   .cel-25-a h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-25-b h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-25-c h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-25-d h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
+
   .cel-25-a h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-25-b h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-25-c h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   .cel-25-d h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
+
   /* ========================typography */
   html {
     font-size: 16px; }
+
   header h1 {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
     font-weight: 300; }
+
   /* 50.5pxs */
   h1 {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
     font-weight: 300; }
+
   h2 {
     font-size: 3.157rem;
     line-height: 3rem;
     margin-bottom: 3rem;
     font-weight: 300; }
+
   /* 50.5pxs */
   h3 {
     font-size: 2.369rem;
@@ -1664,6 +1767,7 @@ p {
     margin-bottom: 3rem;
     font-weight: 300;
     padding-left: .25rem; }
+
   /* 38pxs */
   h4 {
     font-size: 1.777rem;
@@ -1671,6 +1775,7 @@ p {
     margin-bottom: 3rem;
     font-weight: 300;
     padding-left: .25rem; }
+
   /* 21pxs */
   h5 {
     font-size: 1.333rem;
@@ -1678,6 +1783,7 @@ p {
     margin-bottom: 1.5rem;
     font-weight: 300;
     padding-left: .25rem; }
+
   /* 18pxs */
   h6 {
     font-size: .75rem;
@@ -1685,6 +1791,7 @@ p {
     margin-bottom: 1.5rem;
     font-weight: 300;
     padding-left: .25rem; }
+
   /* 16pxs */
   p {
     font-size: 1rem;
@@ -1692,12 +1799,14 @@ p {
     margin-bottom: 1.5rem;
     font-weight: 400;
     padding: 0; }
+
   /* 16pxs */
   body {
     font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 400; }
+
   /* 16pxs */
   /* =================> Column Layout styles */
   /* DO NOT TOUCH */
@@ -1707,179 +1816,212 @@ p {
     width: 99%;
     margin: 0 0 1.9rem 0;
     padding: 0; }
+
   .cel-100 {
     float: left;
     width: 100%;
     padding: 0; }
+
   .cel-divider {
     float: left;
     width: 100%;
     height: .125em; }
+
   /* 50/50 2 column split */
   .cel-50-a {
     float: left;
     width: 48%;
     padding: 0 1% 0 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-50-b {
     float: right;
     width: 48%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-50-a-rule {
     float: left;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-50-b-rule {
     float: right;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-50-a-box {
     float: left;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-50-b-box {
     float: right;
     width: 48%;
     padding: 0 .75% 0 .75%;
     border: 0.0625em solid #B8CCC7; }
+
   /* 75/25 2 column split */
   .cel-7525-a {
     float: left;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-7525-b {
     float: right;
     width: 24%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-7525-a-rule {
     float: left;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-7525-b-rule {
     float: right;
     width: 24%;
     padding: 0 .5% 0 .5%;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-7525-a-box {
     float: left;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-7525-b-box {
     float: right;
     width: 24%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   /* 25/75 2 column split */
   .cel-2575-a {
     float: left;
     width: 73%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-2575-b {
     float: right;
     width: 73%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-2575-a-rule {
     float: left;
     width: 24%;
     padding: 0 .5% 0 .5%;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-2575-b-rule {
     float: right;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-2575-a-box {
     float: left;
     width: 24%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-2575-b-box {
     float: right;
     width: 73%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   /* 60/40 2 column split */
   .cel-60-a {
     float: left;
     width: 61%;
     padding: 0 1% 0 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-40-b {
     float: right;
     width: 35%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-60-a-rule {
     float: left;
     width: 61%;
     padding: 0 1% 0 0;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-40-b-rule {
     float: right;
     width: 35%;
     padding: 0 0 0 1%;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-60-a-box {
     float: left;
     width: 61%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-40-b-box {
     float: right;
     width: 35%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   /* 40/60 2 column split */
   .cel-40-a {
     float: left;
     width: 35%;
     padding: 0 1% 0 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-60-b {
     float: right;
     width: 61%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-40-a-rule {
     float: left;
     width: 35%;
     padding: 0 1% 0 0;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-60-b-rule {
     float: right;
     width: 61%;
     padding: 0 0 0 1%;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-40-a-box {
     float: left;
     width: 35%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-60-b-box {
     float: right;
     width: 61%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   /* 30/30/30 3 column split */
   .cel-30-a {
     float: left;
@@ -1887,17 +2029,20 @@ p {
     padding: 0 1% 0 0;
     border: 0.0625em solid #F7FFFC;
     margin-bottom: .4rem; }
+
   .cel-30-b {
     float: left;
     width: 48%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC;
     margin-bottom: .4rem; }
+
   .cel-30-c {
     float: right;
     width: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-30-a-rule {
     float: left;
     width: 48%;
@@ -1905,6 +2050,7 @@ p {
     margin-bottom: .4rem;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-30-b-rule {
     float: left;
     width: 48%;
@@ -1912,94 +2058,111 @@ p {
     margin-bottom: .4rem;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-30-c-rule {
     float: right;
     width: 98%;
     padding: 0;
     border: .0625em solid;
     border-color: #B8CCC7 #F7FFFC #F7FFFC #F7FFFC; }
+
   .cel-30-a-box {
     float: left;
     width: 48%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7;
     margin-bottom: .4rem; }
+
   .cel-30-b-box {
     float: left;
     width: 48%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7;
     margin-bottom: .4rem; }
+
   .cel-30-c-box {
     float: right;
     width: 97%;
     padding: 0 .5% 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   /* 25/25/25/25 4 column split */
   .cel-25-a {
     float: left;
     width: 48%;
     padding: 0 1% 0 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-25-b {
     float: left;
     width: 48%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-25-c {
     float: left;
     width: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-25-d {
     float: left;
     right: 98%;
     padding: 0;
     border: 0.0625em solid #F7FFFC; }
+
   .cel-25-a-rule {
     float: left;
     width: 48%;
     padding: 0 1% 0 0;
     border: .0625em solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-25-b-rule {
     float: left;
     width: 48%;
     padding: 0 0 0 1%;
     border: .0625em solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-25-c-rule {
     float: left;
     width: 98%;
     padding: 0;
     border: .0625em solid;
     border-color: #B8CCC7 #F7FFFC #F7FFFC #F7FFFC; }
+
   .cel-25-d-rule {
     float: left;
     right: 98%;
     padding: 0;
     border: .0625em solid;
     border-color: #B8CCC7 #F7FFFC #F7FFFC #F7FFFC; }
+
   .cel-25-a-box {
     float: left;
     width: 48%;
     padding: 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-25-b-box {
     float: left;
     width: 48%;
     padding: 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-25-c-box {
     float: left;
     width: 97%;
     padding: 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .cel-25-d-box {
     float: left;
     right: 97%;
     padding: 0 .5%;
     border: 0.0625em solid #B8CCC7; }
+
   .activeSlide {
     margin-top: 3.125em;
     min-height: 100%;
@@ -2008,10 +2171,13 @@ p {
     transition-property: opacity;
     transition-duration: .25s;
     transition-timing-function: ease-in; }
+
   .slide {
     opacity: 0; }
+
   .activeSlide .activeSlideContent {
     padding: 1rem; }
+
   .activeSlide .activeSlideFooter {
     margin: 0 1em 0 0;
     padding: 0;
@@ -2021,6 +2187,7 @@ p {
     bottom: 0;
     right: 0;
     z-index: 102; }
+
   .slide .slideFooter {
     margin: 0;
     padding: 0;
@@ -2029,31 +2196,37 @@ p {
     height: 3.125em;
     bottom: 0;
     right: 0; }
+
   .audioBox {
     position: static;
     width: 9.375em; }
+
   .audioButton {
     position: absolute;
     left: 40.5%;
     top: 0; }
+
   .nextButton {
     position: absolute;
     top: 0;
     right: 0;
     bottom: auto;
     margin: 0; }
+
   .prevButton {
     position: absolute;
     top: 0;
     left: 0;
     bottom: auto;
     margin: 0; }
+
   .courseIcon {
     fill: #F7FFFC;
     height: 100px;
     width: 100px;
     float: left;
     padding: .75rem 0 0 .5rem; }
+
   #courseNumber {
     position: relative;
     margin-top: 1rem;
@@ -2067,6 +2240,7 @@ p {
     transition-property: opacity,height;
     transition-duration: 1s,3s;
     transition-timing-function: ease-in-out; }
+
   #moduleNumber {
     margin-bottom: 1rem;
     position: relative;
@@ -2075,10 +2249,12 @@ p {
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease-in-out; }
+
   #tocClosedState {
     /* default TOC style - button state - */
     right: 3em;
     /* This controls the opening timing height,width */ }
+
   #tocOpenState {
     padding-top: 4rem;
     padding-bottom: .75em;
@@ -2087,16 +2263,21 @@ p {
     bottom: 0;
     left: 50%;
     width: 50%; }
+
   #tocOpenState #theTocTarget {
     right: 3em; }
+
   #tocOpenState #theTocTarget:before {
     border: 0; }
+
   #tocOpenState .TOC {
     width: 80%; }
+
   .slideHeader {
     width: 98%;
     text-decoration: none; }
-  .slideHeader h2 {
+
+  .slideHeader {
     width: 100%;
     color: #212423;
     text-align: left;
@@ -2105,10 +2286,12 @@ p {
     float: left;
     font-weight: 400;
     border-radius: .1875em; }
+
   .futureSlideHeader {
     width: 98%;
     text-decoration: none; }
-  .futureSlideHeader h2 {
+
+  .futureSlideHeader {
     width: 100%;
     color: #212423;
     text-align: left;
@@ -2116,10 +2299,8 @@ p {
     margin: .1875em auto;
     border-bottom: 0.0625em solid #212423;
     border-radius: .1875em; }
+
   .activeSlide .pastSlideHeader {
-    width: 98%;
-    text-decoration: none; }
-  .activeSlide .pastSlideHeader h2 {
     background-color: transparent;
     width: 100%;
     color: #212423;
@@ -2130,8 +2311,10 @@ p {
     font-weight: 300;
     font-size: 3.157rem;
     border-radius: .1875em; }
+
   .activeAudioBox {
     width: 100%; }
+
   /* for now...all the non-mobile styles */
   .slide {
     border: 0;
@@ -2142,6 +2325,7 @@ p {
     padding: 0;
     position: absolute;
     width: .0625em; }
+
   .slide .slideContent {
     border: 0;
     clip: auto;
@@ -2151,6 +2335,7 @@ p {
     padding: 0;
     position: inherit;
     width: 100%; }
+
   .slide .slideFooter {
     border: 0;
     clip: auto;
@@ -2160,17 +2345,20 @@ p {
     padding: 0;
     position: inherit;
     width: 100%; }
+
   .mainFooter {
     height: 4.6875em;
     bottom: 0;
     left: 0;
     width: 100%;
-    /* background-color: red; */ }
+    #background-color: red; }
+
   #mainNav {
     height: 5vh;
     width: 90vw;
     margin: 0 auto;
     overflow: visible; }
+
   #mainNavList {
     position: relative;
     list-style: none;
@@ -2178,6 +2366,7 @@ p {
     width: 100%;
     height: 4.375em;
     overflow: visible; }
+
   /* The hover effect for the nav elements. */
   @-webkit-keyframes breathingHover {
     to {
@@ -2202,6 +2391,7 @@ p {
     transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
     -moz-osx-font-smoothing: grayscale; }
+
   .activeNavElement {
     background: url(../img/nav-sprites.png) 50% -41px no-repeat;
     display: inline-block;
@@ -2215,6 +2405,7 @@ p {
     transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
     -moz-osx-font-smoothing: grayscale; }
+
   .pastNavElement {
     background: url(../img/nav-sprites.png) 50% -135px no-repeat;
     display: inline-block;
@@ -2229,6 +2420,7 @@ p {
     transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
     -moz-osx-font-smoothing: grayscale; }
+
   .navElement:hover,
   .activeNavElement:hover,
   .pastNavElement:hover,
@@ -2254,23 +2446,28 @@ p {
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     cursor: pointer; }
+
   #helpboxOpenState {
     width: 40vw; }
+
   #helpButton {
     padding: .7em .9em 0 0;
     text-align: right;
     float: right; }
+
   #celLogo {
     float: left;
     margin: 0 0 0 2.25%;
     padding: 0; }
+
   #institutionalLogo {
     width: 300px;
     position: fixed;
     bottom: 0px;
     left: 0px; } }
-
 /* end 35em media query */
+@media only screen and (min-width: 41.25em) {
+  /* 660 pixel width */ }
 /* end 41.25 em media query */
 @media only screen and (min-width: 49.5em) {
   /* 792 pixel width */
@@ -2280,50 +2477,57 @@ p {
     width: 32%;
     padding: 0 1% 0 0;
     border: 1px solid #F7FFFC; }
+
   .cel-30-b {
     float: left;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC; }
+
   .cel-30-c {
     float: right;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid #F7FFFC; }
+
   .cel-30-a-rule {
     float: left;
     width: 32%;
     padding: 0 1% 0 0;
     border: 1px solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-30-b-rule {
     float: left;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid;
     border-color: #F7FFFC #B8CCC7; }
+
   .cel-30-c-rule {
     right: left;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-30-a-box {
     float: left;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7; }
+
   .cel-30-b-box {
     float: left;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7; }
+
   .cel-30-c-box {
     float: right;
     width: 32%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7; } }
-
 @media only screen and (min-width: 59.375em) {
   /* 950 pixels width */
   /* 25/25/25/25 4 column split */
@@ -2333,24 +2537,28 @@ p {
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC;
     margin-bottom: 1.5rem; }
+
   .cel-25-b {
     float: left;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC;
     margin-bottom: 1.5rem; }
+
   .cel-25-c {
     float: left;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC;
     margin-bottom: 1.5rem; }
+
   .cel-25-d {
     float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #F7FFFC;
     margin-bottom: 1.5rem; }
+
   .cel-25-a-rule {
     float: left;
     width: 23.5%;
@@ -2358,6 +2566,7 @@ p {
     margin-bottom: 1.5rem;
     border: 1px solid;
     border-color: #F7FFFC #B8CCC7 #F7FFFC #F7FFFC; }
+
   .cel-25-b-rule {
     float: left;
     width: 23.5%;
@@ -2365,6 +2574,7 @@ p {
     margin-bottom: 1.5rem;
     border: 1px solid;
     border-color: #F7FFFC #B8CCC7; }
+
   .cel-25-c-rule {
     float: left;
     width: 23.5%;
@@ -2372,6 +2582,7 @@ p {
     margin-bottom: 1.5rem;
     border: 1px solid;
     border-color: #F7FFFC #B8CCC7; }
+
   .cel-25-d-rule {
     float: right;
     width: 23.5%;
@@ -2379,35 +2590,39 @@ p {
     margin-bottom: 1.5rem;
     border: 1px solid;
     border-color: #F7FFFC #F7FFFC #F7FFFC #B8CCC7; }
+
   .cel-25-a-box {
     float: left;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
     margin-bottom: 1.5rem; }
+
   .cel-25-b-box {
     float: left;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
     margin-bottom: 1.5rem; }
+
   .cel-25-c-box {
     float: left;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
     margin-bottom: 1.5rem; }
+
   .cel-25-d-box {
     float: right;
     width: 23.5%;
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
     margin-bottom: 1.5rem; } }
-
 @media only screen and (min-width: 68.1875em) {
   #tocOpenState {
     width: 30%;
     left: 70%; }
+
   .activeSlide {
     margin-bottom: .625em;
     margin-right: auto !important;
@@ -2415,17 +2630,19 @@ p {
     display: block;
     width: 64rem;
     float: none; }
+
   #mainNav {
     height: 5vh;
     width: 64rem; }
+
   #helpboxOpenState {
     width: 35vw; } }
-
 @media only screen and (min-width: 92.625em) {
   /* 1482 pixels width */
   #helpboxOpenState {
     width: 25vw; } }
-
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -2437,13 +2654,17 @@ p {
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
+
   a,
   a:visited {
     text-decoration: underline; }
+
   a[href]:after {
     content: " (" attr(href) ")"; }
+
   abbr[title]:after {
     content: " (" attr(title) ")"; }
+
   /*
    * Don't show links for images, or javascript/internal links
    */
@@ -2451,18 +2672,23 @@ p {
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
+
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
+
   tr,
   img {
     page-break-inside: avoid; }
+
   img {
     max-width: 100% !important; }
+
   @page {
     margin: 0.5cm; }
   p,
@@ -2470,6 +2696,7 @@ p {
   h3 {
     orphans: 3;
     widows: 3; }
+
   h2,
   h3 {
     page-break-after: avoid; } }

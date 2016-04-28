@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AST1002 Learning Unit 1</title>
+    <title>AST1002 Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This is the Learning Object template we to use to convert closed files, like word and ppt, to an open format.">
     <meta name="author" content="Ian Vanhoof (ian@fscj.edu)">
@@ -17,6 +17,8 @@
     <link href='https://fonts.googleapis.com/css&quest;family&equals;Oswald%3A400,300,700%7CQuattrocento' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <a id="skipToContentLink" href="#slide1" class="visuallyhidden" tabindex="0" >Use this link to skip to the main content area</a>
+    <a id="skipToIndexLink" href="#tocClosedState" class="visuallyhidden" tabindex="0">Use this link access the table of contents.</a>
         <article class="module">
               <header id="theModuleHeader" class="moduleHeaders clearfix">
                 <div id="fscjLogo"></div>
@@ -28,7 +30,7 @@
                 <h1 id="courseNumber">AST1002</h1>
                 <h2 id="moduleNumber">Learning Unit 3</h2>
 
-                <ol id="tocClosedState" class="TOCs">
+                <ol id="tocClosedState" class="TOCs" tabindex="-1">
                     <li></li>
                 </ol>
                 <!-- end TOC list -->
@@ -58,13 +60,13 @@
                 </section><!-- end help box -->
             </header>
             <!-- ========================================================================= start slide -->
-            <section id="slide1" class="activeSlide" data-hasAudioPlayer="no">
-                <a class="slideHeader clearfix" href="#slide1">
-                    <h2 class="clearfix">
+            <section id="slide1" class="activeSlide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="slideHeader clearfix">
                         <span class="slideNumber">1</span>
                         <span class="slideTitle">Motions of Objects</span>
                     </h2>
-                </a>
+
                 <div class="activeSlideContent">
                     <div class="cel-row">
 
@@ -80,22 +82,22 @@
                     <!-- end row -->
                 </div>
                 <!-- end content -->
-                <footer class="activeSlideFooter">
+                <footer class="activeSlideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide2"><button class="nextButton" title="advance to slide 2">&gt;</button></a>
+                        <a href="#slide2"><button class="nextButton" title="advance to slide 2"><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
             <!-- ========================================================================= end slide -->
             <!-- ========================================================================= start slide -->
-            <section id="slide2" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide2">
-                    <h2 class="clearfix">
-                <span class="slideNumber">2</span>
-                <span class="slideTitle">Our Night Sky</span>
-            </h2>
-                </a>
-                <div class="slideContent">
+            <section id="slide2" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
+                        <span class="slideNumber">2</span>
+                        <span class="slideTitle">Our Night Sky</span>
+                    </h2>
+
+                <div class="slideContent" >
 
                     <div class="cel-row">
                         <div class="cel-7525-b">
@@ -121,23 +123,23 @@
 
                     </div><!-- end cel row -->
                 </div><!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide1"><button class="prevButton" title="navigate to slide 1">&lt;</button></a>
-                        <a href="#slide3"><button class="nextButton" title="advance to slide 3" >&gt;</button></a>
+                        <a href="#slide1"><button class="prevButton" title="navigate to slide 1"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide3"><button class="nextButton" title="advance to slide 3" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
             <!-- end slide -->
             <!-- ======================================================= end slide -->
             <!-- ========================================================================= start slide -->
-            <section id="slide3" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide3">
-                    <h2 class="clearfix">
+            <section id="slide3" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                 <span class="slideNumber">3</span>
                 <span class="slideTitle">The Sun and the Moon</span>
             </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-60-a">
@@ -168,22 +170,22 @@
                     </div><!-- end CEL row -->
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a  href="#slide2"><button class="prevButton" title="navigate to slide 2" >&lt;</button></a>
-                        <a  href="#slide4"><button class="nextButton" title="advance to slide 4" >&gt;</button></a>
+                        <a  href="#slide2"><button class="prevButton" title="navigate to slide 2" ><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a  href="#slide4"><button class="nextButton" title="advance to slide 4" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
             <!-- end slide -->
             <!-- ======================================================= end slide -->
-            <section id="slide4" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide4">
-                    <h2 class="clearfix">
+            <section id="slide4" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                     <span class="slideNumber">4</span>
                     <span class="slideTitle">Seasons and Seasonal Changes</span>
                 </h2>
-                </a>
+
                 <div class="slideContent">
 
                     <div class="cel-row">
@@ -219,22 +221,22 @@
                         </div><!-- end 40-b -->
                     </div> <!-- end cel row -->
                 </div><!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide3"><button class="prevButton" title="navigate to slide 3">&lt;</button></a>
-                        <a href="#slide5"><button class="nextButton" title="advance to slide 5" >&gt;</button></a>
+                        <a href="#slide3"><button class="prevButton" title="navigate to slide 3"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide5"><button class="nextButton" title="advance to slide 5" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
             <!-- end slide -->
             <!-- ======================================================= end slide -->
-            <section id="slide5" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide5">
-                    <h2 class="clearfix">
+            <section id="slide5" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">5</span>
                  <span class="slideTitle">The Moon in our Skies</span>
               </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-50-a">
@@ -266,21 +268,21 @@
 
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide4"><button class="prevButton" title="navigate to slide 4">&lt;</button></a>
-                        <a href="#slide6"><button class="nextButton" title="advance to slide 6" >&gt;</button></a>
+                        <a href="#slide4"><button class="prevButton" title="navigate to slide 4"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide6"><button class="nextButton" title="advance to slide 6" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
             <!-- ======================================================= end slide -->
-            <section id="slide6" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide6">
-                    <h2 class="clearfix">
+            <section id="slide6" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">6</span>
                  <span class="slideTitle">Phases of the Moon</span>
               </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-50-a">
@@ -315,22 +317,22 @@
                         </div><!-- end 50-b -->
                     </div><!-- end cel row -->
                 </div><!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide5"><button class="prevButton" title="navigate to slide 5">&lt;</button></a>
-                        <a href="#slide7"><button class="nextButton" title="advance to slide 7" >&gt;</button></a>
+                        <a href="#slide5"><button class="prevButton" title="navigate to slide 5"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide7"><button class="nextButton" title="advance to slide 7" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                     <!-- end next prev -->
                 </footer>
             </section>
             <!-- ======================================================= end slide -->
-            <section id="slide7" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide7">
-                    <h2 class="clearfix">
+            <section id="slide7" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">7</span>
                  <span class="slideTitle">More about the Moon&hellip;</span>
               </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-60-a">
@@ -360,22 +362,22 @@ In even monochrome and curving line<br>Of imperturbable serenity.<br><em>Thomas 
 
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide6"><button class="prevButton" title="navigate to slide 6">&lt;</button></a>
-                        <a href="#slide8"><button class="nextButton" title="advance to slide 8" >&gt;</button></a>
+                        <a href="#slide6"><button class="prevButton" title="navigate to slide 6"><span class="visuallyhidden">previous slide</span><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide8"><button class="nextButton" title="advance to slide 8" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                     <!-- end next prev -->
                 </footer>
             </section>
             <!-- ======================================================= end slide -->
-            <section id="slide8" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide8">
-                    <h2 class="clearfix">
+            <section id="slide8" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">8</span>
                  <span class="slideTitle">Eclipses</span>
               </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-50-a">
@@ -407,22 +409,22 @@ In even monochrome and curving line<br>Of imperturbable serenity.<br><em>Thomas 
                     </div><!-- end cel row -->
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide7"><button class="prevButton" title="navigate to slide 7">&lt;</button></a>
-                        <a href="#slide9"><button class="nextButton" title="advance to slide 9" >&gt;</button></a>
+                        <a href="#slide7"><button class="prevButton" title="navigate to slide 7"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide9"><button class="nextButton" title="advance to slide 9" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                     <!-- end next prev -->
                 </footer>
             </section>
             <!-- ======================================================= end slide -->
-            <section id="slide9" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide9">
-                    <h2 class="clearfix">
+            <section id="slide9" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">9</span>
                  <span class="slideTitle">Total Solar Eclipses</span>
               </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-7525-a">
@@ -448,22 +450,22 @@ In even monochrome and curving line<br>Of imperturbable serenity.<br><em>Thomas 
                     </div><!-- end cel row -->
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide8"><button  class="prevButton" title="navigate to slide 8">&lt;</button></a>
-                        <a href="#slide10"><button class="nextButton" title="advance to slide 10" >&gt;</button></a>
+                        <a href="#slide8"><button  class="prevButton" title="navigate to slide 8"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide10"><button class="nextButton" title="advance to slide 10" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                     <!-- end next prev -->
                 </footer>
             </section>
             <!-- ======================================================= end slide -->
-            <section id="slide10" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide10">
-                    <h2 class="clearfix">
+            <section id="slide10" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">10</span>
                  <span class="slideTitle">Eclipse: Lore and Legend</span>
               </h2>
-                </a>
+
                 <div class="slideContent">
                     <div class="cel-row">
                         <div class="cel-60-a">
@@ -478,23 +480,22 @@ In even monochrome and curving line<br>Of imperturbable serenity.<br><em>Thomas 
                     </div><!-- end cel row -->
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide9"><button class="prevButton">&lt;</button></a>
-                        <a href="#slide11"><button class="nextButton">&gt;</button></a>
+                        <a href="#slide9"><button class="prevButton"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide11"><button class="nextButton"><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                     <!-- end next prev -->
                 </footer>
             </section>
             <!-- ======================================================= end slide -->
-            <section id="slide11" class="slide" data-hasAudioPlayer="no">
-                <a class="futureSlideHeader clearfix" href="#slide11">
-                    <h2 class="clearfix">
+            <section id="slide11" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+                    <h2 class="futureSlideHeader clearfix">
                  <span class="slideNumber">11</span>
                  <span class="slideTitle">A Total Eclipse of the Sun</span>
               </h2>
-                </a>
-                <div class="slideContent">
+                                <div class="slideContent">
                     <div class="cel-60-a">
                         <p>People have described total solar eclipses as magical, life-changing, and almost religious in nature…even in today’s scientific and high-technology world.</p>
                     </div><!-- end 7525-a -->
@@ -505,18 +506,18 @@ In even monochrome and curving line<br>Of imperturbable serenity.<br><em>Thomas 
                     </div><!-- end 7525-b -->
                 </div>
                 <!-- end content -->
-                <footer class="slideFooter">
+                <footer class="slideFooter" tabindex="0">
                     <nav class="nextPrevious">
-                        <a href="#slide10"><button class="prevButton" title="navigate to slide 10">&lt;</button></a>
-                        <a href="#slide1"><button class="nextButton" title="jump back to slide 1" >&gt;</button></a>
+                        <a href="#slide10"><button class="prevButton" title="navigate to slide 10"><span class="visuallyhidden">previous slide</span>&lt;</button></a>
+                        <a href="#slide1"><button class="nextButton" title="jump back to slide 1" ><span class="visuallyhidden">next slide</span>&gt;</button></a>
                     </nav>
                 </footer>
             </section>
-
+            <!-- ======================================================= end slide -->
 
             <footer class="mainFooter">
-                <nav id="mainNav">
-                    <ul id="mainNavList">
+                <nav id="mainNav" >
+                    <ul id="mainNavList" tabindex="-1">
                         <li></li>
                     </ul>
                 </nav>

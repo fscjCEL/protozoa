@@ -1,4 +1,13 @@
 var methods = {
+    focusAllTheThings:function(){
+        //This is so my internal links get keyboard focus (for accessibility's sake)
+            //get that link
+            var href=this.getAttribute("href");
+            //take the hash (#) off
+            var theID = href.substr(1);
+            //set focus on THAT IDed element.
+            document.getElementById(theID).focus();
+    },//end function focusAllTheThings
     yellowFlash:function(){
         var slidesLength = methods.countTheSlides();
         for (var i = 0; i < slidesLength; i++) {
@@ -87,6 +96,7 @@ var methods = {
         theInitialTarget.id = "nav"+theInitialSlideCount;
         //these three lines set the attributes of the target element.
         theInitialTarget.className = "navElement";
+
         theInitialTarget.innerHTML = theInitialSlideCount;
 
         //now that I have a target built I can send everything else it's way.
@@ -100,7 +110,7 @@ var methods = {
             }else{
                 insertThisListItemElement.className = "navElement";
             }//end if
-
+            insertThisListItemElement.setAttribute("tabindex","-1");
             insertThisListItemElement.innerHTML = i;
 
             var navLiParentNode = document.getElementById("mainNavList");
@@ -142,7 +152,7 @@ var methods = {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
         //add clearfix to the open menu so it shows everything inside.
 
-        theTOCelement.className += " clearfix";
+        theTOCelement.classList.add = "clearfix";
         theTOCelement.id = "tocOpenState";
 
     },//end function
@@ -182,10 +192,12 @@ var methods = {
         function processCapturedNode(type, node) {//process type of "H1" and the actual <h1> element dom object
             //generate a random # to use as a header ID, and to write as an HREF target.
             //this gives me a random, usually 4 digit, number to identify and connect each header/href pair.
-            var randomNumforNodes, theHREFiNeed, slideBit, newVar, linkInnerHtml;
+            var randomNumforNodes, theHREFiNeed, slideBit, newVar;
             randomNumforNodes = Math.round((Math.random() * 10000));
             //apply the random # to the ID of the header
             node.id = theCurrentSlide + "-" + type + "-" + randomNumforNodes;//apply the ID.
+            //add a tabindex so this can be jumped to from the toc and retain keyboard focus
+            node.setAttribute("tabindex","-1");
             //used to control the if statement (below) that creates new slide sub lists..
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
@@ -204,14 +216,24 @@ var methods = {
                 //nope this is a normal header with no children.
                 insertThisTitle = node.innerHTML;
             }
-            linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
+            //linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
 
             // create the new list item
-            theNewElement = document.createElement(type);//ex.type=h2
+            //theNewElement = document.createElement(type);//ex.type=h2 should be <a
+            theNewElement = document.createElement("a");
+            theNewElement.className = "TOClink";
+            theNewElement.href = theHREFiNeed;
+            theNewElement.setAttribute("data-destination", theCurrentSlide);
+            theNewElement.setAttribute("data-destinationNavID", newVar);
+            //this is here because I want to suppress defeault link behavior in screen readers (which is tabindex=0)
+            theNewElement.setAttribute("tabindex", "-1");
+
             //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
 
-            // craft the link as the innerHTML of the list item.
-            theNewElement.innerHTML = linkInnerHtml;
+            // craft the header element as the innerHTML of the list item.
+
+            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide "+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
+
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
                 var theTOCParentMainList;//<--this should remain the same because it is the starter list.
@@ -527,10 +549,13 @@ var methods = {
                 allTheAudioElements[p].pause();
             }//end for
         }//end if
-        //
+        //keyboard focus should change to the destination as well.
+        document.getElementById(destination).focus();
 
         //This is the ID of the current active slide.
         theActiveSlideElement = document.getElementById(slideID);
+        //I need to change the href of the skip to content link each time slide is changed
+        document.getElementById("skipToContentLink").href = "#"+destination;
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
@@ -655,6 +680,7 @@ var methods = {
                 destinationSlideIDNUM = Number(theDestination.substr(3));
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = theDestination;
+                document.getElementById(destinationSlideID).focus();
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
                 break;
             case "slideHeader":
@@ -669,7 +695,8 @@ var methods = {
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
                 //this is here because of it's scope, and so it will jump to and open a slide.
-                window.location = "#"+destinationSlideID;
+                //window.location = "#"+destinationSlideID;
+                document.getElementById(destinationSlideID).focus();
                 break;
         }//end switch
     },//end ascertainScope method
@@ -848,6 +875,10 @@ var methods = {
        methods.navMenu();
        //call the figure build
        methods.figureButtonInsertion();
+
+       //put this into a function if it works.
+       document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
+
        methods.yellowFlash();
 
 
