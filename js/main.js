@@ -87,40 +87,54 @@ var methods = {
     },//end figureButtonInsertion
     populateTheNavMenu: function () {
         //this function is called from main, and adds list items to the nav menu.
-
+        var insertThisListItemElement,navLiParentNode,insertLiBeforeThis,theInitialTarget;
         //how many slides do I have?
         var theInitialSlideCount = methods.countTheSlides();
-        //the initial target for insertion is the single empty li child in the mainNavList element
-        var theInitialTarget = document.getElementById("mainNavList").children[0];
-        //give the blank Li an ID
-        theInitialTarget.id = "nav"+theInitialSlideCount;
-        //these three lines set the attributes of the target element.
-        theInitialTarget.className = "navElement";
 
-        theInitialTarget.innerHTML = theInitialSlideCount;
+
 
         //now that I have a target built I can send everything else it's way.
         //NOTE:this loop counts down from the total down to one.
-        for(var i=(methods.countTheSlides()-1);i>0;i--){
-            //create and build the LI to be inserted
-            var insertThisListItemElement = document.createElement("li");
-            insertThisListItemElement.id = "nav"+i;
-            if(i===1){
-                insertThisListItemElement.className = "activeNavElement";
-            }else{
-                insertThisListItemElement.className = "navElement";
-            }//end if
-            insertThisListItemElement.setAttribute("tabindex","-1");
-            insertThisListItemElement.innerHTML = i;
-
-            var navLiParentNode = document.getElementById("mainNavList");
-            var insertLiBeforeThis = document.getElementById("nav"+(i+1));
-
-            navLiParentNode.insertBefore(insertThisListItemElement,insertLiBeforeThis);
+        if(methods.countTheSlides()===1){
+            //I just need to use the existing element if there is only one slide.
+            //there is only one so treat it as such.
+            //
+            theInitialTarget = document.getElementById("mainNavList").children[0];
+            theInitialTarget.id = "nav1";
+            theInitialTarget.className = "activeNavElement";
+            theInitialTarget.setAttribute("tabindex","-1");
+            theInitialTarget.innerHTML = "1";
 
 
+        }else{
+            //there is more than one, so start ripping.
+            //the initial target for insertion is the single empty li child in the mainNavList element
+            theInitialTarget = document.getElementById("mainNavList").children[0];
+            //give the blank Li an ID
+            theInitialTarget.id = "nav"+theInitialSlideCount;
+            //these three lines set the attributes of the target element.
+            theInitialTarget.className = "navElement";
 
-        }//end for
+            theInitialTarget.innerHTML = theInitialSlideCount;
+            for(var i=(methods.countTheSlides()-1);i>0;i--){
+                //create and build the LI to be inserted
+                insertThisListItemElement = document.createElement("li");
+                insertThisListItemElement.id = "nav"+i;
+                if(i===1){
+                    insertThisListItemElement.className = "activeNavElement";
+                }else{
+                    insertThisListItemElement.className = "navElement";
+                }//end if
+                insertThisListItemElement.setAttribute("tabindex","-1");
+                insertThisListItemElement.innerHTML = i;
+
+                navLiParentNode = document.getElementById("mainNavList");
+                insertLiBeforeThis = document.getElementById("nav"+(i+1));
+
+                navLiParentNode.insertBefore(insertThisListItemElement,insertLiBeforeThis);
+            }//end for
+        }//end if
+
 
     },//end populateTheNavMenu
     clickScopeTOC: function () {
