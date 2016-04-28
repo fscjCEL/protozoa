@@ -213,6 +213,8 @@ var methods = {
             theNewElement.href = theHREFiNeed;
             theNewElement.setAttribute("data-destination", theCurrentSlide);
             theNewElement.setAttribute("data-destinationNavID", newVar);
+            //this is here because I want to suppress defeault link behavior in screen readers (which is tabindex=0)
+            theNewElement.setAttribute("tabindex", "-1");
 
             //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
 
