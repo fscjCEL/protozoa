@@ -1,4 +1,13 @@
 var methods = {
+    focusAllTheThings:function(){
+        //This is so my internal links get keyboard focus (for accessibility's sake)
+            //get that link
+            var href=this.getAttribute("href");
+            //take the hash (#) off
+            var theID = href.substr(1);
+            //set focus on THAT IDed element.
+            document.getElementById(theID).focus();
+    },//end function focusAllTheThings
     yellowFlash:function(){
         var slidesLength = methods.countTheSlides();
         for (var i = 0; i < slidesLength; i++) {
@@ -87,6 +96,7 @@ var methods = {
         theInitialTarget.id = "nav"+theInitialSlideCount;
         //these three lines set the attributes of the target element.
         theInitialTarget.className = "navElement";
+
         theInitialTarget.innerHTML = theInitialSlideCount;
 
         //now that I have a target built I can send everything else it's way.
@@ -100,7 +110,7 @@ var methods = {
             }else{
                 insertThisListItemElement.className = "navElement";
             }//end if
-
+            insertThisListItemElement.setAttribute("tabindex","-1");
             insertThisListItemElement.innerHTML = i;
 
             var navLiParentNode = document.getElementById("mainNavList");
@@ -186,6 +196,8 @@ var methods = {
             randomNumforNodes = Math.round((Math.random() * 10000));
             //apply the random # to the ID of the header
             node.id = theCurrentSlide + "-" + type + "-" + randomNumforNodes;//apply the ID.
+            //add a tabindex so this can be jumped to from the toc and retain keyboard focus
+            node.setAttribute("tabindex","-1");
             //used to control the if statement (below) that creates new slide sub lists..
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
@@ -536,7 +548,8 @@ var methods = {
                 allTheAudioElements[p].pause();
             }//end for
         }//end if
-        //
+        //keyboard focus should change to the destination as well.
+        document.getElementById(destination).focus();
 
         //This is the ID of the current active slide.
         theActiveSlideElement = document.getElementById(slideID);
@@ -666,6 +679,7 @@ var methods = {
                 destinationSlideIDNUM = Number(theDestination.substr(3));
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = theDestination;
+                document.getElementById(destinationSlideID).focus();
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
                 break;
             case "slideHeader":
@@ -680,7 +694,7 @@ var methods = {
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
                 //this is here because of it's scope, and so it will jump to and open a slide.
-                window.location = "#"+destinationSlideID;
+                //window.location = "#"+destinationSlideID;
                 document.getElementById(destinationSlideID).focus();
                 break;
         }//end switch
@@ -862,15 +876,7 @@ var methods = {
        methods.figureButtonInsertion();
 
        //put this into a function if it works.
-       document.getElementById("skipToContentLink").addEventListener("click", function(){
-            var href=this.getAttribute("href");
-            var theID = href.substr(1);
-
-            document.getElementById(theID).focus();
-
-
-
-       },false);
+       document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
 
        methods.yellowFlash();
 
