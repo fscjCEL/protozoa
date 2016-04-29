@@ -166,8 +166,9 @@ var methods = {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
         //add clearfix to the open menu so it shows everything inside.
 
-        theTOCelement.classList.add = "clearfix";
+
         theTOCelement.id = "tocOpenState";
+        theTOCelement.classList.add = "clearfix";
 
     },//end function
     traverse: function (task, node) {
