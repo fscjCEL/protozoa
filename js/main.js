@@ -247,7 +247,7 @@ var methods = {
 
             // craft the header element as the innerHTML of the list item.
 
-            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide "+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
+            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
