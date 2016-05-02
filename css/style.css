@@ -753,7 +753,10 @@ button {
   box-shadow: 0 4px 4px #727272;
   width: 2.75rem;
   height: 2.75rem;
-  padding: 0; }
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2.5rem; }
 
 .prevButton {
   position: fixed;
@@ -771,7 +774,10 @@ button {
   box-shadow: 0 4px 4px #727272;
   width: 2.75rem;
   height: 2.75rem;
-  padding: 0; }
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2.5rem; }
 
 .nextButton:hover {
   background-color: #212423;
@@ -2225,14 +2231,20 @@ p {
     top: 0;
     right: 0;
     bottom: auto;
-    margin: 0; }
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5rem; }
 
   .prevButton {
     position: absolute;
     top: 0;
     left: 0;
     bottom: auto;
-    margin: 0; }
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5rem; }
 
   .courseIcon {
     fill: #F7FFFC;

@@ -722,11 +722,11 @@ var methods = {
         //clicked the next button
         if (this.className === "nextButton") {
 
-            methods.ascertainScope("nextButton", this.parentNode.parentNode.parentNode.parentNode.id);
+            methods.ascertainScope("nextButton", this.parentNode.parentNode.parentNode.id);
         }//end if
         //clicked a previous button
         if (this.className === "prevButton") {
-            methods.ascertainScope("prevButton", this.parentNode.parentNode.parentNode.parentNode.id);
+            methods.ascertainScope("prevButton", this.parentNode.parentNode.parentNode.id);
         }//end if
         //clicked a nav element
         if (this.className === "navElement" || this.className === "activeNavElement" || this.className === "pastNavElement") {
