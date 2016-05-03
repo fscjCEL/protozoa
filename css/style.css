@@ -2662,7 +2662,18 @@ p {
     width: 64rem; }
 
   #helpboxOpenState {
-    width: 35vw; } }
+    width: 35vw; }
+
+  .bookBox {
+    margin-left: 19.35% !important;
+    margin-right: 19.35% !important;
+    padding-top: 13em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 10em; }
+
+  .bookBox p {
+    padding: 0; } }
 @media only screen and (min-width: 92.625em) {
   /* 1482 pixels width */
   #helpboxOpenState {

@@ -1901,6 +1901,21 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 #helpboxOpenState{width:35vw;}
 
+.bookBox{
+
+    margin-left: 19.35%!important;
+    margin-right: 19.35%!important;
+    padding-top: 13em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 10em;
+
+
+
+
+}
+.bookBox p{padding: 0;}
+
 }//end 1091px media query
 @media only screen and (min-width: 92.625em) {/* 1482 pixels width */
 
