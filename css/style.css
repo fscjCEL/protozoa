@@ -175,6 +175,26 @@ object {
   width: 100%;
   height: 100%; }
 
+/*
+<div class="cel-60-a bookBox">
+    <div class="cel-100 bookBoxBanner"><!-- optional banner image --></div>
+    <!-- the main content body -->
+</div>
+*/
+.bookBox {
+  margin-left: 0;
+  margin-right: 19.35% !important;
+  padding: .25em; }
+
+.bookBox p {
+  padding: 0; }
+
+.bookBoxBanner {
+  /* background: url("../img/myBannerGraphic.svg" ); */
+  background-position: -50px 0;
+  height: 250px;
+  margin-bottom: 105px; }
+
 .courseIcon {
   fill: #F7FFFC;
   height: 45px;
@@ -2490,7 +2510,18 @@ p {
     width: 300px;
     position: fixed;
     bottom: 0px;
-    left: 0px; } }
+    left: 0px; }
+
+  .bookBox {
+    margin-left: 19.35% !important;
+    margin-right: 19.35% !important;
+    padding-top: 13em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 10em; }
+
+  .bookBox p {
+    padding: 0; } }
 /* end 35em media query */
 @media only screen and (min-width: 41.25em) {
   /* 660 pixel width */ }
