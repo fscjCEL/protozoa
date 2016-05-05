@@ -908,26 +908,14 @@ a.slideHeader:hover{
 
 .slide .slideContent {
     //default mobile slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 
 .slide .slideFooter {
     //default mobile slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 
 .activeSlide .activeSlideFooter {
@@ -977,14 +965,8 @@ a.slideHeader:hover{
 }
 #mainNavList {
     //default mobile Nav state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 button{border:0;}
 .nextButton {
@@ -1056,14 +1038,8 @@ button{border:0;}
 
 .navContainer {
     //default mobile slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 
 .mainFooter {
@@ -1663,14 +1639,8 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 .slide {
     //default desktop slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: .0625em;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: .0625em;
+    display: none !important;
+    visibility: hidden;
 }
 
 .slide .slideContent {
