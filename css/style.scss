@@ -1850,7 +1850,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
   .cel-30-a-rule {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
   .cel-30-b-rule {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-30-c-rule {right: left;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-30-c-rule {float: right;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-30-a-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
   .cel-30-b-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
   .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
