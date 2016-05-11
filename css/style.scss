@@ -908,26 +908,14 @@ a.slideHeader:hover{
 
 .slide .slideContent {
     //default mobile slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 
 .slide .slideFooter {
     //default mobile slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 
 .activeSlide .activeSlideFooter {
@@ -941,6 +929,7 @@ a.slideHeader:hover{
     position: inherit;
     width: 100%;
     z-index: 102;
+
 }
 
 .activeSlide .activeSlideContent {
@@ -977,14 +966,8 @@ a.slideHeader:hover{
 }
 #mainNavList {
     //default mobile Nav state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none;
+    visibility: hidden;
 }
 button{border:0;}
 .nextButton {
@@ -1056,14 +1039,8 @@ button{border:0;}
 
 .navContainer {
     //default mobile slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    display: none !important;
+    visibility: hidden;
 }
 
 .mainFooter {
@@ -1663,14 +1640,8 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 .slide {
     //default desktop slide state...hidden
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: .0625em;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: .0625em;
+    display: none !important;
+    visibility: hidden;
 }
 
 .slide .slideContent {
@@ -1722,6 +1693,8 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
     width: 100%;
     height: 4.375em;
     overflow: visible;
+    display: block;
+    visibility: visible;
 }
 
 
@@ -1877,7 +1850,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
   .cel-30-a-rule {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
   .cel-30-b-rule {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-30-c-rule {right: left;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
+  .cel-30-c-rule {float: right;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
   .cel-30-a-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
   .cel-30-b-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
   .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}

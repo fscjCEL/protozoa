@@ -9,6 +9,7 @@ var methods = {
             document.getElementById(theID).focus();
     },//end function focusAllTheThings
     yellowFlash:function(){
+
         var slidesLength = methods.countTheSlides();
         for (var i = 0; i < slidesLength; i++) {
             var theActiveSlideElement = document.getElementById("slide"+(i+1));

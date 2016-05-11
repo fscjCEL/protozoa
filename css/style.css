@@ -688,24 +688,12 @@ a.slideHeader:hover {
   padding-left: 1%; }
 
 .slide .slideContent {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+  display: none !important;
+  visibility: hidden; }
 
 .slide .slideFooter {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+  display: none !important;
+  visibility: hidden; }
 
 .activeSlide .activeSlideFooter {
   border: 0;
@@ -745,14 +733,8 @@ a.slideHeader:hover {
   animation-timing-function: ease; }
 
 #mainNavList {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+  display: none;
+  visibility: hidden; }
 
 button {
   border: 0; }
@@ -818,14 +800,8 @@ button {
   margin-bottom: 2.25em; }
 
 .navContainer {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+  display: none !important;
+  visibility: hidden; }
 
 .mainFooter {
   width: 100%;
@@ -2363,14 +2339,8 @@ p {
 
   /* for now...all the non-mobile styles */
   .slide {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: .0625em;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: .0625em; }
+    display: none !important;
+    visibility: hidden; }
 
   .slide .slideContent {
     border: 0;
@@ -2411,7 +2381,9 @@ p {
     margin: 0 auto;
     width: 100%;
     height: 4.375em;
-    overflow: visible; }
+    overflow: visible;
+    display: block;
+    visibility: visible; }
 
   /* The hover effect for the nav elements. */
   @-webkit-keyframes breathingHover {
@@ -2562,7 +2534,7 @@ p {
     border-color: #F7FFFC #B8CCC7; }
 
   .cel-30-c-rule {
-    right: left;
+    float: right;
     width: 32%;
     padding: 0 0 0 1%;
     border: 1px solid;
