@@ -360,7 +360,7 @@ object {
   line-height: 1.3; }
 
 .TOC h3:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .TOC h4 {
   font-weight: 300;
@@ -371,7 +371,7 @@ object {
   line-height: 1.3; }
 
 .TOC h4:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .TOC h5 {
   font-weight: 300;
@@ -385,7 +385,7 @@ object {
   padding-left: .9375em; }
 
 .TOC h5:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .TOC h6 {
   font-weight: 300;
@@ -396,7 +396,7 @@ object {
   line-height: 1.3; }
 
 .TOC h6:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .audioBox {
   width: 95%;
@@ -2381,7 +2381,9 @@ p {
     margin: 0 auto;
     width: 100%;
     height: 4.375em;
-    overflow: visible; }
+    overflow: visible;
+    display: block;
+    visibility: visible; }
 
   /* The hover effect for the nav elements. */
   @-webkit-keyframes breathingHover {
@@ -2727,3 +2729,5 @@ p {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+/*# sourceMappingURL=style.css.map */
