@@ -231,7 +231,7 @@ var methods = {
                 //nope this is a normal header with no children.
                 insertThisTitle = node.innerHTML;
             }
-            //linkInnerHtml = "<a class='TOClink' data-href='" + theHREFiNeed + "'" + "data-destination='" + theCurrentSlide + "' " + "data-destinationNavID='" + newVar + "'>" + insertThisTitle + "</a>";
+
 
             // create the new list item
             //theNewElement = document.createElement(type);//ex.type=h2 should be <a
@@ -243,7 +243,7 @@ var methods = {
             //this is here because I want to suppress defeault link behavior in screen readers (which is tabindex=0)
             theNewElement.setAttribute("tabindex", "-1");
 
-            //todo this needs to happen the other way around. It needs to write an anchor(link) around an h2
+
 
             // craft the header element as the innerHTML of the list item.
 
@@ -556,7 +556,7 @@ var methods = {
             //This TOC is OPEN and needs to be CLOSED.
             methods.closeTOC(theIDforTOC);
         }//end if
-        //first pause any audio players that might have been started.
+        //Pause any audio players that might have been started.
         allTheAudioElements = document.getElementsByTagName("audio");
         //making sure there are audio elements to pause
         if (allTheAudioElements.length > 0) {
@@ -571,6 +571,7 @@ var methods = {
         theActiveSlideElement = document.getElementById(slideID);
         //I need to change the href of the skip to content link each time slide is changed
         document.getElementById("skipToContentLink").href = "#"+destination;
+        window.location = "#"+destination;
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
