@@ -878,6 +878,30 @@ button {
   -webkit-animation-direction: alternate;
   animation-direction: alternate; }
 
+#cel-reader-view h1 {
+  font-size: 1.5rem;
+  color: #090A0A; }
+
+#cel-reader-view h2 {
+  font-size: 1.3rem;
+  color: #090A0A; }
+
+#cel-reader-view h3 {
+  font-size: 1.1rem;
+  color: #090A0A; }
+
+#cel-reader-view h4 {
+  font-size: 1rem;
+  color: #090A0A; }
+
+#cel-reader-view h5 {
+  font-size: .9rem;
+  color: #090A0A; }
+
+#cel-reader-view h6 {
+  font-size: .8rem;
+  color: #090A0A; }
+
 /* =================> Column Layout styles */
 /* DO NOT TOUCH */
 /* DO NOT TOUCH */

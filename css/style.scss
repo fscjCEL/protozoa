@@ -1121,6 +1121,30 @@ button{border:0;}
     @include breathingEffect;
 }
 
+#cel-reader-view h1{
+  font-size: 1.5rem;
+  color:$black;
+}
+#cel-reader-view h2{
+  font-size: 1.3rem;
+  color:$black;
+}
+#cel-reader-view h3{
+  font-size: 1.1rem;
+  color:$black;
+}
+#cel-reader-view h4{
+  font-size: 1rem;
+  color:$black;
+}
+#cel-reader-view h5{
+  font-size: .9rem;
+  color:$black;
+}
+#cel-reader-view h6{
+  font-size: .8rem;
+  color:$black;
+}
 
 
 

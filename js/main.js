@@ -13,18 +13,27 @@ methods = {
             };//end iterate
         }//end readerViewIterator
 
-        function writeThem(node) {
-            var readerContainer = document.getElementById("cel-reader-view");
-            readerContainer.appendChild(node);
+        function writeThem(nodeType,node) {
+            var theClone,readerContainer;
+            console.log(nodeType);
+            readerContainer = document.getElementById("cel-reader-view");
+            theClone = document.createElement(nodeType);
+
+            theClone.innerHTML = node.innerHTML;
+            readerContainer.appendChild(theClone);
         }
         function grabThem(node) {
 
-            if(node.nodeName === "H1" ||
-                node.nodeName === "H2"
-            ) {
-                writeThem(node);
-
-            }
+            if(node.nodeName === "H1") {writeThem("h1",node);}
+            if(node.nodeName === "H2") {writeThem("h2",node);}
+            if(node.nodeName === "H3") {writeThem("h3",node);}
+            if(node.nodeName === "H4") {writeThem("h4",node);}
+            if(node.nodeName === "H5") {writeThem("h5",node);}
+            if(node.nodeName === "H6") {writeThem("h6",node);}
+            if(node.nodeName === "P") {writeThem("p",node);}
+            if(node.nodeName === "UL") {writeThem("ul",node);}
+            if(node.nodeName === "OL") {writeThem("ol",node);}
+            if(node.nodeName === "IMG") {writeThem("img",node);}
         }//end drawBorders function
 
         var bodyElement = document.getElementsByTagName("body")[0];
