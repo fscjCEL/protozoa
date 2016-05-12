@@ -35,10 +35,18 @@ methods = {
             if(node.nodeName === "OL") {writeThem("ol",node);}
             if(node.nodeName === "IMG") {writeThem("img",node);}
         }//end drawBorders function
+        //this needs to go a slide at a time.
+        slideCount = methods.countTheSlides();//the total amount of slides
+        for (var mm=0;mm<slideCount;mm++){
+            var theIDofTHElement = "slide"+(mm+1);
+            alert(theIDofTHElement);
+            var THElement = document.getElementById(theIDofTHElement);
+            var htmlNodeIterator = new ReaderViewIterator();
+            htmlNodeIterator.iterate(grabThem,THElement);
+        }
+       // var bodyElement = document.getElementsByTagName("body")[0];
 
-        var bodyElement = document.getElementsByTagName("body")[0];
-        var htmlNodeIterator = new ReaderViewIterator();
-        htmlNodeIterator.iterate(grabThem,bodyElement);
+
 
 
     },//end buildReaderView function
