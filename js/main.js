@@ -1,4 +1,8 @@
 var methods = {
+    buildReaderView:function(){
+        alert("I made it to the reader");
+
+    },//end buildReaderView function
     focusAllTheThings:function(){
         //This is so my internal links get keyboard focus (for accessibility's sake)
             //get that link
@@ -896,6 +900,7 @@ var methods = {
        document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
 
        methods.yellowFlash();
+        document.getElementById("readerButton").addEventListener("click", methods.buildReaderView,false);
 
 
 
