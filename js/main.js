@@ -1,33 +1,63 @@
-var methods = {
-    buildReaderView:function(){
-        alert("I made it to the reader");
+var methods;
+methods = {
+    buildReaderView: function () {
+        function ReaderViewIterator() {
+            this.iterate = function iterate(task, node) {
+                for (var x = 0; x < node.childNodes.length; x++) {
+                    var childNode = node.childNodes[x];
+                    task(childNode);
+                    if (childNode.childNodes.length > 0) {
+                        this.iterate(task, childNode);
+                    }//end if
+                } //end for
+            };//end iterate
+        }//end readerViewIterator
+
+        function writeThem(node) {
+            var readerContainer = document.getElementById("cel-reader-view");
+            readerContainer.appendChild(node);
+        }
+        function grabThem(node) {
+
+            if(node.nodeName === "H1" ||
+                node.nodeName === "H2"
+            ) {
+                writeThem(node);
+
+            }
+        }//end drawBorders function
+
+        var bodyElement = document.getElementsByTagName("body")[0];
+        var htmlNodeIterator = new ReaderViewIterator();
+        htmlNodeIterator.iterate(grabThem,bodyElement);
+
 
     },//end buildReaderView function
-    focusAllTheThings:function(){
+    focusAllTheThings: function () {
         //This is so my internal links get keyboard focus (for accessibility's sake)
-            //get that link
-            var href=this.getAttribute("href");
-            //take the hash (#) off
-            var theID = href.substr(1);
-            //set focus on THAT IDed element.
-            document.getElementById(theID).focus();
+        //get that link
+        var href = this.getAttribute("href");
+        //take the hash (#) off
+        var theID = href.substr(1);
+        //set focus on THAT IDed element.
+        document.getElementById(theID).focus();
     },//end function focusAllTheThings
-    yellowFlash:function(){
+    yellowFlash: function () {
 
         var slidesLength = methods.countTheSlides();
         for (var i = 0; i < slidesLength; i++) {
-            var theActiveSlideElement = document.getElementById("slide"+(i+1));
+            var theActiveSlideElement = document.getElementById("slide" + (i + 1));
             var theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
-            if(theFirstParagraph.parentNode.className !=="figure"){
-             theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
-            }else{
+            if (theFirstParagraph.parentNode.className !== "figure") {
+                theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+            } else {
                 theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
             }//end if
             theFirstParagraph.className = "TheFirst";
 
         }
     },//end yellowFlashFunction
-    figureModalHandler: function(){
+    figureModalHandler: function () {
         //add the class that makes it a modal box
 
         var theFigureBox = this.parentNode;
@@ -38,105 +68,104 @@ var methods = {
 
         if (figureEval === "closed") {
             //closed --> open
-            theFigureBox.setAttribute("data-state","open");
+            theFigureBox.setAttribute("data-state", "open");
             theFigureBox.className = "figure-open-state";
             this.src = "img/figureClose.svg";
-            if(theFigureImage.tagName === "IMG"){
-                    theFigureImage.style.overflow = "scroll";
-                }//endif
-            if(theFigureCaption.tagName === "P"){
-                    theFigureCaption.style.backgroundColor = "#FFF";
-                }//endif
+            if (theFigureImage.tagName === "IMG") {
+                theFigureImage.style.overflow = "scroll";
+            }//endif
+            if (theFigureCaption.tagName === "P") {
+                theFigureCaption.style.backgroundColor = "#FFF";
+            }//endif
         }//endif
         if (figureEval === "open") {
             //open--->closed
-            theFigureBox.setAttribute("data-state","closed");
+            theFigureBox.setAttribute("data-state", "closed");
             theFigureBox.className = "figure-closed-state";
             this.src = "img/figureOpen.svg";
-            if(theFigureCaption.tagName === "IMG"){
-                    theFigureCaption.style.overflow = "visible";
-                }//endif
-            if(theFigureCaption.tagName === "P"){
-                    theFigureCaption.style.backgroundColor = "transparent";
-                }//endif
+            if (theFigureCaption.tagName === "IMG") {
+                theFigureCaption.style.overflow = "visible";
+            }//endif
+            if (theFigureCaption.tagName === "P") {
+                theFigureCaption.style.backgroundColor = "transparent";
+            }//endif
         }//end if
     },//end figureModalHandler
-    figureButtonInsertion:function(){
+    figureButtonInsertion: function () {
         //create a button element that will be inserted into each figure element.
 
         //first: gather and loop through each figure element.
         var allTheFigureElements = document.getElementsByClassName("figure");
         //each element needs to have a button inserted, and then a listener added to the button.
-            for (var i = 0; i < allTheFigureElements.length; i++) {
-                //create the button element
-                var newFigureButtonElement = document.createElement("img");
-                newFigureButtonElement.src = "img/figureOpen.svg";
-                newFigureButtonElement.alt = "";
-                newFigureButtonElement.className = "fullScreenButton";
-                var theCurrentFigureID = "figureButton"+(i+1);
-                newFigureButtonElement.id = theCurrentFigureID;
-                // insertTheButton image element.
-                var theFigureParentNode = allTheFigureElements[i];
-                theFigureParentNode.setAttribute("data-state","closed");
-                // grab the img in the box, and set it up as the reference node.
-                var theIMGsInFigure = allTheFigureElements[i].getElementsByTagName("img");
-                var theFigureReferenceNode = theIMGsInFigure[0];
-                //now insert the button
-                theFigureParentNode.insertBefore(newFigureButtonElement, theFigureReferenceNode);
+        for (var i = 0; i < allTheFigureElements.length; i++) {
+            //create the button element
+            var newFigureButtonElement = document.createElement("img");
+            newFigureButtonElement.src = "img/figureOpen.svg";
+            newFigureButtonElement.alt = "";
+            newFigureButtonElement.className = "fullScreenButton";
+            var theCurrentFigureID = "figureButton" + (i + 1);
+            newFigureButtonElement.id = theCurrentFigureID;
+            // insertTheButton image element.
+            var theFigureParentNode = allTheFigureElements[i];
+            theFigureParentNode.setAttribute("data-state", "closed");
+            // grab the img in the box, and set it up as the reference node.
+            var theIMGsInFigure = allTheFigureElements[i].getElementsByTagName("img");
+            var theFigureReferenceNode = theIMGsInFigure[0];
+            //now insert the button
+            theFigureParentNode.insertBefore(newFigureButtonElement, theFigureReferenceNode);
 
 
-                document.getElementById(theCurrentFigureID).addEventListener("click",methods.figureModalHandler,false);
-            }//end for
+            document.getElementById(theCurrentFigureID).addEventListener("click", methods.figureModalHandler, false);
+        }//end for
 
 
     },//end figureButtonInsertion
     populateTheNavMenu: function () {
         //this function is called from main, and adds list items to the nav menu.
-        var insertThisListItemElement,navLiParentNode,insertLiBeforeThis,theInitialTarget;
+        var insertThisListItemElement, navLiParentNode, insertLiBeforeThis, theInitialTarget;
         //how many slides do I have?
         var theInitialSlideCount = methods.countTheSlides();
 
 
-
         //now that I have a target built I can send everything else it's way.
         //NOTE:this loop counts down from the total down to one.
-        if(methods.countTheSlides()===1){
+        if (methods.countTheSlides() === 1) {
             //I just need to use the existing element if there is only one slide.
             //there is only one so treat it as such.
             //
             theInitialTarget = document.getElementById("mainNavList").children[0];
             theInitialTarget.id = "nav1";
             theInitialTarget.className = "activeNavElement";
-            theInitialTarget.setAttribute("tabindex","-1");
+            theInitialTarget.setAttribute("tabindex", "-1");
             theInitialTarget.innerHTML = "1";
 
 
-        }else{
+        } else {
             //there is more than one, so start ripping.
             //the initial target for insertion is the single empty li child in the mainNavList element
             theInitialTarget = document.getElementById("mainNavList").children[0];
             //give the blank Li an ID
-            theInitialTarget.id = "nav"+theInitialSlideCount;
+            theInitialTarget.id = "nav" + theInitialSlideCount;
             //these three lines set the attributes of the target element.
             theInitialTarget.className = "navElement";
 
             theInitialTarget.innerHTML = theInitialSlideCount;
-            for(var i=(methods.countTheSlides()-1);i>0;i--){
+            for (var i = (methods.countTheSlides() - 1); i > 0; i--) {
                 //create and build the LI to be inserted
                 insertThisListItemElement = document.createElement("li");
-                insertThisListItemElement.id = "nav"+i;
-                if(i===1){
+                insertThisListItemElement.id = "nav" + i;
+                if (i === 1) {
                     insertThisListItemElement.className = "activeNavElement";
-                }else{
+                } else {
                     insertThisListItemElement.className = "navElement";
                 }//end if
-                insertThisListItemElement.setAttribute("tabindex","-1");
+                insertThisListItemElement.setAttribute("tabindex", "-1");
                 insertThisListItemElement.innerHTML = i;
 
                 navLiParentNode = document.getElementById("mainNavList");
-                insertLiBeforeThis = document.getElementById("nav"+(i+1));
+                insertLiBeforeThis = document.getElementById("nav" + (i + 1));
 
-                navLiParentNode.insertBefore(insertThisListItemElement,insertLiBeforeThis);
+                navLiParentNode.insertBefore(insertThisListItemElement, insertLiBeforeThis);
             }//end for
         }//end if
 
@@ -216,7 +245,7 @@ var methods = {
             //apply the random # to the ID of the header
             node.id = theCurrentSlide + "-" + type + "-" + randomNumforNodes;//apply the ID.
             //add a tabindex so this can be jumped to from the toc and retain keyboard focus
-            node.setAttribute("tabindex","-1");
+            node.setAttribute("tabindex", "-1");
             //used to control the if statement (below) that creates new slide sub lists..
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
@@ -228,10 +257,10 @@ var methods = {
             //linkInnerHtml variable where node.innerHTML is written currently
             //so only grab the className of slideTitle as children of node.
             var insertThisTitle;
-            if(node.children[0]){
+            if (node.children[0]) {
                 //grabbing the slide title from the slide header itself
                 insertThisTitle = node.children[1].innerHTML;
-            }else{
+            } else {
                 //nope this is a normal header with no children.
                 insertThisTitle = node.innerHTML;
             }
@@ -248,10 +277,9 @@ var methods = {
             theNewElement.setAttribute("tabindex", "-1");
 
 
-
             // craft the header element as the innerHTML of the list item.
 
-            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
+            theNewElement.innerHTML = "<" + type + "><span class='visuallyhidden'>jump to slide&nbsp;" + theCurrentSlide.substr(5) + "</span>" + insertThisTitle + "</" + type + ">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
@@ -285,9 +313,7 @@ var methods = {
             subTocParentELement.insertBefore(theNewElement, TocSubListTarget);
         }//end processCapturedNode function
         function captureNodes(node) {
-            //if (node.nodeName === "H1") {
-              //  processCapturedNode("H1", node);
-            //}//end if
+
             if (node.nodeName === "H2") {
                 processCapturedNode("H2", node);
             }//end if
@@ -419,12 +445,12 @@ var methods = {
         //get the amount of slides(that gives us how many nav items as well)
         var howmanySlides = methods.countTheSlides();
         //figure out how wide each should be as a percentage
-        var theWidth = 100/howmanySlides;
+        var theWidth = 100 / howmanySlides;
 
-        for(var x=0;x < howmanySlides;x++){
+        for (var x = 0; x < howmanySlides; x++) {
             //rip through all the nav elements and apply the width
-            var theELementID = "nav"+(x+1);
-            document.getElementById(theELementID).style.width = theWidth+"%";
+            var theELementID = "nav" + (x + 1);
+            document.getElementById(theELementID).style.width = theWidth + "%";
         }//end for
 
     },//end navMenu function
@@ -489,15 +515,15 @@ var methods = {
     },//end audioButtonHandler method
     helpButtonHandler: function () {
         //opens and closed the help menu
-        var theHelpBoxElement,theHelpButtonParent;
+        var theHelpBoxElement, theHelpButtonParent;
 
-         theHelpButtonParent = document.getElementById("helpButton").parentNode;
+        theHelpButtonParent = document.getElementById("helpButton").parentNode;
         if (theHelpButtonParent.id === "helpboxOpenState") {
             //opened, and needs to be closed
             theHelpBoxElement = document.getElementById("helpboxOpenState");
             theHelpBoxElement.className = "helpBox";
             theHelpBoxElement.id = "helpboxClosedState";
-        }else{
+        } else {
             //closed, and needs to be opened
             theHelpBoxElement = document.getElementById("helpboxClosedState");
             theHelpBoxElement.className += " clearfix";
@@ -513,44 +539,42 @@ var methods = {
 
         //this is to hide the header info past slide one, but I need to retain the header size to make up for the buttons located within.
         INeedTheSlideNumber = destination.substr(5);
-        if(INeedTheSlideNumber>1){
+        if (INeedTheSlideNumber > 1) {
             //push these styles out to a CSS class.
             //slide 2 or above
-            document.getElementById("theCourseIcon").style.height="0px";
-            document.getElementById("theCourseIcon").style.width="0px";
+            document.getElementById("theCourseIcon").style.height = "0px";
+            document.getElementById("theCourseIcon").style.width = "0px";
             document.getElementById("courseNumber").style.overflow = "hidden";
             document.getElementById("courseNumber").style.opacity = "0";
             document.getElementById("courseNumber").style.width = "0px";
             document.getElementById("courseNumber").style.height = "0px";
 
 
-            document.getElementById("moduleNumber").style.opacity="0";
-            document.getElementById("moduleNumber").style.width="0px";
-            document.getElementById("moduleNumber").style.height="0px";
-            document.getElementById("moduleNumber").style.overflow="hidden";
+            document.getElementById("moduleNumber").style.opacity = "0";
+            document.getElementById("moduleNumber").style.width = "0px";
+            document.getElementById("moduleNumber").style.height = "0px";
+            document.getElementById("moduleNumber").style.overflow = "hidden";
 
 
+            document.getElementById("theModuleHeader").style.height = "3.25em";
 
-
-            document.getElementById("theModuleHeader").style.height="3.25em";
-
-        }else{
+        } else {
             //slide 1
-            document.getElementById("theCourseIcon").style.height="100px";
-            document.getElementById("theCourseIcon").style.width="100px";
-            document.getElementById("courseNumber").style.opacity="1";
-            document.getElementById("courseNumber").style.overflow="visible";
-            document.getElementById("courseNumber").style.width="60vw";
-            document.getElementById("courseNumber").style.height="auto";
+            document.getElementById("theCourseIcon").style.height = "100px";
+            document.getElementById("theCourseIcon").style.width = "100px";
+            document.getElementById("courseNumber").style.opacity = "1";
+            document.getElementById("courseNumber").style.overflow = "visible";
+            document.getElementById("courseNumber").style.width = "60vw";
+            document.getElementById("courseNumber").style.height = "auto";
 
 
-            document.getElementById("moduleNumber").style.opacity="1";
-            document.getElementById("moduleNumber").style.overflow="visible";
-            document.getElementById("moduleNumber").style.width="70%";
-            document.getElementById("moduleNumber").style.height="auto";
+            document.getElementById("moduleNumber").style.opacity = "1";
+            document.getElementById("moduleNumber").style.overflow = "visible";
+            document.getElementById("moduleNumber").style.width = "70%";
+            document.getElementById("moduleNumber").style.height = "auto";
 
 
-            document.getElementById("theModuleHeader").style.height="auto";
+            document.getElementById("theModuleHeader").style.height = "auto";
         }
         //end if
         //TOC should close
@@ -574,8 +598,8 @@ var methods = {
         //This is the ID of the current active slide.
         theActiveSlideElement = document.getElementById(slideID);
         //I need to change the href of the skip to content link each time slide is changed
-        document.getElementById("skipToContentLink").href = "#"+destination;
-        window.location = "#"+destination;
+        document.getElementById("skipToContentLink").href = "#" + destination;
+        window.location = "#" + destination;
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
@@ -892,17 +916,15 @@ var methods = {
         }//end for
 
         //this creates the nav menu elements.
-       methods.navMenu();
-       //call the figure build
-       methods.figureButtonInsertion();
+        methods.navMenu();
+        //call the figure build
+        methods.figureButtonInsertion();
 
-       //put this into a function if it works.
-       document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
+        //put this into a function if it works.
+        document.getElementById("skipToContentLink").addEventListener("click", methods.focusAllTheThings, false);
 
-       methods.yellowFlash();
-        document.getElementById("readerButton").addEventListener("click", methods.buildReaderView,false);
-
-
+        methods.yellowFlash();
+        document.getElementById("readerButton").addEventListener("click", methods.buildReaderView, false);
 
 
     }//end main method
