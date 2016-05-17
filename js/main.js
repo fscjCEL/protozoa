@@ -1,5 +1,12 @@
 var methods;
 methods = {
+    countTheSlides: function () {
+        var theSlidesClassedActive, theSlidesClassedSlide;
+        //gather all the slide elements, and all the activeSlideElements, and add them together give you a total slide count.
+        theSlidesClassedSlide = document.getElementsByClassName("slide");
+        theSlidesClassedActive = document.getElementsByClassName("activeSlide");
+        return theSlidesClassedActive.length + theSlidesClassedSlide.length;
+    },//end countTheSlides
     buildReaderView: function () {
         function ReaderViewIterator() {
             this.iterate = function iterate(task, node) {
@@ -12,7 +19,6 @@ methods = {
                 } //end for
             };//end iterate
         }//end readerViewIterator
-
         function writeThem(nodeType,node) {
             var theClone,readerContainer;
             console.log(nodeType);
@@ -21,28 +27,56 @@ methods = {
 
             theClone.innerHTML = node.innerHTML;
             readerContainer.appendChild(theClone);
-        }
+        }//end writeThem function
         function grabThem(node) {
+            var theClone,readerContainer;
+            if(node.nodeName === "H1") {
+                readerContainer = document.getElementById("cel-reader-view");
+                theClone = document.createElement("h1");
 
-            if(node.nodeName === "H1") {writeThem("h1",node);}
-            if(node.nodeName === "H2") {writeThem("h2",node);}
-            if(node.nodeName === "H3") {writeThem("h3",node);}
+                theClone.innerHTML = node.innerHTML;
+                readerContainer.appendChild(theClone);
+            }
+            if(node.nodeName === "H2") {
+                readerContainer = document.getElementById("cel-reader-view");
+                theClone = document.createElement("h2");
+
+                theClone.innerHTML = node.innerHTML;
+                readerContainer.appendChild(theClone);
+            }
+            if(node.nodeName === "H3") {
+                readerContainer = document.getElementById("cel-reader-view");
+                theClone = document.createElement("h3");
+
+                theClone.innerHTML = node.innerHTML;
+                readerContainer.appendChild(theClone);
+            }
             if(node.nodeName === "H4") {writeThem("h4",node);}
             if(node.nodeName === "H5") {writeThem("h5",node);}
             if(node.nodeName === "H6") {writeThem("h6",node);}
-            if(node.nodeName === "P") {writeThem("p",node);}
+            if(node.nodeName === "P") {
+                readerContainer = document.getElementById("cel-reader-view");
+                theClone = document.createElement("p");
+
+                theClone.innerHTML = node.innerHTML;
+                readerContainer.appendChild(theClone);
+            }
             if(node.nodeName === "UL") {writeThem("ul",node);}
             if(node.nodeName === "OL") {writeThem("ol",node);}
             if(node.nodeName === "IMG") {writeThem("img",node);}
         }//end drawBorders function
+
         //this needs to go a slide at a time.
-        slideCount = methods.countTheSlides();//the total amount of slides
+        var theIDofTHElement, htmlNodeIterator=[];
+        var slideCount = methods.countTheSlides();//the total amount of slides
+
         for (var mm=0;mm<slideCount;mm++){
-            var theIDofTHElement = "slide"+(mm+1);
+            theIDofTHElement = "slide"+(mm+1);
             alert(theIDofTHElement);
             var THElement = document.getElementById(theIDofTHElement);
-            var htmlNodeIterator = new ReaderViewIterator();
-            htmlNodeIterator.iterate(grabThem,THElement);
+            htmlNodeIterator[mm] = new ReaderViewIterator();
+
+            htmlNodeIterator[mm].iterate(grabThem,THElement);
         }
        // var bodyElement = document.getElementsByTagName("body")[0];
 
@@ -450,13 +484,7 @@ methods = {
             }//end if
         }//end for
     },//end givingAccess function
-    countTheSlides: function () {
-        var theSlidesClassedActive, theSlidesClassedSlide;
-        //gather all the slide elements, and all the activeSlideElements, and add them together give you a total slide count.
-        theSlidesClassedSlide = document.getElementsByClassName("slide");
-        theSlidesClassedActive = document.getElementsByClassName("activeSlide");
-        return theSlidesClassedActive.length + theSlidesClassedSlide.length;
-    },//end countTheSlides
+
     navMenu: function () {
         //this function makes sure the nav menu items line up proper.
         //get the amount of slides(that gives us how many nav items as well)
