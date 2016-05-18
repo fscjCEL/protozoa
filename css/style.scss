@@ -383,6 +383,7 @@ object {
     overflow:hidden;
     top: .25rem;
     right:3em;
+    outline: none;
 }
 
 #tocOpenState{
@@ -396,6 +397,7 @@ object {
     position:absolute;
     top: 0;
     right:0;
+    outline: none;
 
 }
 
@@ -412,18 +414,20 @@ object {
     position:absolute;
     right:0;
     top: 0;
+    outline: none;
 }
 #tocOpenState #theTocTarget{
     /* this controls the open state of the TOC menu button */
     background: url('../img/TOC-closeX.png') no-repeat;
 
-    width: 100%;
+    width: 80%;
     height: 2.75rem;
     background-size:2.75rem;
     background-position: 100% 0, top;
     right: .75em;
     top: .75em;
     position:absolute;
+    outline: none;
 }
 #tocOpenState #theTocTarget:hover{
     cursor: pointer;
