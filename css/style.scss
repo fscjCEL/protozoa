@@ -62,90 +62,14 @@ $black: #090A0A;
 }
 
 
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
-
-html {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-
-
-::selection {
-  background: yellow;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: .0625em;
-  border: 0;
-  border-top: .0625em solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-
-audio,
-canvas,
-img,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
 
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
+
 
 .visuallyhidden {
   border: 0;
@@ -158,10 +82,7 @@ fieldset {
   width: 1px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
+
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -175,17 +96,7 @@ fieldset {
 
 
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 
 .clearfix:before,
 .clearfix:after {
@@ -197,21 +108,12 @@ fieldset {
   clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-  *zoom: 1;
-}
 
 
 
 
 
-//main.css are the styles that I retained from html5 boilerplate.
-//todo At the end of the main dev cycle get rid of the import and combine it all into one CSS file to cut down on HTTP requests.
+
 //these are the default styles, and are done from a mobile first stand point.
 //you can find any desktop styles in the media queries below.
 
@@ -1921,10 +1823,6 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   /* Style adjustments for high resolution devices */
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
 
 @media print {
   * {
