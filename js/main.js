@@ -36,7 +36,7 @@ var methods = {
             //closed --> open
             theFigureBox.setAttribute("data-state","open");
             theFigureBox.className = "figure-open-state";
-            this.src = "img/figureClose.svg";
+            this.src = "img/figureClose.png";
             if(theFigureImage.tagName === "IMG"){
                     theFigureImage.style.overflow = "scroll";
                 }//endif
@@ -48,7 +48,7 @@ var methods = {
             //open--->closed
             theFigureBox.setAttribute("data-state","closed");
             theFigureBox.className = "figure-closed-state";
-            this.src = "img/figureOpen.svg";
+            this.src = "img/figureOpen.png";
             if(theFigureCaption.tagName === "IMG"){
                     theFigureCaption.style.overflow = "visible";
                 }//endif
@@ -66,7 +66,7 @@ var methods = {
             for (var i = 0; i < allTheFigureElements.length; i++) {
                 //create the button element
                 var newFigureButtonElement = document.createElement("img");
-                newFigureButtonElement.src = "img/figureOpen.svg";
+                newFigureButtonElement.src = "img/figureOpen.png";
                 newFigureButtonElement.alt = "";
                 newFigureButtonElement.className = "fullScreenButton";
                 var theCurrentFigureID = "figureButton"+(i+1);

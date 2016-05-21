@@ -65,8 +65,9 @@ $black: #090A0A;
 
 
 .hidden {
+    visibility: hidden;
   display: none !important;
-  visibility: hidden;
+  
 }
 
 
@@ -107,16 +108,6 @@ $black: #090A0A;
 .clearfix:after {
   clear: both;
 }
-
-
-
-
-
-
-
-//these are the default styles, and are done from a mobile first stand point.
-//you can find any desktop styles in the media queries below.
-
 
 h1,
 h2,
@@ -200,7 +191,7 @@ object {
 .bookBox p{padding: 0;}
 .bookBoxBanner{
     //uncomment the follow line, and insert the graphic to add it to a bookBox as a banner.
-    /* background: url("../img/myBannerGraphic.svg" ); */
+    /* background: url("../img/myBannerGraphic.png" ); */
     background-position: -50px 0;
     height: 250px;
     margin-bottom: 105px;
@@ -489,8 +480,9 @@ object {
     left: 45%;
     height: 2.75em;
     width: 2.75em;
-    background: url("../img/audioButton.svg") no-repeat;
+    background: url("../img/audioButton.png") no-repeat;
     background-color: $accentColor;
+    background-size: cover;
     border-radius: 50%;
     @include material-shadow(0,
     .25em,
