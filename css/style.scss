@@ -1,3 +1,4 @@
+
 $primaryColor: #2F343B;
 $lightPrimaryColor: #B8CCC7;
 $darkPrimaryColor: #212423;
@@ -17,8 +18,6 @@ $black: #090A0A;
 @mixin heavyWeight() {
   font-weight: 700;
 }
-
-
 
 
 @mixin material-shadow($exOffset, $whyOffset, $blur) {
@@ -61,13 +60,19 @@ $black: #090A0A;
 
 }
 
-
+@import 'chunk-col-50';
+@import 'chunk-col-6040';
+@import 'chunk-col-4060';
+@import 'chunk-col-7525';
+@import 'chunk-col-2575';
+@import 'chunk-col-30';
+@import 'chunk-col-25';
 
 
 .hidden {
     visibility: hidden;
   display: none !important;
-  
+
 }
 
 
@@ -1039,71 +1044,14 @@ button{border:0;}
 .cel-divider {float: left;width: 100%;height: .125em;}
 
 
-/* 50/50 2 column split */
-.cel-50-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
-.cel-50-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
-.cel-50-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
-.cel-50-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color:  $lightPrimaryColor $white $white $white;}
-.cel-50-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor}
-.cel-50-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor}
-
-/* 75/25 2 column split */
-.cel-7525-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-7525-b {float: right;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-7525-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white  $lightPrimaryColor $white;}
-.cel-7525-b-rule {float: right;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
-.cel-7525-a-box {float: left; width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-7525-b-box {float: right;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-
-/* 25/75 2 column split */
-.cel-2575-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-2575-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-2575-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
-.cel-2575-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
-.cel-2575-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-2575-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-
-/* 60/40 2 column split */
-.cel-60-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-40-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-60-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
-.cel-40-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
-.cel-60-a-box {float: left;width: 98%;padding: 0 .5%;border: 1px solid $lightPrimaryColor;}
-.cel-40-b-box {float: left;width: 98%;padding: 0 .5%;border: 1px solid $lightPrimaryColor;}
-
-/* 40/60 2 column split */
-.cel-40-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-60-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-40-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
-.cel-60-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
-.cel-40-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-60-b-box {float: right;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
 
 
-/* 30/30/30 3 column split */
-.cel-30-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-30-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-30-c {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-30-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
-.cel-30-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white;}
-.cel-30-c-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white;}
-.cel-30-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-30-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-30-c-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
 
-/* 25/25/25/25 4 column split */
-.cel-25-a {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
-.cel-25-b {float: left;width: 98%;padding: 0 1%;border: 1px solid $white}
-.cel-25-c {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-25-d {float: left;width: 98%;padding: 0 1%;border: 1px solid $white;}
-.cel-25-a-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $white $white $lightPrimaryColor $white;}
-.cel-25-b-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white;}
-.cel-25-c-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white;}
-.cel-25-d-rule {float: left;width: 98%;padding: 0 1%;border: 1px solid;border-color: $lightPrimaryColor $white $white $white  ;}
-.cel-25-a-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-25-b-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-25-c-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
-.cel-25-d-box {float: left;width: 98%;padding: 0 1%;border: 1px solid $lightPrimaryColor;}
+
+
+
+
+
 
 /* ========================typography */
 html {font-size: 16px;}
@@ -1131,131 +1079,18 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
   /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
 
-  .cel-50-a img:first-child {margin-top: 1.4rem;}
-  .cel-50-b img:first-child {margin-top: 1.4rem;}
-  .cel-50-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-50-a h3:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
-  .cel-50-b h3:first-child {margin-top: .7rem;margin-bottom: 1.8rem;}
-  .cel-50-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-50-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-50-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-50-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
-  .cel-7525-a img:first-child {margin-top: 1.4rem;}
-  .cel-7525-b img:first-child {margin-top: 1.4rem;}
-  .cel-7525-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-7525-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-7525-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-7525-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-7525-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-7525-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-7525-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
-  .cel-2575-a img:first-child {margin-top: 1.4rem;}
-  .cel-2575-b img:first-child {margin-top: 1.4rem;}
-  .cel-2575-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-2575-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-2575-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-2575-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-2575-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-2575-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-2575-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
-  .cel-40-a img:first-child {margin-top: 1.4rem;}
-  .cel-60-b img:first-child {margin-top: 1.4rem;}
-  .cel-40-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-60-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-40-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-60-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-40-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-60-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
-  .cel-60-a img:first-child {margin-top: 1.4rem;}
-  .cel-40-b img:first-child {margin-top: 1.4rem;}
-  .cel-60-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-40-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-60-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-40-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-60-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-40-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-60-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-40-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
-  .cel-30-a img:first-child {margin-top: 1.4rem;}
-  .cel-30-b img:first-child {margin-top: 1.4rem;}
-  .cel-30-c img:first-child {margin-top: 1.4rem;}
-  .cel-30-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-c ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-c ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-c h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-30-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-30-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-30-c h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-30-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-30-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-30-c h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-30-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-30-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-30-c h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
 
-  .cel-25-a img:first-child {margin-top: 1.4rem;}
-  .cel-25-b img:first-child {margin-top: 1.4rem;}
-  .cel-25-c img:first-child {margin-top: 1.4rem;}
-  .cel-25-d img:first-child {margin-top: 1.4rem;}
-  .cel-25-a ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-b ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-c ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-d ul:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-a ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-b ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-c ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-d ol:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-a h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-b h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-c h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-d h2:first-child {margin-top: 1rem;margin-bottom: 1.5rem;}
-  .cel-25-a h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-b h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-c h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-d h3:first-child {margin-top: .65rem;margin-bottom: 1.85rem;}
-  .cel-25-a h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-b h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-c h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-d h4:first-child {margin-top: .5rem;margin-bottom: 2rem;}
-  .cel-25-a h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-25-b h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-25-c h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
-  .cel-25-d h5:first-child {margin-top: .4rem;margin-bottom: 2.1rem;}
+
+
+
+
+
+
 
   /* ========================typography */
   html {font-size: 16px;}
@@ -1278,71 +1113,20 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   .cel-divider {float: left;width: 100%;height: .125em;}
 
 
-  /* 50/50 2 column split */
-  .cel-50-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white}
-  .cel-50-b {float: right;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
-  .cel-50-a-rule {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-50-b-rule {float: right;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-50-a-box {float: left;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
-  .cel-50-b-box {float: right;width: 48%;padding: 0 .75% 0 .75%;border: .0625em solid $lightPrimaryColor}
-
-  /* 75/25 2 column split */
-  .cel-7525-a {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $white;}
-  .cel-7525-b {float: right;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $white;}
-  .cel-7525-a-rule {float: left;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-7525-b-rule {float: right;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-7525-a-box {float: left; width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-7525-b-box {float: right;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-
-  /* 25/75 2 column split */
-  .cel-2575-a {float: left;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
-  .cel-2575-b {float: right;width: 73%;padding: 0 0 0 1%;border: .0625em solid $white;}
-  .cel-2575-a-rule {float: left;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-2575-b-rule {float: right;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-2575-a-box {float: left;width: 24%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-2575-b-box {float: right;width: 73%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-
-  /* 60/40 2 column split */
-  .cel-60-a {float: left;width: 61%;padding: 0 1% 0 0;border: .0625em solid $white;}
-  .cel-40-b {float: right;width: 35%;padding: 0 0 0 1%;border: .0625em solid $white;}
-  .cel-60-a-rule {float: left;width: 61%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-40-b-rule {float: right;width: 35%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-60-a-box {float: left;width: 61%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-40-b-box {float: right;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-
-  /* 40/60 2 column split */
-  .cel-40-a {float: left;width: 35%;padding: 0 1% 0 0;border: .0625em solid $white;}
-  .cel-60-b {float: right;width: 61%;padding: 0 0 0 1%;border: .0625em solid $white;}
-  .cel-40-a-rule {float: left;width: 35%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-60-b-rule {float: right;width: 61%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-40-a-box {float: left;width: 35%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-60-b-box {float: right;width: 61%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
 
-  /* 30/30/30 3 column split */
-  .cel-30-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white;margin-bottom: .4rem;}
-  .cel-30-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white;margin-bottom: .4rem;}
-  .cel-30-c {float: right;width: 98%;padding: 0;border: .0625em solid $white;}
-  .cel-30-a-rule {float: left;width: 48%;padding: 0 1% 0 0;margin-bottom: .4rem;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white ;}
-  .cel-30-b-rule {float: left;width: 48%;padding: 0 0 0 1%;margin-bottom: .4rem;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-30-c-rule {float: right;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white;}
-  .cel-30-a-box {float: left;width: 48%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;margin-bottom: .4rem;}
-  .cel-30-b-box {float: left;width: 48%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;margin-bottom: .4rem;}
-  .cel-30-c-box {float: right;width: 97%;padding: 0 .5% 0 .5%;border: .0625em solid $lightPrimaryColor;}
 
-  /* 25/25/25/25 4 column split */
-  .cel-25-a {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid $white}
-  .cel-25-b {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid $white}
-  .cel-25-c {float: left;width: 98%;padding: 0;border: .0625em solid $white;}
-  .cel-25-d {float: left;right: 98%;padding: 0;border: .0625em solid $white;}
-  .cel-25-a-rule {float: left;width: 48%;padding: 0 1% 0 0;border: .0625em solid;border-color: $white $lightPrimaryColor $white $white ;}
-  .cel-25-b-rule {float: left;width: 48%;padding: 0 0 0 1%;border: .0625em solid;border-color: $white $white $white $lightPrimaryColor ;}
-  .cel-25-c-rule {float: left;width: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white ;}
-  .cel-25-d-rule {float: left;right: 98%;padding: 0;border: .0625em solid;border-color: $lightPrimaryColor $white $white $white  ;}
-  .cel-25-a-box {float: left;width: 48%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-25-b-box {float: left;width: 48%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-25-c-box {float: left;width: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
-  .cel-25-d-box {float: left;right: 97%;padding: 0 .5%;border: .0625em solid $lightPrimaryColor;}
+
+
+
+
+
+
+
+
+
+
+
 
 
   .activeSlide {
@@ -1716,17 +1500,14 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 #institutionalLogo{
   width: 300px;
   position:fixed;
-  bottom:0px;
-  left:0px;
+  bottom:0;
+  left:0;
 
 }
 .bookBox{
     margin-left: 19.35%!important;
     margin-right: 19.35%!important;
-    padding-top: 13em;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 10em;
+    padding:  13em 0 10em 0;
 }
 .bookBox p{padding: 0;}
 
@@ -1739,42 +1520,8 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 }/* end 41.25 em media query */
 
-@media only screen and (min-width: 49.5em) {/* 792 pixel width */
-
-  /* 30/30/30 3 column split */
-  .cel-30-a {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid $white;}
-  .cel-30-b {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $white;}
-  .cel-30-c {float: right;width: 32%;padding: 0 0 0 1%;border: 1px solid $white;}
-
-  .cel-30-a-rule {float: left;width: 32%;padding: 0 1% 0 0;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-30-b-rule {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-30-c-rule {float: right;width: 32%;padding: 0 0 0 1%;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-30-a-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
-  .cel-30-b-box {float: left;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
-  .cel-30-c-box {float: right;width: 32%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;}
 
 
-
-}//end 792
-
-@media only screen and (min-width: 59.375em) {/* 950 pixels width */
-
-  /* 25/25/25/25 4 column split */
-  .cel-25-a {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
-  .cel-25-b {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
-  .cel-25-c {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
-  .cel-25-d {float: right;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $white;margin-bottom: 1.5rem;}
-  .cel-25-a-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor $white $white;}
-  .cel-25-b-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-25-c-rule {float: left;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $lightPrimaryColor;}
-  .cel-25-d-rule {float: right;width: 23.5%;padding: 0 .5% 0 .5%;margin-bottom: 1.5rem;border: 1px solid;border-color: $white $white $white $lightPrimaryColor;}
-  .cel-25-a-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
-  .cel-25-b-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
-  .cel-25-c-box {float: left;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
-  .cel-25-d-box {float: right;width: 23.5%;padding: 0 .5% 0 .5%;border: 1px solid $lightPrimaryColor;margin-bottom: 1.5rem;}
-
-  //#helpboxOpenState{height:55em;}
-}//end 840
 
 @media only screen and (min-width: 68.1875em) {
   //This stops the content area from growing any larger than 1091 pixels.
@@ -1808,77 +1555,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
     #helpboxOpenState{width:25vw;}
 }
-@media print,
-(-o-min-device-pixel-ratio: 5/4),
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
 
 
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important; /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
 
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links for images, or javascript/internal links
-   */
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group; /* h5bp.com/t */
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}//end print
