@@ -59,7 +59,9 @@ $black: #090A0A;
     color: $lightPrimaryColor;
 
 }
+/* importing chunks*/
 
+/* column layout styles */
 @import 'chunk-col-50';
 @import 'chunk-col-6040';
 @import 'chunk-col-4060';
@@ -67,140 +69,23 @@ $black: #090A0A;
 @import 'chunk-col-2575';
 @import 'chunk-col-30';
 @import 'chunk-col-25';
+@import 'chunk-col-layoutHelpers';
 
+/* generic element styles html body p ul */
+@import 'baseClasses';
 
-.hidden {
-    visibility: hidden;
-  display: none !important;
+@import "typography";
 
-}
+/* styles that hide things + clearfixing styles*/
+@import 'helperClasses';
 
-
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
+/* created a golden ration sized centered column that look and acts like a traditional book */
+@import 'bookBox';
 
 
 
 
 
-.clearfix:before,
-.clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @include font-familyHeading;
-    @include lightWeight;
-    color: $black;
-}
-
-body {
-    background-color: $lightPrimaryColor;
-
-}
-
-body,
-p {
-    @include regularWeight;
-    @include font-familyRegular;
-    color: $black;
-    word-wrap: break-word;
-}
-
-img {
-    max-width: 100%;
-}
-
-li p {
-    margin: 0 auto 0 auto;
-}
-
-ul li:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-dt {
-    font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;font-size:1.25rem;line-height: 1.5rem;@include lightWeight;
-    margin-bottom:.5rem;
-    padding-left: .25rem;
-}
-dd {
-    font-size: 1rem;line-height: 1.5rem;@include regularWeight;
-    margin-left: 2rem;
-    padding: .25rem 1rem 1rem 0;
-}
-
-img,
-audio,
-canvas,
-video,
-iframe {
-    max-width: 100%;
-}
-
-object {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-//This bookBox class creates a centered column with wide side margins much like a printed book.
-//here is the html structure
-/*
-<div class="cel-60-a bookBox">
-    <div class="cel-100 bookBoxBanner"><!-- optional banner image --></div>
-    <!-- the main content body -->
-</div>
-*/
-
-.bookBox{
-    margin-left: 0;
-    margin-right: 19.35%!important;
-    padding:.25em;
-}
-.bookBox p{padding: 0;}
-.bookBoxBanner{
-    //uncomment the follow line, and insert the graphic to add it to a bookBox as a banner.
-    /* background: url("../img/myBannerGraphic.png" ); */
-    background-position: -50px 0;
-    height: 250px;
-    margin-bottom: 105px;
-}
 
 
 .courseIcon {
@@ -1039,9 +924,6 @@ button{border:0;}
 /* DO NOT TOUCH */
 // at mobile widths I am taking the top margin off the a's and the bottom margin off the ending boxes.
 
-.cel-row {float: left;width: 99%;margin: 0 0 1.9rem 0;padding: 0;}
-.cel-100 {float: left;width: 100%;padding: 0;}
-.cel-divider {float: left;width: 100%;height: .125em;}
 
 
 
@@ -1053,17 +935,8 @@ button{border:0;}
 
 
 
-/* ========================typography */
-html {font-size: 16px;}
-header h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
-h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
-h2 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
-h3 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
-h4 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
-h5 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
-h6 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
-//h7 {font-size: .64rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 14pxs */
-p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
+
+
 
 //========================================================================(mobile ^) Media Queries (desktop v) =====================================
 // =============================================================
@@ -1093,24 +966,10 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
 
   /* ========================typography */
-  html {font-size: 16px;}
-  //1 rem = 16px;
-  header h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;}/* 50.5pxs */
-  h1 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;}
-  h2 {font-size: 3.157rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;}/* 50.5pxs */
-  h3 {font-size: 2.369rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;padding-left: .25rem;}/* 38pxs */
-  h4 {font-size: 1.777rem;line-height: 3rem;margin-bottom: 3rem;@include lightWeight;padding-left: .25rem;}/* 21pxs */
-  h5 {font-size: 1.333rem;line-height: 3rem;margin-bottom: 1.5rem;@include lightWeight;padding-left: .25rem;}/* 18pxs */
-  h6 {font-size: .75rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include lightWeight;padding-left: .25rem;}/* 16pxs */
-  //h6 {font-size: .563rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding-left: .25rem;}/* 14pxs */
-  p {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;padding: 0;}/* 16pxs */
-  body {font-size: 1rem;line-height: 1.5rem;margin-bottom: 1.5rem;@include regularWeight;}/* 16pxs */
 
   /* =================> Column Layout styles *//* DO NOT TOUCH */
   /* DO NOT TOUCH */
-  .cel-row {float: left;width: 99%;margin: 0 0 1.9rem 0;padding: 0;}
-  .cel-100 {float: left;width: 100%;padding: 0;}
-  .cel-divider {float: left;width: 100%;height: .125em;}
+
 
 
 
@@ -1504,21 +1363,10 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
   left:0;
 
 }
-.bookBox{
-    margin-left: 19.35%!important;
-    margin-right: 19.35%!important;
-    padding:  13em 0 10em 0;
-}
-.bookBox p{padding: 0;}
+
 
 } /* end 35em media query */
-@media only screen and (min-width: 41.25em){/* 660 pixel width */
 
-
-
-
-
-}/* end 41.25 em media query */
 
 
 

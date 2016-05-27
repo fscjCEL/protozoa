@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* importing chunks*/
+/* column layout styles */
 /* 50/50 2 column split */
 .cel-50-a {
   float: left;
@@ -1285,39 +1287,41 @@
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
     margin-bottom: 1.5rem; } }
-.hidden {
-  visibility: hidden;
-  display: none !important; }
+.cel-row {
+  float: left;
+  width: 99%;
+  margin: 0 0 1.9rem 0;
+  padding: 0; }
 
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+.cel-100 {
+  float: left;
+  width: 100%;
+  padding: 0; }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
+.cel-divider {
+  float: left;
+  width: 100%;
+  height: .125em; }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
+@media only screen and (min-width: 35em) {
+  /* 560 pixel width */
+  .cel-row {
+    float: left;
+    width: 99%;
+    margin: 0 0 1.9rem 0;
+    padding: 0; }
 
-.clearfix:after {
-  clear: both; }
+  .cel-100 {
+    float: left;
+    width: 100%;
+    padding: 0; }
 
+  .cel-divider {
+    float: left;
+    width: 100%;
+    height: .125em; } }
+/* end media Q*/
+/* generic element styles html body p ul */
 h1,
 h2,
 h3,
@@ -1377,6 +1381,178 @@ object {
   width: 100%;
   height: 100%; }
 
+/* ========================typography */
+html {
+  font-size: 16px; }
+
+header h1 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: 300; }
+
+/* 36pxs */
+h1 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: 300; }
+
+/* 36pxs */
+h2 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: 300; }
+
+/* 36pxs */
+h3 {
+  font-size: 1.953rem;
+  line-height: 3rem;
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: .25rem; }
+
+/* 24pxs */
+h4 {
+  font-size: 1.563rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: .25rem; }
+
+/* 21pxs */
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: .25rem; }
+
+/* 18pxs */
+h6 {
+  font-size: .8rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: .25rem; }
+
+/* 16pxs */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400; }
+
+/* 16pxs */
+@media only screen and (min-width: 35em) {
+  /* 560 pixel width */
+  html {
+    font-size: 16px; }
+
+  header h1 {
+    font-size: 3.157rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300; }
+
+  /* 50.5pxs */
+  h1 {
+    font-size: 3.157rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300; }
+
+  h2 {
+    font-size: 3.157rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300; }
+
+  /* 50.5pxs */
+  h3 {
+    font-size: 2.369rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    padding-left: .25rem; }
+
+  /* 38pxs */
+  h4 {
+    font-size: 1.777rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    padding-left: .25rem; }
+
+  /* 21pxs */
+  h5 {
+    font-size: 1.333rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    padding-left: .25rem; }
+
+  /* 18pxs */
+  h6 {
+    font-size: .75rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    padding-left: .25rem; }
+
+  /* 16pxs */
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    padding: 0; }
+
+  /* 16pxs */
+  body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400; }
+
+  /* 16pxs */ }
+/* end media query*/
+/* styles that hide things + clearfixing styles*/
+.hidden {
+  visibility: hidden;
+  display: none !important; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* created a golden ration sized centered column that look and acts like a traditional book */
 /*
 <div class="cel-60-a bookBox">
     <div class="cel-100 bookBoxBanner"><!-- optional banner image --></div>
@@ -1397,6 +1573,16 @@ object {
   height: 250px;
   margin-bottom: 105px; }
 
+@media only screen and (min-width: 35em) {
+  /* 560 pixel width */
+  .bookBox {
+    margin-left: 19.35% !important;
+    margin-right: 19.35% !important;
+    padding: 13em 0 10em 0; }
+
+  .bookBox p {
+    padding: 0; } }
+/* end media query */
 .courseIcon {
   fill: #F7FFFC;
   height: 45px;
@@ -2088,179 +2274,13 @@ button {
 /* =================> Column Layout styles */
 /* DO NOT TOUCH */
 /* DO NOT TOUCH */
-.cel-row {
-  float: left;
-  width: 99%;
-  margin: 0 0 1.9rem 0;
-  padding: 0; }
-
-.cel-100 {
-  float: left;
-  width: 100%;
-  padding: 0; }
-
-.cel-divider {
-  float: left;
-  width: 100%;
-  height: .125em; }
-
-/* ========================typography */
-html {
-  font-size: 16px; }
-
-header h1 {
-  font-size: 2.441rem;
-  line-height: 3rem;
-  font-weight: 300; }
-
-/* 36pxs */
-h1 {
-  font-size: 2.441rem;
-  line-height: 3rem;
-  font-weight: 300; }
-
-/* 36pxs */
-h2 {
-  font-size: 2.441rem;
-  line-height: 3rem;
-  font-weight: 300; }
-
-/* 36pxs */
-h3 {
-  font-size: 1.953rem;
-  line-height: 3rem;
-  font-weight: 300;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: .25rem; }
-
-/* 24pxs */
-h4 {
-  font-size: 1.563rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: .25rem; }
-
-/* 21pxs */
-h5 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: .25rem; }
-
-/* 18pxs */
-h6 {
-  font-size: .8rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: .25rem; }
-
-/* 16pxs */
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400; }
-
-/* 16pxs */
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
   /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
   /* ========================typography */
-  html {
-    font-size: 16px; }
-
-  header h1 {
-    font-size: 3.157rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    font-weight: 300; }
-
-  /* 50.5pxs */
-  h1 {
-    font-size: 3.157rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    font-weight: 300; }
-
-  h2 {
-    font-size: 3.157rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    font-weight: 300; }
-
-  /* 50.5pxs */
-  h3 {
-    font-size: 2.369rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    font-weight: 300;
-    padding-left: .25rem; }
-
-  /* 38pxs */
-  h4 {
-    font-size: 1.777rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    font-weight: 300;
-    padding-left: .25rem; }
-
-  /* 21pxs */
-  h5 {
-    font-size: 1.333rem;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    padding-left: .25rem; }
-
-  /* 18pxs */
-  h6 {
-    font-size: .75rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    padding-left: .25rem; }
-
-  /* 16pxs */
-  p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-    padding: 0; }
-
-  /* 16pxs */
-  body {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 400; }
-
-  /* 16pxs */
   /* =================> Column Layout styles */
   /* DO NOT TOUCH */
   /* DO NOT TOUCH */
-  .cel-row {
-    float: left;
-    width: 99%;
-    margin: 0 0 1.9rem 0;
-    padding: 0; }
-
-  .cel-100 {
-    float: left;
-    width: 100%;
-    padding: 0; }
-
-  .cel-divider {
-    float: left;
-    width: 100%;
-    height: .125em; }
-
   .activeSlide {
     margin-top: 3.125em;
     min-height: 100%;
@@ -2564,19 +2584,8 @@ p {
     width: 300px;
     position: fixed;
     bottom: 0;
-    left: 0; }
-
-  .bookBox {
-    margin-left: 19.35% !important;
-    margin-right: 19.35% !important;
-    padding: 13em 0 10em 0; }
-
-  .bookBox p {
-    padding: 0; } }
+    left: 0; } }
 /* end 35em media query */
-@media only screen and (min-width: 41.25em) {
-  /* 660 pixel width */ }
-/* end 41.25 em media query */
 @media only screen and (min-width: 68.1875em) {
   #tocOpenState {
     width: 30%;
