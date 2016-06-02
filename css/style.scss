@@ -54,8 +54,6 @@ $black: #090A0A;
 
     @include lightWeight;
     @include font-familyHeading;
-
-
     margin:0!important;
     color: $lightPrimaryColor;
 
@@ -65,7 +63,7 @@ $black: #090A0A;
 
 
 .invisible {
-    /* hidden to everything, including screen readers */
+    /* as if it were never in the DOM  */
   display: none !important;
   visibility: hidden;
 }
