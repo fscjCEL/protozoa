@@ -64,15 +64,16 @@ $black: #090A0A;
 
 
 
-.hidden {
-    visibility: hidden;
+.invisible {
+    /* hidden to everything, including screen readers */
   display: none !important;
-  
+  visibility: hidden;
 }
 
 
 
-.visuallyhidden {
+.covert {
+    /* hidden to the naked eye, but visible to screen readers.  */
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -85,8 +86,8 @@ $black: #090A0A;
 
 
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.covert.focusable:active,
+.covert.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -99,13 +100,13 @@ $black: #090A0A;
 
 
 
-.clearfix:before,
-.clearfix:after {
+.solveClearing:before,
+.solveClearing:after {
   content: " "; /* 1 */
   display: table; /* 2 */
 }
 
-.clearfix:after {
+.solveClearing:after {
   clear: both;
 }
 
@@ -805,13 +806,13 @@ a.slideHeader:hover{
 }
 
 .slide .slideContent {
-    //default mobile slide state...hidden
+    //default mobile slide state...invisible
     display: none !important;
     visibility: hidden;
 }
 
 .slide .slideFooter {
-    //default mobile slide state...hidden
+    //default mobile slide state...invisible
     display: none !important;
     visibility: hidden;
 }
@@ -863,7 +864,7 @@ a.slideHeader:hover{
       animation-timing-function: ease;
 }
 #mainNavList {
-    //default mobile Nav state...hidden
+    //default mobile Nav state...invisible
     display: none;
     visibility: hidden;
 }
@@ -936,7 +937,7 @@ button{border:0;}
 }
 
 .navContainer {
-    //default mobile slide state...hidden
+    //default mobile slide state...invisible
     display: none !important;
     visibility: hidden;
 }
@@ -1537,7 +1538,7 @@ p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 /* for now...all the non-mobile styles */
 
 .slide {
-    //default desktop slide state...hidden
+    //default desktop slide state...invisible
     display: none !important;
     visibility: hidden;
 }
