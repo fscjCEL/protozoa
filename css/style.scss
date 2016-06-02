@@ -427,7 +427,7 @@ $black: #090A0A;
     z-index: 2;
     padding-bottom: .3rem;
     background-image : url(../img/HELP-default.png);
-    background-position : 100% 0px ;
+    background-position : 100% 0 ;
     background-size : 2.5rem;
 
     /* timing of height then width NOTE: this effects the closing animation */
@@ -447,7 +447,7 @@ $black: #090A0A;
     width : 90vw;
 
     background-image : url(../img/HELP-closeX.png);
-    background-position : 100% 0px,top;
+    background-position : 100% 0,top;
     background-size : 2.5rem;
 
     /* timing of height then width NOTE: this effects the opening animation*/
@@ -1258,7 +1258,7 @@ button{border:0;}
 
 
 .navElement {
-    background: url(../img/nav-sprites.png) 50% 0px no-repeat;
+    background: url(../img/nav-sprites.png) 50% 0 no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;

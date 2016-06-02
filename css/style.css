@@ -1763,7 +1763,7 @@ p {
   line-height: 1.3; }
 
 .TOC h4:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .TOC h5 {
   font-weight: 300;
@@ -1777,7 +1777,7 @@ p {
   padding-left: .9375em; }
 
 .TOC h5:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .TOC h6 {
   font-weight: 300;
@@ -1788,7 +1788,7 @@ p {
   line-height: 1.3; }
 
 .TOC h6:before {
-  content: "•   "; }
+  content: "ΓÇó   "; }
 
 .audioBox {
   width: 95%;
@@ -1852,7 +1852,7 @@ p {
   z-index: 2;
   padding-bottom: .3rem;
   background-image: url(../img/HELP-default.png);
-  background-position: 100% 0px;
+  background-position: 100% 0;
   background-size: 2.5rem;
   /* timing of height then width NOTE: this effects the closing animation */
   transition-duration: .1s, .25s, .5s; }
@@ -1866,7 +1866,7 @@ p {
   padding-bottom: 1rem;
   width: 90vw;
   background-image: url(../img/HELP-closeX.png);
-  background-position: 100% 0px,top;
+  background-position: 100% 0,top;
   background-size: 2.5rem;
   /* timing of height then width NOTE: this effects the opening animation*/
   transition-duration: .25s, .1s,.5s; }
@@ -2499,7 +2499,7 @@ button {
       -ms-transform: scale(1.3);
       transform: scale(1.3); } }
   .navElement {
-    background: url(../img/nav-sprites.png) 50% 0px no-repeat;
+    background: url(../img/nav-sprites.png) 50% 0 no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
@@ -2609,3 +2609,5 @@ button {
   /* 1482 pixels width */
   #helpboxOpenState {
     width: 25vw; } }
+
+/*# sourceMappingURL=style.css.map */
