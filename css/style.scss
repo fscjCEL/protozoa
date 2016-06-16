@@ -74,22 +74,22 @@ $black: #090A0A;
 
 @import "typography";
 
-<<<<<<< HEAD
+
 .invisible {
     /* as if it were never in the DOM  */
   display: none !important;
   visibility: hidden;
 }
-=======
+
 /* styles that hide things + clearfixing styles*/
 @import 'helperClasses';
->>>>>>> origin/feature-oocss
+
 
 /* created a golden ration sized centered column that look and acts like a traditional book */
 @import 'bookBox';
 
 
-<<<<<<< HEAD
+
 .covert {
     /* hidden to the naked eye, but visible to screen readers.  */
   border: 0;
@@ -216,14 +216,6 @@ object {
     margin-bottom: 105px;
 }
 
-
-=======
-
-
-
-
-
->>>>>>> origin/feature-oocss
 .courseIcon {
   fill: $white;
   height: 45px;
