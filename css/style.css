@@ -2598,7 +2598,8 @@ button {
     height: 4.375em;
     overflow: visible;
     display: block;
-    visibility: visible; }
+    visibility: visible;
+    padding: 0; }
 
   /* The hover effect for the nav elements. */
   @-webkit-keyframes breathingHover {
