@@ -1,12 +1,12 @@
 var methods = {
     focusAllTheThings:function(){
         //This is so my internal links get keyboard focus (for accessibility's sake)
-            //get that link
-            var href=this.getAttribute("href");
-            //take the hash (#) off
-            var theID = href.substr(1);
-            //set focus on THAT IDed element.
-            document.getElementById(theID).focus();
+        //get that link
+        var href=this.getAttribute("href");
+        //take the hash (#) off
+        var theID = href.substr(1);
+        //set focus on THAT IDed element.
+        document.getElementById(theID).focus();
     },//end function focusAllTheThings
     yellowFlash:function(){
 
@@ -15,7 +15,7 @@ var methods = {
             var theActiveSlideElement = document.getElementById("slide"+(i+1));
             var theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
             if(theFirstParagraph.parentNode.className !=="figure"){
-             theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+                theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
             }else{
                 theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
             }//end if
@@ -38,11 +38,11 @@ var methods = {
             theFigureBox.className = "figure-open-state";
             this.src = "img/figureClose.png";
             if(theFigureImage.tagName === "IMG"){
-                    theFigureImage.style.overflow = "scroll";
-                }//endif
+                theFigureImage.style.overflow = "scroll";
+            }//endif
             if(theFigureCaption.tagName === "P"){
-                    theFigureCaption.style.backgroundColor = "#FFF";
-                }//endif
+                theFigureCaption.style.backgroundColor = "#FFF";
+            }//endif
         }//endif
         if (figureEval === "open") {
             //open--->closed
@@ -50,11 +50,11 @@ var methods = {
             theFigureBox.className = "figure-closed-state";
             this.src = "img/figureOpen.png";
             if(theFigureCaption.tagName === "IMG"){
-                    theFigureCaption.style.overflow = "visible";
-                }//endif
+                theFigureCaption.style.overflow = "visible";
+            }//endif
             if(theFigureCaption.tagName === "P"){
-                    theFigureCaption.style.backgroundColor = "transparent";
-                }//endif
+                theFigureCaption.style.backgroundColor = "transparent";
+            }//endif
         }//end if
     },//end figureModalHandler
     figureButtonInsertion:function(){
@@ -63,26 +63,26 @@ var methods = {
         //first: gather and loop through each figure element.
         var allTheFigureElements = document.getElementsByClassName("figure");
         //each element needs to have a button inserted, and then a listener added to the button.
-            for (var i = 0; i < allTheFigureElements.length; i++) {
-                //create the button element
-                var newFigureButtonElement = document.createElement("img");
-                newFigureButtonElement.src = "img/figureOpen.png";
-                newFigureButtonElement.alt = "";
-                newFigureButtonElement.className = "fullScreenButton";
-                var theCurrentFigureID = "figureButton"+(i+1);
-                newFigureButtonElement.id = theCurrentFigureID;
-                // insertTheButton image element.
-                var theFigureParentNode = allTheFigureElements[i];
-                theFigureParentNode.setAttribute("data-state","closed");
-                // grab the img in the box, and set it up as the reference node.
-                var theIMGsInFigure = allTheFigureElements[i].getElementsByTagName("img");
-                var theFigureReferenceNode = theIMGsInFigure[0];
-                //now insert the button
-                theFigureParentNode.insertBefore(newFigureButtonElement, theFigureReferenceNode);
+        for (var i = 0; i < allTheFigureElements.length; i++) {
+            //create the button element
+            var newFigureButtonElement = document.createElement("img");
+            newFigureButtonElement.src = "img/figureOpen.png";
+            newFigureButtonElement.alt = "";
+            newFigureButtonElement.className = "fullScreenButton";
+            var theCurrentFigureID = "figureButton"+(i+1);
+            newFigureButtonElement.id = theCurrentFigureID;
+            // insertTheButton image element.
+            var theFigureParentNode = allTheFigureElements[i];
+            theFigureParentNode.setAttribute("data-state","closed");
+            // grab the img in the box, and set it up as the reference node.
+            var theIMGsInFigure = allTheFigureElements[i].getElementsByTagName("img");
+            var theFigureReferenceNode = theIMGsInFigure[0];
+            //now insert the button
+            theFigureParentNode.insertBefore(newFigureButtonElement, theFigureReferenceNode);
 
 
-                document.getElementById(theCurrentFigureID).addEventListener("click",methods.figureModalHandler,false);
-            }//end for
+            document.getElementById(theCurrentFigureID).addEventListener("click",methods.figureModalHandler,false);
+        }//end for
 
 
     },//end figureButtonInsertion
@@ -165,9 +165,9 @@ var methods = {
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
-        //add clearfix to the open menu so it shows everything inside.
+        //add is-cleared to the open menu so it shows everything inside.
 
-        theTOCelement.classList.add = "clearfix";
+        theTOCelement.classList.add = "is-cleared";
         theTOCelement.id = "tocOpenState";
 
     },//end function
@@ -247,7 +247,7 @@ var methods = {
 
             // craft the header element as the innerHTML of the list item.
 
-            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
+            theNewElement.innerHTML =  "<"+type+"><span class='is-dormant'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
@@ -282,7 +282,7 @@ var methods = {
         }//end processCapturedNode function
         function captureNodes(node) {
             //if (node.nodeName === "H1") {
-              //  processCapturedNode("H1", node);
+            //  processCapturedNode("H1", node);
             //}//end if
             if (node.nodeName === "H2") {
                 processCapturedNode("H2", node);
@@ -396,7 +396,7 @@ var methods = {
                 theNewElement.style.height = "10px";
                 theNewElement.style.margin = "0";
                 theNewElement.style.padding = "0 3px 6px 0";
-                theNewElement.src = "img/externalLinkIcon.png";
+                theNewElement.src = "../../../img/externalLinkIcon.png";
                 if (allTheLinks[s].className !== "celLogoLink") {
                     theElementsParent.insertBefore(theNewElement, theElementToInsertBefore);
                 }//end if
@@ -487,7 +487,7 @@ var methods = {
         //opens and closed the help menu
         var theHelpBoxElement,theHelpButtonParent;
 
-         theHelpButtonParent = document.getElementById("helpButton").parentNode;
+        theHelpButtonParent = document.getElementById("helpButton").parentNode;
         if (theHelpButtonParent.id === "helpboxOpenState") {
             //opened, and needs to be closed
             theHelpBoxElement = document.getElementById("helpboxOpenState");
@@ -496,7 +496,7 @@ var methods = {
         }else{
             //closed, and needs to be opened
             theHelpBoxElement = document.getElementById("helpboxClosedState");
-            theHelpBoxElement.className += " clearfix";
+            theHelpBoxElement.className += " is-cleared";
             theHelpBoxElement.id = "helpboxOpenState";
         }//end if
 
@@ -575,9 +575,9 @@ var methods = {
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
-            if (theChildsClassname === "slideHeader clearfix" || theChildsClassname === "futureSlideHeader clearfix") {
+            if (theChildsClassname === "slideHeader is-cleared" || theChildsClassname === "futureSlideHeader is-cleared") {
                 theActiveSlideHeaderElement = theActiveSlideElement.children[g];
-                theActiveSlideHeaderElement.className = "pastSlideHeader clearfix";
+                theActiveSlideHeaderElement.className = "pastSlideHeader is-cleared";
             }//end if
         }//end for
         //the nav element to past style
@@ -590,8 +590,8 @@ var methods = {
         //now the slidecontent and footer for the mobile view
         for (var h = 0; h < theDestinationSlideElement.children.length; h++) {
             destinationsChildClassname = theDestinationSlideElement.children[h].className;
-            if (destinationsChildClassname === "futureSlideHeader clearfix") {
-                theDestinationSlideElement.children[h].className = "slideHeader clearfix";
+            if (destinationsChildClassname === "futureSlideHeader is-cleared") {
+                theDestinationSlideElement.children[h].className = "slideHeader is-cleared";
             }//end if
             if (destinationsChildClassname === "slideContent") {
                 theDestinationSlideElement.children[h].className = "activeSlideContent";
@@ -618,10 +618,10 @@ var methods = {
                     evaluateThisSlideClassname = theOneIAmWorkingON.children[j].className;
 
                     switch (evaluateThisSlideClassname) {
-                        case "pastSlideHeader clearfix":
+                        case "pastSlideHeader is-cleared":
                             //These is here because I want to leave these alone. THey need to retain that class.
                             break;
-                        case "futureSlideHeader clearfix":
+                        case "futureSlideHeader is-cleared":
                             break;
                         case "activeSlideContent":
                             theOneIAmWorkingON.children[j].className = "slideContent";
@@ -736,7 +736,7 @@ var methods = {
         }//end if
 
         //clicked a header element
-        if (this.className === "slideHeader clearfix" || this.className === "pastSlideHeader clearfix" || this.className === "futureSlideHeader clearfix") {
+        if (this.className === "slideHeader is-cleared" || this.className === "pastSlideHeader is-cleared" || this.className === "futureSlideHeader is-cleared") {
             methods.ascertainScope("slideHeader", this.parentNode.id);
         }//end if
         if (zz.keyCode === 78) {
@@ -825,12 +825,12 @@ var methods = {
         //All the slide headers.
 
 
-        slideHeaderElements = document.getElementsByClassName("slideHeader clearfix");
+        slideHeaderElements = document.getElementsByClassName("slideHeader is-cleared");
         for (var a = 0; a < slideHeaderElements.length; a++) {
             slideHeaderElements[a].addEventListener("click", methods.whichInput, false);
         }//end for
 
-        futureSlideHeaderElements = document.getElementsByClassName("futureSlideHeader clearfix");
+        futureSlideHeaderElements = document.getElementsByClassName("futureSlideHeader is-cleared");
         for (var o = 0; o < futureSlideHeaderElements.length; o++) {
             futureSlideHeaderElements[o].addEventListener("click", methods.whichInput, false);
         }//end for
@@ -888,14 +888,14 @@ var methods = {
         }//end for
 
         //this creates the nav menu elements.
-       methods.navMenu();
-       //call the figure build
-       methods.figureButtonInsertion();
+        methods.navMenu();
+        //call the figure build
+        methods.figureButtonInsertion();
 
-       //put this into a function if it works.
-       document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
+        //put this into a function if it works.
+        document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
 
-       methods.yellowFlash();
+        methods.yellowFlash();
 
 
 
@@ -903,7 +903,3 @@ var methods = {
     }//end main method
 };//end methods object.
 window.onload = methods.main();
-
-
-
-
