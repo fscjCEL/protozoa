@@ -299,8 +299,6 @@ object {
 
 #tocOpenState{
     z-index: 200;
-    overflow-y: hidden;
-    overflow-x: scroll;
     width: 90%;
     padding-top:4rem;
     padding-bottom: .75em;
@@ -1237,14 +1235,17 @@ button{border:0;}
 
 #tocOpenState{
 
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding-top:4rem;
     padding-bottom: .75em;
-    position:fixed;
+    //position:fixed;
     top: 0;
     bottom:0;
 
     left:50%;
     width:50%;
+    height:80vh;
 }
 #tocOpenState #theTocTarget{
     right:3em;
