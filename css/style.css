@@ -2383,9 +2383,6 @@ button {
     padding-bottom: .75em;
     overflow-x: hidden;
     overflow-y: scroll;
-    top: 0;
-    bottom: 0;
-    left: 50%;
     width: 50%;
     height: 80vh; }
 
@@ -2590,8 +2587,7 @@ button {
 /* end 35em media query */
 @media only screen and (min-width: 68.1875em) {
   #tocOpenState {
-    width: 30%;
-    left: 70%; }
+    width: 30%; }
 
   .activeSlide {
     margin-bottom: .625em;

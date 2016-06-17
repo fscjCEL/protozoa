@@ -1111,10 +1111,7 @@ button{border:0;}
     padding-bottom: .75em;
     overflow-x: hidden;
     overflow-y: scroll;
-    top: 0;
-    bottom:0;
-
-    left:50%;
+    
     width:50%;
     height: 80vh;
 }
@@ -1378,7 +1375,7 @@ button{border:0;}
   //This stops the content area from growing any larger than 1091 pixels.
   #tocOpenState{
     width:30%;
-    left:70%;
+
   }
   .activeSlide {
     margin-bottom: .625em;
