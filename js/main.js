@@ -162,6 +162,7 @@ var methods = {
         var theTOCelement = document.getElementById(incomingSlideID).parentNode.id;//so theTocTarget's parentNode
         document.getElementById(theTOCelement).className = "TOCs";
         document.getElementById(theTOCelement).id = "tocClosedState";
+        document.getElementById(theTOCelement).scrollTop = 0;
     },//end justCloseTOC
     openTOC: function (theIDofWHatIClicked) {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
