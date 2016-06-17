@@ -1,0 +1,33 @@
+//This bookBox class creates a centered column with wide side margins much like a printed book.
+//here is the html structure
+/*
+<div class="cel-60-a bookBox">
+    <div class="cel-100 bookBoxBanner"><!-- optional banner image --></div>
+    <!-- the main content body -->
+</div>
+*/
+
+.bookBox{
+    margin-left: 0;
+    margin-right: 19.35%!important;
+    padding:.25em;
+}
+.bookBox p{padding: 0;}
+.bookBoxBanner{
+    //uncomment the follow line, and insert the graphic to add it to a bookBox as a banner.
+    /* background: url("../img/myBannerGraphic.png" ); */
+    background-position: -50px 0;
+    height: 250px;
+    margin-bottom: 105px;
+}
+
+@media only screen and (min-width: 35em) {/* 560 pixel width */
+    .bookBox{
+        margin-left: 19.35%!important;
+        margin-right: 19.35%!important;
+        padding:  13em 0 10em 0;
+    }
+    .bookBox p{padding: 0;}
+
+
+}/* end media query */

@@ -1,0 +1,156 @@
+/* 40/60 2 column split */
+.cel-40-a {
+    float: left;
+    width: 98%;
+    padding: 0 1%;
+    border: 1px solid $white;
+}
+
+.cel-60-b {
+    float: left;
+    width: 98%;
+    padding: 0 1%;
+    border: 1px solid $white;
+}
+
+.cel-40-a-rule {
+    float: left;
+    width: 98%;
+    padding: 0 1%;
+    border: 1px solid;
+    border-color: $white $white $lightPrimaryColor $white;
+}
+
+.cel-60-b-rule {
+    float: left;
+    width: 98%;
+    padding: 0 1%;
+    border: 1px solid;
+    border-color: $lightPrimaryColor $white $white $white;
+}
+
+.cel-40-a-box {
+    float: left;
+    width: 98%;
+    padding: 0 1%;
+    border: 1px solid $lightPrimaryColor;
+}
+
+.cel-60-b-box {
+    float: right;
+    width: 98%;
+    padding: 0 1%;
+    border: 1px solid $lightPrimaryColor;
+}
+
+@media only screen and (min-width: 35em) {/* 560 pixel width */
+    .cel-40-a img:first-child {
+        margin-top: 1.4rem;
+    }
+    .cel-60-b img:first-child {
+        margin-top: 1.4rem;
+    }
+    .cel-40-a ul:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .cel-60-b ul:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .cel-40-a ol:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+
+    }
+    .cel-60-b ol:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cel-40-a h2:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cel-60-b h2:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cel-40-a h3:first-child {
+        margin-top: .65rem;
+        margin-bottom: 1.85rem;
+    }
+
+    .cel-60-b h3:first-child {
+        margin-top: .65rem;
+        margin-bottom: 1.85rem;
+    }
+
+    .cel-40-a h4:first-child {
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cel-60-b h4:first-child {
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cel-40-a h5:first-child {
+        margin-top: .4rem;
+        margin-bottom: 2.1rem;
+    }
+
+    .cel-60-b h5:first-child {
+        margin-top: .4rem;
+        margin-bottom: 2.1rem;
+    }
+
+
+    /* 40/60 2 column split */
+    .cel-40-a {
+        float: left;
+        width: 35%;
+        padding: 0 1% 0 0;
+        border: .0625em solid $white;
+    }
+
+    .cel-60-b {
+        float: right;
+        width: 61%;
+        padding: 0 0 0 1%;
+        border: .0625em solid $white;
+    }
+
+    .cel-40-a-rule {
+        float: left;
+        width: 35%;
+        padding: 0 1% 0 0;
+        border: .0625em solid;
+        border-color: $white $lightPrimaryColor $white $white;
+
+    }
+    .cel-60-b-rule {
+        float: right;
+        width: 61%;
+        padding: 0 0 0 1%;
+        border: .0625em solid;
+        border-color: $white $white $white $lightPrimaryColor;}
+
+    .cel-40-a-box {
+        float: left;
+        width: 35%;
+        padding: 0 .5% 0 .5%;
+        border: .0625em solid $lightPrimaryColor;
+    }
+
+    .cel-60-b-box {
+        float: right;
+        width: 61%;
+        padding: 0 .5% 0 .5%;
+        border: .0625em solid $lightPrimaryColor;
+    }
+
+}/* end media query*/

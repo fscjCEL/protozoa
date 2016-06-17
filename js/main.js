@@ -167,7 +167,7 @@ var methods = {
         var theTOCelement = document.getElementById(theIDofWHatIClicked).parentNode;
         //add clearfix to the open menu so it shows everything inside.
 
-
+        theTOCelement.classList.add = "solveClearing";
         theTOCelement.id = "tocOpenState";
         theTOCelement.classList.add = "clearfix";
 
@@ -248,7 +248,7 @@ var methods = {
 
             // craft the header element as the innerHTML of the list item.
 
-            theNewElement.innerHTML =  "<"+type+"><span class='visuallyhidden'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
+            theNewElement.innerHTML =  "<"+type+"><span class='covert'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
@@ -497,7 +497,7 @@ var methods = {
         }else{
             //closed, and needs to be opened
             theHelpBoxElement = document.getElementById("helpboxClosedState");
-            theHelpBoxElement.className += " clearfix";
+            theHelpBoxElement.className += " solveClearing";
             theHelpBoxElement.id = "helpboxOpenState";
         }//end if
 
@@ -576,9 +576,9 @@ var methods = {
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
-            if (theChildsClassname === "slideHeader clearfix" || theChildsClassname === "futureSlideHeader clearfix") {
+            if (theChildsClassname === "slideHeader solveClearing" || theChildsClassname === "futureSlideHeader solveClearing") {
                 theActiveSlideHeaderElement = theActiveSlideElement.children[g];
-                theActiveSlideHeaderElement.className = "pastSlideHeader clearfix";
+                theActiveSlideHeaderElement.className = "pastSlideHeader solveClearing";
             }//end if
         }//end for
         //the nav element to past style
@@ -591,8 +591,8 @@ var methods = {
         //now the slidecontent and footer for the mobile view
         for (var h = 0; h < theDestinationSlideElement.children.length; h++) {
             destinationsChildClassname = theDestinationSlideElement.children[h].className;
-            if (destinationsChildClassname === "futureSlideHeader clearfix") {
-                theDestinationSlideElement.children[h].className = "slideHeader clearfix";
+            if (destinationsChildClassname === "futureSlideHeader solveClearing") {
+                theDestinationSlideElement.children[h].className = "slideHeader solveClearing";
             }//end if
             if (destinationsChildClassname === "slideContent") {
                 theDestinationSlideElement.children[h].className = "activeSlideContent";
@@ -619,10 +619,10 @@ var methods = {
                     evaluateThisSlideClassname = theOneIAmWorkingON.children[j].className;
 
                     switch (evaluateThisSlideClassname) {
-                        case "pastSlideHeader clearfix":
+                        case "pastSlideHeader solveClearing":
                             //These is here because I want to leave these alone. THey need to retain that class.
                             break;
-                        case "futureSlideHeader clearfix":
+                        case "futureSlideHeader solveClearing":
                             break;
                         case "activeSlideContent":
                             theOneIAmWorkingON.children[j].className = "slideContent";
@@ -737,7 +737,7 @@ var methods = {
         }//end if
 
         //clicked a header element
-        if (this.className === "slideHeader clearfix" || this.className === "pastSlideHeader clearfix" || this.className === "futureSlideHeader clearfix") {
+        if (this.className === "slideHeader solveClearing" || this.className === "pastSlideHeader solveClearing" || this.className === "futureSlideHeader solveClearing") {
             methods.ascertainScope("slideHeader", this.parentNode.id);
         }//end if
         if (zz.keyCode === 78) {
@@ -826,12 +826,12 @@ var methods = {
         //All the slide headers.
 
 
-        slideHeaderElements = document.getElementsByClassName("slideHeader clearfix");
+        slideHeaderElements = document.getElementsByClassName("slideHeader solveClearing");
         for (var a = 0; a < slideHeaderElements.length; a++) {
             slideHeaderElements[a].addEventListener("click", methods.whichInput, false);
         }//end for
 
-        futureSlideHeaderElements = document.getElementsByClassName("futureSlideHeader clearfix");
+        futureSlideHeaderElements = document.getElementsByClassName("futureSlideHeader solveClearing");
         for (var o = 0; o < futureSlideHeaderElements.length; o++) {
             futureSlideHeaderElements[o].addEventListener("click", methods.whichInput, false);
         }//end for
