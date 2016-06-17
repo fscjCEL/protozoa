@@ -1,37 +1,40 @@
-.hidden {
-    visibility: hidden;
+.is-invisible {
+    /* as if it were never in the DOM  */
     display: none !important;
-
+    visibility: hidden;
 }
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+
+
+.is-dormant {
+    /* hidden to the naked eye, but visible to screen readers.  */
     position: absolute;
+    height: 1px;
     width: 1px;
+    margin: -1px;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    border: 0;
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
+
+
+.is-dormant.focusable:active,
+.is-dormant.focusable:focus {
+    position: static;
+    width: auto;
     height: auto;
     margin: 0;
     overflow: visible;
-    position: static;
-    width: auto;
+    clip: auto;
+}
+.is-cleared:before,
+.is-cleared:after {
+    content: " ";
+    display: table;
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
+.is-cleared:after {
     clear: both;
 }
-
