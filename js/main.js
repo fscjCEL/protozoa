@@ -574,7 +574,7 @@ var methods = {
         theActiveSlideElement = document.getElementById(slideID);
         //I need to change the href of the skip to content link each time slide is changed
         document.getElementById("skipToContentLink").href = "#"+destination;
-        window.location = "#"+destination;
+        window.location.hash = "#"+destination;
         //i am changing slides, so I need to change the look of the active header to an pastSlideHeader
         for (var g = 0; g < theActiveSlideElement.children.length; g++) {
             theChildsClassname = theActiveSlideElement.children[g].className;
@@ -713,8 +713,7 @@ var methods = {
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
-                //this is here because of it's scope, and so it will jump to and open a slide.
-                //window.location = "#"+destinationSlideID;
+               
                 document.getElementById(destinationSlideID).focus();
                 break;
         }//end switch
