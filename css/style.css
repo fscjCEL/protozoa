@@ -1321,6 +1321,9 @@
     height: .125em; } }
 /* end media Q*/
 /* generic element styles html body p ul */
+strong {
+  font-weight: 700; }
+
 h1,
 h2,
 h3,
@@ -2379,6 +2382,8 @@ button {
     /* This controls the opening timing height,width */ }
 
   #tocOpenState {
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding-top: 4rem;
     padding-bottom: .75em;
     overflow-x: hidden;
