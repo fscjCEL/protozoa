@@ -1,4 +1,3 @@
-
 $primaryColor: #2F343B;
 $lightPrimaryColor: #B8CCC7;
 $darkPrimaryColor: #212423;
@@ -242,15 +241,11 @@ $black: #090A0A;
 
 #tocClosedState .TOC{
     opacity: 0;
-    transition-property: opacity;
-    transition-duration:3.5s;
-    transition-timing-function: ease
+
 }
 #tocOpenState .TOC{
     opacity: 1;
-    transition-property: opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease
+
 }
 
 
@@ -413,7 +408,7 @@ $black: #090A0A;
 
 
     /* the timing for this is in the IDs that get swapped */
-    transition-property: height, width,background-color;
+    transition-property: height, width;
     transition-timing-function: ease-in-out;
 
 }
@@ -478,9 +473,7 @@ $black: #090A0A;
     text-align: center;
     @include lightWeight;
     @include font-familyRegular;
-    transition-property: opacity;
-    transition-timing-function: linear;
-    transition-duration: .1s;
+
 
 
 
