@@ -74,15 +74,26 @@ var methods = {
             aSingleParentalUnit.id = aSingleParentalUnitID;
             //insert parent into the DOM
             allTheFigureElements[i].appendChild(aSingleParentalUnit);
-            //copy the children into the new parental unit.
+        }//end for
+        //now fill all the new boxes with the content standing next to it as peer children
+        var howManyBoxes = allTheFigureElements.length;
 
-            for (var lmno = allTheFigureElements[i].children.length; lmno = 0; lmno--){
+        for(var lmno = 0; lmno < howManyBoxes;lmno++){
+            var theIDofFigureBox = "cel-figure-" + lmno;
+            var insertIntoMe = document.getElementById(theIDofFigureBox);//this is a node
+            var theParentFigureElement = insertIntoMe.parentNode;
+            //loop through the children of the parent
+            alert(theParentFigureElement.childNodes.length);
+            for(var hijk = theParentFigureElement.childNodes.length; hijk = 0;hijk--){
+                var evalMe = theParentFigureElement.childNodes[hijk];
 
-                    document.getElementById(aSingleParentalUnitID).innerHTML = "this is a test";
+                    insertIntoMe.appendChild(evalMe);
 
             }//end for
 
         }//end for
+
+
         /* old code for reference
         //create a button element that will be inserted into each figure element.
         //first: gather and loop through each figure element.
