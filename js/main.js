@@ -58,8 +58,33 @@ var methods = {
         }//end if
     },//end figureModalHandler
     figureButtonInsertion:function(){
-        //create a button element that will be inserted into each figure element.
+        var aSingleParentalUnit;
+        var aSingleParentalUnitID;
+        var allTheFigureElements = document.getElementsByClassName("figure");
 
+
+        //each element needs to have a button inserted, and then a listener added to the button.
+        for (var i = 0; i < allTheFigureElements.length; i++) {
+            //add the modal class to the parent element NOTE which is already classed as figure
+            allTheFigureElements[i].classList.add("cel-modal-dialog");
+            //create and write a new element as child of figure element.
+            aSingleParentalUnit = document.createElement("div");
+            aSingleParentalUnit.className = "cel-modal-container";
+            aSingleParentalUnitID = "cel-figure-" + i;
+            aSingleParentalUnit.id = aSingleParentalUnitID;
+            //insert parent into the DOM
+            allTheFigureElements[i].appendChild(aSingleParentalUnit);
+            //copy the children into the new parental unit.
+
+            for (var lmno = allTheFigureElements[i].children.length; lmno = 0; lmno--){
+
+                    document.getElementById(aSingleParentalUnitID).innerHTML = "this is a test";
+
+            }//end for
+
+        }//end for
+        /* old code for reference
+        //create a button element that will be inserted into each figure element.
         //first: gather and loop through each figure element.
         var allTheFigureElements = document.getElementsByClassName("figure");
         //each element needs to have a button inserted, and then a listener added to the button.
@@ -83,7 +108,7 @@ var methods = {
 
             document.getElementById(theCurrentFigureID).addEventListener("click",methods.figureModalHandler,false);
         }//end for
-
+        */
 
     },//end figureButtonInsertion
     populateTheNavMenu: function () {
@@ -713,7 +738,7 @@ var methods = {
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
-               
+
                 document.getElementById(destinationSlideID).focus();
                 break;
         }//end switch
