@@ -58,40 +58,48 @@ var methods = {
         }//end if
     },//end figureModalHandler
     figureButtonInsertion:function(){
-        var aSingleParentalUnit;
-        var aSingleParentalUnitID;
         var allTheFigureElements = document.getElementsByClassName("figure");
+        //container for clones.
+        var figureClonedNode;
+        //create a close button node.
+        var aCloseButton = document.createElement("a");
+        aCloseButton.innerHTML = "X";
+        //each Element needs to be transformed into the more complex structure.
 
-
-        //each element needs to have a button inserted, and then a listener added to the button.
         for (var i = 0; i < allTheFigureElements.length; i++) {
-            //add the modal class to the parent element NOTE which is already classed as figure
-            allTheFigureElements[i].classList.add("cel-modal-dialog");
-            //create and write a new element as child of figure element.
-            aSingleParentalUnit = document.createElement("div");
-            aSingleParentalUnit.className = "cel-modal-container";
-            aSingleParentalUnitID = "cel-figure-" + i;
-            aSingleParentalUnit.id = aSingleParentalUnitID;
-            //insert parent into the DOM
-            allTheFigureElements[i].appendChild(aSingleParentalUnit);
+            //clone the existing dialog.
+            figureClonedNode = allTheFigureElements[i].cloneNode(true);//don’t forget to bring the children along for the ride.
+            //change class of the  clone to modalContainer
+            figureClonedNode.classList.add("modalContainer");
+
+            //delete the existing child nodes.
+            while(allTheFigureElements[i].firstChild){
+                allTheFigureElements[i].removeChild(allTheFigureElements[i].firstChild);
+            }//end while
+
+            //insert the cloned object to the modalDialog
+            allTheFigureElements[i].appendChild(figureClonedNode);
+
+            //change the class on the existing element to modalDialog
+            allTheFigureElements[i].className = "modalDialog";
+
+
+
+
+
+            //make another close button
+            var anotherCloseButtonaCloseButton = aCloseButton.cloneNode(true);
+            //id a close button
+            anotherCloseButtonaCloseButton.id = "figure-"+i;
+            //add close button to container.
+            allTheFigureElements[i].appendChild(anotherCloseButtonaCloseButton);
+
+
+
+
         }//end for
         //now fill all the new boxes with the content standing next to it as peer children
-        var howManyBoxes = allTheFigureElements.length;
 
-        for(var lmno = 0; lmno < howManyBoxes;lmno++){
-            var theIDofFigureBox = "cel-figure-" + lmno;
-            var insertIntoMe = document.getElementById(theIDofFigureBox);//this is a node
-            var theParentFigureElement = insertIntoMe.parentNode;
-            //loop through the children of the parent
-            alert(theParentFigureElement.childNodes.length);
-            for(var hijk = theParentFigureElement.childNodes.length; hijk = 0;hijk--){
-                var evalMe = theParentFigureElement.childNodes[hijk];
-
-                    insertIntoMe.appendChild(evalMe);
-
-            }//end for
-
-        }//end for
 
 
         /* old code for reference
