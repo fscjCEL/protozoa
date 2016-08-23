@@ -1,23 +1,53 @@
-.figure{
+.figure-is-closed{
   position:relative;
   width:100%;
   margin:0;
   padding:0;
 }
-.figure img{
+.figure-is-closed img{
   width:100%;
   margin:0!important;
   padding:0;
   z-index:100;
 }
-.figure p{
+.figure-is-closed p{
   font-style: italic;
   text-align:center;
   width:100%;
   z-index:100;
 }
-.figure p::before{
+.figure-is-closed p::before{
   content:"Figure: ";
   font-weight: bold;
   z-index:100;
+}
+.figure-button-is-closed{
+
+  border-radius: 50%;
+
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 46px;
+  height: 46px;
+  visibility: visible;
+  background: url('../img/figureOpen.png') no-repeat;
+  background-position: 0 0;
+  background-size: 45px 45px;
+  background-color: transparent;
+}
+.figure-button-is-closed:hover{
+  @include breathingEffect;
+}
+.figure-button-is-open{
+
+}
+.figure-is-open{
+
+}
+.modal-dialog-is-closed{
+
+}
+.modal-dialog-is-open{
+
 }

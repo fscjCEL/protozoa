@@ -36,11 +36,12 @@ var methods = {
         //create a close button node.
         var aCloseButton = document.createElement("a");
         //todo I may need to add this X when I open the modal window.
-        aCloseButton.innerHTML = "X";
+        //aCloseButton.innerHTML = "X";
         //each Element needs to be transformed into the more complex structure.
         for (var i = 0; i < allTheFigureElements.length; i++) {
             //clone the existing dialog.
             figureClonedNode = allTheFigureElements[i].cloneNode(true);//don’t forget to bring the children along for the ride.
+            //figureClonedNode.className = "figure-is-closed";
             //delete the existing child nodes.
             while(allTheFigureElements[i].firstChild){
                 allTheFigureElements[i].removeChild(allTheFigureElements[i].firstChild);
@@ -48,14 +49,19 @@ var methods = {
             //insert the cloned object to the modalDialog
             allTheFigureElements[i].appendChild(figureClonedNode);
             //change the class on the existing element to modalDialog
-            allTheFigureElements[i].className = "modalDialog";
+            allTheFigureElements[i].className = "modalDialog-is-closed";
             //make another close button
             var anotherCloseButtonCloseButton = aCloseButton.cloneNode(true);
             //id + class this close button
             anotherCloseButtonCloseButton.id = "figure-"+i;
-            anotherCloseButtonCloseButton.className = "figure-button is-closed";
+            anotherCloseButtonCloseButton.className = "figure-button-is-closed";
             //add close button to container.
             allTheFigureElements[i].appendChild(anotherCloseButtonCloseButton);
+            //add the proper classname to the figure class so I can swap it proper.
+            var theFigureBox = document.getElementById("figure-"+i);
+            theFigureBox.parentNode.className = "figure-is-closed";
+            theFigureBox.addEventListener("click", methods.figureModalHandler,false);
+
         }//end for
         //now fill all the new boxes with the content standing next to it as peer children
 
