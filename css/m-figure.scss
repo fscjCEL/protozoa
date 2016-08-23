@@ -1,0 +1,100 @@
+.figure-is-closed{
+  position:relative;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.figure-is-closed > .figure-image{
+  width:100%;
+  margin:0!important;
+  padding:0;
+  z-index:100;
+}
+.figure-is-closed > .figure-description{
+  font-style: italic;
+  text-align:center;
+  width:100%;
+  z-index:100;
+}
+.figure-is-closed > .figure-description:before{
+  content:"Figure: ";
+  font-weight: bold;
+  z-index:100;
+}
+.figure-button-is-closed{
+
+  border-radius: 50%;
+
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 46px;
+  height: 46px;
+  visibility: visible;
+  background: url('../img/figureOpen.png') no-repeat;
+  background-position: 0 0;
+  background-size: 45px 45px;
+  background-color: transparent;
+}
+.figure-button-is-closed:hover,.figure-button-is-open:hover{
+  @include breathingEffect;
+}
+.figure-button-is-open{
+  border-radius: 50%;
+
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 46px;
+  height: 46px;
+  visibility: visible;
+  background: url('../img/figureClose.png') no-repeat;
+  background-position: 0 0;
+  background-size: 45px 45px;
+  background-color: transparent;
+  pointer-events: auto!important;
+
+}
+.figure-is-open{
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+}
+.figure-is-open > .figure-image, .figure-is-open > .figure-description{
+  max-width: 100%;
+  margin: 0 auto!important;
+  position: relative;
+  display: inline-block;
+
+}
+.modal-dialog-is-closed{
+  /*this is the default state, and should stay just like this for now. */
+}
+.modal-dialog-is-open{
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:1;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.figure-image{
+
+}
+.figure-description{
+  width: 100%;
+  text-align: center;
+}

@@ -19,47 +19,88 @@ var methods = {
             }else{
                 theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
             }//end if
-            theFirstParagraph.className = "TheFirst";
+            theFirstParagraph.classList.add("TheFirst");
 
         }
     },//end yellowFlashFunction
     figureModalHandler: function(){
-        //add the class that makes it a modal box
-
+        //change the class on the modalDialog box so it fills the screen.
+        var theModalDialogBox = this.parentNode.parentNode;
         var theFigureBox = this.parentNode;
-        var theFigureImage = theFigureBox.children[1];
-        var theFigureCaption = theFigureBox.children[2];
-        var figureEval = theFigureBox.getAttribute("data-state");
+        var theFigureButton = this;
+        var figureEval = theFigureButton.className;
+        //open box if closed.
 
+        if(figureEval === "figure-button-is-closed"){
+            theModalDialogBox.className = "modal-dialog-is-open";
+            theFigureBox.className = "figure-is-open";
+            theFigureButton.className = 'figure-button-is-open';
+        }
 
-        if (figureEval === "closed") {
-            //closed --> open
-            theFigureBox.setAttribute("data-state","open");
-            theFigureBox.className = "figure-open-state";
-            this.src = "img/figureClose.png";
-            if(theFigureImage.tagName === "IMG"){
-                theFigureImage.style.overflow = "scroll";
-            }//endif
-            if(theFigureCaption.tagName === "P"){
-                theFigureCaption.style.backgroundColor = "#FFF";
-            }//endif
-        }//endif
-        if (figureEval === "open") {
-            //open--->closed
-            theFigureBox.setAttribute("data-state","closed");
-            theFigureBox.className = "figure-closed-state";
-            this.src = "img/figureOpen.png";
-            if(theFigureCaption.tagName === "IMG"){
-                theFigureCaption.style.overflow = "visible";
-            }//endif
-            if(theFigureCaption.tagName === "P"){
-                theFigureCaption.style.backgroundColor = "transparent";
-            }//endif
+        if(figureEval === "figure-button-is-open"){
+            theModalDialogBox.className = "modal-dialog-is-closed";
+            theFigureBox.className = "figure-is-closed";
+            theFigureButton.className = 'figure-button-is-closed';
         }//end if
+
+        
     },//end figureModalHandler
     figureButtonInsertion:function(){
-        //create a button element that will be inserted into each figure element.
+        var allTheFigureElements = document.getElementsByClassName("figure");
 
+        //container for clones.
+        var figureClonedNode;
+        //create a close button node.
+        var aCloseButton = document.createElement("a");
+
+        //each Element needs to be transformed into the more complex structure.
+        for (var i=(allTheFigureElements.length-1);i>=0;i--) {
+            //clone the existing dialog.
+            figureClonedNode = allTheFigureElements[i].cloneNode(true);//don’t forget to bring the children along for the ride.
+            //figureClonedNode.className = "figure-is-closed";
+            //delete the existing child nodes.
+            while(allTheFigureElements[i].firstChild){
+                allTheFigureElements[i].removeChild(allTheFigureElements[i].firstChild);
+            }//end while
+            //insert the cloned object to the modalDialog
+            allTheFigureElements[i].appendChild(figureClonedNode);
+            //change the class on the existing element to modalDialog
+            allTheFigureElements[i].className = "modalDialog-is-closed";
+            //make another close button
+            var anotherCloseButtonCloseButton = aCloseButton.cloneNode(true);
+            //id + class this close button
+            anotherCloseButtonCloseButton.id = "figure-"+i;
+            anotherCloseButtonCloseButton.className = "figure-button-is-closed";
+            //add close button to container.
+            allTheFigureElements[i].appendChild(anotherCloseButtonCloseButton);
+           //add the event listener to the button
+            var theFigureButton = document.getElementById("figure-"+i);
+            theFigureButton.addEventListener("click", methods.figureModalHandler,false);
+
+            var theFigureBox = theFigureButton.parentNode;
+            //add the proper classname to the figure class so I can swap the classname.
+            theFigureBox.className = "figure-is-closed";
+
+
+            //grab the img inside the figurebox and add a classname to it.
+            for(var k=(theFigureBox.children.length-1);k>=0;k--){
+                    var theElementType = theFigureBox.children[k].tagName;
+                    if(theElementType === "IMG"){
+                        theFigureBox.children[k].className = "figure-image"
+                    }//end if
+                    if(theElementType === "P"){
+
+                        theFigureBox.children[k].classList.add("figure-description");
+                    }//end if
+            }//end for
+
+        }//end for
+        //now fill all the new boxes with the content standing next to it as peer children
+
+
+
+        /* old code for reference
+        //create a button element that will be inserted into each figure element.
         //first: gather and loop through each figure element.
         var allTheFigureElements = document.getElementsByClassName("figure");
         //each element needs to have a button inserted, and then a listener added to the button.
@@ -83,7 +124,7 @@ var methods = {
 
             document.getElementById(theCurrentFigureID).addEventListener("click",methods.figureModalHandler,false);
         }//end for
-
+        */
 
     },//end figureButtonInsertion
     populateTheNavMenu: function () {
@@ -713,7 +754,7 @@ var methods = {
                 destinationSlideID = "slide" + destinationSlideIDNUM;
                 destinationNavID = "nav" + destinationSlideIDNUM;
                 methods.changeTheActualSlide(destinationSlideID, destinationNavID, theActiveNavID, theActiveSlideID);
-               
+
                 document.getElementById(destinationSlideID).focus();
                 break;
         }//end switch
