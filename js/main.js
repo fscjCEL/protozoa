@@ -26,7 +26,13 @@ var methods = {
     figureModalHandler: function(){
         //add the class that makes it a modal box
 
-        alert("I need to re-write this whole damn think");
+        //change the class on the modalDialog box so it fills the screen.
+        var theModalDialogBox = this.parentNode.parentNode;
+        var theFigureBox = this.parentNode;
+        var theFigureButton = this;
+        theModalDialogBox.className = "modal-dialog-is-open";
+        theFigureBox.className = "figure-is-open";
+        theFigureButton.className = 'figure-button-is-open';
         
     },//end figureModalHandler
     figureButtonInsertion:function(){
@@ -60,7 +66,12 @@ var methods = {
             //add the proper classname to the figure class so I can swap it proper.
             var theFigureBox = document.getElementById("figure-"+i);
             theFigureBox.parentNode.className = "figure-is-closed";
+            //addd the event listener to the button.
             theFigureBox.addEventListener("click", methods.figureModalHandler,false);
+            //grab the img inside the figurebox and add a classname to it.
+            for (var k = theFigureBox.children.length;){
+
+            }//end for
 
         }//end for
         //now fill all the new boxes with the content standing next to it as peer children
