@@ -1592,19 +1592,19 @@ p {
   margin: 0;
   padding: 0; }
 
-.figure-is-closed img {
+.figure-is-closed > .figure-image {
   width: 100%;
   margin: 0 !important;
   padding: 0;
   z-index: 100; }
 
-.figure-is-closed p {
+.figure-is-closed > .figure-description {
   font-style: italic;
   text-align: center;
   width: 100%;
   z-index: 100; }
 
-.figure-is-closed p::before {
+.figure-is-closed > .figure-description:before {
   content: "Figure: ";
   font-weight: bold;
   z-index: 100; }
@@ -1622,7 +1622,7 @@ p {
   background-size: 45px 45px;
   background-color: transparent; }
 
-.figure-button-is-closed:hover {
+.figure-button-is-closed:hover, .figure-button-is-open:hover {
   -webkit-animation-name: breathingHover;
   animation-name: breathingHover;
   -webkit-animation-duration: .75s;
@@ -1645,22 +1645,25 @@ p {
   background: url("../img/figureClose.png") no-repeat;
   background-position: 0 0;
   background-size: 45px 45px;
-  background-color: transparent; }
+  background-color: transparent;
+  pointer-events: auto !important; }
 
 .figure-is-open {
   width: 80%;
   position: relative;
   margin: 0 auto;
   padding: 5px;
+  text-align: center;
   background: #fff;
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999); }
 
-.figure-is-open img, .figure-is-open p {
+.figure-is-open > .figure-image, .figure-is-open > .figure-description {
   max-width: 100%;
   margin: 0 auto !important;
-  position: relative; }
+  position: relative;
+  display: inline-block; }
 
 .modal-dialog-is-closed {
   /*this is the default state, and should stay just like this for now. */ }
@@ -1678,6 +1681,10 @@ p {
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none; }
+
+.figure-description {
+  width: 100%;
+  text-align: center; }
 
 .courseIcon {
   fill: #F7FFFC;

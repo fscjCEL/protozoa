@@ -19,32 +19,42 @@ var methods = {
             }else{
                 theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
             }//end if
-            theFirstParagraph.className = "TheFirst";
+            theFirstParagraph.classList.add("TheFirst");
 
         }
     },//end yellowFlashFunction
     figureModalHandler: function(){
-        //add the class that makes it a modal box
-
         //change the class on the modalDialog box so it fills the screen.
         var theModalDialogBox = this.parentNode.parentNode;
         var theFigureBox = this.parentNode;
         var theFigureButton = this;
-        theModalDialogBox.className = "modal-dialog-is-open";
-        theFigureBox.className = "figure-is-open";
-        theFigureButton.className = 'figure-button-is-open';
+        var figureEval = theFigureButton.className;
+        //open box if closed.
+
+        if(figureEval === "figure-button-is-closed"){
+            theModalDialogBox.className = "modal-dialog-is-open";
+            theFigureBox.className = "figure-is-open";
+            theFigureButton.className = 'figure-button-is-open';
+        }
+
+        if(figureEval === "figure-button-is-open"){
+            theModalDialogBox.className = "modal-dialog-is-closed";
+            theFigureBox.className = "figure-is-closed";
+            theFigureButton.className = 'figure-button-is-closed';
+        }//end if
+
         
     },//end figureModalHandler
     figureButtonInsertion:function(){
         var allTheFigureElements = document.getElementsByClassName("figure");
+
         //container for clones.
         var figureClonedNode;
         //create a close button node.
         var aCloseButton = document.createElement("a");
-        //todo I may need to add this X when I open the modal window.
-        //aCloseButton.innerHTML = "X";
+
         //each Element needs to be transformed into the more complex structure.
-        for (var i = 0; i < allTheFigureElements.length; i++) {
+        for (var i=(allTheFigureElements.length-1);i>=0;i--) {
             //clone the existing dialog.
             figureClonedNode = allTheFigureElements[i].cloneNode(true);//don’t forget to bring the children along for the ride.
             //figureClonedNode.className = "figure-is-closed";
@@ -63,14 +73,25 @@ var methods = {
             anotherCloseButtonCloseButton.className = "figure-button-is-closed";
             //add close button to container.
             allTheFigureElements[i].appendChild(anotherCloseButtonCloseButton);
-            //add the proper classname to the figure class so I can swap it proper.
-            var theFigureBox = document.getElementById("figure-"+i);
-            theFigureBox.parentNode.className = "figure-is-closed";
-            //addd the event listener to the button.
-            theFigureBox.addEventListener("click", methods.figureModalHandler,false);
-            //grab the img inside the figurebox and add a classname to it.
-            for (var k = theFigureBox.children.length;){
+           //add the event listener to the button
+            var theFigureButton = document.getElementById("figure-"+i);
+            theFigureButton.addEventListener("click", methods.figureModalHandler,false);
 
+            var theFigureBox = theFigureButton.parentNode;
+            //add the proper classname to the figure class so I can swap the classname.
+            theFigureBox.className = "figure-is-closed";
+
+
+            //grab the img inside the figurebox and add a classname to it.
+            for(var k=(theFigureBox.children.length-1);k>=0;k--){
+                    var theElementType = theFigureBox.children[k].tagName;
+                    if(theElementType === "IMG"){
+                        theFigureBox.children[k].className = "figure-image"
+                    }//end if
+                    if(theElementType === "P"){
+
+                        theFigureBox.children[k].classList.add("figure-description");
+                    }//end if
             }//end for
 
         }//end for

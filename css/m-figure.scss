@@ -4,19 +4,19 @@
   margin:0;
   padding:0;
 }
-.figure-is-closed img{
+.figure-is-closed > .figure-image{
   width:100%;
   margin:0!important;
   padding:0;
   z-index:100;
 }
-.figure-is-closed p{
+.figure-is-closed > .figure-description{
   font-style: italic;
   text-align:center;
   width:100%;
   z-index:100;
 }
-.figure-is-closed p::before{
+.figure-is-closed > .figure-description:before{
   content:"Figure: ";
   font-weight: bold;
   z-index:100;
@@ -36,7 +36,7 @@
   background-size: 45px 45px;
   background-color: transparent;
 }
-.figure-button-is-closed:hover{
+.figure-button-is-closed:hover,.figure-button-is-open:hover{
   @include breathingEffect;
 }
 .figure-button-is-open{
@@ -52,6 +52,7 @@
   background-position: 0 0;
   background-size: 45px 45px;
   background-color: transparent;
+  pointer-events: auto!important;
 
 }
 .figure-is-open{
@@ -59,16 +60,17 @@
   position: relative;
   margin: 0 auto;
   padding: 5px;
-
+  text-align: center;
   background: #fff;
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
 }
-.figure-is-open img, .figure-is-open p{
+.figure-is-open > .figure-image, .figure-is-open > .figure-description{
   max-width: 100%;
   margin: 0 auto!important;
   position: relative;
+  display: inline-block;
 
 }
 .modal-dialog-is-closed{
@@ -88,4 +90,11 @@
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+}
+.figure-image{
+
+}
+.figure-description{
+  width: 100%;
+  text-align: center;
 }
