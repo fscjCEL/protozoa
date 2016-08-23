@@ -70,6 +70,7 @@ $black: #090A0A;
 @import 'chunk-col-25';
 @import 'chunk-col-layoutHelpers';
 
+
 /* generic element styles html body p ul */
 @import 'baseClasses';
 
@@ -82,7 +83,8 @@ $black: #090A0A;
 /* created a golden ration sized centered column that look and acts like a traditional book */
 @import 'bookBox';
 
-
+/* style for the figure image elements*/
+@import "m-figure";
 
 
 
@@ -834,58 +836,7 @@ button{border:0;}
 
 
 }
-.figure{
-  position:relative;
-  width:100%;
-  margin:0;
-  padding:0;
 
-}
-.figure-open-state{
-
-    width:100%;
-    margin:0;
-    padding:0;
-
-    top : 0;
-    bottom : 0;
-    left : 0;
-    right : 0;
-    background : rgba(0,0,0,0.8);
-    position : fixed;
-    z-index : 102;
-}
-.figure-closed-state{
-    position:relative;
-    width:100%;
-    margin:0;
-    padding:0;
-
-    top : auto;
-    bottom : auto;
-    left : auto;
-    right : auto;
-    background : rgba(0,0,0,0);
-
-    z-index : auto;
-}
-.figure img{
-  width:100%;
-  margin:0!important;
-  padding:0;
-  z-index:100;
-}
-.figure p{
-  font-style: italic;
-  text-align:center;
-  width:100%;
-  z-index:100;
-}
-.figure p::before{
-    content:"Figure: ";
-    font-weight: bold;
-    z-index:100;
-}
 .fullScreenButton{
   width:30px!important;
   height:30px!important;

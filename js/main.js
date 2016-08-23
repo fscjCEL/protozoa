@@ -26,36 +26,8 @@ var methods = {
     figureModalHandler: function(){
         //add the class that makes it a modal box
 
-        var theFigureBox = this.parentNode;
-        var theFigureImage = theFigureBox.children[1];
-        var theFigureCaption = theFigureBox.children[2];
-        var figureEval = theFigureBox.getAttribute("data-state");
-
-
-        if (figureEval === "closed") {
-            //closed --> open
-            theFigureBox.setAttribute("data-state","open");
-            theFigureBox.className = "figure-open-state";
-            this.src = "img/figureClose.png";
-            if(theFigureImage.tagName === "IMG"){
-                theFigureImage.style.overflow = "scroll";
-            }//endif
-            if(theFigureCaption.tagName === "P"){
-                theFigureCaption.style.backgroundColor = "#FFF";
-            }//endif
-        }//endif
-        if (figureEval === "open") {
-            //open--->closed
-            theFigureBox.setAttribute("data-state","closed");
-            theFigureBox.className = "figure-closed-state";
-            this.src = "img/figureOpen.png";
-            if(theFigureCaption.tagName === "IMG"){
-                theFigureCaption.style.overflow = "visible";
-            }//endif
-            if(theFigureCaption.tagName === "P"){
-                theFigureCaption.style.backgroundColor = "transparent";
-            }//endif
-        }//end if
+        alert("I need to re-write this whole damn think");
+        
     },//end figureModalHandler
     figureButtonInsertion:function(){
         var allTheFigureElements = document.getElementsByClassName("figure");
@@ -69,8 +41,6 @@ var methods = {
         for (var i = 0; i < allTheFigureElements.length; i++) {
             //clone the existing dialog.
             figureClonedNode = allTheFigureElements[i].cloneNode(true);//don’t forget to bring the children along for the ride.
-            //change class of the  clone to modalContainer
-            figureClonedNode.classList.add("modalContainer");
             //delete the existing child nodes.
             while(allTheFigureElements[i].firstChild){
                 allTheFigureElements[i].removeChild(allTheFigureElements[i].firstChild);
@@ -83,7 +53,7 @@ var methods = {
             var anotherCloseButtonCloseButton = aCloseButton.cloneNode(true);
             //id + class this close button
             anotherCloseButtonCloseButton.id = "figure-"+i;
-            anotherCloseButtonCloseButton.className = "figure-is-closed";
+            anotherCloseButtonCloseButton.className = "figure-button is-closed";
             //add close button to container.
             allTheFigureElements[i].appendChild(anotherCloseButtonCloseButton);
         }//end for
