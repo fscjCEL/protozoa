@@ -1937,7 +1937,7 @@ p {
   color: #F7FFFC;
   position: absolute;
   right: 0;
-  top: .25em;
+  top: 0;
   margin-right: .25em;
   text-align: left;
   overflow: hidden;
@@ -1951,6 +1951,7 @@ p {
   background-color: #2F343B;
   z-index: 2;
   padding-bottom: .3rem;
+  padding-top: .25em;
   background-image: url(../img/HELP-default.png);
   background-position: 100% 0;
   background-size: 2.5rem;
