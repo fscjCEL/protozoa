@@ -43,7 +43,7 @@ var methods = {
             theFigureButton.className = 'figure-button-is-closed';
         }//end if
 
-        
+
     },//end figureModalHandler
     figureButtonInsertion:function(){
         var allTheFigureElements = document.getElementsByClassName("figure");
@@ -422,28 +422,17 @@ var methods = {
                 }//end if
             }//end allTheListItems for loop
         }//end allTheListItems If
-        //add the title attribute to all anchors that open a new window, giving people a warning that it is happeneing.
+        //add the title attribute to all anchors that open a new window. This lets them know that they are about to leave the page..
         allTheLinks = document.getElementsByTagName("a");
         for (var s = 0; s < allTheLinks.length; s++) {
             targetBlank = allTheLinks[s].getAttribute("target");
             if (targetBlank === "_blank") {
-                theTargetURL = allTheLinks[s].getAttribute("href");
-                allTheLinks[s].setAttribute("title", "NOTE: This external link will bring you to the following URL:" + theTargetURL);
-                //create an element, then insert it in before the anchor element.
-                theElementToInsertBefore = allTheLinks[s];
-                theElementsParent = theElementToInsertBefore.parentNode;
-                theNewElement = document.createElement("img");
-                //this inserts a little glyph before each link within the content that leads to an external page. All internal links do not get the glyph. .
-                theNewElement.id = "link" + s;
-                theNewElement.alt = "";
-                theNewElement.style.width = "10px";
-                theNewElement.style.height = "10px";
-                theNewElement.style.margin = "0";
-                theNewElement.style.padding = "0 3px 6px 0";
-                theNewElement.src = "../../../img/externalLinkIcon.png";
-                if (allTheLinks[s].className !== "celLogoLink") {
-                    theElementsParent.insertBefore(theNewElement, theElementToInsertBefore);
-                }//end if
+                //take this target URL and strip the http:// part.
+                var trimThisUrl = allTheLinks[s].getAttribute("href").substr(7);
+                 //adding the hover title
+                allTheLinks[s].setAttribute("title", "NOTE: This external link will bring you to the following URL: " + trimThisUrl);
+                //adding the class that paints the arrow glyph after every link.
+                allTheLinks[s].classList.add("cel-link-icon");
             }//end if
         }//end for
     },//end givingAccess function
@@ -858,6 +847,7 @@ var methods = {
     main: function () {
 
         //this function is limited to mostly adding event listeners. The one exception, as it stands, is rendering the audio buttons on the page. This has extremely low overhead, and is the first of a two step process designed to make page loading more efficient.
+        var tocListItems;
         var slideHeaderElements, futureSlideHeaderElements, allTheAudioButtons, allThePreviousSLideButtons, allTheNextSLideButtons, allTheNavElements;
 
 
@@ -925,7 +915,7 @@ var methods = {
         //the TOC button
         document.getElementById("theTocTarget").addEventListener("click", methods.clickScopeTOC, false);
         //each TOC link
-        var tocListItems = document.getElementsByClassName("TOClink");
+        tocListItems = document.getElementsByClassName("TOClink");
         for (var ttt = 0; ttt < tocListItems.length; ttt++) {
             tocListItems[ttt].addEventListener("click", methods.whichInput, false);
         }//end for

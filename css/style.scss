@@ -86,9 +86,10 @@ $black: #090A0A;
 /* style for the figure image elements */
 @import "m-figure";
 
+.cel-link-icon:after{
+    content: "\21D7";
 
-
-
+}
 
 .courseIcon {
   fill: $white;
