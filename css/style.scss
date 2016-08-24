@@ -55,7 +55,7 @@ $black: #090A0A;
 
 
     margin:0!important;
-    color: $lightPrimaryColor;
+    color: $white;
 
 }
 /* importing chunks*/
@@ -151,7 +151,7 @@ $black: #090A0A;
     border-radius: .1875em;
     padding-top: 0;
     list-style-type:decimal;
-    color:$lightPrimaryColor;
+    color: $white;
 
     transition-property: width,right;
     transition-timing-function:ease-in-out;
@@ -228,7 +228,7 @@ $black: #090A0A;
     left:4rem;
     top:2rem;
 
-    color:$lightPrimaryColor;
+    color:$white;
     display:inline-block;
 
     font-size: 2em;
@@ -485,23 +485,23 @@ $black: #090A0A;
 .helpContent p{
     width:90%;
   margin: 0 auto;
-  color:$lightPrimaryColor;
+  color:$white;
 }
 .helpContent p a{
 
-  color:$lightPrimaryColor;
+  color:$white;
 }
 
 .helpContent h3{
   font-weight: 300;
   margin-bottom:1em;
   margin-top: 1em;
-  color:$lightPrimaryColor;
+  color:$white;
 }
 
 .slide {
     width: 100%;
-    background-color: $lightPrimaryColor;
+    background-color: $white;
 
 
 }
