@@ -402,7 +402,7 @@ $black: #090A0A;
     color: $white;
     position:absolute;
     right:0;
-    top:.25em;
+    top:0;
     margin-right: .25em;
     text-align: left;
 
@@ -425,6 +425,7 @@ $black: #090A0A;
     background-color: $primaryColor;
     z-index: 2;
     padding-bottom: .3rem;
+    padding-top: .25em;
     background-image : url(../img/HELP-default.png);
     background-position : 100% 0 ;
     background-size : 2.5rem;
@@ -436,6 +437,7 @@ $black: #090A0A;
 
 #helpboxOpenState {
     // This is the help box that is sitting open.
+
 
     background-color: $darkPrimaryColor;
     @include material-shadow(.15em, .15em, .15em);
