@@ -1686,6 +1686,9 @@ p {
   width: 100%;
   text-align: center; }
 
+.cel-link-icon:after {
+  content: "\21D7"; }
+
 .courseIcon {
   fill: #F7FFFC;
   height: 45px;
