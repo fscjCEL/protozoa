@@ -95,37 +95,6 @@ var methods = {
             }//end for
 
         }//end for
-        //now fill all the new boxes with the content standing next to it as peer children
-
-
-
-        /* old code for reference
-        //create a button element that will be inserted into each figure element.
-        //first: gather and loop through each figure element.
-        var allTheFigureElements = document.getElementsByClassName("figure");
-        //each element needs to have a button inserted, and then a listener added to the button.
-        for (var i = 0; i < allTheFigureElements.length; i++) {
-            //create the button element
-            var newFigureButtonElement = document.createElement("img");
-            newFigureButtonElement.src = "img/figureOpen.png";
-            newFigureButtonElement.alt = "";
-            newFigureButtonElement.className = "fullScreenButton";
-            var theCurrentFigureID = "figureButton"+(i+1);
-            newFigureButtonElement.id = theCurrentFigureID;
-            // insertTheButton image element.
-            var theFigureParentNode = allTheFigureElements[i];
-            theFigureParentNode.setAttribute("data-state","closed");
-            // grab the img in the box, and set it up as the reference node.
-            var theIMGsInFigure = allTheFigureElements[i].getElementsByTagName("img");
-            var theFigureReferenceNode = theIMGsInFigure[0];
-            //now insert the button
-            theFigureParentNode.insertBefore(newFigureButtonElement, theFigureReferenceNode);
-
-
-            document.getElementById(theCurrentFigureID).addEventListener("click",methods.figureModalHandler,false);
-        }//end for
-        */
-
     },//end figureButtonInsertion
     populateTheNavMenu: function () {
         //this function is called from main, and adds list items to the nav menu.
