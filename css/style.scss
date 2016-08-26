@@ -79,7 +79,6 @@ $black: #090A0A;
 /* styles that hide things + clearing styles*/
 @import 'helperClasses';
 
-
 /* created a golden ration sized centered column that look and acts like a traditional book */
 @import 'bookBox';
 
@@ -691,13 +690,13 @@ a.slideHeader:hover{
 }
 
 .slide .slideContent {
-    //default mobile slide state...invisible
+    //default mobile slide state...hidden
     display: none !important;
     visibility: hidden;
 }
 
 .slide .slideFooter {
-    //default mobile slide state...invisible
+    //default mobile slide state...hidden
     display: none !important;
     visibility: hidden;
 }
@@ -822,7 +821,7 @@ button{border:0;}
 }
 
 .navContainer {
-    //default mobile slide state...invisible
+    //default mobile slide state...hidden
     display: none !important;
     visibility: hidden;
 }
@@ -1052,8 +1051,6 @@ button{border:0;}
 
 #tocOpenState{
 
-    overflow-x: hidden;
-    overflow-y: scroll;
     padding-top:4rem;
     padding-bottom: .75em;
 
@@ -1125,7 +1122,7 @@ button{border:0;}
 /* for now...all the non-mobile styles */
 
 .slide {
-    //default desktop slide state...invisible
+    //default desktop slide state...hidden
     display: none !important;
     visibility: hidden;
 }

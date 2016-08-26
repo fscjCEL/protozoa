@@ -2431,8 +2431,6 @@ button {
     /* This controls the opening timing height,width */ }
 
   #tocOpenState {
-    overflow-x: hidden;
-    overflow-y: scroll;
     padding-top: 4rem;
     padding-bottom: .75em;
     width: 50%;
