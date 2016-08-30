@@ -1768,7 +1768,9 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  outline: none; }
+  outline: none;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 #tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
