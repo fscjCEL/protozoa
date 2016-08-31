@@ -6,6 +6,7 @@ $shadowColor: #727272;
 $white: #F7FFFC;
 $black: #090A0A;
 
+/* NOTE: for these weights to work them must exist in the webfont you download. */
 @mixin lightWeight() {
   font-weight: 300;
 }
@@ -18,7 +19,6 @@ $black: #090A0A;
   font-weight: 700;
 }
 
-
 @mixin material-shadow($exOffset, $whyOffset, $blur) {
   -moz-box-shadow: $exOffset $whyOffset $blur $shadowColor;
   -webkit-box-shadow: $exOffset $whyOffset $blur $shadowColor;
@@ -28,7 +28,6 @@ $black: #090A0A;
 @mixin font-familyRegular() {
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
 }
-
 
 @mixin font-familyHeading() {
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
@@ -47,16 +46,11 @@ $black: #090A0A;
   animation-direction: alternate;
 }
 
-
 @mixin indexHeader(){
-
     @include lightWeight;
     @include font-familyHeading;
-
-
     margin:0!important;
     color: $white;
-
 }
 /* importing chunks*/
 
@@ -69,7 +63,6 @@ $black: #090A0A;
 @import 'chunk-col-30';
 @import 'chunk-col-25';
 @import 'chunk-col-layoutHelpers';
-
 
 /* generic element styles html body p ul */
 @import 'baseClasses';
@@ -87,7 +80,6 @@ $black: #090A0A;
 
 .cel-link-icon:after{
     content: "\21D7";
-
 }
 
 .courseIcon {
@@ -126,17 +118,11 @@ $black: #090A0A;
 
 .moduleHeaders {
     width: 100%;
-
     background-color: $primaryColor;
     border-bottom: .0625em solid $darkPrimaryColor;
     margin-bottom: .5rem;
-    @include material-shadow(0px,
-    .125em,
-    .0625em);
-
+    @include material-shadow(0px,.125em,.0625em);
 }
-
-
 
 #theModuleHeader {
     position: relative;
@@ -144,15 +130,12 @@ $black: #090A0A;
     transition-timing-function:ease-in-out;
     transition-duration: .25s;
 }
-
 .TOCs{
     margin: 0 auto -50px 0;
     border-radius: .1875em;
     padding-top: 0;
     list-style-type:decimal;
-    color: $white;
-
-    transition-property: width,right;
+    color: $white;    transition-property: width,right;
     transition-timing-function:ease-in-out;
     transition-duration: .1s;
 }
@@ -164,7 +147,6 @@ $black: #090A0A;
     width: 1%;
     height: 2.8125em;
     background-color: transparent;
-
     overflow:hidden;
     top: .25rem;
     right:3em;
@@ -178,26 +160,22 @@ $black: #090A0A;
     padding-bottom: .75em;
     background-color: $darkPrimaryColor;
     @include material-shadow(.15em, .15em, .15em);
-
     position:absolute;
     top: 0;
     right:0;
     outline: none;
     overflow-x: hidden;
     overflow-y: scroll;
-
 }
 
 #tocClosedState #theTocTarget {
     /* this hooks into the closed menu TOC button */
-    width: 2.6em;
-    height: 2.6em;
-
+    width: 200px;
+    height: 200px;
     background-image: url('../img/TOC-default.png');
     background-repeat: no-repeat;
     background-position:-1px 0, top;
     background-size:2.5em, 2.5em;
-
     position:absolute;
     right:0;
     top: 0;
