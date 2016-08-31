@@ -1775,8 +1775,8 @@ p {
 
 #tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
-  width: 200px;
-  height: 200px;
+  width: 2.6em;
+  height: 2.6em;
   background-image: url("../img/TOC-default.png");
   background-repeat: no-repeat;
   background-position: -1px 0, top;

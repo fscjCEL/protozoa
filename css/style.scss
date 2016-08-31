@@ -170,12 +170,14 @@ $black: #090A0A;
 
 #tocClosedState #theTocTarget {
     /* this hooks into the closed menu TOC button */
-    width: 200px;
-    height: 200px;
+    width: 2.6em;
+    height: 2.6em;
+
     background-image: url('../img/TOC-default.png');
     background-repeat: no-repeat;
     background-position:-1px 0, top;
     background-size:2.5em, 2.5em;
+
     position:absolute;
     right:0;
     top: 0;
