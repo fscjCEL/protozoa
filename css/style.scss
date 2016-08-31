@@ -40,10 +40,10 @@ $black: #090A0A;
   animation-direction: alternate;
 }
 @mixin indexHeader(){
-    @include lightWeight;
-    @include font-familyHeading;
-    margin:0!important;
-    color: $white;
+  @include lightWeight;
+  @include font-familyHeading;
+  margin:0!important;
+  color: $white;
 }
 /* importing chunks*/
 /* column layout styles */
@@ -65,7 +65,7 @@ $black: #090A0A;
 /* style for the figure image elements */
 @import "m-figure";
 .cel-link-icon:after{
-    content: "\21D7";
+  content: "\21D7";
 }
 .courseIcon {
   fill: $white;
@@ -75,291 +75,291 @@ $black: #090A0A;
   padding: 0.5rem 0 0 .5rem;
 }
 #courseNumber {
-    float: left;
-    width: 98%;
-    color: $white;
-    margin: 0;
-    padding: .75rem 0 0 .5rem;
-    @include lightWeight;
+  float: left;
+  width: 98%;
+  color: $white;
+  margin: 0;
+  padding: .75rem 0 0 .5rem;
+  @include lightWeight;
 }
 #moduleNumber {
-    float: left;
-    width: 94%;
-    color: $white;
-    margin: 0 0 .8rem 1rem;
-    @include lightWeight;
+  float: left;
+  width: 94%;
+  color: $white;
+  margin: 0 0 .8rem 1rem;
+  @include lightWeight;
 }
 .module {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 0;
-    margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
 }
 .moduleHeaders {
-    width: 100%;
-    background-color: $primaryColor;
-    border-bottom: .0625em solid $darkPrimaryColor;
-    margin-bottom: .5rem;
-    @include material-shadow(0px,.125em,.0625em);
+  width: 100%;
+  background-color: $primaryColor;
+  border-bottom: .0625em solid $darkPrimaryColor;
+  margin-bottom: .5rem;
+  @include material-shadow(0px,.125em,.0625em);
 }
 #theModuleHeader {
-    position: relative;
-    transition-property: all;
-    transition-timing-function:ease-in-out;
-    transition-duration: .25s;
+  position: relative;
+  transition-property: all;
+  transition-timing-function:ease-in-out;
+  transition-duration: .25s;
 }
 .TOCs{
-    margin: 0 auto -50px 0;
-    border-radius: .1875em;
-    padding-top: 0;
-    list-style-type:decimal;
-    color: $white;    transition-property: width,right;
-    transition-timing-function:ease-in-out;
-    transition-duration: .1s;
+  margin: 0 auto -50px 0;
+  border-radius: .1875em;
+  padding-top: 0;
+  list-style-type:decimal;
+  color: $white;    transition-property: width,right;
+  transition-timing-function:ease-in-out;
+  transition-duration: .1s;
 }
 #tocClosedState {
-    /* default TOC style - button state - */
-    position: absolute;
-    z-index: 2;
-    width: 1%;
-    height: 2.8125em;
-    background-color: transparent;
-    overflow:hidden;
-    top: .25rem;
-    right:3em;
-    outline: none;
+  /* default TOC style - button state - */
+  position: absolute;
+  z-index: 2;
+  width: 1%;
+  height: 2.8125em;
+  background-color: transparent;
+  overflow:hidden;
+  top: .25rem;
+  right:3em;
+  outline: none;
 }
 #tocOpenState{
-    z-index: 200;
-    width: 90%;
-    padding-top:4rem;
-    padding-bottom: .75em;
-    background-color: $darkPrimaryColor;
-    @include material-shadow(.15em, .15em, .15em);
-    position:absolute;
-    top: 0;
-    right:0;
-    outline: none;
-    overflow-x: hidden;
-    overflow-y: scroll;
+  z-index: 200;
+  width: 90%;
+  padding-top:4rem;
+  padding-bottom: .75em;
+  background-color: $darkPrimaryColor;
+  @include material-shadow(.15em, .15em, .15em);
+  position:absolute;
+  top: 0;
+  right:0;
+  outline: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 #tocClosedState #theTocTarget {
-    /* this hooks into the closed menu TOC button */
-    width: 2.6em;
-    height: 2.6em;
-    background-image: url('../img/TOC-default.png');
-    background-repeat: no-repeat;
-    background-position:-1px 0, top;
-    background-size:2.5em, 2.5em;
-    position:absolute;
-    right:0;
-    top: 0;
-    outline: none;
+  /* this hooks into the closed menu TOC button */
+  width: 2.6em;
+  height: 2.6em;
+  background-image: url('../img/TOC-default.png');
+  background-repeat: no-repeat;
+  background-position:-1px 0, top;
+  background-size:2.5em, 2.5em;
+  position:absolute;
+  right:0;
+  top: 0;
+  outline: none;
 }
 #tocOpenState #theTocTarget{
-    /* this controls the open state of the TOC menu button */
-    background: url('../img/TOC-closeX.png') no-repeat;
-    width: 80%;
-    height: 2.75rem;
-    background-size:2.75rem;
-    background-position: 100% 0, top;
-    right: .75em;
-    top: .75em;
-    position:absolute;
-    outline: none;
+  /* this controls the open state of the TOC menu button */
+  background: url('../img/TOC-closeX.png') no-repeat;
+  width: 80%;
+  height: 2.75rem;
+  background-size:2.75rem;
+  background-position: 100% 0, top;
+  right: .75em;
+  top: .75em;
+  position:absolute;
+  outline: none;
 }
 #tocOpenState #theTocTarget:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 #tocClosedState #theTocTarget:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 #tocOpenState #theTocTarget::before{
-    /* This renders the Table of Contents Menu Title as a CSS insertion */
-    content:"Table of Contents";
-    position:relative;
-    left:4rem;
-    top:2rem;
-    color:$white;
-    display:inline-block;
-    font-size: 2em;
-    @include font-familyHeading;
-    @include lightWeight;
+  /* This renders the Table of Contents Menu Title as a CSS insertion */
+  content:"Table of Contents";
+  position:relative;
+  left:4rem;
+  top:2rem;
+  color:$white;
+  display:inline-block;
+  font-size: 2em;
+  @include font-familyHeading;
+  @include lightWeight;
 }
 /* these controls the fade in animation of the toc menu content.   */
 #tocClosedState .TOC{
-    opacity: 0;
+  opacity: 0;
 }
 #tocOpenState .TOC{
-    opacity: 1;
+  opacity: 1;
 }
 #tocOpenState li a {
-    /* The links that connect this lists to the actual slides. */
-    text-decoration: none;
+  /* The links that connect this lists to the actual slides. */
+  text-decoration: none;
 }
 #tocOpenState #slide1TOC {
-    margin-top: 2.8125em;
+  margin-top: 2.8125em;
 }
 .TOC{
-    margin-top: 0;
-    margin-bottom: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
 }
 .TOC h2 {
-    @include indexHeader;
-    font-size: 1.25rem;
-    line-height: 1.5;
+  @include indexHeader;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 .TOC h2:hover,.TOC h3:hover,.TOC h4:hover,.TOC h5:hover,.TOC h6:hover {
-    background-color: yellow;
-    color: $darkPrimaryColor;
+  background-color: yellow;
+  color: $darkPrimaryColor;
 }
 .TOC h3 {
-    @include indexHeader;
-    font-size: .9375rem;
-    line-height: 1.3;
+  @include indexHeader;
+  font-size: .9375rem;
+  line-height: 1.3;
 }
 .TOC h3:before {
-    content: "   ";
+  content: "   ";
 }
 .TOC h4 {
-    @include indexHeader;
-    font-size: .8rem;
-    line-height: 1.3;
+  @include indexHeader;
+  font-size: .8rem;
+  line-height: 1.3;
 
 }
 .TOC h4:before {
-    content: "   ";
+  content: "   ";
 }
 .TOC h5 {
-    @include indexHeader;
-    font-size: .8rem;
-    line-height: 1.3;
+  @include indexHeader;
+  font-size: .8rem;
+  line-height: 1.3;
 
 }
 .TOC h5 a {
-    padding-left: .9375em;
+  padding-left: .9375em;
 }
 .TOC h5:before {
-    content: "   ";
+  content: "   ";
 }
 .TOC h6 {
-    @include indexHeader;
-    font-size: .8rem;
-    line-height: 1.3;
+  @include indexHeader;
+  font-size: .8rem;
+  line-height: 1.3;
 }
 .TOC h6:before {
-    content: "   ";
+  content: "   ";
 }
 .audioBox {
-    width: 95%;
-    position: fixed;
-    bottom: 6.25em;
-    margin-top: -28px;
+  width: 95%;
+  position: fixed;
+  bottom: 6.25em;
+  margin-top: -28px;
 }
 .audioControls {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 }
 .audioButton {
-    position: fixed;
-    bottom: 2.9375em;
-    left: 45%;
-    height: 2.75em;
-    width: 2.75em;
-    background: url("../img/audioButton.png") no-repeat;
-    background-color: $accentColor;
-    background-size: cover;
-    border-radius: 50%;
-    @include material-shadow(0,
-    .25em,
-    .25em);
-    -o-transition: width .5s ease-in-out, height .25s ease-in-out;
-    -webkit-transition: width .5s ease-in-out, height .25s ease-in-out;
-    -moz-transition: width .5s ease-in-out, height .25s ease-in-out;
-    transition: width .5s ease-in-out, height .25s ease-in-out;
+  position: fixed;
+  bottom: 2.9375em;
+  left: 45%;
+  height: 2.75em;
+  width: 2.75em;
+  background: url("../img/audioButton.png") no-repeat;
+  background-color: $accentColor;
+  background-size: cover;
+  border-radius: 50%;
+  @include material-shadow(0,
+          .25em,
+          .25em);
+  -o-transition: width .5s ease-in-out, height .25s ease-in-out;
+  -webkit-transition: width .5s ease-in-out, height .25s ease-in-out;
+  -moz-transition: width .5s ease-in-out, height .25s ease-in-out;
+  transition: width .5s ease-in-out, height .25s ease-in-out;
 }
 #celLogo {
-    float: left;
-    -o-transition: width .5s, height .5s;
-    -webkit-transition: width .5s, height .5s;
-    -moz-transition: width .5s, height .5s;
-    transition: width .5s, height .5s;
-    height: 2.8125em;
-    width: 2.6em;
-    margin: .375em;
+  float: left;
+  -o-transition: width .5s, height .5s;
+  -webkit-transition: width .5s, height .5s;
+  -moz-transition: width .5s, height .5s;
+  transition: width .5s, height .5s;
+  height: 2.8125em;
+  width: 2.6em;
+  margin: .375em;
 }
 .helpBox {
-    background: url("../img/HELP-default.png") no-repeat;
-    background-position: center;
-    background-size: 2.6rem;
-    background-origin: content-box;
-    border-radius: .1875em;
-    color: $white;
-    position:absolute;
-    right:0;
-    top:0;
-    margin-right: .25em;
-    text-align: left;
-    overflow:hidden;
-    /* the timing for this is in the IDs that get swapped */
-    transition-property: height, width;
-    transition-timing-function: ease-in-out;
+  background: url("../img/HELP-default.png") no-repeat;
+  background-position: center;
+  background-size: 2.6rem;
+  background-origin: content-box;
+  border-radius: .1875em;
+  color: $white;
+  position:absolute;
+  right:0;
+  top:0;
+  margin-right: .25em;
+  text-align: left;
+  overflow:hidden;
+  /* the timing for this is in the IDs that get swapped */
+  transition-property: height, width;
+  transition-timing-function: ease-in-out;
 }
 #helpboxClosedState {
-    width : 2.75em;
-    height : 2.75em;
-    background-color: $primaryColor;
-    z-index: 2;
-    padding-bottom: .3rem;
-    padding-top: .25em;
-    background-image : url(../img/HELP-default.png);
-    background-position : 100% 0 ;
-    background-size : 2.5rem;
-    /* timing of height then width NOTE: this effects the closing animation */
-    transition-duration: .1s, .25s, .5s;
+  width : 2.75em;
+  height : 2.75em;
+  background-color: $primaryColor;
+  z-index: 2;
+  padding-bottom: .3rem;
+  padding-top: .25em;
+  background-image : url(../img/HELP-default.png);
+  background-position : 100% 0 ;
+  background-size : 2.5rem;
+  /* timing of height then width NOTE: this effects the closing animation */
+  transition-duration: .1s, .25s, .5s;
 }
 #helpboxOpenState {
-    // This is the help box that is sitting open.
-    background-color: $darkPrimaryColor;
-    @include material-shadow(.15em, .15em, .15em);
-    z-index: 200;
-    padding-bottom: 1rem;
-    width : 90vw;
-    background-image : url(../img/HELP-closeX.png);
-    background-position : 100% 0,top;
-    background-size : 2.5rem;
-    /* timing of height then width NOTE: this effects the opening animation*/
-    transition-duration: .25s, .1s,.5s;
+  // This is the help box that is sitting open.
+  background-color: $darkPrimaryColor;
+  @include material-shadow(.15em, .15em, .15em);
+  z-index: 200;
+  padding-bottom: 1rem;
+  width : 90vw;
+  background-image : url(../img/HELP-closeX.png);
+  background-position : 100% 0,top;
+  background-size : 2.5rem;
+  /* timing of height then width NOTE: this effects the opening animation*/
+  transition-duration: .25s, .1s,.5s;
 }
 #helpButton {
-    width: 100%;
-    height: 2.45em;
-    color: $white;
-    font-weight: 700;
-    padding: .7em 0 0 .9em;
-    text-align: left;
-    float: right;
+  width: 100%;
+  height: 2.45em;
+  color: $white;
+  font-weight: 700;
+  padding: .7em 0 0 .9em;
+  text-align: left;
+  float: right;
 }
 #helpButton:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 #helpboxClosedState .helpContent{
-    opacity: 0;
+  opacity: 0;
 }
 #helpboxOpenState .helpContent{
-    opacity: 1;
+  opacity: 1;
 }
 .helpContent {
-    width: 90%;
-    margin-left:5%;
-    text-align: center;
-    @include lightWeight;
-    @include font-familyRegular;
+  width: 90%;
+  margin-left:5%;
+  text-align: center;
+  @include lightWeight;
+  @include font-familyRegular;
 }
 .helpContent p{
-    width:90%;
+  width:90%;
   margin: 0 auto;
   color:$white;
 }
@@ -373,202 +373,202 @@ $black: #090A0A;
   color:$white;
 }
 .slide {
-    width: 100%;
-    background-color: $white;
+  width: 100%;
+  background-color: $white;
 }
 .activeSlide {
-    opacity:1;
-    float: left;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-bottom: .625em;
-    background-color: $white;
-    border-radius: .1875em;
-    @include material-shadow(0,.125em,.125em);
+  opacity:1;
+  float: left;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: .625em;
+  background-color: $white;
+  border-radius: .1875em;
+  @include material-shadow(0,.125em,.125em);
 }
 .slideHeader {
-    /* This is the active slide style. */
-    width: 95%;
-    position: relative;
-    text-decoration: none;
+  /* This is the active slide style. */
+  width: 95%;
+  position: relative;
+  text-decoration: none;
 }
 a.slideHeader:hover{
-    cursor:auto!important;
+  cursor:auto!important;
 }
 .slideHeader  {
-    //this controls the default space between main headers.
-    width: 100%;
-    color: $darkPrimaryColor;
-    text-align: left;
-    border-radius: .1875em;
-    @include lightWeight;
+  //this controls the default space between main headers.
+  width: 100%;
+  color: $darkPrimaryColor;
+  text-align: left;
+  border-radius: .1875em;
+  @include lightWeight;
 }
 .slideHeader .slideNumber {
-    float: left;
-    width: 17%;
-    text-align: right;
-    padding-right: 3%;
-    @include lightWeight;
+  float: left;
+  width: 17%;
+  text-align: right;
+  padding-right: 3%;
+  @include lightWeight;
 }
 .slideHeader .slideTitle {
-    float: right;
-    width: 75%;
-    text-align: left;
-    padding-left: 3%;
-    padding-right: 1%;
-    word-wrap: break-word;
-    border-left: 1px solid $black;
-    @include lightWeight;
+  float: right;
+  width: 75%;
+  text-align: left;
+  padding-left: 3%;
+  padding-right: 1%;
+  word-wrap: break-word;
+  border-left: 1px solid $black;
+  @include lightWeight;
 }
 .futureSlideHeader {
-    /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
-    width: 98%;
-    text-decoration: none;
-    border-radius: 50%;
+  /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
+  width: 98%;
+  text-decoration: none;
+  border-radius: 50%;
 }
 .futureSlideHeader  {
-    font-size: 2.25em;
-    width: 95%;
-    color: $darkPrimaryColor;
-    text-align: center;
-    padding: .625em 0;
-    margin: .1875em auto;
-    border-radius: .1875em;
-    background-color: $white;
-    @include lightWeight;
+  font-size: 2.25em;
+  width: 95%;
+  color: $darkPrimaryColor;
+  text-align: center;
+  padding: .625em 0;
+  margin: .1875em auto;
+  border-radius: .1875em;
+  background-color: $white;
+  @include lightWeight;
 }
 .futureSlideHeader .slideNumber {
-    float: left;
-    width: 17%;
-    text-align: right;
-    padding-right: 3%;
-    @include lightWeight;
+  float: left;
+  width: 17%;
+  text-align: right;
+  padding-right: 3%;
+  @include lightWeight;
 }
 .futureSlideHeader .slideTitle {
-    float: right;
-    width: 75%;
-    text-align: left;
-    padding-left: 3%;
-    padding-right: 1%;
-    word-wrap: break-word;
-    border-left: 1px solid $black;
-    @include lightWeight;
+  float: right;
+  width: 75%;
+  text-align: left;
+  padding-left: 3%;
+  padding-right: 1%;
+  word-wrap: break-word;
+  border-left: 1px solid $black;
+  @include lightWeight;
 }
 .futureSlideHeader:hover {
-    color: $white;
-    background-color: $accentColor
+  color: $white;
+  background-color: $accentColor
 }
 .pastSlideHeader {
-    /* this is a slide that has been clicked on already and shows as being in the past in the mobile slide stack*/
-    width: 90%;
-    text-decoration: none;
+  /* this is a slide that has been clicked on already and shows as being in the past in the mobile slide stack*/
+  width: 90%;
+  text-decoration: none;
 }
 .pastSlideHeader {
-    font-size: 2.25em;
-    padding: 5px 10px;
-    margin: 1px auto;
-    text-align: center;
-    background-color: $darkPrimaryColor;
-    @include lightWeight;
+  font-size: 2.25em;
+  padding: 5px 10px;
+  margin: 1px auto;
+  text-align: center;
+  background-color: $darkPrimaryColor;
+  @include lightWeight;
 }
 .pastSlideHeader:hover {
-    color: $white;
-    background-color: $accentColor;
+  color: $white;
+  background-color: $accentColor;
 }
 .pastSlideHeader .slideNumber {
-    float: left;
-    width: 20%;
-    text-align: right;
-    color: $white;
-    @include lightWeight;
+  float: left;
+  width: 20%;
+  text-align: right;
+  color: $white;
+  @include lightWeight;
 }
 .pastSlideHeader  .slideTitle {
-    float: right;
-    width: 75%;
-    text-align: left;
-    padding-left: 3%;
-    padding-right: 1%;
-    word-wrap: break-word;
-    border-left: 1px solid $lightPrimaryColor;
-    color: $white;
-    @include lightWeight;
+  float: right;
+  width: 75%;
+  text-align: left;
+  padding-left: 3%;
+  padding-right: 1%;
+  word-wrap: break-word;
+  border-left: 1px solid $lightPrimaryColor;
+  color: $white;
+  @include lightWeight;
 }
 .activeSlide .pastSlideHeader {
-    /* This is a slide that has been has been viewed once, and gone back to. I wanted this style to match the default style*/
-    width: 98%;
-    position: relative;
-    text-decoration: none;
+  /* This is a slide that has been has been viewed once, and gone back to. I wanted this style to match the default style*/
+  width: 98%;
+  position: relative;
+  text-decoration: none;
 }
 .activeSlide .pastSlideHeader {
-    //this controls the default space between main headers.
-    width: 95%;
-    color: $accentColor;
-    text-align: left;
-    padding: 10px 2.5%;
-    margin: 3px auto;
-    border-radius: 3px;
-    position: relative;
-    background-color: $white;
-    @include lightWeight;
+  //this controls the default space between main headers.
+  width: 95%;
+  color: $accentColor;
+  text-align: left;
+  padding: 10px 2.5%;
+  margin: 3px auto;
+  border-radius: 3px;
+  position: relative;
+  background-color: $white;
+  @include lightWeight;
 }
 .activeSlide .pastSlideHeader .slideNumber {
-    float: left;
-    width: 17%;
-    text-align: right;
-    padding-right: 3%;
-    color: $darkPrimaryColor;
-    @include lightWeight;
+  float: left;
+  width: 17%;
+  text-align: right;
+  padding-right: 3%;
+  color: $darkPrimaryColor;
+  @include lightWeight;
 }
 .activeSlide .pastSlideHeader .slideTitle {
-    float: right;
-    width: 75%;
-    text-align: left;
-    padding-left: 3%;
-    padding-right: 1%;
-    word-wrap: break-word;
-    border-left: 1px solid $primaryColor;
-    box-shadow: none;
-    border-bottom: none;
-    color: $darkPrimaryColor;
-    @include lightWeight;
+  float: right;
+  width: 75%;
+  text-align: left;
+  padding-left: 3%;
+  padding-right: 1%;
+  word-wrap: break-word;
+  border-left: 1px solid $primaryColor;
+  box-shadow: none;
+  border-bottom: none;
+  color: $darkPrimaryColor;
+  @include lightWeight;
 }
 .activeSlide .pastSlideHeader:hover {
-    color: $accentColor;
+  color: $accentColor;
 }
 .slideContent {
-    padding-left: 1%;
+  padding-left: 1%;
 }
 .slide .slideContent {
-    //default mobile slide state...hidden
-    display: none !important;
-    visibility: hidden;
+  //default mobile slide state...hidden
+  display: none !important;
+  visibility: hidden;
 }
 .slide .slideFooter {
-    //default mobile slide state...hidden
-    display: none !important;
-    visibility: hidden;
+  //default mobile slide state...hidden
+  display: none !important;
+  visibility: hidden;
 }
 .activeSlide .activeSlideFooter {
-    //default mobile active slide state...visible
-    border: 0;
-    clip: inherit;
-    height: auto;
-    margin: 0 1em 0 0;
-    padding: 0;
-    position: inherit;
-    width: 100%;
-    z-index: 102;
+  //default mobile active slide state...visible
+  border: 0;
+  clip: inherit;
+  height: auto;
+  margin: 0 1em 0 0;
+  padding: 0;
+  position: inherit;
+  width: 100%;
+  z-index: 102;
 }
 .activeSlide .activeSlideContent {
-    //default mobile active slide state...visible
-    border: 0;
-    clip: inherit;
-    height: auto;
-    margin: auto;
-    overflow: auto;
-    padding: 2%;
-    position: inherit;
-    width: 90%;
+  //default mobile active slide state...visible
+  border: 0;
+  clip: inherit;
+  height: auto;
+  margin: auto;
+  overflow: auto;
+  padding: 2%;
+  position: inherit;
+  width: 90%;
 }
 @keyframes yellowFlash{
   0% {
@@ -579,92 +579,92 @@ a.slideHeader:hover{
   }
 }
 .activeSlide .TheFirst{
-        -webkit-animation-name: yellowFlash;
-        animation-name: yellowFlash;
-      -webkit-animation-direction: alternate;
-      animation-direction: alternate;
-      -webkit-animation-iteration-count: 1;
-      animation-iteration-count: 1;
-      -webkit-animation-duration: .8s;
-      animation-duration: .8s;
-      -webkit-animation-timing-function: ease;
-      animation-timing-function: ease;
+  -webkit-animation-name: yellowFlash;
+  animation-name: yellowFlash;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 #mainNavList {
-    //default mobile Nav state...invisible
-    display: none;
-    visibility: hidden;
+  //default mobile Nav state...invisible
+  display: none;
+  visibility: hidden;
 }
 button{border:0;}
 .nextButton {
-    position: fixed;
-    bottom: 44px;
-    right: 22px;
-    border-radius: 50%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    color: $white;
-    font-size: 2.25em;
-    background-color: $accentColor;
-    @include font-familyRegular;
-    @include material-shadow(0,
-    4px,
-    4px);
-    width: 2.75rem;
-    height: 2.75rem;
-    padding:0;
-    text-decoration:none;
-    text-align:center;
-    line-height:2.5rem;
+  position: fixed;
+  bottom: 44px;
+  right: 22px;
+  border-radius: 50%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  color: $white;
+  font-size: 2.25em;
+  background-color: $accentColor;
+  @include font-familyRegular;
+  @include material-shadow(0,
+          4px,
+          4px);
+  width: 2.75rem;
+  height: 2.75rem;
+  padding:0;
+  text-decoration:none;
+  text-align:center;
+  line-height:2.5rem;
 }
 .prevButton {
-    position: fixed;
-    bottom: 44px;
-    left: 22px;
-    border-radius: 50%;
-    margin-left: 1%;
-    margin-bottom: 1%;
-    color: $white;
-    @include font-familyRegular;
-    font-size: 2.25em;
-    background-color: $accentColor;
-    @include material-shadow(0,4px,4px);
-    width: 2.75rem;
-    height: 2.75rem;
-    padding:0;
-    text-decoration:none;
-    text-align:center;
-    line-height:2.5rem;
+  position: fixed;
+  bottom: 44px;
+  left: 22px;
+  border-radius: 50%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  color: $white;
+  @include font-familyRegular;
+  font-size: 2.25em;
+  background-color: $accentColor;
+  @include material-shadow(0,4px,4px);
+  width: 2.75rem;
+  height: 2.75rem;
+  padding:0;
+  text-decoration:none;
+  text-align:center;
+  line-height:2.5rem;
 }
 .nextButton:hover {
-    background-color: $darkPrimaryColor;
-    transition: background-color .25s ease-in-out;
-    cursor: pointer;
+  background-color: $darkPrimaryColor;
+  transition: background-color .25s ease-in-out;
+  cursor: pointer;
 }
 .prevButton:hover {
-    background-color: $darkPrimaryColor;
-    transition: background-color .25s ease-in-out;
-    cursor: pointer;
+  background-color: $darkPrimaryColor;
+  transition: background-color .25s ease-in-out;
+  cursor: pointer;
 }
 .slideFooter {
-    width: 100%;
-    margin-bottom: 2.25em;
+  width: 100%;
+  margin-bottom: 2.25em;
 }
 .activeSlideFooter {
-    width: 100%;
-    margin-bottom: 2.25em;
+  width: 100%;
+  margin-bottom: 2.25em;
 }
 .navContainer {
-    //default mobile slide state...hidden
-    display: none !important;
-    visibility: hidden;
+  //default mobile slide state...hidden
+  display: none !important;
+  visibility: hidden;
 }
 .mainFooter {
-    width: 100%;
-    float: left;
+  width: 100%;
+  float: left;
 }
 #institutionalLogo{
- width: 100%;
+  width: 100%;
 }
 .fullScreenButton{
   width:30px!important;
@@ -676,7 +676,7 @@ button{border:0;}
   margin-top: 0!important;
 }
 .fullScreenButton:hover{
-    @include breathingEffect;
+  @include breathingEffect;
 }
 /* Mobile styles are above, and Desktop Styles are below  */
 
@@ -690,14 +690,14 @@ button{border:0;}
     transition-property:opacity;
     transition-duration:.25s;
     transition-timing-function:ease-in;
-}
-.slide{
+  }
+  .slide{
     opacity:0;
-}
-.activeSlide .activeSlideContent {
+  }
+  .activeSlide .activeSlideContent {
     padding: 1rem;
-}
-.activeSlide .activeSlideFooter {
+  }
+  .activeSlide .activeSlideFooter {
     margin: 0 1em 0 0;
     padding: 0;
     position: fixed;
@@ -706,8 +706,8 @@ button{border:0;}
     bottom: 0;
     right: 0;
     z-index: 102;
-}
-.slide .slideFooter {
+  }
+  .slide .slideFooter {
     margin: 0;
     padding: 0;
     position: fixed;
@@ -715,17 +715,17 @@ button{border:0;}
     height: 3.125em;
     bottom: 0;
     right: 0;
-}
-.audioBox {
+  }
+  .audioBox {
     position: static;
     width: 9.375em;
-}
-.audioButton {
+  }
+  .audioButton {
     position: absolute;
     left: 40.5%;
     top: 0;
-}
-.nextButton {
+  }
+  .nextButton {
     position: absolute;
     top: 0;
     right: 0;
@@ -734,8 +734,8 @@ button{border:0;}
     text-decoration: none;
     text-align:center;
     line-height:2.5rem;
-}
-.prevButton {
+  }
+  .prevButton {
     position: absolute;
     top: 0;
     left: 0;
@@ -744,16 +744,16 @@ button{border:0;}
     text-decoration: none;
     text-align:center;
     line-height:2.5rem;
-}
-.courseIcon {
-  fill: $white;
-  height: 100px;
-  width: 100px;
-  float:left;
-  padding: .75rem 0 0 .5rem;
+  }
+  .courseIcon {
+    fill: $white;
+    height: 100px;
+    width: 100px;
+    float:left;
+    padding: .75rem 0 0 .5rem;
 
-}
-#courseNumber {
+  }
+  #courseNumber {
     position:relative;
     margin-top: 1rem;
     width:60vw;
@@ -766,8 +766,8 @@ button{border:0;}
     transition-property:opacity,height;
     transition-duration: 1s,3s;
     transition-timing-function:ease-in-out;
-}
-#moduleNumber {
+  }
+  #moduleNumber {
     margin-bottom: 1rem;
     position:relative;
     width:60vw;
@@ -775,31 +775,31 @@ button{border:0;}
     transition-property:opacity;
     transition-duration: 1s;
     transition-timing-function:ease-in-out;
-}
-#tocClosedState {
+  }
+  #tocClosedState {
     /* default TOC style - button state - */
     right: 3em;
-}
-#tocOpenState{
+  }
+  #tocOpenState{
     padding-top:4rem;
     padding-bottom: .75em;
     width:50%;
     height: 80vh;
-}
-#tocOpenState #theTocTarget{
+  }
+  #tocOpenState #theTocTarget{
     right:3em;
-}
-#tocOpenState #theTocTarget:before{
+  }
+  #tocOpenState #theTocTarget:before{
     border:0;
-}
-#tocOpenState .TOC{
+  }
+  #tocOpenState .TOC{
     width:80%;
-}
-.slideHeader {
+  }
+  .slideHeader {
     width: 98%;
     text-decoration: none;
-}
-.slideHeader {
+  }
+  .slideHeader {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -809,12 +809,12 @@ button{border:0;}
     float: left;
     @include regularWeight;
     border-radius: .1875em;
-}
-.futureSlideHeader {
+  }
+  .futureSlideHeader {
     width: 98%;
     text-decoration: none;
-}
-.futureSlideHeader {
+  }
+  .futureSlideHeader {
     //this controls the default space between main headers.
     width: 100%;
     color: $darkPrimaryColor;
@@ -823,8 +823,8 @@ button{border:0;}
     margin: .1875em auto;
     border-bottom: .0625em solid $darkPrimaryColor;
     border-radius: .1875em;
-}
-.activeSlide .pastSlideHeader {
+  }
+  .activeSlide .pastSlideHeader {
     //this controls the default space between main headers.
     background-color: transparent;
     width: 100%;
@@ -836,16 +836,16 @@ button{border:0;}
     @include lightWeight;
     font-size: 3.157rem;
     border-radius: .1875em;
-}
-.activeAudioBox {
+  }
+  .activeAudioBox {
     width: 100%;
-}
-.slide {
+  }
+  .slide {
     //default desktop slide state...hidden
     display: none !important;
     visibility: hidden;
-}
-.slide .slideContent {
+  }
+  .slide .slideContent {
     //default desktop slideContent state...visible yet hidden if slide is hidden
     border: 0;
     clip: auto;
@@ -855,8 +855,8 @@ button{border:0;}
     padding: 0;
     position: inherit;
     width: 100%;
-}
-.slide .slideFooter {
+  }
+  .slide .slideFooter {
     //default desktop slideContent state...visible yet hidden if slide is hidden
     border: 0;
     clip: auto;
@@ -866,20 +866,20 @@ button{border:0;}
     padding: 0;
     position: inherit;
     width: 100%;
-}
-.mainFooter {
+  }
+  .mainFooter {
     height: 4.6875em;
     bottom: 0;
     left: 0;
     width: 100%;
-}
-#mainNav {
+  }
+  #mainNav {
     height: 5vh;
     width: 90vw;
     margin: 0 auto;
     overflow: visible;
-}
-#mainNavList {
+  }
+  #mainNavList {
     position: relative;
     list-style: none;
     margin: 0 auto;
@@ -889,22 +889,22 @@ button{border:0;}
     display: block;
     visibility: visible;
     padding: 0;
-}
-@-webkit-keyframes breathingHover {
+  }
+  @-webkit-keyframes breathingHover {
     to {
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3);
     }
-}
-@keyframes breathingHover {
+  }
+  @keyframes breathingHover {
     to {
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3);
     }
-}
-.navElement {
+  }
+  .navElement {
     background: url(../img/nav-sprites.png) 50% 0 no-repeat;
     display: inline-block;
     width: 45px;
@@ -917,8 +917,8 @@ button{border:0;}
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
-}
-.activeNavElement {
+  }
+  .activeNavElement {
     background: url(../img/nav-sprites.png) 50% -41px no-repeat;
     display: inline-block;
     width: 45px;
@@ -931,8 +931,8 @@ button{border:0;}
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
-}
-.pastNavElement {
+  }
+  .pastNavElement {
     background: url(../img/nav-sprites.png) 50% -135px no-repeat;
     display: inline-block;
     width: 45px;
@@ -946,18 +946,18 @@ button{border:0;}
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
-}
+  }
 
-.navElement:hover,
-.activeNavElement:hover,
-.pastNavElement:hover,
-.navElement:focus,
-.activeNavElement:focus,
-.pastNavElement:focus,
-.navElement:active,
-.activeNavElement:active,
-.pastNavElement:active
-{
+  .navElement:hover,
+  .activeNavElement:hover,
+  .pastNavElement:hover,
+  .navElement:focus,
+  .activeNavElement:focus,
+  .pastNavElement:focus,
+  .navElement:active,
+  .activeNavElement:active,
+  .pastNavElement:active
+  {
     background: url(../img/nav-sprites.png) 50% -88px no-repeat;
     display: inline-block;
     width: 45px;
@@ -974,26 +974,26 @@ button{border:0;}
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     cursor: pointer;
-}
-#helpboxOpenState{
+  }
+  #helpboxOpenState{
     width:40vw;
-}
-#helpButton {
+  }
+  #helpButton {
     padding: .7em .9em 0 0;
     text-align: right;
     float: right;
-}
-#celLogo {
+  }
+  #celLogo {
     float: left;
     margin: 0 0 0 2.25%;
     padding: 0;
-}
-#institutionalLogo{
-  width: 300px;
-  position:fixed;
-  bottom:0;
-  left:0;
-}
+  }
+  #institutionalLogo{
+    width: 300px;
+    position:fixed;
+    bottom:0;
+    left:0;
+  }
 } /* end 35em media query */
 @media only screen and (min-width: 68.1875em) {
   //This stops the content area from growing any larger than 1091 pixels.
@@ -1007,18 +1007,18 @@ button{border:0;}
     display: block;
     width: 64rem;
     float: none;
-}
+  }
 
-#mainNav {
+  #mainNav {
     height: 5vh;
     width: 64rem;
-}
-#helpboxOpenState{
+  }
+  #helpboxOpenState{
     width:35vw;
-}
+  }
 }
 @media only screen and (min-width: 92.625em) {/* 1482 pixels width */
-    #helpboxOpenState{
-        width:25vw;
-    }
+  #helpboxOpenState{
+    width:25vw;
+  }
 }
