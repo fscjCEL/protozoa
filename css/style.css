@@ -2063,7 +2063,6 @@ a.slideHeader:hover {
   border-left: 1px solid #090A0A;
   font-weight: 300; }
 
-/* end .slideHeader h2 .slideTitle */
 .futureSlideHeader {
   /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
   width: 98%;
@@ -2325,16 +2324,9 @@ button {
   -webkit-animation-direction: alternate;
   animation-direction: alternate; }
 
-/* =================> Column Layout styles */
-/* DO NOT TOUCH */
-/* DO NOT TOUCH */
+/* Mobile styles are above, and Desktop Styles are below  */
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
-  /* ========================typography */
-  /* =================> Column Layout styles */
-  /* DO NOT TOUCH */
-  /* DO NOT TOUCH */
   .activeSlide {
     margin-top: 3.125em;
     min-height: 100%;
@@ -2430,8 +2422,7 @@ button {
 
   #tocClosedState {
     /* default TOC style - button state - */
-    right: 3em;
-    /* This controls the opening timing height,width */ }
+    right: 3em; }
 
   #tocOpenState {
     padding-top: 4rem;
@@ -2490,7 +2481,6 @@ button {
   .activeAudioBox {
     width: 100%; }
 
-  /* for now...all the non-mobile styles */
   .slide {
     display: none !important;
     visibility: hidden; }
@@ -2519,8 +2509,7 @@ button {
     height: 4.6875em;
     bottom: 0;
     left: 0;
-    width: 100%;
-    /* background-color: red; */ }
+    width: 100%; }
 
   #mainNav {
     height: 5vh;
@@ -2539,7 +2528,6 @@ button {
     visibility: visible;
     padding: 0; }
 
-  /* The hover effect for the nav elements. */
   @-webkit-keyframes breathingHover {
     to {
       -webkit-transform: scale(1.3);

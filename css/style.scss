@@ -10,29 +10,23 @@ $black: #090A0A;
 @mixin lightWeight() {
   font-weight: 300;
 }
-
 @mixin regularWeight() {
   font-weight: 400;
 }
-
 @mixin heavyWeight() {
   font-weight: 700;
 }
-
 @mixin material-shadow($exOffset, $whyOffset, $blur) {
   -moz-box-shadow: $exOffset $whyOffset $blur $shadowColor;
   -webkit-box-shadow: $exOffset $whyOffset $blur $shadowColor;
   box-shadow: $exOffset $whyOffset $blur $shadowColor;
 }
-
 @mixin font-familyRegular() {
   font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
 }
-
 @mixin font-familyHeading() {
   font-family: 'Oswald',Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
 }
-
 @mixin breathingEffect(){
   -webkit-animation-name: breathingHover;
   animation-name: breathingHover;
@@ -45,7 +39,6 @@ $black: #090A0A;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
-
 @mixin indexHeader(){
     @include lightWeight;
     @include font-familyHeading;
@@ -53,7 +46,6 @@ $black: #090A0A;
     color: $white;
 }
 /* importing chunks*/
-
 /* column layout styles */
 @import 'chunk-col-50';
 @import 'chunk-col-6040';
@@ -63,32 +55,24 @@ $black: #090A0A;
 @import 'chunk-col-30';
 @import 'chunk-col-25';
 @import 'chunk-col-layoutHelpers';
-
 /* generic element styles html body p ul */
 @import 'baseClasses';
-
 @import "typography";
-
 /* styles that hide things + clearing styles*/
 @import 'helperClasses';
-
 /* created a golden ration sized centered column that look and acts like a traditional book */
 @import 'bookBox';
-
 /* style for the figure image elements */
 @import "m-figure";
-
 .cel-link-icon:after{
     content: "\21D7";
 }
-
 .courseIcon {
   fill: $white;
   height: 45px;
   width: 45px;
   float:left;
   padding: 0.5rem 0 0 .5rem;
-
 }
 #courseNumber {
     float: left;
@@ -98,7 +82,6 @@ $black: #090A0A;
     padding: .75rem 0 0 .5rem;
     @include lightWeight;
 }
-
 #moduleNumber {
     float: left;
     width: 94%;
@@ -106,7 +89,6 @@ $black: #090A0A;
     margin: 0 0 .8rem 1rem;
     @include lightWeight;
 }
-
 .module {
     position: absolute;
     width: 100%;
@@ -115,7 +97,6 @@ $black: #090A0A;
     padding: 0;
     margin: 0;
 }
-
 .moduleHeaders {
     width: 100%;
     background-color: $primaryColor;
@@ -123,7 +104,6 @@ $black: #090A0A;
     margin-bottom: .5rem;
     @include material-shadow(0px,.125em,.0625em);
 }
-
 #theModuleHeader {
     position: relative;
     transition-property: all;
@@ -139,7 +119,6 @@ $black: #090A0A;
     transition-timing-function:ease-in-out;
     transition-duration: .1s;
 }
-
 #tocClosedState {
     /* default TOC style - button state - */
     position: absolute;
@@ -152,7 +131,6 @@ $black: #090A0A;
     right:3em;
     outline: none;
 }
-
 #tocOpenState{
     z-index: 200;
     width: 90%;
@@ -167,17 +145,14 @@ $black: #090A0A;
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
 #tocClosedState #theTocTarget {
     /* this hooks into the closed menu TOC button */
     width: 2.6em;
     height: 2.6em;
-
     background-image: url('../img/TOC-default.png');
     background-repeat: no-repeat;
     background-position:-1px 0, top;
     background-size:2.5em, 2.5em;
-
     position:absolute;
     right:0;
     top: 0;
@@ -186,7 +161,6 @@ $black: #090A0A;
 #tocOpenState #theTocTarget{
     /* this controls the open state of the TOC menu button */
     background: url('../img/TOC-closeX.png') no-repeat;
-
     width: 80%;
     height: 2.75rem;
     background-size:2.75rem;
@@ -208,142 +182,86 @@ $black: #090A0A;
     position:relative;
     left:4rem;
     top:2rem;
-
     color:$white;
     display:inline-block;
-
     font-size: 2em;
-
     @include font-familyHeading;
     @include lightWeight;
-
-
-
-
-
 }
 /* these controls the fade in animation of the toc menu content.   */
-
 #tocClosedState .TOC{
     opacity: 0;
-
 }
 #tocOpenState .TOC{
     opacity: 1;
-
 }
-
-
-
-
-
-//end li ul li
 #tocOpenState li a {
     /* The links that connect this lists to the actual slides. */
     text-decoration: none;
-
-
 }
-
-
-
-
-//end theTocTarget
 #tocOpenState #slide1TOC {
     margin-top: 2.8125em;
 }
-
-//end slide1TOC
-
-//end toclink
 .TOC{
     margin-top: 0;
     margin-bottom: 1.25rem;
 }
-
-
-
 .TOC h2 {
     @include indexHeader;
-
     font-size: 1.25rem;
     line-height: 1.5;
-
 }
 .TOC h2:hover,.TOC h3:hover,.TOC h4:hover,.TOC h5:hover,.TOC h6:hover {
     background-color: yellow;
     color: $darkPrimaryColor;
 }
-
-
-
 .TOC h3 {
     @include indexHeader;
     font-size: .9375rem;
     line-height: 1.3;
-
 }
-
-
-
 .TOC h3:before {
     content: "   ";
 }
-
 .TOC h4 {
     @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
 
 }
-
-
-
 .TOC h4:before {
     content: "   ";
 }
-
 .TOC h5 {
     @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
 
 }
-
 .TOC h5 a {
     padding-left: .9375em;
 }
-
 .TOC h5:before {
     content: "   ";
 }
-
 .TOC h6 {
     @include indexHeader;
     font-size: .8rem;
     line-height: 1.3;
-
 }
-
-
-
 .TOC h6:before {
     content: "   ";
 }
-
-
 .audioBox {
     width: 95%;
     position: fixed;
     bottom: 6.25em;
     margin-top: -28px;
 }
-
 .audioControls {
     width: 60%;
     margin: auto;
 }
-
 .audioButton {
     position: fixed;
     bottom: 2.9375em;
@@ -362,7 +280,6 @@ $black: #090A0A;
     -moz-transition: width .5s ease-in-out, height .25s ease-in-out;
     transition: width .5s ease-in-out, height .25s ease-in-out;
 }
-
 #celLogo {
     float: left;
     -o-transition: width .5s, height .5s;
@@ -373,7 +290,6 @@ $black: #090A0A;
     width: 2.6em;
     margin: .375em;
 }
-
 .helpBox {
     background: url("../img/HELP-default.png") no-repeat;
     background-position: center;
@@ -387,16 +303,10 @@ $black: #090A0A;
     margin-right: .25em;
     text-align: left;
     overflow:hidden;
-
-
     /* the timing for this is in the IDs that get swapped */
     transition-property: height, width;
     transition-timing-function: ease-in-out;
-
 }
-
-
-
 #helpboxClosedState {
     width : 2.75em;
     height : 2.75em;
@@ -407,32 +317,22 @@ $black: #090A0A;
     background-image : url(../img/HELP-default.png);
     background-position : 100% 0 ;
     background-size : 2.5rem;
-
     /* timing of height then width NOTE: this effects the closing animation */
     transition-duration: .1s, .25s, .5s;
-
 }
-
 #helpboxOpenState {
     // This is the help box that is sitting open.
-
-
     background-color: $darkPrimaryColor;
     @include material-shadow(.15em, .15em, .15em);
     z-index: 200;
     padding-bottom: 1rem;
-
-
     width : 90vw;
-
     background-image : url(../img/HELP-closeX.png);
     background-position : 100% 0,top;
     background-size : 2.5rem;
-
     /* timing of height then width NOTE: this effects the opening animation*/
     transition-duration: .25s, .1s,.5s;
 }
-
 #helpButton {
     width: 100%;
     height: 2.45em;
@@ -457,10 +357,6 @@ $black: #090A0A;
     text-align: center;
     @include lightWeight;
     @include font-familyRegular;
-
-
-
-
 }
 .helpContent p{
     width:90%;
@@ -468,24 +364,18 @@ $black: #090A0A;
   color:$white;
 }
 .helpContent p a{
-
   color:$white;
 }
-
 .helpContent h3{
   font-weight: 300;
   margin-bottom:1em;
   margin-top: 1em;
   color:$white;
 }
-
 .slide {
     width: 100%;
     background-color: $white;
-
-
 }
-
 .activeSlide {
     opacity:1;
     float: left;
@@ -495,19 +385,14 @@ $black: #090A0A;
     background-color: $white;
     border-radius: .1875em;
     @include material-shadow(0,.125em,.125em);
-
-
 }
-
 .slideHeader {
     /* This is the active slide style. */
     width: 95%;
     position: relative;
-
     text-decoration: none;
-} //end slideheader
+}
 a.slideHeader:hover{
-
     cursor:auto!important;
 }
 .slideHeader  {
@@ -515,20 +400,16 @@ a.slideHeader:hover{
     width: 100%;
     color: $darkPrimaryColor;
     text-align: left;
-    //padding: .625em 0;
-    //margin: 1em 0;
     border-radius: .1875em;
-
     @include lightWeight;
-
-} //end h2
+}
 .slideHeader .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
     @include lightWeight;
-} //end slidenumber
+}
 .slideHeader .slideTitle {
     float: right;
     width: 75%;
@@ -539,17 +420,12 @@ a.slideHeader:hover{
     border-left: 1px solid $black;
     @include lightWeight;
 }
-
-
-/* end .slideHeader h2 .slideTitle */
-
 .futureSlideHeader {
     /* this is a slide that shows in the mobile stack, but has not been clicked on yet. */
     width: 98%;
     text-decoration: none;
     border-radius: 50%;
 }
-
 .futureSlideHeader  {
     font-size: 2.25em;
     width: 95%;
@@ -559,16 +435,15 @@ a.slideHeader:hover{
     margin: .1875em auto;
     border-radius: .1875em;
     background-color: $white;
-
     @include lightWeight;
-} //end h2
+}
 .futureSlideHeader .slideNumber {
     float: left;
     width: 17%;
     text-align: right;
     padding-right: 3%;
     @include lightWeight;
-} //end slidenumber
+}
 .futureSlideHeader .slideTitle {
     float: right;
     width: 75%;
@@ -579,18 +454,15 @@ a.slideHeader:hover{
     border-left: 1px solid $black;
     @include lightWeight;
 }
-
 .futureSlideHeader:hover {
     color: $white;
     background-color: $accentColor
-} //end h2 hover
-//end slideheader
+}
 .pastSlideHeader {
     /* this is a slide that has been clicked on already and shows as being in the past in the mobile slide stack*/
     width: 90%;
     text-decoration: none;
 }
-
 .pastSlideHeader {
     font-size: 2.25em;
     padding: 5px 10px;
@@ -598,18 +470,18 @@ a.slideHeader:hover{
     text-align: center;
     background-color: $darkPrimaryColor;
     @include lightWeight;
-} //end h2
+}
 .pastSlideHeader:hover {
     color: $white;
     background-color: $accentColor;
-} //end pastSlideheader hover
+}
 .pastSlideHeader .slideNumber {
     float: left;
     width: 20%;
     text-align: right;
     color: $white;
     @include lightWeight;
-} //end slidenumber
+}
 .pastSlideHeader  .slideTitle {
     float: right;
     width: 75%;
@@ -621,14 +493,12 @@ a.slideHeader:hover{
     color: $white;
     @include lightWeight;
 }
-
 .activeSlide .pastSlideHeader {
     /* This is a slide that has been has been viewed once, and gone back to. I wanted this style to match the default style*/
     width: 98%;
     position: relative;
     text-decoration: none;
 }
-
 .activeSlide .pastSlideHeader {
     //this controls the default space between main headers.
     width: 95%;
@@ -640,7 +510,7 @@ a.slideHeader:hover{
     position: relative;
     background-color: $white;
     @include lightWeight;
-} //end h2
+}
 .activeSlide .pastSlideHeader .slideNumber {
     float: left;
     width: 17%;
@@ -648,7 +518,7 @@ a.slideHeader:hover{
     padding-right: 3%;
     color: $darkPrimaryColor;
     @include lightWeight;
-} //end slidenumber
+}
 .activeSlide .pastSlideHeader .slideTitle {
     float: right;
     width: 75%;
@@ -662,41 +532,33 @@ a.slideHeader:hover{
     color: $darkPrimaryColor;
     @include lightWeight;
 }
-
 .activeSlide .pastSlideHeader:hover {
     color: $accentColor;
 }
-
 .slideContent {
     padding-left: 1%;
 }
-
 .slide .slideContent {
     //default mobile slide state...hidden
     display: none !important;
     visibility: hidden;
 }
-
 .slide .slideFooter {
     //default mobile slide state...hidden
     display: none !important;
     visibility: hidden;
 }
-
 .activeSlide .activeSlideFooter {
     //default mobile active slide state...visible
     border: 0;
     clip: inherit;
     height: auto;
     margin: 0 1em 0 0;
-    //overflow: auto;
     padding: 0;
     position: inherit;
     width: 100%;
     z-index: 102;
-
 }
-
 .activeSlide .activeSlideContent {
     //default mobile active slide state...visible
     border: 0;
@@ -712,7 +574,6 @@ a.slideHeader:hover{
   0% {
     background-color:yellow;
   }
-
   100%{
     background-color:$white;
   }
@@ -756,7 +617,6 @@ button{border:0;}
     text-align:center;
     line-height:2.5rem;
 }
-
 .prevButton {
     position: fixed;
     bottom: 44px;
@@ -768,9 +628,7 @@ button{border:0;}
     @include font-familyRegular;
     font-size: 2.25em;
     background-color: $accentColor;
-    @include material-shadow(0,
-    4px,
-    4px);
+    @include material-shadow(0,4px,4px);
     width: 2.75rem;
     height: 2.75rem;
     padding:0;
@@ -778,46 +636,36 @@ button{border:0;}
     text-align:center;
     line-height:2.5rem;
 }
-
 .nextButton:hover {
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
     cursor: pointer;
-
 }
-
 .prevButton:hover {
     background-color: $darkPrimaryColor;
     transition: background-color .25s ease-in-out;
     cursor: pointer;
 }
-
 .slideFooter {
     width: 100%;
     margin-bottom: 2.25em;
 }
-
 .activeSlideFooter {
     width: 100%;
     margin-bottom: 2.25em;
 }
-
 .navContainer {
     //default mobile slide state...hidden
     display: none !important;
     visibility: hidden;
 }
-
 .mainFooter {
     width: 100%;
     float: left;
 }
 #institutionalLogo{
-  width: 100%;
-
-
+ width: 100%;
 }
-
 .fullScreenButton{
   width:30px!important;
   height:30px!important;
@@ -826,94 +674,13 @@ button{border:0;}
   left:10px;
   z-index:101;
   margin-top: 0!important;
-
-
-
 }
-
 .fullScreenButton:hover{
     @include breathingEffect;
 }
-
-
-
-
-
-
-
-
-
-
-
-//========================
-/* =================> Column Layout styles *//* DO NOT TOUCH */
-/* DO NOT TOUCH */
-// at mobile widths I am taking the top margin off the a's and the bottom margin off the ending boxes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//========================================================================(mobile ^) Media Queries (desktop v) =====================================
-// =============================================================
-// =============================================================
-// =============================================================
-// =============================================================
-// =============================================================
-// =============================================================
+/* Mobile styles are above, and Desktop Styles are below  */
 
 @media only screen and (min-width: 35em) {/* 560 pixel width */
-
-
-
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ========================typography */
-
-  /* =================> Column Layout styles *//* DO NOT TOUCH */
-  /* DO NOT TOUCH */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .activeSlide {
     //This makes sure that the header buttons works.
     margin-top: 3.125em;
@@ -924,12 +691,12 @@ button{border:0;}
     transition-duration:.25s;
     transition-timing-function:ease-in;
 }
-.slide{opacity:0;}
-
+.slide{
+    opacity:0;
+}
 .activeSlide .activeSlideContent {
     padding: 1rem;
 }
-
 .activeSlide .activeSlideFooter {
     margin: 0 1em 0 0;
     padding: 0;
@@ -940,7 +707,6 @@ button{border:0;}
     right: 0;
     z-index: 102;
 }
-
 .slide .slideFooter {
     margin: 0;
     padding: 0;
@@ -950,18 +716,15 @@ button{border:0;}
     bottom: 0;
     right: 0;
 }
-
 .audioBox {
     position: static;
     width: 9.375em;
 }
-
 .audioButton {
     position: absolute;
     left: 40.5%;
     top: 0;
 }
-
 .nextButton {
     position: absolute;
     top: 0;
@@ -972,7 +735,6 @@ button{border:0;}
     text-align:center;
     line-height:2.5rem;
 }
-
 .prevButton {
     position: absolute;
     top: 0;
@@ -1001,42 +763,26 @@ button{border:0;}
     border: 0;
     padding: 0 0 0 .75rem;
     opacity:1;
-
-
     transition-property:opacity,height;
     transition-duration: 1s,3s;
     transition-timing-function:ease-in-out;
 }
-
 #moduleNumber {
-
     margin-bottom: 1rem;
     position:relative;
     width:60vw;
     opacity:1;
-
-
     transition-property:opacity;
-        transition-duration: 1s;
-        transition-timing-function:ease-in-out;
-
+    transition-duration: 1s;
+    transition-timing-function:ease-in-out;
 }
-
 #tocClosedState {
     /* default TOC style - button state - */
     right: 3em;
-    /* This controls the opening timing height,width */
-
-
-
 }
-
 #tocOpenState{
-
     padding-top:4rem;
     padding-bottom: .75em;
-
-
     width:50%;
     height: 80vh;
 }
@@ -1048,13 +794,11 @@ button{border:0;}
 }
 #tocOpenState .TOC{
     width:80%;
-
 }
-
 .slideHeader {
     width: 98%;
     text-decoration: none;
-} //end slideheader
+}
 .slideHeader {
     //this controls the default space between main headers.
     width: 100%;
@@ -1065,11 +809,11 @@ button{border:0;}
     float: left;
     @include regularWeight;
     border-radius: .1875em;
-} //end h2
+}
 .futureSlideHeader {
     width: 98%;
     text-decoration: none;
-} //end slideheader
+}
 .futureSlideHeader {
     //this controls the default space between main headers.
     width: 100%;
@@ -1079,10 +823,7 @@ button{border:0;}
     margin: .1875em auto;
     border-bottom: .0625em solid $darkPrimaryColor;
     border-radius: .1875em;
-} //end h2
-
-
-//end pastSlideheader
+}
 .activeSlide .pastSlideHeader {
     //this controls the default space between main headers.
     background-color: transparent;
@@ -1095,20 +836,15 @@ button{border:0;}
     @include lightWeight;
     font-size: 3.157rem;
     border-radius: .1875em;
-} //end h2
+}
 .activeAudioBox {
     width: 100%;
 }
-
-
-/* for now...all the non-mobile styles */
-
 .slide {
     //default desktop slide state...hidden
     display: none !important;
     visibility: hidden;
 }
-
 .slide .slideContent {
     //default desktop slideContent state...visible yet hidden if slide is hidden
     border: 0;
@@ -1120,7 +856,6 @@ button{border:0;}
     position: inherit;
     width: 100%;
 }
-
 .slide .slideFooter {
     //default desktop slideContent state...visible yet hidden if slide is hidden
     border: 0;
@@ -1131,27 +866,20 @@ button{border:0;}
     padding: 0;
     position: inherit;
     width: 100%;
-
 }
-
 .mainFooter {
     height: 4.6875em;
     bottom: 0;
     left: 0;
     width: 100%;
-    /* background-color: red; */
 }
-
 #mainNav {
-    //the container
     height: 5vh;
     width: 90vw;
     margin: 0 auto;
     overflow: visible;
 }
-
 #mainNavList {
-    //the list
     position: relative;
     list-style: none;
     margin: 0 auto;
@@ -1162,9 +890,6 @@ button{border:0;}
     visibility: visible;
     padding: 0;
 }
-
-
-/* The hover effect for the nav elements. */
 @-webkit-keyframes breathingHover {
     to {
         -webkit-transform: scale(1.3);
@@ -1172,7 +897,6 @@ button{border:0;}
         transform: scale(1.3);
     }
 }
-
 @keyframes breathingHover {
     to {
         -webkit-transform: scale(1.3);
@@ -1180,8 +904,6 @@ button{border:0;}
         transform: scale(1.3);
     }
 }
-
-
 .navElement {
     background: url(../img/nav-sprites.png) 50% 0 no-repeat;
     display: inline-block;
@@ -1189,37 +911,27 @@ button{border:0;}
     height: 35px;
     text-align: center;
     padding-top: .75em;
-
-
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
-
 }
-
 .activeNavElement {
-
     background: url(../img/nav-sprites.png) 50% -41px no-repeat;
     display: inline-block;
     width: 45px;
     height: 35px;
     text-align: center;
     padding-top: .75em!important;
-
-
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -moz-osx-font-smoothing: grayscale;
-
 }
-
 .pastNavElement {
     background: url(../img/nav-sprites.png) 50% -135px no-repeat;
     display: inline-block;
@@ -1228,8 +940,6 @@ button{border:0;}
     text-align: center;
     padding-top: .75em!important;
     color:#FFF;
-
-
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -1253,7 +963,6 @@ button{border:0;}
     width: 45px;
     height: 35px;
     color: #FFF;
-
     -webkit-animation-name: breathingHover;
     animation-name: breathingHover;
     -webkit-animation-duration: .75s;
@@ -1274,33 +983,22 @@ button{border:0;}
     text-align: right;
     float: right;
 }
-
 #celLogo {
     float: left;
     margin: 0 0 0 2.25%;
     padding: 0;
 }
-
 #institutionalLogo{
   width: 300px;
   position:fixed;
   bottom:0;
   left:0;
-
 }
-
-
 } /* end 35em media query */
-
-
-
-
-
 @media only screen and (min-width: 68.1875em) {
   //This stops the content area from growing any larger than 1091 pixels.
   #tocOpenState{
     width:30%;
-
   }
   .activeSlide {
     margin-bottom: .625em;
@@ -1309,26 +1007,18 @@ button{border:0;}
     display: block;
     width: 64rem;
     float: none;
-
 }
 
 #mainNav {
-    //since this is supposed to follow the bottom of the content area I made it the same width.
     height: 5vh;
     width: 64rem;
 }
-
-
-#helpboxOpenState{width:35vw;}
-
-
-
-}//end 1091px media query
-@media only screen and (min-width: 92.625em) {/* 1482 pixels width */
-
-    #helpboxOpenState{width:25vw;}
+#helpboxOpenState{
+    width:35vw;
 }
-
-
-
-
+}
+@media only screen and (min-width: 92.625em) {/* 1482 pixels width */
+    #helpboxOpenState{
+        width:25vw;
+    }
+}
