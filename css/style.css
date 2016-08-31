@@ -1,3 +1,4 @@
+/* NOTE: for these weights to work them must exist in the webfont you download. */
 /* importing chunks*/
 /* column layout styles */
 /* 50/50 2 column split */
@@ -1774,8 +1775,8 @@ p {
 
 #tocClosedState #theTocTarget {
   /* this hooks into the closed menu TOC button */
-  width: 2.6em;
-  height: 2.6em;
+  width: 200px;
+  height: 200px;
   background-image: url("../img/TOC-default.png");
   background-repeat: no-repeat;
   background-position: -1px 0, top;
