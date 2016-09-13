@@ -14,12 +14,15 @@ var methods = {
         for (var i = 0; i < slidesLength; i++) {
             var theActiveSlideElement = document.getElementById("slide"+(i+1));
             var theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
-            if(theFirstParagraph.parentNode.className !=="figure"){
-                theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
-            }else{
-                theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
+            if(theFirstParagraph){
+                if(theFirstParagraph.parentNode.className !=="figure"){
+                    theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+                }else{
+                    theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
+                }//end if
+                theFirstParagraph.classList.add("TheFirst");
             }//end if
-            theFirstParagraph.classList.add("TheFirst");
+
 
         }
     },//end yellowFlashFunction
@@ -73,7 +76,7 @@ var methods = {
             anotherCloseButtonCloseButton.className = "figure-button-is-closed";
             //add close button to container.
             allTheFigureElements[i].appendChild(anotherCloseButtonCloseButton);
-           //add the event listener to the button
+            //add the event listener to the button
             var theFigureButton = document.getElementById("figure-"+i);
             theFigureButton.addEventListener("click", methods.figureModalHandler,false);
 
@@ -84,14 +87,14 @@ var methods = {
 
             //grab the img inside the figurebox and add a classname to it.
             for(var k=(theFigureBox.children.length-1);k>=0;k--){
-                    var theElementType = theFigureBox.children[k].tagName;
-                    if(theElementType === "IMG"){
-                        theFigureBox.children[k].className = "figure-image"
-                    }//end if
-                    if(theElementType === "P"){
+                var theElementType = theFigureBox.children[k].tagName;
+                if(theElementType === "IMG"){
+                    theFigureBox.children[k].className = "figure-image"
+                }//end if
+                if(theElementType === "P"){
 
-                        theFigureBox.children[k].classList.add("figure-description");
-                    }//end if
+                    theFigureBox.children[k].classList.add("figure-description");
+                }//end if
             }//end for
 
         }//end for
@@ -398,7 +401,7 @@ var methods = {
             if (targetBlank === "_blank") {
                 //take this target URL and strip the http:// part.
                 var trimThisUrl = allTheLinks[s].getAttribute("href").substr(7);
-                 //adding the hover title
+                //adding the hover title
                 allTheLinks[s].setAttribute("title", "NOTE: This external link will bring you to the following URL: " + trimThisUrl);
                 //adding the class that paints the arrow glyph after every link.
                 allTheLinks[s].classList.add("cel-link-icon");
