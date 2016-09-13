@@ -1,9 +1,9 @@
 /* 50/50 2 column split */
 .cel-50-a {
-    float: left;
-    width: 98%;
-    padding: 0 1%;
-    border: 1px solid $white
+  float: left;
+  width: 98%;
+  padding: 0 1%;
+  border: 1px solid $white
 }
 
 .cel-50-b {
@@ -44,63 +44,63 @@
 }
 
 @media only screen and (min-width: 35em) {
-  .cel-50-a img:first-child {
+  .cel-50-a img:first-child,.cel-50-a-rule img:first-child,.cel-50-a-box img:first-child {
     margin-top: 1.4rem;
   }
 
-  .cel-50-b img:first-child {
+  .cel-50-b img:first-child,.cel-50-b-rule img:first-child,.cel-50-b-box img:first-child {
     margin-top: 1.4rem;
   }
-  .cel-50-a ul:first-child {
+  .cel-50-a ul:first-child,.cel-50-a-rule ul:first-child,.cel-50-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .cel-50-b ul:first-child {
+  .cel-50-b ul:first-child,.cel-50-b-rule ul:first-child,.cel-50-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .cel-50-a ol:first-child {
+  .cel-50-a ol:first-child,.cel-50-a-rule ol:first-child,.cel-50-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
-  .cel-50-b ol:first-child {
+  .cel-50-b ol:first-child,.cel-50-b-rule ol:first-child,.cel-50-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
-  .cel-50-a h2:first-child {
+  .cel-50-a h2:first-child,.cel-50-a-rule h2:first-child,.cel-50-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
-  .cel-50-b h2:first-child {
+  .cel-50-b h2:first-child,.cel-50-b-rule h2:first-child,.cel-50-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
-  .cel-50-a h3:first-child {
+  .cel-50-a h3:first-child,.cel-50-a-rule h3:first-child,.cel-50-a-box h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem;
   }
-  .cel-50-b h3:first-child {
+  .cel-50-b h3:first-child,.cel-50-b-rule h3:first-child,.cel-50-b-box h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem;
   }
 
-  .cel-50-a h4:first-child {
+  .cel-50-a h4:first-child,.cel-50-a-rule h4:first-child,.cel-50-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem;
   }
 
-  .cel-50-b h4:first-child {
+  .cel-50-b h4:first-child,.cel-50-b-rule h4:first-child,.cel-50-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem;
   }
-  .cel-50-a h5:first-child {
+  .cel-50-a h5:first-child,.cel-50-a-rule h5:first-child,.cel-50-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem;
   }
 
-  .cel-50-b h5:first-child {
+  .cel-50-b h5:first-child,.cel-50-b-rule h5:first-child,.cel-50-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem;
   }

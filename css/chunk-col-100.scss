@@ -1,0 +1,40 @@
+
+.cel-100 {
+  float: left;
+  width: 98.5%;
+  padding: 0 1%;
+  margin: 0;
+  border: 1px solid transparent;
+}
+.cel-100-box{
+  float: left;
+  width: 98.5%;
+  margin: 0;
+  padding: 0 1.5%;
+  border: 1px solid $lightPrimaryColor;
+}
+.cel-100-rule{
+  float: left;
+  width: 98.5%;
+  padding: 0 1.5%;
+  margin:0;
+  border: 1px solid;
+  border-color: $white $white $lightPrimaryColor $white;
+
+}
+.cel-100-rule-top{
+  float: left;
+  width: 98.5%;
+  padding: 0 1.5%;
+  margin: 0;
+  border: 1px solid;
+  border-color: $lightPrimaryColor $white $white $white;
+
+}
+
+@media only screen and (min-width: 35em) {
+  /* 560 pixel width */
+
+  /* here just in case. this is my mobile breakpoint. */
+
+}/* end media Q*/
