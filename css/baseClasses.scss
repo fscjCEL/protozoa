@@ -1,3 +1,6 @@
+hr{
+    border-color: $lightPrimaryColor;
+}
 strong{
     @include heavyWeight;
 }

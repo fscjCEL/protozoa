@@ -1,0 +1,67 @@
+$cardColor:  lighten($white,5%);
+$cardDarkColor:  lighten($lightPrimaryColor,10%);
+.is-card{
+  background-color: $cardColor;
+  border-color: $cardColor;
+  @include material-shadow(0,.125em,.0625em);
+
+}
+/* changes the border color to match*/
+.is-card .cel-50-a,
+.is-card .cel-50-b,
+.is-card .cel-100,
+.is-card .cel-30-a,
+.is-card .cel-30-b,
+.is-card .cel-30-c,
+.is-card .cel-25-a,
+.is-card .cel-25-b,
+.is-card .cel-25-c,
+.is-card .cel-25-d,
+.is-card .cel-7525-a,
+.is-card .cel-7525-b,
+.is-card .cel-60-a,
+.is-card .cel-40-b,
+.is-card .cel-40-a,
+.is-card .cel-60-b,
+.is-card .cel-2575-a,
+.is-card .cel-2575-b
+{
+  border-color: transparent;
+}
+
+.is-card-dark{
+  background-color: $cardDarkColor;
+  border-color: $cardDarkColor;
+  @include material-shadow(0,.125em,.0625em);
+
+}
+/* changes the border color to match*/
+.is-card-dark .cel-50-a,
+.is-card-dark .cel-50-b,
+.is-card-dark .cel-100,
+.is-card-dark .cel-30-a,
+.is-card-dark .cel-30-b,
+.is-card-dark .cel-30-c,
+.is-card-dark .cel-25-a,
+.is-card-dark .cel-25-b,
+.is-card-dark .cel-25-c,
+.is-card-dark .cel-25-d,
+.is-card-dark .cel-7525-a,
+.is-card-dark .cel-7525-b,
+.is-card-dark .cel-60-a,
+.is-card-dark .cel-40-b,
+.is-card-dark .cel-40-a,
+.is-card-dark .cel-60-b,
+.is-card-dark .cel-2575-a,
+.is-card-dark .cel-2575-b,
+.cel-row[class="is-card"],
+.cel-row[class="is-card-dark"]
+{
+  border-color: $cardDarkColor;
+}
+
+@media only screen and (min-width: 35em) {/* 560 pixel width */
+
+  /* here just in case. this is my mobile breakpoint. */
+
+}/* end media Q*/

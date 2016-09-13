@@ -1,6 +1,40 @@
 /* NOTE: for these weights to work them must exist in the webfont you download. */
 /* importing chunks*/
 /* column layout styles */
+.cel-100 {
+  float: left;
+  width: 98.5%;
+  padding: 0 1%;
+  margin: 0;
+  border: 1px solid transparent; }
+
+.cel-100-box {
+  float: left;
+  width: 98.5%;
+  margin: 0;
+  padding: 0 1.5%;
+  border: 1px solid #B8CCC7; }
+
+.cel-100-rule {
+  float: left;
+  width: 98.5%;
+  padding: 0 1.5%;
+  margin: 0;
+  border: 1px solid;
+  border-color: #F7FFFC #F7FFFC #B8CCC7 #F7FFFC; }
+
+.cel-100-rule-top {
+  float: left;
+  width: 98.5%;
+  padding: 0 1.5%;
+  margin: 0;
+  border: 1px solid;
+  border-color: #B8CCC7 #F7FFFC #F7FFFC #F7FFFC; }
+
+@media only screen and (min-width: 35em) {
+  /* 560 pixel width */
+  /* here just in case. this is my mobile breakpoint. */ }
+/* end media Q*/
 /* 50/50 2 column split */
 .cel-50-a {
   float: left;
@@ -41,57 +75,57 @@
   border: 1px solid #B8CCC7; }
 
 @media only screen and (min-width: 35em) {
-  .cel-50-a img:first-child {
+  .cel-50-a img:first-child, .cel-50-a-rule img:first-child, .cel-50-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-50-b img:first-child {
+  .cel-50-b img:first-child, .cel-50-b-rule img:first-child, .cel-50-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-50-a ul:first-child {
+  .cel-50-a ul:first-child, .cel-50-a-rule ul:first-child, .cel-50-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-b ul:first-child {
+  .cel-50-b ul:first-child, .cel-50-b-rule ul:first-child, .cel-50-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-a ol:first-child {
+  .cel-50-a ol:first-child, .cel-50-a-rule ol:first-child, .cel-50-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-b ol:first-child {
+  .cel-50-b ol:first-child, .cel-50-b-rule ol:first-child, .cel-50-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-a h2:first-child {
+  .cel-50-a h2:first-child, .cel-50-a-rule h2:first-child, .cel-50-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-b h2:first-child {
+  .cel-50-b h2:first-child, .cel-50-b-rule h2:first-child, .cel-50-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-50-a h3:first-child {
+  .cel-50-a h3:first-child, .cel-50-a-rule h3:first-child, .cel-50-a-box h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem; }
 
-  .cel-50-b h3:first-child {
+  .cel-50-b h3:first-child, .cel-50-b-rule h3:first-child, .cel-50-b-box h3:first-child {
     margin-top: .7rem;
     margin-bottom: 1.8rem; }
 
-  .cel-50-a h4:first-child {
+  .cel-50-a h4:first-child, .cel-50-a-rule h4:first-child, .cel-50-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-50-b h4:first-child {
+  .cel-50-b h4:first-child, .cel-50-b-rule h4:first-child, .cel-50-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-50-a h5:first-child {
+  .cel-50-a h5:first-child, .cel-50-a-rule h5:first-child, .cel-50-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-50-b h5:first-child {
+  .cel-50-b h5:first-child, .cel-50-b-rule h5:first-child, .cel-50-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -175,57 +209,57 @@
 
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  .cel-60-a img:first-child {
+  .cel-60-a img:first-child, .cel-60-a-rule img:first-child, .cel-60-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-40-b img:first-child {
+  .cel-40-b img:first-child, .cel-40-b-rule img:first-child, .cel-40-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-60-a ul:first-child {
+  .cel-60-a ul:first-child, .cel-60-a-rule ul:first-child, .cel-60-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-b ul:first-child {
+  .cel-40-b ul:first-child, .cel-40-b-rule ul:first-child, .cel-40-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-a ol:first-child {
+  .cel-60-a ol:first-child, .cel-60-a-rule ol:first-child, .cel-60-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-b ol:first-child {
+  .cel-40-b ol:first-child, .cel-40-b-rule ol:first-child, .cel-40-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-a h2:first-child {
+  .cel-60-a h2:first-child, .cel-60-a-rule h2:first-child, .cel-60-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-b h2:first-child {
+  .cel-40-b h2:first-child, .cel-40-b-rule h2:first-child, .cel-40-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-a h3:first-child {
+  .cel-60-a h3:first-child, .cel-60-a-rule h3:first-child, .cel-60-a-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-40-b h3:first-child {
+  .cel-40-b h3:first-child, .cel-40-b-rule h3:first-child, .cel-40-b-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-60-a h4:first-child {
+  .cel-60-a h4:first-child, .cel-60-a-rule h4:first-child, .cel-60-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-40-b h4:first-child {
+  .cel-40-b h4:first-child, .cel-40-b-rule h4:first-child, .cel-40-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-60-a h5:first-child {
+  .cel-60-a h5:first-child, .cel-60-a-rule h5:first-child, .cel-60-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-40-b h5:first-child {
+  .cel-40-b h5:first-child, .cel-40-b-rule h5:first-child, .cel-40-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -309,57 +343,57 @@
 
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  .cel-40-a img:first-child {
+  .cel-40-a img:first-child, .cel-40-a-rule img:first-child, .cel-40-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-60-b img:first-child {
+  .cel-60-b img:first-child, .cel-60-b-rule img:first-child, .cel-60-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-40-a ul:first-child {
+  .cel-40-a ul:first-child, .cel-40-a-rule ul:first-child, .cel-40-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-b ul:first-child {
+  .cel-60-b ul:first-child, .cel-60-b-rule ul:first-child, .cel-60-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-a ol:first-child {
+  .cel-40-a ol:first-child, .cel-40-a-rule ol:first-child, .cel-40-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-b ol:first-child {
+  .cel-60-b ol:first-child, .cel-60-b-rule ol:first-child, .cel-60-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-a h2:first-child {
+  .cel-40-a h2:first-child, .cel-40-a-rule h2:first-child, .cel-40-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-60-b h2:first-child {
+  .cel-60-b h2:first-child, .cel-60-b-rule h2:first-child, .cel-60-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-40-a h3:first-child {
+  .cel-40-a h3:first-child, .cel-40-a-rule h3:first-child, .cel-40-a-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-60-b h3:first-child {
+  .cel-60-b h3:first-child, .cel-60-b-rule h3:first-child, .cel-60-b-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-40-a h4:first-child {
+  .cel-40-a h4:first-child, .cel-40-a-rule h4:first-child, .cel-40-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-60-b h4:first-child {
+  .cel-60-b h4:first-child, .cel-60-b-rule h4:first-child, .cel-60-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-40-a h5:first-child {
+  .cel-40-a h5:first-child, .cel-40-a-rule h5:first-child, .cel-40-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-60-b h5:first-child {
+  .cel-60-b h5:first-child, .cel-60-b-rule h5:first-child, .cel-60-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -443,57 +477,57 @@
 
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  .cel-7525-a img:first-child {
+  .cel-7525-a img:first-child, .cel-7525-a-rule img:first-child, .cel-7525-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-7525-b img:first-child {
+  .cel-7525-b img:first-child, .cel-7525-b-rule img:first-child, .cel-7525-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-7525-a ul:first-child {
+  .cel-7525-a ul:first-child, .cel-7525-a-rule ul:first-child, .cel-7525-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-b ul:first-child {
+  .cel-7525-b ul:first-child, .cel-7525-b-rule ul:first-child, .cel-7525-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-a ol:first-child {
+  .cel-7525-a ol:first-child, .cel-7525-a-rule ol:first-child, .cel-7525-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-b ol:first-child {
+  .cel-7525-b ol:first-child, .cel-7525-b-rule ol:first-child, .cel-7525-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-a h2:first-child {
+  .cel-7525-a h2:first-child, .cel-7525-a-rule h2:first-child, .cel-7525-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-b h2:first-child {
+  .cel-7525-b h2:first-child, .cel-7525-b-rule h2:first-child, .cel-7525-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-7525-a h3:first-child {
+  .cel-7525-a h3:first-child, .cel-7525-a-rule h3:first-child, .cel-7525-a-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-7525-b h3:first-child {
+  .cel-7525-b h3:first-child, .cel-7525-b-rule h3:first-child, .cel-7525-b-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-7525-a h4:first-child {
+  .cel-7525-a h4:first-child, .cel-7525-a-rule h4:first-child, .cel-7525-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-7525-b h4:first-child {
+  .cel-7525-b h4:first-child, .cel-7525-b-rule h4:first-child, .cel-7525-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-7525-a h5:first-child {
+  .cel-7525-a h5:first-child, .cel-7525-a-rule h5:first-child, .cel-7525-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-7525-b h5:first-child {
+  .cel-7525-b h5:first-child, .cel-7525-b-rule h5:first-child, .cel-7525-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -577,64 +611,64 @@
 
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  .cel-2575-a img:first-child {
+  .cel-2575-a img:first-child, .cel-2575-a-rule img:first-child, .cel-2575-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-2575-b img:first-child {
+  .cel-2575-b img:first-child, .cel-2575-b-rule img:first-child, .cel-2575-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-2575-a ul:first-child {
+  .cel-2575-a ul:first-child, .cel-2575-a-rule ul:first-child, .cel-2575-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-b ul:first-child {
+  .cel-2575-b ul:first-child, .cel-2575-b-rule ul:first-child, .cel-2575-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-a ol:first-child {
+  .cel-2575-a ol:first-child, .cel-2575-a-rule ol:first-child, .cel-2575-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-b ol:first-child {
+  .cel-2575-b ol:first-child, .cel-2575-b-rule ol:first-child, .cel-2575-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-a h2:first-child {
+  .cel-2575-a h2:first-child, .cel-2575-a-rule h2:first-child, .cel-2575-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-b h2:first-child {
+  .cel-2575-b h2:first-child, .cel-2575-b-rule h2:first-child, .cel-2575-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-2575-a h3:first-child {
+  .cel-2575-a h3:first-child, .cel-2575-a-rule h3:first-child, .cel-2575-a-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-2575-b h3:first-child {
+  .cel-2575-b h3:first-child, .cel-2575-b-rule h3:first-child, .cel-2575-b-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-2575-a h4:first-child {
+  .cel-2575-a h4:first-child, .cel-2575-a-rule h4:first-child, .cel-2575-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-2575-b h4:first-child {
+  .cel-2575-b h4:first-child, .cel-2575-b-rule h4:first-child, .cel-2575-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-2575-a h5:first-child {
+  .cel-2575-a h5:first-child, .cel-2575-a-rule h5:first-child, .cel-2575-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-2575-b h5:first-child {
+  .cel-2575-b h5:first-child, .cel-2575-b-rule h5:first-child, .cel-2575-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
   /* 25/75 2 column split */
   .cel-2575-a {
     float: left;
-    width: 73%;
+    width: 24%;
     padding: 0 0 0 1%;
     border: 0.0625em solid #F7FFFC; }
 
@@ -729,84 +763,84 @@
   border: 1px solid #B8CCC7; }
 
 @media only screen and (min-width: 35em) {
-  .cel-30-a img:first-child {
+  .cel-30-a img:first-child, .cel-30-a-rule img:first-child, .cel-30-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-30-b img:first-child {
+  .cel-30-b img:first-child, .cel-30-b-rule img:first-child, .cel-30-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-30-c img:first-child {
+  .cel-30-c img:first-child, .cel-30-c-rule img:first-child, .cel-30-c-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-30-a ul:first-child {
+  .cel-30-a ul:first-child, .cel-30-a-rule ul:first-child, .cel-30-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-b ul:first-child {
+  .cel-30-b ul:first-child, .cel-30-b-rule ul:first-child, .cel-30-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-c ul:first-child {
+  .cel-30-c ul:first-child, .cel-30-c-rule ul:first-child, .cel-30-c-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-a ol:first-child {
+  .cel-30-a ol:first-child, .cel-30-a-rule ol:first-child, .cel-30-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-b ol:first-child {
+  .cel-30-b ol:first-child, .cel-30-b-rule ol:first-child, .cel-30-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-c ol:first-child {
+  .cel-30-c ol:first-child, .cel-30-c-rule ol:first-child, .cel-30-c-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-a h2:first-child {
+  .cel-30-a h2:first-child, .cel-30-a-rule h2:first-child, .cel-30-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-b h2:first-child {
+  .cel-30-b h2:first-child, .cel-30-b-rule h2:first-child, .cel-30-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-c h2:first-child {
+  .cel-30-c h2:first-child, .cel-30-c-rule h2:first-child, .cel-30-c-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-30-a h3:first-child {
+  .cel-30-a h3:first-child, .cel-30-a-rule h3:first-child, .cel-30-a-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-30-b h3:first-child {
+  .cel-30-b h3:first-child, .cel-30-b-rule h3:first-child, .cel-30-b-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-30-c h3:first-child {
+  .cel-30-c h3:first-child, .cel-30-c-rule h3:first-child, .cel-30-c-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-30-a h4:first-child {
+  .cel-30-a h4:first-child, .cel-30-a-rule h4:first-child, .cel-30-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-30-b h4:first-child {
+  .cel-30-b h4:first-child, .cel-30-b-rule h4:first-child, .cel-30-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-30-c h4:first-child {
+  .cel-30-c h4:first-child, .cel-30-c-rule h4:first-child, .cel-30-c-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-30-a h5:first-child {
+  .cel-30-a h5:first-child, .cel-30-a-rule h5:first-child, .cel-30-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-30-b h5:first-child {
+  .cel-30-b h5:first-child, .cel-30-b-rule h5:first-child, .cel-30-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-30-c h5:first-child {
+  .cel-30-c h5:first-child, .cel-30-c-rule h5:first-child, .cel-30-c-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1012,111 +1046,111 @@
 
 @media only screen and (min-width: 35em) {
   /* 560 pixel width */
-  .cel-25-a img:first-child {
+  .cel-25-a img:first-child, .cel-25-a-rule img:first-child, .cel-25-a-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-25-b img:first-child {
+  .cel-25-b img:first-child, .cel-25-b-rule img:first-child, .cel-25-b-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-25-c img:first-child {
+  .cel-25-c img:first-child, .cel-25-c-rule img:first-child, .cel-25-c-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-25-d img:first-child {
+  .cel-25-d img:first-child, .cel-25-d-rule img:first-child, .cel-25-d-box img:first-child {
     margin-top: 1.4rem; }
 
-  .cel-25-a ul:first-child {
+  .cel-25-a ul:first-child, .cel-25-a-rule ul:first-child, .cel-25-a-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-b ul:first-child {
+  .cel-25-b ul:first-child, .cel-25-b-rule ul:first-child, .cel-25-b-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-c ul:first-child {
+  .cel-25-c ul:first-child, .cel-25-c-rule ul:first-child, .cel-25-c-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-d ul:first-child {
+  .cel-25-d ul:first-child, .cel-25-d-rule ul:first-child, .cel-25-d-box ul:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-a ol:first-child {
+  .cel-25-a ol:first-child, .cel-25-a-rule ol:first-child, .cel-25-a-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-b ol:first-child {
+  .cel-25-b ol:first-child, .cel-25-b-rule ol:first-child, .cel-25-b-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-c ol:first-child {
+  .cel-25-c ol:first-child, .cel-25-c-rule ol:first-child, .cel-25-c-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-d ol:first-child {
+  .cel-25-d ol:first-child, .cel-25-d-rule ol:first-child, .cel-25-d-box ol:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-a h2:first-child {
+  .cel-25-a h2:first-child, .cel-25-a-rule h2:first-child, .cel-25-a-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-b h2:first-child {
+  .cel-25-b h2:first-child, .cel-25-b-rule h2:first-child, .cel-25-b-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-c h2:first-child {
+  .cel-25-c h2:first-child, .cel-25-c-rule h2:first-child, .cel-25-c-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-d h2:first-child {
+  .cel-25-d h2:first-child, .cel-25-d-rule h2:first-child, .cel-25-d-box h2:first-child {
     margin-top: 1rem;
     margin-bottom: 1.5rem; }
 
-  .cel-25-a h3:first-child {
+  .cel-25-a h3:first-child, .cel-25-a-rule h3:first-child, .cel-25-a-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-25-b h3:first-child {
+  .cel-25-b h3:first-child, .cel-25-b-rule h3:first-child, .cel-25-b-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-25-c h3:first-child {
+  .cel-25-c h3:first-child, .cel-25-c-rule h3:first-child, .cel-25-c-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-25-d h3:first-child {
+  .cel-25-d h3:first-child, .cel-25-d-rule h3:first-child, .cel-25-d-box h3:first-child {
     margin-top: .65rem;
     margin-bottom: 1.85rem; }
 
-  .cel-25-a h4:first-child {
+  .cel-25-a h4:first-child, .cel-25-a-rule h4:first-child, .cel-25-a-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-25-b h4:first-child {
+  .cel-25-b h4:first-child, .cel-25-b-rule h4:first-child, .cel-25-b-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-25-c h4:first-child {
+  .cel-25-c h4:first-child, .cel-25-c-rule h4:first-child, .cel-25-c-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-25-d h4:first-child {
+  .cel-25-d h4:first-child, .cel-25-d-rule h4:first-child, .cel-25-d-box h4:first-child {
     margin-top: .5rem;
     margin-bottom: 2rem; }
 
-  .cel-25-a h5:first-child {
+  .cel-25-a h5:first-child, .cel-25-a-rule h5:first-child, .cel-25-a-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-25-b h5:first-child {
+  .cel-25-b h5:first-child, .cel-25-b-rule h5:first-child, .cel-25-b-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-25-c h5:first-child {
+  .cel-25-c h5:first-child, .cel-25-c-rule h5:first-child, .cel-25-c-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
-  .cel-25-d h5:first-child {
+  .cel-25-d h5:first-child, .cel-25-d-rule h5:first-child, .cel-25-d-box h5:first-child {
     margin-top: .4rem;
     margin-bottom: 2.1rem; }
 
@@ -1287,15 +1321,72 @@
     padding: 0 .5% 0 .5%;
     border: 1px solid #B8CCC7;
     margin-bottom: 1.5rem; } }
+.is-card {
+  background-color: white;
+  border-color: white;
+  -moz-box-shadow: 0 0.125em 0.0625em #727272;
+  -webkit-box-shadow: 0 0.125em 0.0625em #727272;
+  box-shadow: 0 0.125em 0.0625em #727272; }
+
+/* changes the border color to match*/
+.is-card .cel-50-a,
+.is-card .cel-50-b,
+.is-card .cel-100,
+.is-card .cel-30-a,
+.is-card .cel-30-b,
+.is-card .cel-30-c,
+.is-card .cel-25-a,
+.is-card .cel-25-b,
+.is-card .cel-25-c,
+.is-card .cel-25-d,
+.is-card .cel-7525-a,
+.is-card .cel-7525-b,
+.is-card .cel-60-a,
+.is-card .cel-40-b,
+.is-card .cel-40-a,
+.is-card .cel-60-b,
+.is-card .cel-2575-a,
+.is-card .cel-2575-b {
+  border-color: transparent; }
+
+.is-card-dark {
+  background-color: #d6e1de;
+  border-color: #d6e1de;
+  -moz-box-shadow: 0 0.125em 0.0625em #727272;
+  -webkit-box-shadow: 0 0.125em 0.0625em #727272;
+  box-shadow: 0 0.125em 0.0625em #727272; }
+
+/* changes the border color to match*/
+.is-card-dark .cel-50-a,
+.is-card-dark .cel-50-b,
+.is-card-dark .cel-100,
+.is-card-dark .cel-30-a,
+.is-card-dark .cel-30-b,
+.is-card-dark .cel-30-c,
+.is-card-dark .cel-25-a,
+.is-card-dark .cel-25-b,
+.is-card-dark .cel-25-c,
+.is-card-dark .cel-25-d,
+.is-card-dark .cel-7525-a,
+.is-card-dark .cel-7525-b,
+.is-card-dark .cel-60-a,
+.is-card-dark .cel-40-b,
+.is-card-dark .cel-40-a,
+.is-card-dark .cel-60-b,
+.is-card-dark .cel-2575-a,
+.is-card-dark .cel-2575-b,
+.cel-row[class="is-card"],
+.cel-row[class="is-card-dark"] {
+  border-color: #d6e1de; }
+
+@media only screen and (min-width: 35em) {
+  /* 560 pixel width */
+  /* here just in case. this is my mobile breakpoint. */ }
+/* end media Q*/
 .cel-row {
   float: left;
   width: 99%;
   margin: 0 0 1.9rem 0;
-  padding: 0; }
-
-.cel-100 {
-  float: left;
-  width: 100%;
   padding: 0; }
 
 .cel-divider {
@@ -1311,17 +1402,15 @@
     margin: 0 0 1.9rem 0;
     padding: 0; }
 
-  .cel-100 {
-    float: left;
-    width: 100%;
-    padding: 0; }
-
   .cel-divider {
     float: left;
     width: 100%;
     height: .125em; } }
 /* end media Q*/
 /* generic element styles html body p ul */
+hr {
+  border-color: #B8CCC7; }
+
 strong {
   font-weight: 700; }
 
@@ -1725,9 +1814,9 @@ p {
   background-color: #2F343B;
   border-bottom: 0.0625em solid #212423;
   margin-bottom: .5rem;
-  -moz-box-shadow: 0px 0.125em 0.0625em #727272;
-  -webkit-box-shadow: 0px 0.125em 0.0625em #727272;
-  box-shadow: 0px 0.125em 0.0625em #727272; }
+  -moz-box-shadow: 0 0.125em 0.0625em #727272;
+  -webkit-box-shadow: 0 0.125em 0.0625em #727272;
+  box-shadow: 0 0.125em 0.0625em #727272; }
 
 #theModuleHeader {
   position: relative;
@@ -2400,16 +2489,15 @@ button {
 
   .courseIcon {
     fill: #F7FFFC;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     float: left;
-    padding: .75rem 0 0 .5rem; }
+    padding: 1.25em 0 0 .5rem; }
 
   #courseNumber {
     position: relative;
     margin-top: 1rem;
     width: 60vw;
-    font-weight: 700;
     font-size: 3em;
     font-weight: 300;
     border: 0;
