@@ -3,6 +3,7 @@
   color: $white;
   cursor: pointer;
 }
+.cel-accordionHeader{border: 1px solid $accentColor;margin-bottom: 0!important;}
 .cel-accordionBox, .cel-accordionHeader, .cel-accordion-container, .is-activeAccordion,.is-closedAccordion,.is-openAccordion{
   transition: all .5s ease;
 }
