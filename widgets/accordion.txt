@@ -19,6 +19,7 @@ var accordionMethod = {
     //now show the accordion that was clicked.
     var showThisAccordion = this.parentNode;
     this.classList.remove("is-closedAccordion");
+    this.parentNode.classList.add("is-cleared");
     this.classList.add("is-openAccordion");
     //replace class name.
     showThisAccordion.getElementsByClassName("is-invisible")[0].className = "is-activeAccordion";
