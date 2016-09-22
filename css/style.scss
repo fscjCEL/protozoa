@@ -58,6 +58,11 @@ $black: #090A0A;
 @import 'chunk-col-25';
 @import "chunk-cards";
 @import 'chunk-col-layoutHelpers';
+@import "widget-accordion";
+@import "widget-clickReveal";
+@import "widget-fillInTheBlank";
+@import "widget-multiChoice";
+@import "widget-tabular";
 
 
 /* generic element styles html body p ul */

@@ -1,0 +1,17 @@
+/* ======================================  STEP 1: A little bit of JS   ================================== */
+/* STEP ONE: Add an eventlistener per fill in the blank question to the module's custom.js file */
+/* =================================================================================== */
+
+document.getElementById("fillBlank1").addEventListener("click", function(){this.innerHTML = " The answer ";}, false);
+
+document.getElementById("fillBlank2").addEventListener("click", function(){this.innerHTML = " That ";}, false);
+
+
+
+/* ======================================  STEP 2: the HTML Structure   ================================== */
+/* STEP THREE: add the HTML structure to index.html by copy/pasting the following HTML anywhere you need. */
+/* =================================================================================== */
+
+<p><span id="fillBlank1" class="cel-questionBlank">__________</span>are products that the U.S. Department of Agriculture has evaluated in order to determine if the products meet a meal pattern requirement.</p>
+
+<p>This is another question<span id="fillBlank2" class="cel-questionBlank">__________</span>may have a blank in the middle of it.</p>

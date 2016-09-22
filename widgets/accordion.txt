@@ -1,0 +1,54 @@
+ /* ======================================  STEP 1: some JS   ================================== */
+ /* STEP ONE: Paste the following JS into the custom.js file located in your module's root folder.
+ /* =================================================================================== */
+
+var accordionMethod = {
+    celAccordionHandler:function(){
+    //grab the parent element
+    var theAccordionParent = document.getElementById(this.parentNode.parentNode.id);
+    if(theAccordionParent.getElementsByClassName("is-activeAccordion")[0]){
+        //if there is an active accordion then change it to is-invisible class
+        theAccordionParent.getElementsByClassName("is-activeAccordion")[0].classList.add("is-invisible");
+        theAccordionParent.getElementsByClassName("is-activeAccordion")[0].classList.remove("is-activeAccordion");
+    }//end if
+    //if there is an openAccordion (header object clicked upon) change it to closed as well.
+    if(theAccordionParent.getElementsByClassName("is-openAccordion")[0]){
+        theAccordionParent.getElementsByClassName("is-openAccordion")[0].classList.add("is-closedAccordion");
+        theAccordionParent.getElementsByClassName("is-openAccordion")[0].classList.remove("is-openAccordion");
+    }//end if
+    //now show the accordion that was clicked.
+    var showThisAccordion = this.parentNode;
+    this.classList.remove("is-closedAccordion");
+    this.classList.add("is-openAccordion");
+    //replace class name.
+    showThisAccordion.getElementsByClassName("is-invisible")[0].className = "is-activeAccordion";
+}//end function
+};/*end accordionMethod*/
+var accordionHeaders = document.getElementsByClassName("cel-accordionHeader");
+for(var ah=0;ah<accordionHeaders.length;ah++){
+    accordionHeaders[ah].addEventListener("click",accordionMethod.celAccordionHandler,"false");
+}//end for
+
+
+
+/* ======================================  STEP 2: the HTML Structure   ================================== */
+/* STEP TWO: add the HTML structure to index.html by copy/pasting the following HTML anywhere you need. */
+/* =================================================================================== */
+/* IF you need more than one block of accordions --> just change the ID on the accordion container by incrementing the # */
+
+<div class="cel-row">
+    <div class="cel-accordion-container" id="accordion1">
+        <div class="cel-accordionBox">
+            <h3 class="cel-accordionHeader is-closedAccordion">Clickable sub-headers reveal content</h3>
+            <div class="is-invisible">
+                    <p>Insert Content Here</p>
+            </div><!-- end accordion Content -->
+        </div><!-- end accordionBOX -->
+        <div class="cel-accordionBox">
+            <h4 class="cel-accordionHeader is-closedAccordion">Different Sized sub headers</h4>
+            <div class="is-invisible">
+                <p>Insert content here</p>
+            </div><!-- end accordion Content -->
+        </div><!-- end accordionBox -->
+    </div><!-- end accordion container -->
+</div><!-- end row -->

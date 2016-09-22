@@ -1,0 +1,13 @@
+
+.clickButton{text-align: right;}
+.clickButton:hover{background-color: $accentColor;color: $white;cursor: pointer;transition: all .5s ease;}
+.theReveal{transition: all .5s ease;}
+
+
+.clickButton{text-align: center;}
+
+
+@media only screen and (max-width: 66.25em) {
+  .printHeaderHeader{font-size: 1.5em;}
+  .clickButton{text-align: center;}
+}

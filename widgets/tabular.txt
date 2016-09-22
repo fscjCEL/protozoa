@@ -1,0 +1,81 @@
+ /* ======================================  STEP 1: some JS   ================================== */
+ /* STEP ONE: Paste the following javascript code into the custom.js file.
+ /* =================================================================================== */
+
+var theTabularContainers = document.getElementsByClassName("cel-tabular-container");
+for(var z=0;z<theTabularContainers.length;z++){
+    theTabularContainers[z].classList.add("is-card");
+    //looping through each tabular group
+    //grab the all the nav elements within that container.
+    var theNavsWithin =  theTabularContainers[z].getElementsByClassName("cel-tabNav");
+    var theBase = 100 - theNavsWithin.length;
+    var tabNavWidthPercentage = theBase/theNavsWithin.length;
+    for(var a=0;a<theNavsWithin.length;a++){
+        theNavsWithin[a].style.width = tabNavWidthPercentage+"%";
+    }//end for
+}//end for
+var tabularMethod = {
+    tabularHandler:function(){
+        //this is called when a tab is clicked and changes the content to the tab clicked upon..
+        var theClickedTabNav = this;
+
+        var theTabularParent = this.parentNode.parentNode;
+        var theNumberOfClickedTabNav = theClickedTabNav.id.substr(-1);
+        var theIDOfNeededTab = theTabularParent.id+"-tab-"+theNumberOfClickedTabNav;
+        //remove the active classname off the currently active tabNav
+        theTabularParent.getElementsByClassName("is-activeTabNav")[0].classList.remove("is-activeTabNav");
+        //hide the currently active tab
+        theTabularParent.getElementsByClassName("is-activeTab")[0].classList.add("is-invisible");
+        //remove the active designation from currently active tab
+        theTabularParent.getElementsByClassName("is-activeTab")[0].classList.remove("is-activeTab");
+
+        //Add the active class to the tabNav you just clicked.
+        theClickedTabNav.classList.add("is-activeTabNav");
+        //show the newly clicked tab content
+        document.getElementById(theIDOfNeededTab).classList.remove("is-invisible");
+        document.getElementById(theIDOfNeededTab).classList.add("is-activeTab");
+    }//end tabularfunction
+}; //end method
+
+var theTabNavs = document.getElementsByClassName("cel-tabNav");
+var theTabs = document.getElementsByClassName("cel-tab");
+for (var x=0;x < theTabNavs.length;x++){
+    theTabNavs[x].addEventListener("click",tabularMethod.tabularHandler,false);
+    var theTabNavParentID = theTabNavs[x].parentNode.parentNode.id;
+    theTabNavs[x].id = theTabNavParentID+"-nav-"+x;
+}//end for
+for(var y=0;y<theTabs.length;y++){
+    var theTabParentID = theTabs[y].parentNode.parentNode.id;
+    theTabs[y].id = theTabParentID+"-tab-"+y;
+}//end for
+
+
+/* ======================================  STEP 2: the HTML Structure   ================================== */
+/* STEP TWO: add the HTML structure to index.html by copy/pasting the following HTML anywhere you need. */
+/* NOTE: at the very least the structure should be in a cel-row. You can put multiple tab structures throughout the module as needed. No need for special ID's
+/* =================================================================================== */
+<div class="cel-row">
+    <p>Click each tab to reveal the content under each one.</p>
+    <div class="cel-tabular-container">
+        <div class="cel-tabNavs is-cleared">
+            <div class="cel-tabNav is-activeTabNav">Tab One</div>
+            <div class="cel-tabNav">Tab Two</div>
+            <div class="cel-tabNav">Tab Three</div>
+            <div class="cel-tabNav">Tab Four</div>
+        </div><!-- end nav container -->
+        <div class="cel-tabs is-cleared">
+            <div class="cel-tab is-activeTab">
+                <p>Tab One Content</p>
+            </div><!-- end tab content -->
+            <div class="cel-tab is-invisible">
+                <p>Tab Two Content</p>
+            </div><!-- end tab content -->
+            <div class="cel-tab is-invisible">
+                <p>Tab Three Content</p>
+            </div><!-- end tab content -->
+            <div class="cel-tab is-invisible">
+                <p>Tab Four Content</p>
+            </div><!-- end tab content -->
+        </div><!-- end tabs container -->
+    </div><!-- end tabular container -->
+</div><!-- end row -->

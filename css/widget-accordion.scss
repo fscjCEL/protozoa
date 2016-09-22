@@ -1,0 +1,8 @@
+.is-closedAccordion:hover{
+  background-color: $accentColor;
+  color: $white;
+  cursor: pointer;
+}
+.cel-accordionBox, .cel-accordionHeader, .cel-accordion-container, .is-activeAccordion,.is-closedAccordion,.is-openAccordion{
+  transition: all .5s ease;
+}

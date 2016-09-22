@@ -1,0 +1,5 @@
+.cel-answer:hover{background-color: $accentColor;color: $white;transition: all .15s ease-in-out;cursor: pointer;}
+
+.cel-answer{font-size: 1em;}
+.cel-answer-is-correct{color: #00A103;font-weight: 700;}
+.cel-answer-is-incorrect{color: #adadad;}
