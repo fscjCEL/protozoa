@@ -1,2 +1,4 @@
 /.idea/
 *.cfg
+prepros.cfg
+/prepros.cfg
