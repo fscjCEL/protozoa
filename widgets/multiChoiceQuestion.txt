@@ -1,0 +1,82 @@
+ /* ======================================  STEP 1: some JS   ================================== */
+ /* STEP ONE: Paste the following javascript into the custom.js file
+ /* =================================================================================== */
+var multiChoiceMethod = {
+    revealAnswer:function(){
+        //the element variable represents the element that was clicked on.
+        var element = this;
+        //grab all the LI within the parent
+        var listItems = element.parentNode.getElementsByTagName('li');
+        //RIP through them, if correct then style one way, if NOT make gray.
+        for (var i=0, length=listItems.length;i < length;i++){
+            var theClassname = listItems[i].className;
+            if (theClassname == "correct cel-answer"){
+                //this is the correct answer so turn it green
+                listItems[i].classList.remove("cel-answer");
+                listItems[i].classList.add("cel-answer-is-correct");
+                //now shove the feedback into something you can view.
+                var theFeedback = listItems[i].getAttribute("data-feedback");
+            }
+            else{
+                //this is the wrong answer so turn it grey
+                listItems[i].classList.remove("cel-answer");
+                listItems[i].classList.add("cel-answer-is-incorrect");
+                listItems[i].removeEventListener("click",multiChoiceMethod.revealAnswer,false);
+                //listItems[i].parentNode.removeEventListener("click",multiChoiceMethod.revealAnswer,false);
+            }//end if
+        }//end for
+        //if your questions have no feedback then just comment the following line out.
+        alert(theFeedback);
+
+    } //end function
+}; //end method
+var multiChoiceQuestion = document.getElementsByClassName("cel-answer");
+for(var xz=0;xz<multiChoiceQuestion.length;xz++){
+    multiChoiceQuestion[xz].addEventListener("click",multiChoiceMethod.revealAnswer,"false");
+}//end for
+
+
+
+
+/* ======================================  STEP 2: the HTML Structure   ================================== */
+/* STEP TWO: add the HTML structure to index.html by copy/pasting the following HTML anywhere you need. */
+/* NOTE make sure that the correct answer in each group is classes as such and has data-feedback*/
+/* =================================================================================== */
+
+ <div class="cel-row">
+    <h3>Multiple Choice Self Check</h3>
+    <form>
+        <p>1.	The ability to know when more information is needed and the ability to find it, evaluate it and use it effectively is known as:</p>
+        <ul>
+            <li class="cel-answer">Know the purpose </li>
+            <li class="cel-answer">Technology</li>
+            <li class="correct cel-answer" data-feedback=" insert question feedback here.">Information Literacy</li>
+            <li class="cel-answer">Database</li>
+
+        </ul>
+        <p>2.	In which step of becoming information literate do you begin the search process?</p>
+        <ul>
+            <li class="cel-answer">Know the purpose</li>
+            <li class="correct cel-answer" data-feedback=" insert question feedback here.">Retrieve</li>
+            <li class="cel-answer">Evaluate</li>
+            <li class="cel-answer">Use</li>
+
+        </ul>
+        <p>3.	Determining what kind of information you need and for what reason happens during which step?</p>
+        <ul>
+            <li class="correct cel-answer" data-feedback=" insert question feedback here.">Know the purpose</li>
+            <li class="cel-answer">Retrieve</li>
+            <li class="cel-answer">Evaluate</li>
+            <li class="cel-answer">Use</li>
+
+        </ul>
+        <p>4.	Determining if sources are credible and relevant to your topic occurs during which step?</p>
+        <ul>
+            <li class="cel-answer">Know the purpose</li>
+            <li class="cel-answer">Retrieve</li>
+            <li class="correct cel-answer" data-feedback=" insert question feedback here.">Evaluate</li>
+            <li class="cel-answer">Use</li>
+
+        </ul>
+    </form>
+</div><!-- end cel-row -->

@@ -1,0 +1,57 @@
+
+.cel-tabular-container{
+float: left;
+  width: 99%;
+  margin: 0;
+  padding: .5em;
+  display: inline-block;
+  border-radius: 3px;
+}
+.cel-tabNavContainer{
+  float: left;
+  width: 100%;
+  margin: 0 .125em .125em 0;
+  padding: 0;
+  display: inline-block;
+}
+.cel-tabNavs{width: 100%;padding: 0;margin: 0;}
+.cel-tabNav{
+  box-sizing: border-box;
+  float: left;
+  display: inline-block;
+  color:$black;
+  background-color: $lightPrimaryColor;
+  border: 1px solid $lightPrimaryColor;
+  padding: .25em 0 .25em .25em;
+  margin: .25em .25em -.18em 0;
+  border-radius: 3px;
+}
+.is-activeTabNav{
+
+  color:$white;
+  background-color: $accentColor;
+  border: 1px solid #666;
+
+}
+.is-activeTabNav:hover{
+
+  color:$black;
+  background-color: $white;
+  border: 1px solid $darkPrimaryColor;
+  cursor: pointer;
+}
+.cel-tabNav:hover{
+  background-color: $white;
+  color: $darkPrimaryColor;
+  cursor: pointer;
+}
+
+.is-activeTab{
+  float: left;
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  opacity: 1;
+  padding-top: .5em;
+  transition: opacity 1s ease-in-out;
+}
