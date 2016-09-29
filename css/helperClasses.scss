@@ -38,5 +38,12 @@
 .is-cleared:after {
     clear: both;
 }
-.centeredLeftHeader{text-align: right;}
-.centeredRightHeader{text-align: left;}
+.centeredLeftHeader{text-align: center;}
+.centeredRightHeader{text-align: center;}
+@media only screen and (min-width: 35em) {/* 560 pixel width */
+  .centeredLeftHeader{text-align: right;}
+  .centeredRightHeader{text-align: left;}
+
+}
+
+.celCitation{margin-left: 3em;text-indent: -3em;}

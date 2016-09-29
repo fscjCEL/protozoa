@@ -848,33 +848,6 @@ button{border:0;}
 
 
 
-
-
-
-
-
-
-
-
-//========================
-/* =================> Column Layout styles *//* DO NOT TOUCH */
-/* DO NOT TOUCH */
-// at mobile widths I am taking the top margin off the a's and the bottom margin off the ending boxes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //========================================================================(mobile ^) Media Queries (desktop v) =====================================
 // =============================================================
 // =============================================================
@@ -884,45 +857,6 @@ button{border:0;}
 // =============================================================
 
 @media only screen and (min-width: 35em) {/* 560 pixel width */
-
-
-
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ========================typography */
-
-  /* =================> Column Layout styles *//* DO NOT TOUCH */
-  /* DO NOT TOUCH */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   .activeSlide {

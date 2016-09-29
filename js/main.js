@@ -304,7 +304,7 @@ var methods = {
             if (node.nodeName === "H3") {
                 processCapturedNode("H3", node);
             }//end if
-            
+
         }//end captureNodes function
 
 
