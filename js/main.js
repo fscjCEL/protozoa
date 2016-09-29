@@ -240,7 +240,7 @@ var methods = {
             //linkInnerHtml variable where node.innerHTML is written currently
             //so only grab the className of slideTitle as children of node.
             var insertThisTitle;
-            if(node.children[0]){
+            if(node.children[0]){//todo this breaks when you put a br into any header
                 //grabbing the slide title from the slide header itself
                 insertThisTitle = node.children[1].innerHTML;
             }else{
@@ -263,7 +263,7 @@ var methods = {
 
             // craft the header element as the innerHTML of the list item.
 
-            theNewElement.innerHTML =  "<"+type+"><span class='is-dormant'>jump to slide&nbsp;"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
+            theNewElement.innerHTML =  "<"+type+"><span class='is-dormant'>jump to slide—"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
@@ -297,24 +297,14 @@ var methods = {
             subTocParentELement.insertBefore(theNewElement, TocSubListTarget);
         }//end processCapturedNode function
         function captureNodes(node) {
-            //if (node.nodeName === "H1") {
-            //  processCapturedNode("H1", node);
-            //}//end if
+
             if (node.nodeName === "H2") {
                 processCapturedNode("H2", node);
             }//end if
             if (node.nodeName === "H3") {
                 processCapturedNode("H3", node);
             }//end if
-            if (node.nodeName === "H4") {
-                processCapturedNode("H4", node);
-            }//end if
-            if (node.nodeName === "H5") {
-                processCapturedNode("H5", node);
-            }//end if
-            if (node.nodeName === "H6") {
-                processCapturedNode("H6", node);
-            }//end if
+            
         }//end captureNodes function
 
 
