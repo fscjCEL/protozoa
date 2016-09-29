@@ -78,6 +78,9 @@ $black: #090A0A;
 
 /* style for the figure image elements */
 @import "m-figure";
+
+/* styles for the dropcaps */
+@import "m-dropCaps";
 .cel-link-icon:after{
   content: "\21D7";
 

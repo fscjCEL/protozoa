@@ -1,4 +1,17 @@
 var methods = {
+    addDropCaps:function(){
+        //collects all the paragraphs classed dropcap and adds the span.
+        var paragraphNodes,theFirstCharacter,theRestOfTheParagraph,node;
+        paragraphNodes = document.getElementsByClassName("dropCap");
+        if (paragraphNodes[0]){
+            for(var i=0;i<paragraphNodes.length;i++){
+                node = paragraphNodes[i];
+                theFirstCharacter = node.innerHTML.substr(0,1);
+                theRestOfTheParagraph =  node.innerHTML.substr(1);
+                node.innerHTML = "<span class='dropcapCharacter'>"+theFirstCharacter+"</span>"+theRestOfTheParagraph;
+            }//end for
+        }//end if
+    },//end addDropCaps function
     focusAllTheThings:function(){
         //This is so my internal links get keyboard focus (for accessibility's sake)
         //get that link
@@ -891,6 +904,7 @@ var methods = {
         document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
 
         methods.yellowFlash();
+        methods.addDropCaps();
 
 
 
