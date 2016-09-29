@@ -1237,7 +1237,14 @@ button{border:0;}
 
   }
 
+  #backToTopLink{
+    position: fixed;
+    bottom: .3em;
+    left: .5em;
+    color: $darkPrimaryColor;
 
+
+  }
 } /* end 35em media query */
 
 
