@@ -827,9 +827,11 @@ button{border:0;}
   float: left;
 }
 #institutionalLogo{
-  width: 100%;
-
-
+  width:275px;
+  
+  top:.1em;
+  right:6.25em;
+  position: absolute;
 }
 
 .fullScreenButton{
@@ -1229,13 +1231,7 @@ button{border:0;}
     padding: 0;
   }
 
-  #institutionalLogo{
-    width: 300px;
-    position:fixed;
-    bottom:0;
-    left:0;
 
-  }
 
   #backToTopLink{
     position: fixed;
@@ -1245,6 +1241,7 @@ button{border:0;}
 
 
   }
+  .cel-copyrightInfo{font-size: .7em;text-align: center;width: 100%;margin: 1em 0;}
 } /* end 35em media query */
 
 
