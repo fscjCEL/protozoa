@@ -627,7 +627,7 @@ var methods = {
 
                     switch (evaluateThisSlideClassname) {
                         case "pastSlideHeader is-cleared":
-                            //These is here because I want to leave these alone. THey need to retain that class.
+                            //These are here because I want to leave these alone. THey need to retain that class.
                             break;
                         case "futureSlideHeader is-cleared":
                             break;
