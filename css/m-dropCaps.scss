@@ -1,0 +1,11 @@
+.dropcapCharacter{
+  font-size:4em;
+  float:left;
+  margin:-.04em .04em -.25em 0;
+  padding: 0 .04em;
+  line-height:1.2;
+  background-color:$white;
+  color:$darkPrimaryColor;
+  @include font-familyHeading;
+
+}

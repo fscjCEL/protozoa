@@ -69,6 +69,7 @@ $black: #090A0A;
 @import 'baseClasses';
 
 @import "typography";
+@import "m-institutional-logo";
 
 /* styles that hide things + clearing styles*/
 @import 'helperClasses';
@@ -78,6 +79,9 @@ $black: #090A0A;
 
 /* style for the figure image elements */
 @import "m-figure";
+
+/* styles for the dropcaps */
+@import "m-dropCaps";
 .cel-link-icon:after{
   content: "\21D7";
 
@@ -492,7 +496,7 @@ $black: #090A0A;
 
 .slide {
   width: 100%;
-  background-color: $white;
+
 
 
 }
@@ -823,11 +827,7 @@ button{border:0;}
   width: 100%;
   float: left;
 }
-#institutionalLogo{
-  width: 100%;
 
-
-}
 
 .fullScreenButton{
   width:30px!important;
@@ -848,33 +848,6 @@ button{border:0;}
 
 
 
-
-
-
-
-
-
-
-
-//========================
-/* =================> Column Layout styles *//* DO NOT TOUCH */
-/* DO NOT TOUCH */
-// at mobile widths I am taking the top margin off the a's and the bottom margin off the ending boxes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //========================================================================(mobile ^) Media Queries (desktop v) =====================================
 // =============================================================
 // =============================================================
@@ -884,45 +857,6 @@ button{border:0;}
 // =============================================================
 
 @media only screen and (min-width: 35em) {/* 560 pixel width */
-
-
-
-  /* Column Tops must be flush regardless of what it starts with. Here I have taken care of H2-H6, Paragraphs and lists. When you use a graphic it breaks the baseline of any text located underneath it in the same column.   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ========================typography */
-
-  /* =================> Column Layout styles *//* DO NOT TOUCH */
-  /* DO NOT TOUCH */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   .activeSlide {
@@ -1292,15 +1226,17 @@ button{border:0;}
     padding: 0;
   }
 
-  #institutionalLogo{
-    width: 300px;
-    position:fixed;
-    bottom:0;
-    left:0;
+
+
+  #backToTopLink{
+    position: fixed;
+    bottom: .3em;
+    left: .5em;
+    color: $darkPrimaryColor;
+
 
   }
-
-
+  .cel-copyrightInfo{font-size: .7em;text-align: center;width: 100%;margin: 1em 0;}
 } /* end 35em media query */
 
 

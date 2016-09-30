@@ -1,0 +1,30 @@
+.activeSlide #institutionalLogo{
+  /* visible @ mobile */
+    width:40%;
+    position: relative;
+    left: 30%;
+    bottom:0;
+
+}
+.slide #institutionalLogo{
+  /* invisible @ mobile */
+    display: none !important;
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 35em) {
+
+    .activeSlide #institutionalLogo{
+      /* visible @ desktop */
+        width:100px;
+        position: relative;
+        left:.5em;
+        bottom:0;
+
+    }
+    .slide #institutionalLogo{
+      /* invisible @ desktop  */
+        display: none !important;
+        visibility: hidden;
+    }
+}
