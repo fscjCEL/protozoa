@@ -69,6 +69,7 @@ $black: #090A0A;
 @import 'baseClasses';
 
 @import "typography";
+@import "m-institutional-logo";
 
 /* styles that hide things + clearing styles*/
 @import 'helperClasses';
@@ -826,13 +827,7 @@ button{border:0;}
   width: 100%;
   float: left;
 }
-#institutionalLogo{
-  width:275px;
-  
-  top:.1em;
-  right:6.25em;
-  position: absolute;
-}
+
 
 .fullScreenButton{
   width:30px!important;
