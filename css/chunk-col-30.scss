@@ -221,60 +221,69 @@
     /* 30/30/30 3 column split */
     .cel-30-a {
         float: left;
-        width: 32%;
-        padding: 0 1% 0 0;
-        border: 1px solid $white;
+        width: 31.1%;
+        padding: 0 .5%;
+        margin-right: .66%;
+        border: .0625em solid $white;
     }
     .cel-30-b {
         float: left;
-        width: 32%;
-        padding: 0 .5% 0 .5%;
-        border: 1px solid $white;
+        width: 30.8%;
+        padding: 0 .5%;
+        margin-left:1%;
+
+
+        border: .0625em solid $white;
     }
     .cel-30-c {
         float: right;
-        width: 32%;
-        padding: 0 0 0 1%;
-        border: 1px solid $white;
+        width: 31.1%;
+        padding: 0 .5%;
+
+        border: .0625em solid $white;
     }
 
     .cel-30-a-rule {
-        float: left;
-        width: 32%;
-        padding: 0 1% 0 0;
+      float: left;
+      width: 31.1%;
+      padding: 0 .5%;
+      margin-right: .66%;
         border: 1px solid;
         border-color: $white $lightPrimaryColor $white $white;
     }
     .cel-30-b-rule {
-        float: left;
-        width: 32%;
-        padding: 0 .5% 0 .5%;
+      float: left;
+      width: 30.8%;
+      padding: 0 .5%;
+      margin-left:1%;
         border: 1px solid;
         border-color: $white $lightPrimaryColor;
     }
     .cel-30-c-rule {
-        float: right;
-        width: 32%;
-        padding: 0 0 0 1%;
+      float: right;
+      width: 31.1%;
+      padding: 0 .5%;
         border: 1px solid;
         border-color: $white $white $white $lightPrimaryColor;
     }
     .cel-30-a-box {
-        float: left;
-        width: 32%;
-        padding: 0 .5% 0 .5%;
+      float: left;
+      width: 31.1%;
+      padding: 0 .5%;
+      margin-right: .66%;
         border: 1px solid $lightPrimaryColor;
     }
     .cel-30-b-box {
-        float: left;
-        width: 32%;
-        padding: 0 .5% 0 .5%;
+      float: left;
+      width: 30.8%;
+      padding: 0 .5%;
+      margin-left:1%;
         border: 1px solid $lightPrimaryColor;
     }
     .cel-30-c-box {
-        float: right;
-        width: 32%;
-        padding: 0 .5% 0 .5%;
+      float: right;
+      width: 31.1%;
+      padding: 0 .5%;
         border: 1px solid $lightPrimaryColor;
     }
 
