@@ -2,4 +2,4 @@
 *.cfg
 prepros.cfg
 /prepros.cfg
-/css/style.css
+/css/*.css
