@@ -3,10 +3,10 @@ html {font-size: 16px;}
 header h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
 h1 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
 h2 {font-size: 2.441rem;line-height: 3rem;@include lightWeight;}/* 36pxs */
-h3 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 24pxs */
-h4 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 21pxs */
-h5 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 18pxs */
-h6 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;padding-left: .25rem;}/* 16pxs */
+h3 {font-size: 1.953rem;line-height: 3rem;@include lightWeight;margin-top: 0;padding-top: 0;}/* 24pxs */
+h4 {font-size: 1.563rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;}/* 21pxs */
+h5 {font-size: 1.25rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;}/* 18pxs */
+h6 {font-size: .8rem;line-height: 1.5rem;@include lightWeight;margin-top: 0;padding-top: 0;}/* 16pxs */
 
 p {font-size: 1rem;line-height: 1.5;@include regularWeight;}/* 16pxs */
 
