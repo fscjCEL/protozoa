@@ -104,8 +104,8 @@
     /* 25/75 2 column split */
     .cel-2575-a {
         float: left;
-        width: 24%;
-        padding: 0 0 0 1%;
+        width: 23%;
+        padding: 0 1% 0 0;
         border: .0625em solid $white;
     }
     .cel-2575-b {
@@ -116,7 +116,7 @@
     }
     .cel-2575-a-rule {
         float: left;
-        width: 24%;
+        width: 23%;
         padding: 0 .5% 0 .5%;
         border: .0625em solid;
         border-color: $white $lightPrimaryColor $white $white;
@@ -130,7 +130,7 @@
     }
     .cel-2575-a-box {
         float: left;
-        width: 24%;
+        width: 23%;
         padding: 0 .5% 0 .5%;
         border: .0625em solid $lightPrimaryColor;
     }
