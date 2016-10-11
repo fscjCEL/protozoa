@@ -2,32 +2,32 @@
 .cel-100 {
   float: left;
   width: 98.5%;
-  padding: 0 1%;
+  padding: 0 .5%;
   margin: 0;
-  border: 1px solid transparent;
+  border: .0625em solid transparent;
 }
 .cel-100-box{
   float: left;
   width: 98.5%;
   margin: 0;
   padding: 0 1.5%;
-  border: 1px solid $lightPrimaryColor;
+  border: .0625em solid $lightPrimaryColor;
 }
 .cel-100-rule{
   float: left;
   width: 98.5%;
-  padding: 0 1.5%;
-  margin:0;
-  border: 1px solid;
+  padding: 0 .5%;
+  margin: 0;
+  border: .0625em solid;
   border-color: $white $white $lightPrimaryColor $white;
 
 }
 .cel-100-rule-top{
   float: left;
   width: 98.5%;
-  padding: 0 1.5%;
+  padding: 0 .5%;
   margin: 0;
-  border: 1px solid;
+  border: .0625em solid;
   border-color: $lightPrimaryColor $white $white $white;
 
 }
