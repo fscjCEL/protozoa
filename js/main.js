@@ -265,18 +265,25 @@ var methods = {
             // create the new list item
             //theNewElement = document.createElement(type);//ex.type=h2 should be <a
             theNewElement = document.createElement("a");
-            theNewElement.className = "TOClink";
+            if (type==="H2"){
+                theNewElement.className = "toc-link-header";
+                // craft the header element as the innerHTML of the list item.
+                theNewElement.innerHTML =  "<span class='is-dormant'>jump to slide—"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"<br>";
+
+            }//endif
+            if (type==="H3"){
+                theNewElement.className = "toc-link-subheader";
+                // craft the header element as the innerHTML of the list item.
+                theNewElement.innerHTML =  "<span class='is-dormant'>jump to slide—"+theCurrentSlide.substr(5)+"</span>&ensp;"+insertThisTitle+"<br>";
+
+            }//endif
+
             theNewElement.href = theHREFiNeed;
             theNewElement.setAttribute("data-destination", theCurrentSlide);
             theNewElement.setAttribute("data-destinationNavID", newVar);
             //this is here because I want to suppress defeault link behavior in screen readers (which is tabindex=0)
             theNewElement.setAttribute("tabindex", "-1");
 
-
-
-            // craft the header element as the innerHTML of the list item.
-
-            theNewElement.innerHTML =  "<"+type+"><span class='is-dormant'>jump to slide—"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"</"+type+">";
 
             if (stopBit === Number(slideBit)) {
                 //Grab the parent I want to insert the list into.
@@ -724,7 +731,7 @@ var methods = {
         }//end switch
     },//end ascertainScope method
     whichInput: function (zz) {
-        if (this.className === "TOClink") {
+        if (this.className === "toc-link-header" || this.className === "toc-link-subheader") {
 
             methods.ascertainScope("tableOfContentsLink", this.getAttribute("data-destination"));
         }//end if
@@ -822,8 +829,8 @@ var methods = {
     main: function () {
 
         //this function is limited to mostly adding event listeners. The one exception, as it stands, is rendering the audio buttons on the page. This has extremely low overhead, and is the first of a two step process designed to make page loading more efficient.
-        var tocListItems;
-        var slideHeaderElements, futureSlideHeaderElements, allTheAudioButtons, allThePreviousSLideButtons, allTheNextSLideButtons, allTheNavElements;
+
+        var slideHeaderElements, futureSlideHeaderElements, allTheAudioButtons, allThePreviousSLideButtons, allTheNextSLideButtons, allTheNavElements,tocListHeaders,tocListSubheaders;
 
 
         //putting all the elements into the nav menu based on how many slide there are.
@@ -890,9 +897,13 @@ var methods = {
         //the TOC button
         document.getElementById("theTocTarget").addEventListener("click", methods.clickScopeTOC, false);
         //each TOC link
-        tocListItems = document.getElementsByClassName("TOClink");
-        for (var ttt = 0; ttt < tocListItems.length; ttt++) {
-            tocListItems[ttt].addEventListener("click", methods.whichInput, false);
+        tocListHeaders = document.getElementsByClassName("toc-link-header");
+        for (var ttt = 0; ttt < tocListHeaders.length; ttt++) {
+            tocListHeaders[ttt].addEventListener("click", methods.whichInput, false);
+        }//end for
+        tocListSubheaders = document.getElementsByClassName("toc-link-subheader");
+        for (var sss = 0; sss < tocListSubheaders.length; sss++) {
+            tocListSubheaders[sss].addEventListener("click", methods.whichInput, false);
         }//end for
 
         //this creates the nav menu elements.
