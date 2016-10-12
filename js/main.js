@@ -902,6 +902,7 @@ var methods = {
 
         //put this into a function if it works.
         document.getElementById("skipToContentLink").addEventListener("click",methods.focusAllTheThings,false);
+        document.getElementById("skipToIndexLink").addEventListener("click",methods.focusAllTheThings,false);
 
         methods.yellowFlash();
         methods.addDropCaps();
