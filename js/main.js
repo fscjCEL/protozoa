@@ -268,13 +268,13 @@ var methods = {
             if (type==="H2"){
                 theNewElement.className = "toc-link-header";
                 // craft the header element as the innerHTML of the list item.
-                theNewElement.innerHTML =  "<span class='is-dormant'>jump to slide—"+theCurrentSlide.substr(5)+"</span>"+insertThisTitle+"<br>";
+                theNewElement.innerHTML =  "<span class='is-dormant'>jump to slide:"+theCurrentSlide.substr(5)+"&mdash;</span>"+insertThisTitle+"<br>";
 
             }//endif
             if (type==="H3"){
                 theNewElement.className = "toc-link-subheader";
                 // craft the header element as the innerHTML of the list item.
-                theNewElement.innerHTML =  "<span class='is-dormant'>jump to slide—"+theCurrentSlide.substr(5)+"</span>&ensp;"+insertThisTitle+"<br>";
+                theNewElement.innerHTML =  "<span class='is-dormant'>&mdash;jump to slide:"+theCurrentSlide.substr(5)+"&mdash;</span>&ensp;"+insertThisTitle+"<br>";
 
             }//endif
 
