@@ -201,77 +201,88 @@
     .cel-25-a {
         float: left;
         width: 48%;
-        padding: 0 1% 0 0;
-        border: .0625em solid $white
+        padding: 0 .5%;
+        margin-bottom:1.5rem;
+        border: .0625em solid $white;
+
     }
     .cel-25-b {
-        float: left;
+        float: right;
         width: 48%;
-        padding: 0 0 0 1%;
-        border: .0625em solid $white
+        padding: 0 .5%;
+        margin-bottom:1.5rem;
+        border: .0625em solid $white;
     }
     .cel-25-c {
         float: left;
-        width: 48%;
-        padding: 0;
-        border: .0625em solid $white;
+        width: 98.5%;
+        padding: 0 1%;
+        margin-bottom:1.5rem;
+      border: .0625em solid $white;
     }
     .cel-25-d {
-        float: right;
-        width: 48%;
-        padding: 0 1.4% 0 0;
-        border: .0625em solid $white;
+      float: left;
+      width: 98.5%;
+      padding: 0 1%;
+      border: .0625em solid $white;
+
     }
     .cel-25-a-rule {
-        float: left;
-        width: 48%;
-        padding: 0 1% 0 0;
+      float: left;
+      width: 48%;
+      padding: 0 .5%;
+      margin-bottom:1.5rem;
         border: .0625em solid;
         border-color: $white $lightPrimaryColor $white $white;
     }
     .cel-25-b-rule {
-        float: left;
-        width: 48%;
-        padding: 0 0 0 1%;
+      float: right;
+      width: 48%;
+      padding: 0 .5%;
+      margin-bottom:1.5rem;
         border: .0625em solid;
         border-color: $white $white $white $lightPrimaryColor;
     }
     .cel-25-c-rule {
-        float: left;
-        width: 48%;
-        padding: 0;
+      float: left;
+      width: 98.5%;
+      padding: 0 1%;
+      margin-bottom:1.5rem;
         border: .0625em solid;
         border-color: $lightPrimaryColor $white $white $white;
     }
     .cel-25-d-rule {
-        float: left;
-        width: 48%;
-        padding: 0 1.5% 0 0;
+      float: left;
+      width: 98.5%;
+      padding: 0 1%;
         border: .0625em solid;
         border-color: $lightPrimaryColor $white $white $white;
     }
     .cel-25-a-box {
-        float: left;
-        width: 48%;
-        padding: 0 .5%;
+      float: left;
+      width: 48%;
+      padding: 0 .5%;
+      margin-bottom:1.5rem;
         border: .0625em solid $lightPrimaryColor;
     }
     .cel-25-b-box {
-        float: left;
-        width: 48%;
-        padding: 0 .5%;
+      float: right;
+      width: 48%;
+      padding: 0 .5%;
+      margin-bottom:1.5rem;
         border: .0625em solid $lightPrimaryColor;
     }
     .cel-25-c-box {
-        float: left;
-        width: 48%;
-        padding: 0 .5%;
+      float: left;
+      width: 98.5%;
+      padding: 0 1%;
+      margin-bottom:1.5rem;
         border: .0625em solid $lightPrimaryColor;
     }
     .cel-25-d-box {
-        float: left;
-        width: 48%;
-        padding: 0 1.5% 0 0;
+      float: left;
+      width: 98.5%;
+      padding: 0 1%;
         border: .0625em solid $lightPrimaryColor;
     }
 }
@@ -283,94 +294,105 @@
     /* 25/25/25/25 4 column split */
     .cel-25-a {
         float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
-        border: 1px solid $white;
+        width: 23%;
+        padding: 0 .5%;
         margin-bottom: 1.5rem;
+      border: 1px solid $white;
+
     }
     .cel-25-b {
         float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
-        border: 1px solid $white;
+        width: 23%;
+        padding: 0 .5%;
+        margin-left:1.06%;
         margin-bottom: 1.5rem;
+      border: 1px solid $white;
+
     }
     .cel-25-c {
         float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
-        border: 1px solid $white;
+        width: 23%;
+        padding: 0 .5%;
+        margin-left: 1.06%;
         margin-bottom: 1.5rem;
+      border: 1px solid $white;
+
     }
     .cel-25-d {
         float: right;
-        width: 23.5%;
-        padding: 0 1.5% 0 0;
-        border: 1px solid $white;
+        width: 23%;
+        padding: 0 .5%;
         margin-bottom: 1.5rem;
+      border: 1px solid $white;
+
     }
     .cel-25-a-rule {
-        float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
-        margin-bottom: 1.5rem;
+      float: left;
+      width: 23%;
+      padding: 0 .5%;
+      margin-bottom: 1.5rem;
         border: 1px solid;
         border-color: $white $lightPrimaryColor $white $white;
     }
     .cel-25-b-rule {
-        float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
-        margin-bottom: 1.5rem;
+      float: left;
+      width: 23%;
+      padding: 0 .5%;
+      margin-left:1.06%;
         border: 1px solid;
         border-color: $white $lightPrimaryColor;
     }
     .cel-25-c-rule {
-        float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
-        margin-bottom: 1.5rem;
+      float: left;
+      width: 23%;
+      padding: 0 .5%;
+      margin-left: 1.06%;
+      margin-bottom: 1.5rem;
         border: 1px solid;
         border-color: $white $lightPrimaryColor;
     }
     .cel-25-d-rule {
-        float: left;
-        width: 23.5%;
-        padding: 0 1.5% 0 .5%;
-        margin-bottom: 1.5rem;
+      float: right;
+      width: 23%;
+      padding: 0 .5%;
+      margin-bottom: 1.5rem;
         border: 1px solid;
         border-color: $white $white $white $lightPrimaryColor;
     }
     .cel-25-a-box {
-        float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
+      float: left;
+      width: 23%;
+      padding: 0 .5%;
+      margin-bottom: 1.5rem;
         border: 1px solid $lightPrimaryColor;
-        margin-bottom: 1.5rem;
+
     }
     .cel-25-b-box {
-        float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
+      float: left;
+      width: 23%;
+      padding: 0 .5%;
+      margin-left:1.06%;
         border: 1px solid $lightPrimaryColor;
         margin-bottom: 1.5rem;
     }
     .cel-25-c-box {
-        float: left;
-        width: 23.5%;
-        padding: 0 .5% 0 .5%;
+      float: left;
+      width: 23%;
+      padding: 0 .5%;
+      margin-left: 1.06%;
+      margin-bottom: 1.5rem;
         border: 1px solid $lightPrimaryColor;
-        margin-bottom: 1.5rem;
+
     }
     .cel-25-d-box {
-        float: left;
-        width: 23.5%;
-        padding: 0 1.5% 0 .5%;
+      float: right;
+      width: 23%;
+      padding: 0 .5%;
+      margin-bottom: 1.5rem;
         border: 1px solid $lightPrimaryColor;
-        margin-bottom: 1.5rem;
     }
 
-    //#helpboxOpenState{height:55em;}
+
 }
 
 //end 840
