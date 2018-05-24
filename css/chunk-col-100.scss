@@ -1,39 +1,38 @@
 
 .cel-100 {
   float: left;
-  width: 98.5%;
-  padding: 0 .5%;
+  width: 100%;
+  padding: 0 1%;
   margin: 0;
-  border: .0625em solid transparent;
+
 }
 .cel-100-box{
   float: left;
-  width: 98.5%;
+  width: 100%;
   margin: 0;
-  padding: 0 1.5%;
-  border: .0625em solid $lightPrimaryColor;
+  padding: 0 1%;
+  border: 1px solid $lightPrimaryColor;
 }
 .cel-100-rule{
   float: left;
-  width: 98.5%;
-  padding: 0 .5%;
-  margin: 0;
-  border: .0625em solid;
+  width: 100%;
+  padding: 0;
+  margin:0;
+  border: 1px solid;
   border-color: $white $white $lightPrimaryColor $white;
 
 }
 .cel-100-rule-top{
   float: left;
-  width: 98.5%;
-  padding: 0 .5%;
+  width: 100%;
+  padding: 0 1%;
   margin: 0;
-  border: .0625em solid;
+  border: 1px solid;
   border-color: $lightPrimaryColor $white $white $white;
 
 }
 
-@media only screen and (min-width: 35em) {
-  /* 560 pixel width */
+@media only screen and (min-width: 35em) {/* 560 pixel width */
 
   /* here just in case. this is my mobile breakpoint. */
 
