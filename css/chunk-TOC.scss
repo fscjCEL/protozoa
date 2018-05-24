@@ -44,7 +44,7 @@
   /* this hooks into the closed menu TOC button */
   width: 2.6em;
   height: 2.6em;
-  background-image: url('../img/TOC-default.png');
+  background-image: url('../../theme/img/TOC-default.png');
   background-repeat: no-repeat;
   background-position:-1px 0, top;
   background-size:2.5em, 2.5em;
@@ -55,7 +55,7 @@
 }
 #tocOpenState #theTocTarget{
   /* this controls the open state of the TOC menu button */
-  background: url('../img/TOC-closeX.png') no-repeat;
+  background: url('../../theme/img/TOC-closeX.png') no-repeat;
   width: 80%;
   height: 2.75rem;
   background-size:2.75rem;
@@ -102,7 +102,7 @@
 #tocOpenState .toc-link-subheader{
   text-decoration: none;
   color: $white;
-  
+
   @include font-familyRegular;
   @include regularWeight;
   font-size: .9375rem;

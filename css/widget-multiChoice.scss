@@ -3,3 +3,14 @@
 .cel-answer{font-size: 1em;}
 .cel-answer-is-correct{color: #00A103;font-weight: 700;}
 .cel-answer-is-incorrect{color: #adadad;}
+
+.multi-question{border-top: 1px solid $shadowColor;padding:1rem;}
+.cel-multi>p{font-size: 1.25rem;}
+.multi-feedback{width:100%;adding: 0;margin: 0 0 .5rem 0;background-color: $white;}
+.feedback-is-closed{height:0;overflow: hidden;}
+.feedback-is-open{overflow: visible;}
+.multi-answer{font-size: 1em;width: 100%;}
+.multi-answer p:hover{background-color: #ededed;cursor: pointer;}
+.multi-answer p{width: 100%;border:1px solid #ededed;margin-bottom: .75rem;padding-left: .5rem;}
+.multi-answer-is-correct{border: 1px solid lightgreen;font-size: 1.25rem;}
+.multi-answer-is-correct>p{font-style: italic;font-size: 1.25rem;background-color: lightgreen;}
