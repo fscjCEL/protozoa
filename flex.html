@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Protozoa Flex Learning Object</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the Learning Object template we to use to convert closed files, like word and ppt, to an open format.">
+    <meta name="author" content="Ian Vanhoof (ian@fscj.edu)">
+    <link rel="stylesheet" href="css/flex-level-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Quattrocento:400,700" rel="stylesheet">
+</head>
+<body>
+<a id="skipToContentLink" href="#slide1" class="is-dormant" tabindex="0" >Use this link to skip to the main content area</a>
+<a id="skipToIndexLink" href="#tocClosedState" class="is-dormant" tabindex="0">Use this link access the table of contents.</a>
+<nav id="module-nav">
+    <div id="toc-button"></div>
+    <ul id="nav-item-list" tabindex="-1">
+        <li></li>
+    </ul>
+    <div id="help-button"></div>
+</nav>
+<article id="content-row">
+    <header id="toc-column" class="toc-is-open">
+        <div id="module-heading">
+            <h1 id="module-title">The Title of this LU</h1>
+        </div>
+        <div id="toc-menu" class="TOCs" tabindex="-1">
+            <section></section>
+        </div>
+    </header>
+    <div id="slide-container">
+    <!-- ============================================================================== START slide deck -->
+    <section id="slide1" class="activeSlide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="slideHeader is-cleared">
+            <span class="slideNumber">1</span>
+            <span class="slideTitle">Introduction</span>
+        </h2>
+
+        <div class="activeSlideContent">
+
+            <div class="cel-row">
+
+                <div class="cel-40-a">
+                    <h3>Our Mission</h3>
+                    <p class="dropCap">Here at the Center for eLearning we are in the business of making courses for the Web. We have a team of instructional designers that work with subject matter experts to build the content for each course. Understandably, content is often delivered to us in a format that cannot be rendered using a web browser. For example, Powerpoint files, Word files, Photoshop files, and such.</p><p>As a reaction to that we put all of our content into our web based learning object. This ensures all of our content complies with existing web standards, is accessible, 508 compliant, and is as future proof as we can make it. To make the production workflow run smooth, our development team has made the learning object into template form. We built in design features, and various plug-ins that assist with teaching each lesson.</p>
+                </div><!-- end 40-a -->
+                <div class="cel-60-b">
+                    <h3>Responsive Design</h3>
+                    <p>We do our best here at the Center for eLearning to make sure that our content is consumable by each student who experiences our courses. We also want to make sure that it looks good, and is as future proof as possible. With that in mind, our goal for the learning object was a lofty one…device agnosticism.</p><p>To achieve our goal we turned to a responsive design development pattern. With a little forethought this has allowed us to deliver to our core audience, remain device agnostic, and retain all of our accessibility all in one fell swoop. Now, the same bit of code works across most devices, both mobile and desktop, and is resolution independent.Try it…take your browser window and resize it. Our design adapts & adjusts based on the width of your browser window. During the design process we make little tweaks to the typography, and sizes of things so the content looks good, and is consumable, at any device resolution.</p>
+                    <h3>The Plug-ins</h3>
+                    <p>While working with the ID's and SME's we found that many of the requests for features started to form a pattern. Things like multiple choice, and true false questions started popping up everywhere. Tabbed interfaces, and styled tables were the norm. We analyzed the patterns and came up with plug-ins that we can implement in the template very quickly.</p>
+                    <h3>Accessibility Features</h3>
+                    <ul>
+                        <li><p>All of our content can be viewed even with no javascript or CSS attached.</p></li>
+                        <li><p>Applied ARIA roles to elements suggested in the standard.</p></li>
+                        <li><p>Hidden "skip navigation" link for use with screen reader.</p></li>
+                        <li><p>Liberal use of the alt tag on each img elements</p></li>
+                        <li><p>All Content is section 501/508, W3C validated standard HTML</p></li>
+                        <li><p>No use of structural elements to contain content.</p></li>
+                        <li><p>We use semantic HTML</p></li>
+                        <li><p>All video's contain downloadable transcripts.</p></li>
+                        <li><p>Standard navigation scheme on each slide.</p></li>
+                        <li><p>Hidden links in each Nav element that lead to the main content area of the slide</p></li>
+                    </ul>
+
+                </div><!-- end 60-b -->
+            </div><!-- end row -->
+
+        </div><!-- end content -->
+        <img src="img/logo-fscjOnline.png" alt="" id="institutionalLogo">
+        <footer class="activeSlideFooter" tabindex="0">
+            <nav class="nextPrevious">
+                <a href="#slide2" class="nextButton" title="Advance to slide 2."><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+
+        </footer>
+    </section>
+    <!-- ========================================================== end slide -->
+    <section id="slide2" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="futureSlideHeader is-cleared">
+            <span class="slideNumber">2</span>
+            <span class="slideTitle">Practice Assessments</span>
+        </h2>
+
+        <div class="slideContent">
+
+            <div class="cel-row">
+                <div class="cel-50-a">
+                    <h3>Multiple Choice Self Check</h3>
+                    <p>This is a standard Multiple Choice Mastery Question that provides feedback upon answering in the form of an alert, and colored text.</p>
+                    <form>
+                        <p>1.	 This is a Multiple Choice question whose answer is 2.</p>
+                        <ul>
+                            <li class="cel-answer">Answer 1</li>
+                            <li class="correct cel-answer" data-feedback=" Each of these questions has feedback associated with it.">Answer 2</li>
+                            <li class="cel-answer" >Answer 3</li>
+                            <li class="cel-answer">Answer 4</li>
+
+                        </ul>
+                        <p>2.	This is a Multiple Choice question whose answer is 4.</p>
+                        <ul>
+                            <li class="cel-answer">Answer 1</li>
+                            <li class="cel-answer">Answer 2</li>
+                            <li class="cel-answer">Answer 3</li>
+                            <li class="correct cel-answer" data-feedback=" Each question has a feedback option.">Answer 4</li>
+
+                        </ul>
+
+                    </form>
+                </div><!-- end 50-a -->
+                <div class="cel-50-b">
+                    <h3>True False Self Check</h3>
+                    <p>This is a standard True/False Mastery Question that provides feedback as an alert, and colored text. Very much like the multiple choice question.</p>
+                    <form>
+                        <p>This is a true or false question whose answer is TRUE.</p>
+                        <ul>
+                            <li class="correct cel-answer" data-feedback=" There is feedback on these as well">True</li>
+                            <li class="cel-answer">False</li>
+
+                        </ul>
+                        <p>This is a true or false question whose answer is FALSE.</p>
+                        <ul>
+                            <li class="cel-answer">True</li>
+                            <li class="correct cel-answer" data-feedback=" There is feedback on these as well.">False</li>
+
+                        </ul>
+
+                    </form>
+
+                </div><!-- end 50-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <h3>Fill in the Blank Self Check</h3>
+                <p>This is a fill in the blank question. The learner clicks the blank located within the question, and the answer fills itself in <em>"automagically"</em>.</p>
+
+                <p>This is a question with a bunch of<span id="fillBlank1" class="cel-questionBlank">__________</span>that can be filled in by clicking. This effect is an<span id="fillBlank2" class="cel-questionBlank">___________</span>one to implement, and can be used in a<span id="fillBlank3" class="cel-questionBlank">__________</span></p>
+            </div><!-- end row -->
+
+        </div><!-- end slide content -->
+        <footer class="slideFooter">
+            <nav class="nextPrevious" tabindex="0">
+                <a href="#slide1" class="prevButton" title="navigate to slide 1"><span class="is-dormant">previous slide</span>&lt;</a>
+                <a href="#slide3" class="nextButton" title="advance to slide 3" ><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+        </footer>
+    </section><!-- end slide -->
+    <!-- ========================================================== end slide -->
+    <section id="slide3" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="futureSlideHeader is-cleared">
+            <span class="slideNumber">3</span>
+            <span class="slideTitle">The Accordion Widget</span>
+        </h2>
+
+        <div class="slideContent">
+
+            <div class="cel-row">
+
+                <div class="cel-40-a">
+                    <p>Clicking each header reveals the content under that header.</p>
+                </div><!-- end 40-a -->
+                <div class="cel-60-b">
+                    <div class="cel-accordion-container" id="accordion1">
+                        <div class="cel-accordionBox">
+                            <h3 class="cel-accordionHeader is-closedAccordion">Clickable sub-headers reveal content</h3>
+                            <div class="is-invisible">
+                                <div class="cel-50-a">
+                                    <p>You can fill these widgets with pretty much anything you want to. Even graphics, or figures, etc. </p>
+                                </div><!-- end 50-a -->
+                                <div class="cel-50-b">
+                                    <img src="img/AccordionGraphic.jpg" alt="this is an example graphic with is just the FSCJ logo emblazoned on a white background">
+
+                                </div><!-- end 50-b -->
+                            </div><!-- end accordion Content -->
+                        </div><!-- end accordionBOX -->
+                        <div class="cel-accordionBox">
+                            <h4 class="cel-accordionHeader is-closedAccordion">Different Sized sub headers</h4>
+                            <div class="is-invisible">
+                                <p>By Opening an accordion you should notice that you can only click on other accordions, not the one that is already open.</p>
+                            </div><!-- end accordion Content -->
+                        </div><!-- end accordionBox -->
+                    </div><!-- end accordion container -->
+                </div><!-- end 60-b -->
+
+            </div><!-- end row -->
+
+        </div><!-- end content -->
+        <footer class="slideFooter" tabindex="0">
+            <nav class="nextPrevious">
+                <a href="#slide2" class="prevButton" title="navigate to slide 2"><span class="is-dormant">previous slide</span>&lt;</a>
+                <a href="#slide4" class="nextButton" title="advance to slide 4" ><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+        </footer>
+    </section>
+    <!-- ======================================================= end slide -->
+    <section id="slide4" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="futureSlideHeader is-cleared">
+            <span class="slideNumber">4</span>
+            <span class="slideTitle">The Tabular Widget</span>
+        </h2>
+
+        <div class="slideContent">
+
+            <div class="cel-row">
+                <p>This widget is a small local set of tabs that can be set up with unique content. More than one tabular widget can exist on each page.</p>
+                <p>This widget adapts to fill the size of the container that it is contained within, and has been designed to work well within our responsive set up at mobile widths.</p>
+
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-50-a">
+                    <h3 class="centeredLeftHeader">Tabs Contained within 50-50 Column Set</h3>
+                    <p class="centeredLeftHeader">Click each tab to reveal the content under each one.</p>
+                </div><!-- end 50-a -->
+                <div class="cel-50-b">
+                    <div class="cel-100">
+
+                        <div class="cel-tabular-container">
+                            <div class="cel-tabNavs is-cleared">
+                                <div class="cel-tabNav is-activeTabNav">Standards</div>
+                                <div class="cel-tabNav">Flexible</div>
+                                <div class="cel-tabNav">Adaptable</div>
+                                <div class="cel-tabNav">Easy</div>
+                            </div><!-- end nav container -->
+                            <div class="cel-tabs is-cleared">
+                                <div class="cel-tab is-activeTab">
+                                    <div class="cel-40-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 40-a -->
+                                    <div class="cel-60-b">
+                                        <h4>Standards</h4>
+                                        <p>All of these tabs have been laid out using our standard column templates. This makes it part of the known tested CEL universe.</p>
+                                    </div><!-- end 60-b -->
+                                </div><!-- end tab content -->
+                                <div class="cel-tab is-invisible">
+                                    <div class="cel-60-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 60-a -->
+                                    <div class="cel-40-b">
+                                        <h4>Flexible</h4>
+                                        <p>These tabs offer just as much content flexibility as our normal slides, just is a smaller context.</p>
+                                    </div><!-- end 40-b -->
+                                </div><!-- end tab content -->
+                                <div class="cel-tab is-invisible">
+                                    <div class="cel-50-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 50-a -->
+                                    <div class="cel-50-b">
+                                        <h4>Adaptable</h4>
+                                        <p>This widget is based on the responsive philosophy that we used at the slide level so it still works at all resolutions across most devices.</p>
+                                    </div><!-- end 50-b -->
+                                </div><!-- end tab content -->
+                                <div class="cel-tab is-invisible">
+                                    <div class="cel-40-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 40-a -->
+                                    <div class="cel-60-b">
+                                        <h4>Easy</h4>
+                                        <p>The HTML structure is really easy to implement on the developer side so making these tabs is easy and therefor fast. Which we all appreciate right.</p>
+
+                                    </div><!-- end 60-b -->
+                                </div><!-- end tab content -->
+                            </div><!-- end tabs container -->
+                        </div><!-- end tabular container -->
+                    </div><!-- end row -->
+
+
+                </div><!-- end 50-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-40-a">
+                    <h3 class="centeredLeftHeader">Tabs Contained within 60-40 Column Set</h3>
+                </div><!-- end 60-a -->
+                <div class="cel-60-b">
+                    <div class="cel-100">
+
+                        <div class="cel-tabular-container">
+                            <div class="cel-tabNavs is-cleared">
+                                <div class="cel-tabNav is-activeTabNav">Standards</div>
+                                <div class="cel-tabNav">Flexible</div>
+                                <div class="cel-tabNav">Adaptable</div>
+                                <div class="cel-tabNav">Easy</div>
+                            </div><!-- end nav container -->
+                            <div class="cel-tabs is-cleared">
+                                <div class="cel-tab is-activeTab">
+                                    <div class="cel-40-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 40-a -->
+                                    <div class="cel-60-b">
+                                        <h4>Standards</h4>
+                                        <p>All of these tabs have been laid out using our standard column templates. This makes it part of the known tested CEL universe.</p>
+                                    </div><!-- end 60-b -->
+                                </div><!-- end tab content -->
+                                <div class="cel-tab is-invisible">
+                                    <div class="cel-60-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 60-a -->
+                                    <div class="cel-40-b">
+                                        <h4>Flexible</h4>
+                                        <p>These tabs offer just as much content flexibility as our normal slides, just is a smaller context.</p>
+                                    </div><!-- end 40-b -->
+                                </div><!-- end tab content -->
+                                <div class="cel-tab is-invisible">
+                                    <div class="cel-50-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 50-a -->
+                                    <div class="cel-50-b">
+                                        <h4>Adaptable</h4>
+                                        <p>This widget is based on the responsive philosophy that we used at the slide level so it still works at all resolutions across most devices.</p>
+                                    </div><!-- end 50-b -->
+                                </div><!-- end tab content -->
+                                <div class="cel-tab is-invisible">
+                                    <div class="cel-40-a">
+                                        <img src="img/AccordionGraphic.jpg" alt="Our glorious LOGO once again">
+                                    </div><!-- end 40-a -->
+                                    <div class="cel-60-b">
+                                        <h4>Easy</h4>
+                                        <p>The HTML structure is really easy to implement on the developer side so making these tabs is easy and therefor fast. Which we all appreciate right.</p>
+
+                                    </div><!-- end 60-b -->
+                                </div><!-- end tab content -->
+                            </div><!-- end tabs container -->
+                        </div><!-- end tabular container -->
+                    </div><!-- end 100 -->
+
+
+                </div><!-- end 40-b -->
+            </div><!-- end row -->
+
+        </div><!-- end content -->
+        <footer class="slideFooter" tabindex="0">
+            <nav class="nextPrevious">
+                <a href="#slide3" class="prevButton" title="navigate to slide 3">&lt;</a>
+                <a href="#slide5"  class="nextButton" title="advance to slide 5" ><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+        </footer>
+    </section>
+    <!-- ======================================================= end slide -->
+    <section id="slide5" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="futureSlideHeader is-cleared">
+            <span class="slideNumber">5</span>
+            <span class="slideTitle">The Content Reveal Widget</span>
+        </h2>
+
+        <div class="slideContent">
+
+            <div class="cel-row">
+            <p>Click the word on the left to reveal content on right.</p>
+             </div><!-- end row -->
+            <!-- ======================= start Single clickReveal Object -->
+            <div class="cel-row">
+                <div class="cel-40-a">
+                    <h3 data-reveal-id="reveal-1" class="clickButton">Example 1 </h3>
+                </div><!-- end 40-a-->
+                <div class="cel-60-b">
+                    <div id="reveal-1" class="theReveal is-invisible">
+                        <p>Items that can be placed here include text and images. </p>
+                        <hr>
+                    </div><!-- end 01b -->
+                </div><!-- end 60-b-->
+            </div><!-- end row -->
+            <!-- ======================= start Single clickReveal Object -->
+            <div class="cel-row">
+                <div class="cel-40-a">
+                    <h3 data-reveal-id="reveal-2" class="clickButton">Example 2</h3>
+                </div><!-- end 40-a-->
+                <div class="cel-60-b">
+                    <div id="reveal-2" class="theReveal is-invisible">
+                        <img src="img/AccordionGraphic.jpg" alt="This is the logo for FSCj">
+                        <hr>
+                    </div><!-- end 02b -->
+                </div><!-- end 60-b-->
+            </div><!-- end row -->
+
+        </div><!-- end content -->
+        <footer class="slideFooter" tabindex="0">
+            <nav class="nextPrevious">
+                <a href="#slide4" class="prevButton" title="navigate to slide 4"><span class="is-dormant">previous slide</span>&lt;</a>
+                <a href="#slide6" class="nextButton" title="advance to slide 6" ><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+        </footer>
+    </section>
+    <!-- ======================================================= end slide -->
+    <section id="slide6" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="futureSlideHeader is-cleared">
+            <span class="slideNumber">6</span>
+            <span class="slideTitle">Content Layout Options</span>
+        </h2>
+
+        <div class="slideContent">
+            <div class="cel-row">
+                <p>Think of these as boxes that you can put content into. Each box is designed to take up a certain percentage of the space in which it is contained. For example, if you put a 50% column within a 40% column it will take up 20% of the total page width. This allows us extreme flexibility when laying out the page.</p>
+            </div><!-- end row -->
+
+            <div class="cel-row">
+                <div class="cel-100 is-card">
+                    <h3>100</h3>
+                    <p>One Column that spans 100% of the content area.</p>
+                </div><!-- end cel 100 -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-50-a is-card">
+                    <h3>50</h3>
+                    <p>This Column takes up half of it's container</p>
+                </div><!-- end 50-a -->
+                <div class="cel-50-b is-card">
+                    <h3>50</h3>
+                    <p>This Column takes up the other half</p>
+
+                </div><!-- end 50-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-40-a is-card">
+                    <h3>40</h3>
+                    <p>This Column takes up 40%.</p>
+                </div><!-- end 40-a -->
+                <div class="cel-60-b is-card">
+                    <h3>60</h3>
+                    <p>This Column takes up 60%.</p>
+                </div><!-- end 60-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-60-a is-card">
+                    <h3>60</h3>
+                    <p>This Column takes up 60%.</p>
+                </div><!-- end 40-a -->
+                <div class="cel-40-b is-card">
+                    <h3>40</h3>
+                    <p>This Column takes up 40%.</p>
+                </div><!-- end 60-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-30-a is-card">
+
+                        <h3>30</h3>
+                        <p>This Column takes up one third. </p>
+
+
+                </div><!-- end 30-a -->
+                <div class="cel-30-b is-card">
+
+                        <h3>30</h3>
+                        <p>This Column takes up one third.</p>
+
+
+                </div><!-- end 30-b -->
+                <div class="cel-30-c is-card">
+
+                        <h3>30</h3>
+                        <p>This Column takes up one third.</p>
+
+
+                </div><!-- end 30-c -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-2575-a is-card">
+
+                        <h3>25</h3>
+                        <p>This Column takes up 25%.</p>
+
+                </div><!-- end 2575-a -->
+                <div class="cel-2575-b is-card">
+
+
+                        <h3>75</h3>
+                        <p>This Column takes up 75%.</p>
+
+                </div><!-- end 2575b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-7525-a is-card">
+
+
+                        <h3>75</h3>
+                        <p>This Column takes up 75%.</p>
+
+                </div><!-- end 7525-a -->
+                <div class="cel-7525-b is-card">
+
+
+                        <h3>25</h3>
+                        <p>This Column takes up 25%.</p>
+
+                </div><!-- end 7525b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-25-a is-card">
+
+                        <h3>25</h3>
+                        <p>This Column takes up 25%.</p>
+
+                </div><!-- end 25-a -->
+                <div class="cel-25-b is-card">
+
+                        <h3>25</h3>
+                        <p>This Column takes up 25%.</p>
+
+                </div><!-- end 25-b -->
+                <div class="cel-25-c is-card">
+
+                        <h3>25</h3>
+                        <p>This Column takes up 25%.</p>
+
+                </div><!-- end 25-c -->
+                <div class="cel-25-d is-card">
+
+                        <h3>25</h3>
+                        <p>This Column takes up 25%.</p>
+
+                </div><!-- end 25-d -->
+            </div><!-- end row -->
+
+        </div><!-- end content -->
+        <footer class="slideFooter">
+            <nav class="nextPrevious" tabindex="0">
+                <a href="#slide5" class="prevButton" title="navigate to slide 5"><span class="is-dormant">previous slide</span>&lt;</a>
+                <a href="#slide7" class="nextButton" title="advance to slide 7" ><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+        </footer>
+    </section>
+    <!-- ======================================================= end slide -->
+    <section id="slide7" class="slide" data-hasAudioPlayer="no" tabindex="0">
+
+        <h2 class="futureSlideHeader is-cleared">
+            <span class="slideNumber">7</span>
+            <span class="slideTitle">Content Layout Options</span>
+        </h2>
+
+        <div class="slideContent">
+
+
+            <div class="cel-row">
+                <div class="cel-100">
+                    <h3>One Hundreds</h3>
+                    <p>Here is a working example of the available layout options this time with actual content instead of the gray boxes.</p><p>As you can see this content is located within a one hundred block. The content spans across the whole width of the content area that contains it. Care must be taken with this because if you use too much content in this one there is a risk of creating the dreaded wall of text. To avoid this situation try to keep any content contained within these to less than 5 paragraphs, or break it up by using any one of the smaller boxes below.</p>
+                </div><!-- end cel 100 -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-50-a">
+                    <h3>Fifty</h3>
+                    <p>This content spans halfway across the page, and is best used to illustrate balanced points.</p>
+                </div><!-- end 50-a -->
+                <div class="cel-50-b">
+                    <h3>Fifty</h3>
+                    <p>This is the other side of the balanced coin. Use these to illustrate things like points with counterpoints.</p>
+
+                </div><!-- end 50-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-40-a">
+                    <h3>Forty</h3>
+                    <p>Two Columns that form the golden ratio. This side is the smaller side, and is frequently used to house a graphic while the other side houses the text.</p>
+                </div><!-- end 40-a -->
+                <div class="cel-60-b">
+                    <h3>Sixty</h3>
+                    <p>Because these two columns form the golden ration it tends to be more pleasing to the eye because it occurs so frequently around us. The golden ration can be found in our solar system, in the human body, in plants & animals, even art and music. This ratio exists all around us, and everyone is unconsciously influenced by it.</p>
+                </div><!-- end 60-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-60-a">
+                    <h3>Sixty</h3>
+                    <p>Since the golden ratio is so prevalent within the world we live in, and the human body is unconsciously attracted to it we thought it prudent to include it in our Learning Object as one of the column layout styles.</p>
+                </div><!-- end 40-a -->
+                <div class="cel-40-b">
+                    <h3>Forty</h3>
+                    <p>Each Column can hold text or images. The Columns will hold as much content as you wish.</p>
+                </div><!-- end 60-b -->
+            </div><!-- end row -->
+            <div class="cel-row">
+                <div class="cel-30-a">
+                    <div class="cel-100">
+                        <h3>Thirty</h3>
+                        <p>Three Columns each of which is 33% wide.</p>
+
+                    </div><!-- end cel 100 -->
+                </div><!-- end 30-a -->
+                <div class="cel-30-b ">
+                    <div class="cel-100">
+                        <h3>Thirty</h3>
+                        <p>Each Column can hold text or images.</p>
+
+                    </div><!-- end cel 100 -->
+                </div><!-- end 30-b -->
+                <div class="cel-30-c">
+                    <div class="cel-100">
+                        <h3>Thirty</h3>
+                        <p>The Columns will hold as much content as you wish.</p>
+
+                    </div><!-- end cel 100 -->
+                </div><!-- end 30-c -->
+            </div><!-- end row -->
+
+            <div class="cel-row">
+                <div class="cel-25-a">
+                    <div class="cel-100">
+                        <h3>25</h3>
+                        <p>Four Columns each of which is 25% wide.</p>
+                    </div><!-- end 100 -->
+                </div><!-- end 25-a -->
+                <div class="cel-25-b">
+                    <div class="cel-100">
+                        <h3>25</h3>
+                        <p>Each Column can hold text or images.</p>
+                    </div><!-- end 100 -->
+                </div><!-- end 25-b -->
+                <div class="cel-25-c">
+                    <div class="cel-100">
+                        <h3>25</h3>
+                        <p>The Columns will hold as much content as you wish.</p>
+                    </div><!-- end 100 -->
+                </div><!-- end 25-c -->
+                <div class="cel-25-d">
+                    <div class="cel-100">
+                        <h3>25</h3>
+                        <p>This is the last Column.</p>
+                    </div><!-- end 100 -->
+                </div><!-- end 25-d -->
+            </div><!-- end row -->
+
+        </div><!-- end content -->
+        <footer class="slideFooter" tabindex="0">
+            <nav class="nextPrevious">
+                <a href="#slide6" class="prevButton" title="navigate to slide 6"><span class="is-dormant">previous slide</span>&lt;</a>
+                <a href="#slide1" class="nextButton" title="advance to slide 1"><span class="is-dormant">next slide</span>&gt;</a>
+            </nav>
+        </footer>
+    </section>
+    <!-- ======================================================= end slide -->
+    </div><!-- end slide container -->
+</article><!-- end content row -->
+<a id="backToTopLink" href="#module-nav" name="back to top link" title="back to top link">&barwed;</a>
+
+
+
+<script src="js/custom.js" async></script>
+<script src="js/methods-dist.js" async></script>
+
+
+</body>
+</html>

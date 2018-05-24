@@ -1,0 +1,415 @@
+@mixin lightWeight() {
+  font-weight: 300;
+}
+
+@mixin regularWeight() {
+  font-weight: 400;
+}
+
+@mixin heavyWeight() {
+  font-weight: 700;
+}
+
+@mixin material-shadow($exOffset, $whyOffset, $blur) {
+  -moz-box-shadow: $exOffset $whyOffset $blur $shadowColor;
+  -webkit-box-shadow: $exOffset $whyOffset $blur $shadowColor;
+  box-shadow: $exOffset $whyOffset $blur $shadowColor;
+}
+
+@mixin font-familyRegular() {
+  font-family: 'Quattrocento', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
+}
+
+@mixin font-familyHeading() {
+  font-family: 'Oswald', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+
+@mixin breathingEffect() {
+  -webkit-animation-name: breathingHover;
+  animation-name: breathingHover;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* importing chunks*/
+
+/* column layout styles*/
+
+@import "chunk-col-100";
+@import 'chunk-col-50';
+@import 'chunk-col-6040';
+@import 'chunk-col-4060';
+@import 'chunk-col-7525';
+@import 'chunk-col-2575';
+@import 'chunk-col-30';
+@import 'chunk-col-25';
+@import "chunk-cards";
+@import 'chunk-col-layoutHelpers';
+@import "widget-accordion";
+@import "widget-clickReveal";
+@import "widget-fillInTheBlank";
+@import "widget-multiChoice";
+@import "widget-tabular";
+@import "chunk-next-previous-buttons";
+
+//pulling this because I need these styles in the main area to tweak with.
+//@import "chunk-flex-TOC";
+
+/* generic element styles html body p ul*/
+@import 'baseClasses';
+@import "typography";
+/*
+
+@import "m-institutional-logo";
+*/
+/* styles that hide things + clearing styles*/
+@import 'helperClasses';
+
+/* created a golden ration sized centered column that look and acts like a traditional book
+@import 'bookBox';
+*/
+/* style for the figure image elements
+@import "m-figure";
+*/
+/* styles for the dropcaps
+@import "m-dropCaps";
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#module-column {
+  top: 0;
+}
+
+
+
+#module-heading {
+  width: 98%;
+  align-items: center;
+  padding-bottom: 1rem;
+  background-color: $darkPrimaryColor !important;
+}
+
+@media only screen and (max-width: 35em) {
+  #module-heading {
+    width: 100%;
+  }
+}
+
+#theCourseIcon {
+  height: 42px;
+  width: 42px;
+  margin: .25rem .5em;
+  float: right;
+  opacity: .2;
+
+}
+
+#module-title {
+  @include lightWeight;
+  color: $white;
+  opacity: 1;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 47.5em) {
+  #module-title {
+    font-size: 2.441rem;
+  }
+}
+
+#module-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  //from other classes
+  height: 4.375em;
+  background-color: $darkPrimaryColor;
+}
+
+#help-button {
+  width: 2.6em;
+  height: 2.6em;
+  background-image: url('../img/HELP-default.png');
+  background-repeat: no-repeat;
+  background-position: -1px 0, top;
+  background-size: 2.5em, 2.5em;
+  margin: 0 1em 0 auto;
+  outline: none;
+}
+
+#nav-item-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  list-style: none;
+  margin: auto;
+  height: 4.375em;
+  overflow: visible;
+  visibility: visible;
+  padding: 0;
+}
+
+@media only screen and (max-width: 35em) {
+  #nav-item-list {
+    visibility: hidden;
+    width: 10px;
+  }
+}
+
+.nav-item-is-active {
+  background-color: $accentColor;
+}
+
+.nav-item {
+  background-color: #FFF;
+}
+
+.nav-item-visited {
+  background-color: $darkPrimaryColor;
+}
+
+.nav-item, .nav-item-is-active, .nav-item-visited {
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 47.5em) {
+  .nav-item, .nav-item-is-active, .nav-item-visited {
+
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media only screen and (max-width: 41.5em) {
+  .nav-item, .nav-item-is-active, .nav-item-visited {
+
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav-item, .nav-item-is-active, .nav-item-visited {
+
+    width: 3px;
+    height: 3px;
+  }
+}
+
+.nav-item:hover,
+.nav-item-is-active:hover,
+.nav-item-visited:hover,
+.nav-item:focus,
+.nav-item-is-active:focus,
+.nav-item-visited:focus,
+.nav-item:active,
+.nav-item-is-active:active,
+.nav-item-visited:active {
+  background-color: red;
+  cursor: pointer;
+  @include breathingEffect;
+}
+
+.toc-is-closed {
+  width: 0;
+  height:0;
+
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.toc-is-open {
+  width: 25%;
+  overflow: hidden;
+}
+@media only screen and(max-width: 47.5em) {
+  .toc-is-open {
+    width: 35%;
+  }
+}
+@media only screen and(max-width: 41.5em) {
+  .toc-is-open {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .toc-is-open {
+    width: 100%;
+  }
+}
+
+#toc-column {
+  float: left;
+  min-height: 100vw;
+  transition: all .25s ease;
+}
+
+#toc-menu {
+  padding-top: .5rem;
+}
+
+#toc-button {
+  width: 2.6em;
+  height: 2.6em;
+  background-image: url('../img/course-icon.png');
+  background-repeat: no-repeat;
+  background-position:-1px 0, top;
+  background-size:2.5em, 2.5em;
+
+  margin: 0 auto 0 1em;
+  outline: none;
+}
+
+.TOC {
+  background-color: $white;
+  border-radius: 3px;
+  width: 98%;
+  margin-bottom: 10px;
+  padding: .25rem .25rem 1rem .25rem;
+  border: 1px solid $shadowColor;
+}
+
+@media only screen and (max-width: 35em) {
+  .TOC {
+    width: 100%;
+  }
+}
+
+.TOC:hover {
+  background-color: $accentColor;
+  color: $white !important;
+}
+
+.toc-header {
+  padding-top: -1.75rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  @include font-familyHeading;
+  @include lightWeight;
+  color: inherit;
+
+}
+
+.toc-subheader {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+  @include font-familyHeading;
+  @include lightWeight;
+
+}
+
+.TOC:hover .toc-slide-num {
+  color: $white !important;
+}
+
+.toc-slide-num {
+  float: right;
+  font-size: 1rem;
+  margin: -1.5rem .25rem 0 .25rem;
+  color: #999999;
+}
+
+.toc-item-is-active .toc-slide-num {
+  color: $lightPrimaryColor;
+}
+
+.toc-item-is-active {
+  background-color: $accentColor;
+  color: $white;
+}
+
+#slide-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: .6rem .25rem;
+  top:0;
+
+}
+
+.activeSlide {
+  flex: 1 0 100%;
+  order: 1;
+  margin-right: 2rem;
+
+}
+
+.slideHeader, .futureSlideHeader {
+  margin: 0;
+  padding: 3rem 0 3rem 1rem;
+  background-color: $white;
+  @include material-shadow(0, 0, .1em);
+}
+
+.activeSlideContent {
+  /* clearing the box that I should have */
+  @include material-shadow(0, .25em, .25em);
+  background-color: $white;
+  padding-left: 1rem;
+}
+
+.activeSlideContent:before,
+.activeSlideContent:after {
+  content: " ";
+  display: table;
+}
+
+.activeSlideContent:after {
+  clear: both;
+}
+
+.slideContent {
+  /* clearing the box that I should have */
+  @include material-shadow(0, .25em, .25em);
+  background-color: $white;
+  padding-left: .25rem;
+}
+
+.slideContent:before,
+.slideContent:after {
+  content: " ";
+  display: table;
+}
+
+.slideContent:after {
+  clear: both;
+}
+
+#institutionalLogo {
+  width: 250px;
+  margin-top: .5rem;
+}
+
+.slide {
+  order: 2;
+}
+
+
+
+
+
+

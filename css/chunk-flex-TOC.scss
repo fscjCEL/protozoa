@@ -1,0 +1,80 @@
+.toc-is-closed{
+        width: 0;
+  overflow:hidden;
+    }
+.toc-is-open{
+    width: 25%;
+    overflow:hidden;
+    }
+#toc-column{
+  float:left;
+  min-height:100vw;
+  transition: all .25s ease;
+}
+#toc-menu{
+  padding-top: .5rem;
+}
+#toc-button{
+  width: 2.6em;
+  height: 2.6em;
+  //background-image: url('../../theme/img/TOC-default.png');
+  //background-repeat: no-repeat;
+  //background-position:-1px 0, top;
+  //background-size:2.5em, 2.5em;
+  margin: 0 auto 0 1em;
+  outline: none;
+}
+.TOC{
+  background-color:$white;
+  border-radius:3px;
+  width:98%;
+  margin-bottom: 10px;
+  padding: .25rem .25rem 1rem .25rem;
+  border:1px solid $shadowColor;
+  //@include material-shadow(0,.125em,.0625em);
+
+
+}
+
+.TOC:hover{
+  background-color: $accentColor;
+  color: $white!important;
+}
+.toc-header{
+  padding-top: -1.75rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  @include font-familyHeading;
+  @include lightWeight;
+  color: inherit;
+
+}
+
+
+.toc-subheader{
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+  @include font-familyHeading;
+  @include lightWeight;
+
+
+}
+.TOC:hover .toc-slide-num{
+  color: $white!important;
+}
+.toc-slide-num{
+  float: right;
+  font-size: 1rem;
+  margin: -1.5rem .25rem 0 .25rem;
+  color: #999999;
+}
+.toc-item-is-active .toc-slide-num{
+  color: $lightPrimaryColor;
+}
+
+.toc-item-is-active{
+  background-color: $accentColor;
+  color: $white;
+}
