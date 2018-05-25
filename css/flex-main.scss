@@ -40,9 +40,9 @@
 /* importing chunks*/
 
 /* column layout styles*/
-
+@import "chunk-flex-rows";
 @import "chunk-col-100";
-@import 'chunk-col-50-flex';
+@import 'chunk-col-50';
 @import 'chunk-col-6040';
 @import 'chunk-col-4060';
 @import 'chunk-col-7525';
@@ -50,7 +50,7 @@
 @import 'chunk-col-30';
 @import 'chunk-col-25';
 @import "chunk-cards";
-@import 'chunk-col-layoutHelpers-flex';
+@import 'chunk-col-layoutHelpers';
 @import "widget-accordion";
 @import "widget-clickReveal";
 @import "widget-fillInTheBlank";
@@ -71,15 +71,15 @@
 /* styles that hide things + clearing styles*/
 @import 'helperClasses';
 
-/* created a golden ration sized centered column that look and acts like a traditional book
+/* created a golden ration sized centered column that look and acts like a traditional book*/
 @import 'bookBox';
-*/
-/* style for the figure image elements
+
+/* style for the figure image elements*/
 @import "m-figure";
-*/
-/* styles for the dropcaps
+
+/* styles for the dropcaps*/
 @import "m-dropCaps";
-*/
+
 html {
   box-sizing: border-box;
 }
