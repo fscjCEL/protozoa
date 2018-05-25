@@ -1,0 +1,63 @@
+/*mobile styles*/
+.cel-row-50 > *{
+  width: 98%;
+  padding: 0 1% 0 0;
+  border: .0625em solid $white;
+}
+.cel-row-30 > *{
+  width: 98%;
+  padding: 0 .5%;
+  margin-right: .66%;
+  border: .0625em solid $white;
+}
+.cel-row-25 > *{
+  width: 98%;
+  padding: 0 .5% 0 .5%;
+  border: 1px solid $white;
+  margin-bottom: 1.5rem;
+}
+.cel-row-50, .cel-row-30, .cel-row-25{
+  /* default flex setting for each container */
+  /* container*/
+  display: flex;
+  flex-flow: column nowrap;
+  /* item */
+  justify-content: center;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 35em) { /* 560 pixel width */
+/* desktop styles*/
+
+  .cel-row-50>*,.cel-row-30>*,.cel-row-25>*{
+    /* apply to each column set that has an equal column size*/
+    /* effects each child item */
+    flex-grow: 1;
+  }
+  /* now take care of the sizing and spacing for each specific column set. */
+  .cel-row-50 > *{
+    width: 48%;
+    padding: 0 1% 0 0;
+    border: .0625em solid $white;
+  }
+  .cel-row-30 > *{
+    width: 31.1%;
+    padding: 0 .5%;
+    margin-right: .66%;
+    border: .0625em solid $white;
+  }
+  .cel-row-25 > *{
+    width: 23.5%;
+    padding: 0 .5% 0 .5%;
+    border: 1px solid $white;
+    margin-bottom: 1.5rem;
+  }
+  .cel-row-50, .cel-row-30, .cel-row-25{
+    /* default flex setting for each container */
+    /* container*/
+    display: flex;
+    flex-flow: row nowrap;
+    /* item */
+    justify-content: center;
+    align-items: flex-start;
+  }
+}/* end media query*/
