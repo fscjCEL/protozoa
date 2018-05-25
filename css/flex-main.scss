@@ -42,7 +42,7 @@
 /* column layout styles*/
 
 @import "chunk-col-100";
-@import 'chunk-col-50';
+@import 'chunk-col-50-flex';
 @import 'chunk-col-6040';
 @import 'chunk-col-4060';
 @import 'chunk-col-7525';
@@ -50,7 +50,7 @@
 @import 'chunk-col-30';
 @import 'chunk-col-25';
 @import "chunk-cards";
-@import 'chunk-col-layoutHelpers';
+@import 'chunk-col-layoutHelpers-flex';
 @import "widget-accordion";
 @import "widget-clickReveal";
 @import "widget-fillInTheBlank";

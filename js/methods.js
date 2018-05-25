@@ -24,7 +24,6 @@ var methods = {
     setProgramImgPath: function(){
     //stores the path of the icon file being used for the toc menu button on the first slide so I can use it later. .
         methods['theImagePath'] = document.getElementById("toc-button").style.backgroundImage;
-        alert(methods['theImagePath']);
     },//end function
     traverse: function (task, node) {
         var childNode;
@@ -62,7 +61,7 @@ var methods = {
         function processCapturedNode(type, node) {//process type of "H1" and the actual <h1> element dom object
             //generate a random # to use as a header ID, and to write as an HREF target.
             //this gives me a random, usually 4 digit, number to identify and connect each header/href pair.
-            var randomNumforNodes, theHREFiNeed, slideBit, newVar;
+            var randomNumforNodes, theHREFiNeed, slideBit;
             randomNumforNodes = Math.round((Math.random() * 10000));
             //apply the random # to the ID of the header
             node.id = theCurrentSlide + "-" + type + "-" + randomNumforNodes;//apply the ID.
@@ -71,7 +70,7 @@ var methods = {
             //used to control the if statement (below) that creates new slide sub lists..
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
-            newVar = "nav" + theCurrentSlide.substr(5);
+            //newVar = "nav" + theCurrentSlide.substr(5);
             // build the HREF that is inserted into list item.
             theHREFiNeed = "#" + theCurrentSlide + "-" + type + "-" + randomNumforNodes;
             //build the anchor that is inserted into the list item.
@@ -88,11 +87,10 @@ var methods = {
 
 
             // create the new list item
-            //theNewElement = document.createElement(type);//ex.type=h2 should be <a
+
             theNewElement = document.createElement("p");
             if (type === "H2") {
                 theNewElement.className = "toc-header";
-                theNewElement.style.content = theCurrentSlide;
                 // craft the header element as the innerHTML of the section.
                 theNewElement.innerHTML = "<span class='toc-slide-num'>"+theCurrentSlide.substr(5)+" </span><span class='is-dormant'>&mdash;jump to slide:" + theCurrentSlide.substr(5) + "&mdash;</span>" + insertThisTitle + "<br />";
 
@@ -105,9 +103,7 @@ var methods = {
             }//endif
 
             theNewElement.href = theHREFiNeed;
-            //theNewElement.setAttribute("data-destination", theCurrentSlide);
-            //theNewElement.setAttribute("data-destinationNavID", newVar);
-            //this is here because I want to suppress defeault link behavior in screen readers (which is tabindex=0)
+            //this is here because I want to suppress default link behavior in screen readers (which is tabindex=0)
             theNewElement.setAttribute("tabindex", "-1");
 
 
@@ -125,7 +121,6 @@ var methods = {
                 theSlideTOCList.className = "TOC";
                 // adding one span to the new parent to act as a landing pad for others.
                 theSlideTOCList.innerHTML = "<span id='slide" + slideBit + "TocTarget'" + " class='hidden'></span>";
-                //theSlideTOCList.innerHTML = "<span id='slide" + slideBit + "TocTarget'" + " class='toc-is-hover'></span>";
                 //grab the element that is the landing pad for the new parent list.
                 insertNewBefore = document.getElementById("theTocTarget");
                 // execute the insertion of the new parent. This acts as a target for the list insertion and changes each time the slide changes.
