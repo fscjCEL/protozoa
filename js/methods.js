@@ -14,15 +14,73 @@ var methods = {
         //this returns the active slide ID (ex. slide1) not the slide node itself.
         return document.getElementsByClassName("activeSlide")[0].id;
     },//end get ActiveSlideId
+    createFlipCards: function(){
+        //grab and rip through all the card decks
+        console.log("flip function has been called");
+        var theDeck = document.getElementsByClassName("flip-deck");
+        for(var cnt=0; cnt<theDeck.length;cnt++){
+            console.log("I found at least one deck");
+            //now grab the deck I need to work on.
+            var currentDeck = theDeck[cnt];
+            console.log(currentDeck.children.length);
+            var numberOfCards = currentDeck.children.length/2;
+            //now  rip through the current deck's children
+            //adding child classes to each item as I go.
+            //this is a distinct step
+            for(var dc = 0; dc < currentDeck.children.length ; dc++){
+                console.log("evaluate the deck now");
+                //if true then zero or even, else odd
+                // // using this method I am only hitting even numbers
+                if (dc % 2 === 0){
+                    var theTerm = currentDeck.children[dc];
+                    var theDescription = currentDeck.children[dc+1];
+                    theTerm.className = "card-front";
+                    theDescription.className = "card-back";
+                }//endif
+
+            }//end for
+            console.log("HOW many cards?-->"+numberOfCards);
+            for(var ii=1;ii<=numberOfCards;ii++){
+                var newDivElement = document.createElement("div");
+                //newDivElement.id = "card-"+(ii);
+                newDivElement.className = "flip-card";
+                theCurrentTerm = currentDeck.children[0];
+                theCurrentDesc = currentDeck.children[1];
+
+                if (theCurrentTerm.className === "card-front"){
+                    newDivElement.appendChild(theCurrentTerm);
+                    newDivElement.appendChild(theCurrentDesc);
+                }
+
+
+
+                currentDeck.appendChild(newDivElement);
+
+
+            }//end for
+        }//end for
+    },//end createFlip Cards function
+    flipTheCard: function(){
+        if (this.classList.contains("is-flipped")){
+            this.getElementsByClassName("card-front")[0].style.transform = "rotateY(0deg)";
+            this.getElementsByClassName("card-back")[0].style.transform = "rotateY(-180deg)";
+            this.classList.remove("is-flipped");
+        }else{
+            this.classList.add("is-flipped");
+            this.getElementsByClassName("card-front")[0].style.transform = "rotateY(-180deg)";
+            this.getElementsByClassName("card-back")[0].style.transform = "rotateY(0deg)";
+        }//endif
+
+    },
     openheplBox: function(){
-        console.log("I did it")
+        console.log("I need to complete this")
     },//end openHelp function
     getProgramImgPath: function(){
         //returns the path to the initial icon image that gets loaded as an icon but only on slide 1
         return  methods['theImagePath'];
     },//end function
     setProgramImgPath: function(){
-    //stores the path of the icon file being used for the toc menu button on the first slide so I can use it later. .
+        //stores the path of the icon file being used for the toc menu button on the first slide so I can use it later. .
         methods['theImagePath'] = document.getElementById("toc-button").style.backgroundImage;
     },//end function
     traverse: function (task, node) {
@@ -406,6 +464,11 @@ var methods = {
         //Handling Keyboard input
         document.addEventListener('keyup', methods.inputHandler, false);
         methods.setProgramImgPath();
+        methods.createFlipCards();
+        var allTheFlipCards = document.getElementsByClassName("flip-card");
+        for(var qi=0;qi<allTheFlipCards.length;qi++){
+            allTheFlipCards[qi].addEventListener("click", methods.flipTheCard, false);
+        }
     }//end main function
 };//end methods object.
 window.onload = methods.main();

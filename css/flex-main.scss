@@ -1,3 +1,4 @@
+/* this file is called from (imported into) flex-level-1.scss */
 @mixin lightWeight() {
   font-weight: 300;
 }
@@ -57,7 +58,7 @@
 @import "widget-multiChoice";
 @import "widget-tabular";
 @import "chunk-next-previous-buttons";
-
+@import "widget-flip-card";
 //pulling this because I need these styles in the main area to tweak with.
 //@import "chunk-flex-TOC";
 
@@ -274,7 +275,7 @@ html {
   height: 2.6em;
   background-image: url('../img/course-icon.png');
   background-repeat: no-repeat;
-  background-position:-1px 0, top;
+  background-position: 0 0, top;
   background-size:2.5em, 2.5em;
 
   margin: 0 auto 0 1em;

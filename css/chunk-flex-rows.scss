@@ -33,10 +33,12 @@
     /* effects each child item */
     flex-grow: 1;
   }
+
+
   /* now take care of the sizing and spacing for each specific column set. */
   .cel-row-50 > *{
     width: 48%;
-    padding: 0 1% 0 0;
+    padding: 0 .5% 0 0;
     border: .0625em solid $white;
   }
   .cel-row-30 > *{
