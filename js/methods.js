@@ -16,13 +16,11 @@ var methods = {
     },//end get ActiveSlideId
     createFlipCards: function(){
         //grab and rip through all the card decks
-        console.log("flip function has been called");
+
         var theDeck = document.getElementsByClassName("flip-deck");
         for(var cnt=0; cnt<theDeck.length;cnt++){
-            console.log("I found at least one deck");
             //now grab the deck I need to work on.
             var currentDeck = theDeck[cnt];
-            console.log(currentDeck.children.length);
             var numberOfCards = currentDeck.children.length/2;
             //now  rip through the current deck's children
             //adding child classes to each item as I go.
@@ -39,7 +37,7 @@ var methods = {
                 }//endif
 
             }//end for
-            console.log("HOW many cards?-->"+numberOfCards);
+
             for(var ii=1;ii<=numberOfCards;ii++){
                 var newDivElement = document.createElement("div");
                 //newDivElement.id = "card-"+(ii);
