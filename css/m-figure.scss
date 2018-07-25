@@ -1,6 +1,27 @@
 figure figcaption{
   text-align: center;
-  font-size: .75rem;
+  font-size: .8rem;
+  font-style: italic;
+
+  border: 1px solid $darkPrimaryColor;
+  //background-color: $lightPrimaryColor;
+  margin-top: -.5rem;
+
+  padding: .25rem;
+}
+figure{
+  margin:0;
+}
+.figure-title{
+  font-size: 1.5rem;
+  font-style: normal;
+  @include heavyWeight;
+  line-height: 1.5rem;
+  @include lightWeight;
+  color: $darkPrimaryColor;
+  @include font-familyRegular;
+
+  text-align: center;
 }
 .figure-is-closed{
   position:relative;
