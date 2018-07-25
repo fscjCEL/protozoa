@@ -1,0 +1,10 @@
+/*specific styles for use inside figcaptions*/
+figcaption .is-citation{
+  font-style: italic;
+  font-size: .75rem;
+}
+/* default first line indent*/
+.is-citation{
+  margin-left: 3em;
+  text-indent: -3em;
+}
