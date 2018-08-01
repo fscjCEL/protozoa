@@ -151,12 +151,15 @@ var methods = {
             //linkInnerHtml variable where node.innerHTML is written currently
             //so only grab the className of slideTitle as children of node.
             var insertThisTitle;
-            if (node.children[0]) {//this breaks when you put a br into any header
+           // insertThisTitle = node.innerHTML;
+            //console.log(insertThisTitle+"/n");
+            if (node.children.length === 1) {//this breaks when you put a br into any header
                 //grabbing the slide title from the slide header itself
-                insertThisTitle = node.children[1].innerHTML;
+                insertThisTitle = node.innerHTML;
             } else {
                 //nope this is a normal header with no children.
-                insertThisTitle = node.innerHTML;
+
+                insertThisTitle = node.children[1].innerHTML;
             }
 
 
@@ -164,12 +167,14 @@ var methods = {
 
             theNewElement = document.createElement("p");
             if (type === "H2") {
+
                 theNewElement.className = "toc-header";
                 // craft the header element as the innerHTML of the section.
                 theNewElement.innerHTML = "<span class='toc-slide-num'>"+theCurrentSlide.substr(5)+" </span><span class='is-dormant'>&mdash;jump to slide:" + theCurrentSlide.substr(5) + "&mdash;</span>" + insertThisTitle + "<br />";
 
             }//endif
             if (type === "H3") {
+
                 theNewElement.className = "toc-subheader";
                 // craft the header element as the innerHTML of the list item.
                 theNewElement.innerHTML = "<span class='is-dormant'>&mdash;jump to slide:" + theCurrentSlide.substr(5) + "&mdash;</span>&ensp;" + insertThisTitle + "<br />";
