@@ -14,6 +14,24 @@ var methods = {
         //this returns the active slide ID (ex. slide1) not the slide node itself.
         return document.getElementsByClassName("activeSlide")[0].id;
     },//end get ActiveSlideId
+    yellowFlash:function(){
+
+        var slidesLength = methods.countTheSlides();
+        for (var i = 0; i < slidesLength; i++) {
+            var theActiveSlideElement = document.getElementById("slide"+(i+1));
+            var theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+            if(theFirstParagraph){
+                if(theFirstParagraph.parentNode.className !=="figure"){
+                    theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[0];
+                }else{
+                    theFirstParagraph = theActiveSlideElement.getElementsByTagName('p')[1];
+                }//end if
+                theFirstParagraph.classList.add("TheFirst");
+            }//end if
+
+
+        }
+    },//end yellowFlashFunction
     createFlipCards: function(){
         //grab and rip through all the card decks
 
@@ -467,6 +485,7 @@ var methods = {
         for(var qi=0;qi<allTheFlipCards.length;qi++){
             allTheFlipCards[qi].addEventListener("click", methods.flipTheCard, false);
         }
+        methods.yellowFlash();
     }//end main function
 };//end methods object.
 window.onload = methods.main();
