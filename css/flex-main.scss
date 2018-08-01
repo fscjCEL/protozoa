@@ -267,7 +267,7 @@ html {
   }
 }
 body{
-  max-width: 1024px;
+  max-width: 1393px;
   background-color: $lightPrimaryColor;
   padding: 0;
   margin: 0;
@@ -281,6 +281,40 @@ body{
 
   }
 }
+
+
+
+
+.slideHeader  {
+  //this controls the default space between main headers.
+  width: 100%;
+  color: $darkPrimaryColor;
+  text-align: left;
+  //padding: .625em 0;
+  //margin: 1em 0;
+
+  @include lightWeight;
+
+} //end h2
+.slideHeader .slideNumber, .futureSlideHeader .slideNumber {
+  float: left;
+  width: 8%;
+  text-align: right;
+  padding-right: 3%;
+  @include lightWeight;
+} //end slidenumber
+.slideHeader .slideTitle, .futureSlideHeader .slideTitle {
+  float: right;
+  width: 92%;
+  text-align: left;
+  padding-left: 3%;
+  padding-right: 1%;
+  word-wrap: break-word;
+  border-left: 1px solid $black;
+  @include lightWeight;
+}
+
+
 #content-row{
   background-color: $lightPrimaryColor;
 }
@@ -376,8 +410,10 @@ body{
   flex-flow: row nowrap;
   justify-content: flex-start;
   overflow: hidden;
-  padding: .6rem .25rem;
+  padding: .6rem 1rem 0 .6rem;
   top:0;
+
+
 
 }
 
@@ -416,7 +452,7 @@ body{
   /* clearing the box that I should have */
   @include material-shadow(0, .25em, .25em);
   background-color: $white;
-  padding-left: 1rem;
+  padding: 0 .5rem;
 }
 
 .slideContent:before,

@@ -44,7 +44,7 @@ var methods = {
             //adding child classes to each item as I go.
             //this is a distinct step
             for(var dc = 0; dc < currentDeck.children.length ; dc++){
-                console.log("evaluate the deck now");
+
                 //if true then zero or even, else odd
                 // // using this method I am only hitting even numbers
                 if (dc % 2 === 0){
