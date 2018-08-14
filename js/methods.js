@@ -86,10 +86,11 @@ var methods = {
             this.getElementsByClassName("card-front")[0].style.transform = "rotateY(-180deg)";
             this.getElementsByClassName("card-back")[0].style.transform = "rotateY(0deg)";
         }//endif
-
     },
     openheplBox: function(){
-        console.log("I need to complete this")
+
+        console.log("I need to complete this");
+
     },//end openHelp function
     getProgramImgPath: function(){
         //returns the path to the initial icon image that gets loaded as an icon but only on slide 1
@@ -152,29 +153,31 @@ var methods = {
             //so only grab the className of slideTitle as children of node.
             var insertThisTitle;
            // insertThisTitle = node.innerHTML;
-            //console.log(insertThisTitle+"/n");
-            if (node.children.length === 1) {//this breaks when you put a br into any header
+            //console.log("How many-"+node.children.length+"\n"+node.innerHTML);
+           // if (node.children.length === 1) {//this breaks when you put a br into any header
                 //grabbing the slide title from the slide header itself
-                insertThisTitle = node.innerHTML;
-            } else {
+            //    insertThisTitle = node.innerHTML;
+           //     console.log("\n The straight title - "+insertThisTitle);
+            //} else {
                 //nope this is a normal header with no children.
 
-                insertThisTitle = node.children[1].innerHTML;
-            }
+            //    insertThisTitle = node.children[1].innerHTML;
+            //    console.log("\n Normal Header - "+insertThisTitle);
+            //}
 
 
             // create the new list item
 
             theNewElement = document.createElement("p");
             if (type === "H2") {
-
+                insertThisTitle = node.children[1].innerHTML;
                 theNewElement.className = "toc-header";
                 // craft the header element as the innerHTML of the section.
                 theNewElement.innerHTML = "<span class='toc-slide-num'>"+theCurrentSlide.substr(5)+" </span><span class='is-dormant'>&mdash;jump to slide:" + theCurrentSlide.substr(5) + "&mdash;</span>" + insertThisTitle + "<br />";
 
             }//endif
             if (type === "H3") {
-
+                insertThisTitle = node.innerHTML;
                 theNewElement.className = "toc-subheader";
                 // craft the header element as the innerHTML of the list item.
                 theNewElement.innerHTML = "<span class='is-dormant'>&mdash;jump to slide:" + theCurrentSlide.substr(5) + "&mdash;</span>&ensp;" + insertThisTitle + "<br />";
