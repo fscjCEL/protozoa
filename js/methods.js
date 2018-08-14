@@ -146,30 +146,17 @@ var methods = {
             slideBit = theCurrentSlide.substr(5);
             //this variable used to create the anchor element in the TOC.
             //newVar = "nav" + theCurrentSlide.substr(5);
-            // build the HREF that is inserted into list item.
+            // build the HREF that is inserted into toc item.
             theHREFiNeed = "#" + theCurrentSlide + "-" + type + "-" + randomNumforNodes;
-            //build the anchor that is inserted into the list item.
+            //build the anchor that is inserted into the toc item.
             //linkInnerHtml variable where node.innerHTML is written currently
-            //so only grab the className of slideTitle as children of node.
+            //so only grab the slideTitle as children of node.
             var insertThisTitle;
-           // insertThisTitle = node.innerHTML;
-            //console.log("How many-"+node.children.length+"\n"+node.innerHTML);
-           // if (node.children.length === 1) {//this breaks when you put a br into any header
-                //grabbing the slide title from the slide header itself
-            //    insertThisTitle = node.innerHTML;
-           //     console.log("\n The straight title - "+insertThisTitle);
-            //} else {
-                //nope this is a normal header with no children.
-
-            //    insertThisTitle = node.children[1].innerHTML;
-            //    console.log("\n Normal Header - "+insertThisTitle);
-            //}
-
-
-            // create the new list item
+            // create the new toc item
 
             theNewElement = document.createElement("p");
             if (type === "H2") {
+                //this is an h2 so the title should be in the second child.
                 insertThisTitle = node.children[1].innerHTML;
                 theNewElement.className = "toc-header";
                 // craft the header element as the innerHTML of the section.
@@ -177,6 +164,7 @@ var methods = {
 
             }//endif
             if (type === "H3") {
+                //this is an h3 so the title should be the whole innerHTML dump.
                 insertThisTitle = node.innerHTML;
                 theNewElement.className = "toc-subheader";
                 // craft the header element as the innerHTML of the list item.
@@ -230,7 +218,7 @@ var methods = {
         }//end captureNodes function
 
 
-        //RIp through all the elements on each slide to populate all the menus.
+        //RIP (rapidly iterate and penetrate) through all the elements on each slide to populate all the menus.
 
         theNumberOfSlides = methods.countTheSlides();//the total amount of slides
         //this is the main loop.
