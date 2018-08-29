@@ -14,6 +14,20 @@ var methods = {
         //this returns the active slide ID (ex. slide1) not the slide node itself.
         return document.getElementsByClassName("activeSlide")[0].id;
     },//end get ActiveSlideId
+    insertModalButtons:function(){
+        //grab all the modal dialogs
+        var alltheModals = document.getElementsByClassName("is-modal");
+        var theNewElement = document.createElement("button");
+        theNewElement.innerHTML = "X";
+
+        var theIndividualModal = alltheModals[0];
+        var theParentNodeElem = theIndividualModal;
+        var theReferenceElem = theParentNodeElem.children[0];
+        theParentNodeElem.insertBefore(theNewElement, theReferenceElem);
+        //console.log(theReferenceElem);
+        
+
+    },//end function
     yellowFlash:function(){
 
         var slidesLength = methods.countTheSlides();
@@ -482,6 +496,7 @@ var methods = {
             allTheFlipCards[qi].addEventListener("click", methods.flipTheCard, false);
         }
         methods.yellowFlash();
+        methods.insertModalButtons();
     }//end main function
 };//end methods object.
 window.onload = methods.main();
